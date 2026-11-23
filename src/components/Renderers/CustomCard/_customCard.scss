@@ -1,0 +1,4 @@
+@use "../../../assets/styles/abstract/variables" as *;
+.custom-card-container {
+  @include body-regular;
+}

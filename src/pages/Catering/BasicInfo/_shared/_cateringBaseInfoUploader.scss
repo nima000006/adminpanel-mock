@@ -1,0 +1,45 @@
+@use "../../../../assets/styles/abstract/variables" as *;
+
+.catering-base-info-uploader-row {
+  margin-bottom: $s-24;
+
+  .catering-base-info-uploader {
+    height: auto !important;
+    min-height: $s-160;
+    width: 100%;
+
+    .ant-form-item {
+      margin-bottom: 0;
+    }
+
+    .ant-upload-wrapper,
+    .ant-upload,
+    .ant-upload-select {
+      display: block;
+      width: fit-content;
+    }
+
+    .custom-upload-btn {
+      border-color: $border-color-80;
+      border-style: solid;
+      background-color: var(--app-bg-layout);
+      width: $s-100 !important;
+      height: $s-100 !important;
+      padding: $s-8;
+      @include flex-center;
+    }
+
+    &--dashed .custom-upload-btn {
+      border-style: dashed;
+    }
+  }
+
+  .catering-base-info-upload-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: $s-8;
+    color: $neutral-8;
+    font-size: $s-12;
+  }
+}

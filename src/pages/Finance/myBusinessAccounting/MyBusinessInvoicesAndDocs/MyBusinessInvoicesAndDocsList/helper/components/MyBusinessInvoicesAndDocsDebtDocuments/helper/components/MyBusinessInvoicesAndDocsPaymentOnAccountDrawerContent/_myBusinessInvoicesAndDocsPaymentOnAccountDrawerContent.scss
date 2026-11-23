@@ -1,0 +1,6 @@
+@use "../../../../../../../../../../../assets/styles/abstract/variables" as *;
+.my-invoices-docs-payment-account-drawer-content-container {
+  .ant-input-suffix {
+    @include body-regular;
+  }
+}

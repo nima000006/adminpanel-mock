@@ -1,0 +1,82 @@
+@use "../../../../../../../assets/styles/abstract/variables" as *;
+//billing installment tabs
+.billing-installment-content-container {
+  .bulling-detail-tabs-container {
+    .ant-tabs-nav-wrap-ping-left {
+      justify-content: flex-end;
+    }
+    .ant-tabs-nav-list {
+      @include body-regular;
+      .ant-tabs-tab {
+        @include body-regular;
+        margin-left: $s-32;
+        @media (max-width: 1500px) {
+          margin-left: $s-24;
+        }
+        @media (max-width: 1400px) {
+          margin-left: $s-14;
+        }
+      }
+    }
+  }
+}
+
+//desc generator style
+.billing-installments-descGenerator {
+  .title-wrapper {
+    @include flex-gap($s-4);
+    margin-bottom: $s-8;
+    flex-direction: column;
+    .title {
+      @include h5-regular;
+      color: $black-3;
+    }
+    .sub-title {
+      @include body-regular;
+      color: $black-3;
+    }
+  }
+  .custom-card-contents {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    align-items: center;
+    gap: $s-24;
+  }
+
+  .btn-wrapper {
+    @include flex-gap($s-24);
+    align-self: end;
+    .desc-generator-btn {
+      @include h5-regular;
+      display: flex;
+      align-items: center;
+      align-self: end;
+      padding: $s-20;
+    }
+  }
+}
+
+//installment Content
+.installment-content-container {
+  .ant-steps-item-icon {
+    float: right !important;
+  }
+}
+
+//related bills content
+.billing-related-bills-content-container {
+  @include flex-gap($s-20);
+  flex-direction: column;
+  .billing-related-bills-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
+    gap: $s-24;
+    .desc-generator-btn {
+      @include h5-regular;
+      display: flex;
+      align-items: center;
+      align-self: end;
+      padding: $s-20;
+    }
+  }
+}

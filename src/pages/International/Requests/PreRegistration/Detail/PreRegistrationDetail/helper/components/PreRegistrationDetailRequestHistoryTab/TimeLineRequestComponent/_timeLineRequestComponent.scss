@@ -1,0 +1,7 @@
+@use "../../../../../../../../../../assets/styles/abstract/variables" as *;
+.step-item-description-container {
+  @include footnote;
+  .ant-tag {
+    margin-top: $s-10;
+  }
+}

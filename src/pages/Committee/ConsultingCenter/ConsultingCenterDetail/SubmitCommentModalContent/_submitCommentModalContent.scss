@@ -1,0 +1,27 @@
+@use "../../../../../assets//styles/abstract/variables" as *;
+.consulting-submit-comment-modal-container {
+  .comment-and-desc-wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: $s-12;
+  }
+  .attachment-container {
+    .step-title {
+      @include h5-regular;
+      color: $title-black;
+    }
+    .upload-container {
+      display: flex;
+      flex-direction: column;
+      gap: $s-13;
+      .ant-upload-list {
+        display: flex;
+        gap: $s-8;
+        flex-wrap: wrap;
+      }
+      .custom-btn {
+        @include h5-regular;
+      }
+    }
+  }
+}

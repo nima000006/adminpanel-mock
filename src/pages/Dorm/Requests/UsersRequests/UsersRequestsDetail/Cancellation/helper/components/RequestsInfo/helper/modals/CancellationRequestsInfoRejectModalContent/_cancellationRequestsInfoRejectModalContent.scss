@@ -1,0 +1,6 @@
+@use "../../../../../../../../../../../../assets/styles/abstract/variables" as *;
+.cancellation-requests-info-reject-modal-content-container {
+  .text {
+    @include body-regular;
+  }
+}

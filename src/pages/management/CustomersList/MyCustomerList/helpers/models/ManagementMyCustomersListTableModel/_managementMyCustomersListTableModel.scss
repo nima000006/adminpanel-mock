@@ -1,0 +1,13 @@
+@use "../../../../../../../assets/styles/App.scss" as *;
+.management-my-customer-list-container {
+  .management-my-customer-custom-button {
+    padding: $s-5 !important;
+  }
+  .management-my-customer-list-buttons-container {
+    height: $s-38;
+    @include flex-center;
+  }
+  .management-my-custom-tag {
+    width: fit-content;
+  }
+}

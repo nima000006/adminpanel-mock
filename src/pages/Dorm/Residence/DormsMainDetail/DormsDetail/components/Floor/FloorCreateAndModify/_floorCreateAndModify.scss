@@ -1,0 +1,23 @@
+@use "../../../../../../../../assets/styles/abstract/variables" as *;
+.floor-create-and-modify-page-container {
+  @include flex-col($s-40);
+  .status-container {
+    .ant-form-item {
+      margin-bottom: 0;
+      min-width: 200px;
+    }
+  }
+  .table-tags {
+    width: fit-content;
+  }
+  .action-btns-container {
+    @include flex-gap($s-16);
+    justify-content: end;
+  }
+}
+
+.update-floor-confirmation-modal-container {
+  .desc {
+    @include body-regular;
+  }
+}

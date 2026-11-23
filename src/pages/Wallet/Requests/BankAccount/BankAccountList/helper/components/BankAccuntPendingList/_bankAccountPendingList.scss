@@ -1,0 +1,8 @@
+@use "../../../../../../../../assets/styles/abstract/variables" as *;
+.banking-card-pending-list-container {
+  @include flex-col($s-16);
+
+  .text-link {
+    color: $blue-link;
+  }
+}

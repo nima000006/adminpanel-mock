@@ -1,0 +1,22 @@
+@use "../../../../../assets/styles/abstract/variables" as *;
+.committee-timing-info-list-page-container {
+  .btn-wrapper {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: $s-40;
+    .btn {
+      @include body-regular;
+    }
+  }
+  .timing-info-list-table-container {
+    .view-btn {
+      color: $blue-primary;
+      cursor: pointer;
+    }
+    .tables-sticky-column-left {
+      position: sticky !important;
+      left: 0;
+      overflow: hidden;
+    }
+  }
+}

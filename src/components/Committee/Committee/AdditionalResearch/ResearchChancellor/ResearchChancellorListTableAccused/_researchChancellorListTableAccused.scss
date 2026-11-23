@@ -1,0 +1,39 @@
+@use "../../../../../../assets/styles/abstract/variables" as *;
+.committee-research-chancellor-list-table-container {
+  .btn-wrapper {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: $s-16;
+
+    .register-archive-btn-wrapper {
+      @include flex-gap($s-8);
+    }
+    .font-btn {
+      @include body-regular;
+    }
+    @media (max-width: 590px) {
+      @include flex-gap($s-8);
+      flex-direction: column;
+    }
+  }
+  .research-chancellor-list-table {
+    .waiting-time-container {
+      display: flex;
+      flex-direction: column;
+      gap: $s-8;
+    }
+    .green {
+      background-color: $green;
+    }
+    .yellow {
+      background-color: $yellow;
+    }
+    .red {
+      background-color: $red;
+    }
+    .check-btn {
+      color: $blue-primary;
+      cursor: pointer;
+    }
+  }
+}

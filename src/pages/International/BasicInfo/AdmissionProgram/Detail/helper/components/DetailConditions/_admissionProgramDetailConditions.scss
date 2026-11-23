@@ -1,0 +1,10 @@
+@use "../../../../../../../../assets/styles/abstract/variables" as *;
+.admission-program-detail-conditions-container {
+  .ant-checkbox-group {
+    flex-direction: column !important;
+    gap: $s-10;
+    .ant-checkbox-label {
+      color: var(--app-text);
+    }
+  }
+}

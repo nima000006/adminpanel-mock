@@ -1,0 +1,19 @@
+@use "../../../../../../../assets/styles/abstract/variables" as *;
+.create-apartment-first-tab {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: $s-16;
+  .ant-divider-inner-text {
+    @include h5-regular;
+  }
+  .btn-container {
+    display: flex;
+    gap: $s-16;
+    .cancel-btn {
+      span {
+        @include body-regular;
+      }
+    }
+  }
+}

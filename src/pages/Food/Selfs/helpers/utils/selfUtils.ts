@@ -1,0 +1,15 @@
+export const genderType = [
+  {
+    id: 0,
+    title: "آقایان",
+  },
+  {
+    id: 1,
+    title: "بانوان",
+  },
+  {
+    id: 2,
+    title: "آقایان و بانوان",
+  },
+];
+export const UPDATE_SELF_SUCCESS_MSG = "تغییرات مورد نظر با موفقیت ثبت شد.";

@@ -1,0 +1,15 @@
+@use "../../../../../../../../../assets/styles/abstract/variables" as *;
+.all-selfs-food-schedule-tab-container {
+  @include flex-col($s-24);
+  .advanced-filter-btn {
+    @include body-regular;
+    display: flex;
+    align-items: center;
+  }
+  .all-selfs-food-schedule-table-model-container {
+    .view-btn {
+      color: $blue-primary;
+      cursor: pointer;
+    }
+  }
+}

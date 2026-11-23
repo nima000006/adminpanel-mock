@@ -1,0 +1,27 @@
+@use "../../../../../assets/styles/abstract/variables" as *;
+.dorm-facilities-type-tabs-container {
+  @include body-regular;
+  .dorm-facilities-type-wrapper {
+    @include flex-gap($s-8);
+    align-items: center;
+  }
+  .ant-tabs-tab-active {
+    .icon-active {
+      fill: $primary-7;
+    }
+  }
+  .dorm-facilities-table-container {
+    .ant-form-item {
+      margin-bottom: 0 !important;
+    }
+  }
+
+  .dorm-facilities-table-container {
+    .availability-container {
+      @include flex-gap($s-8);
+      .icon-container {
+        @include flex-gap($s-4);
+      }
+    }
+  }
+}

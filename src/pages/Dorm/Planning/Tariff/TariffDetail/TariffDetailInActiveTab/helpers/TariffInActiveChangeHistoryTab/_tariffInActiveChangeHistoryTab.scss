@@ -1,0 +1,7 @@
+@use "../../../../../../../../assets/styles/abstract/variables" as *;
+.tariff-inActive-change-history-container {
+  @include flex-col($s-16);
+  .alert {
+    margin-top: ($s-20);
+  }
+}

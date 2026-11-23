@@ -1,0 +1,12 @@
+@use "../../../../../../../../../../../../../assets/styles/abstract/variables" as *;
+.business-info-genuine-detail-container {
+  @include flex-col($s-40);
+  .business-info-genuine-detail-custom-tag-wrapper {
+    padding-top: $s-40;
+
+    @include flex-gap($s-8);
+    .business-info-genuine-detail-custom-tag {
+      @include flex-gap($s-4);
+    }
+  }
+}

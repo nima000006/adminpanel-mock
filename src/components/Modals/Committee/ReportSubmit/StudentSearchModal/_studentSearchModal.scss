@@ -1,0 +1,66 @@
+@use "../../../../../assets/styles/abstract/variables" as *;
+.committee-submit-student-search-modal-container {
+  .custom-switch-container {
+    > div {
+      @include flex-gap($s-5);
+      @media (max-width: 575px) {
+        @include flex-col($s-5);
+        align-items: start;
+      }
+    }
+  }
+  width: 70vw !important;
+  max-height: 90%;
+  border-radius: 20px;
+  .ant-modal-container {
+    margin: 0;
+    padding: 0;
+    background-color: $modal-bg-color;
+    .ant-modal-header {
+      padding: $s-16 $s-24;
+    }
+    .ant-modal-title {
+      @include h5-medium;
+      font-weight: bold;
+    }
+    .ant-modal-body {
+      margin: 0;
+      padding: $s-24;
+      display: flex;
+      flex-direction: column;
+      gap: $s-32;
+      .modal-body {
+        display: flex;
+        flex-direction: column;
+        gap: $s-32;
+        .grid-cols-3 {
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+          gap: $s-12;
+          .search-box-btn-container {
+            align-self: flex-end;
+          }
+        }
+      }
+    }
+  }
+  .custom-btn {
+    @include body-regular;
+  }
+  .submit-buttons-container {
+    @include flex-center;
+    justify-content: flex-start;
+    gap: $s-13;
+    margin-top: $s-24;
+  }
+  .input-btn-container {
+    @include flex-gap($s-16);
+    align-items: flex-end;
+    @media (max-width: 767px) {
+      @include flex-col($s-16);
+    }
+  }
+  .ant-switch-inner {
+    @include body-regular;
+  }
+}

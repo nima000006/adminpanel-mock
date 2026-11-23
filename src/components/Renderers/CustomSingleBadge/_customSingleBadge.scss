@@ -1,0 +1,4 @@
+@use "../../../assets/styles/abstract/variables" as *;
+.custom-single-badge-container {
+  @include body-regular;
+}

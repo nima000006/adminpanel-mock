@@ -1,0 +1,21 @@
+@use "../../../../../assets//styles//abstract/variables" as *;
+.committee-case-referral-modal-container {
+  .divider-container {
+    display: grid;
+    grid-template-columns: 4fr auto;
+    gap: $s-16;
+    margin-bottom: $s-24;
+    .intensification-sentence-switch {
+      align-self: center;
+      justify-self: end;
+    }
+  }
+  .referral-higher-unit-wrapper {
+    margin-bottom: $s-12;
+    .referral-higher-unit-content {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: $s-12;
+    }
+  }
+}

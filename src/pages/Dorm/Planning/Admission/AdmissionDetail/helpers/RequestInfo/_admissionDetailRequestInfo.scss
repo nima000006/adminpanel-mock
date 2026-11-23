@@ -1,0 +1,4 @@
+@use "../../../../../../../assets/styles/abstract/variables" as *;
+.admission-detail-awaiting-review-request-info-container {
+  @include flex-col($s-24);
+}

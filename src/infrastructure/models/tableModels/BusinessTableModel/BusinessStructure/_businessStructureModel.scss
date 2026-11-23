@@ -1,0 +1,17 @@
+@use "../../../../../assets/styles/abstract/variables" as *;
+.operation-business-structure-wrapper {
+  @include flex-gap($s-16);
+  justify-content: center;
+  .change-btn {
+    color: $blue-primary;
+    cursor: pointer;
+  }
+  .delete-btn {
+    color: $danger-primary;
+    cursor: pointer;
+  }
+}
+.view-graph-business-structure {
+  color: $blue-primary;
+  cursor: pointer;
+}

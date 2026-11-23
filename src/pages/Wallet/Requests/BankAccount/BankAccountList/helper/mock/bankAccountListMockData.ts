@@ -1,0 +1,101 @@
+/** Auto-generated mock data from API/page types. Adjust values as needed for local UI work. */
+
+import type {
+  GetBankAccountListCountResponse,
+  GetRequestBankAccountListResponse,
+} from "../../@types/@bankAccountList";
+
+export const GET_BANK_ACCOUNT_LIST_COUNT_RESPONSE_MOCK: GetBankAccountListCountResponse = {
+  requested: 1,
+  rejected: 1,
+  accepted: 1,
+  total: 10,
+};
+
+export const GET_REQUEST_BANK_ACCOUNT_LIST_RESPONSE_MOCK: GetRequestBankAccountListResponse = {
+  content: [{
+  id: 1,
+  iban: "iban-mock",
+  isDefault: true,
+  cardNumber: "cardNumber-mock",
+  bankId: 1,
+  bankName: "نمونه bankName",
+  status: "ACTIVE",
+  createdDate: "2026-05-02T10:20:27.741127",
+  modifiedDate: "2026-05-02T10:20:27.741127",
+  branchName: "نمونه branchName",
+  branchCode: 1,
+  businessName: "نمونه businessName",
+  regionTitle: "نمونه regionTitle",
+  createdBy: {
+  username: "نمونه username",
+  firstName: "نمونه firstName",
+  lastName: "نمونه lastName",
+  mobileNumber: "09121234567",
+},
+  province: "province-mock",
+  city: "city-mock",
+  services: [{ id: 1, title: "نمونه", name: "نمونه", value: "1" }],
+  personalityGroupType: { id: 1, title: "نمونه", name: "نمونه", value: "1" },
+}],
+  pageNumber: 0,
+  pageSize: 0,
+  first: true,
+  last: true,
+  totalElements: 10,
+  totalPages: 0,
+  size: 10,
+};
+
+export const REQUEST_BANK_ACCOUNT_DATA_TYPE_LIST_MOCK: RequestBankAccountDataType[] = [
+{
+  id: 1,
+  iban: "iban-mock",
+  isDefault: true,
+  cardNumber: "cardNumber-mock",
+  bankId: 1,
+  bankName: "نمونه bankName",
+  status: "ACTIVE",
+  createdDate: "2026-05-02T10:20:27.741127",
+  modifiedDate: "2026-05-02T10:20:27.741127",
+  branchName: "نمونه branchName",
+  branchCode: 1,
+  businessName: "نمونه businessName",
+  regionTitle: "نمونه regionTitle",
+  createdBy: {
+  username: "نمونه username",
+  firstName: "نمونه firstName",
+  lastName: "نمونه lastName",
+  mobileNumber: "09121234567",
+},
+  province: "province-mock",
+  city: "city-mock",
+  services: [{ id: 1, title: "نمونه", name: "نمونه", value: "1" }],
+  personalityGroupType: { id: 1, title: "نمونه", name: "نمونه", value: "1" },
+},
+{
+  id: 2,
+  iban: "iban-mock-2",
+  isDefault: true,
+  cardNumber: "cardNumber-mock-2",
+  bankId: 2,
+  bankName: "نمونه bankName",
+  status: "ACTIVE",
+  createdDate: "2026-05-02T10:20:27.741127",
+  modifiedDate: "2026-05-02T10:20:27.741127",
+  branchName: "نمونه branchName",
+  branchCode: 2,
+  businessName: "نمونه businessName",
+  regionTitle: "نمونه regionTitle",
+  createdBy: {
+  username: "نمونه username",
+  firstName: "نمونه firstName",
+  lastName: "نمونه lastName",
+  mobileNumber: "09121234567",
+},
+  province: "province-mock-2",
+  city: "city-mock-2",
+  services: [{ id: 2, title: "نمونه", name: "نمونه", value: "1" }],
+  personalityGroupType: { id: 2, title: "نمونه", name: "نمونه", value: "1" },
+},
+];

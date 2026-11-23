@@ -1,0 +1,56 @@
+@use "../../../../../../../../assets/styles/abstract/variables" as *;
+
+.allocate-residence-radio {
+  .ant-radio-group {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: $s-8;
+
+    @media (max-width: 767px) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .ant-radio-wrapper {
+    width: 100%;
+    max-width: 100%;
+    height: 100%;
+    margin-inline: 0 !important;
+    box-sizing: border-box;
+    align-items: flex-start;
+    gap: $s-10;
+    padding: $s-12 !important;
+    border: 1px solid transparent !important;
+    border-radius: $s-8;
+    background: $neutral-2;
+
+    &::after {
+      display: none !important;
+      content: none !important;
+      width: 0 !important;
+      height: 0 !important;
+    }
+
+    &.ant-radio-wrapper-checked {
+      background: $primary-1;
+      border-color: $primary-7 !important;
+    }
+
+    // Radio stays inside the card, top-start (right in RTL).
+    .ant-radio {
+      position: relative;
+      top: 2px;
+      flex-shrink: 0;
+      order: 0;
+    }
+
+    .ant-radio-label,
+    > span:last-child {
+      flex: 1;
+      min-width: 0;
+      width: auto !important;
+      padding-inline: 0 !important;
+    }
+  }
+}

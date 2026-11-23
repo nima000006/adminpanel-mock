@@ -1,0 +1,35 @@
+@use "../../../../../assets/styles/abstract/variables" as *;
+.committee-new-timing-info-page-container {
+  background-color: var(--app-bg-container);
+  padding: $s-20;
+  border-radius: 10px;
+  .timing-info-form {
+    display: flex;
+    flex-direction: column;
+    gap: $s-35;
+    .new-timing-info-content {
+      border: 1px solid $border-color-90;
+      border-radius: 10px;
+      padding: $s-16;
+      display: flex;
+      flex-direction: column;
+      gap: $s-16;
+      .inputs-container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: $s-12;
+        .ant-col {
+          width: 100%;
+          text-align: right;
+        }
+      }
+    }
+    .btn-wrapper {
+      @include flex-gap($s-12);
+      .btn {
+        cursor: pointer;
+        @include body-regular;
+      }
+    }
+  }
+}

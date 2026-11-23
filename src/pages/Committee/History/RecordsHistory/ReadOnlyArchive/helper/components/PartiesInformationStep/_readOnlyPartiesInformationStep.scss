@@ -1,0 +1,40 @@
+@use "../../../../../../../../assets/styles/abstract/variables" as *;
+.committee-records-detail-read-only-parties-information-step-container {
+  display: flex;
+  flex-direction: column;
+  padding: $s-24;
+  gap: $s-35;
+  .delete-request-status-container {
+    border-radius: 2px;
+    border: 1px solid $dust-red-2;
+    background-color: $dust-red-1;
+    padding: $s-10 $s-16;
+    .status-text {
+      @include body-regular;
+      color: $title-black;
+    }
+  }
+  .info-container {
+    display: flex;
+    flex-direction: column;
+    padding: $s-24;
+    gap: $s-35;
+  }
+
+  .ant-collapse-expand-icon {
+    position: absolute;
+    left: 0;
+    border-radius: 50%;
+    .collapse-icon {
+      font-size: $s-18;
+    }
+  }
+
+  .button-wrapper {
+    display: flex;
+    justify-content: flex-end;
+    .btn {
+      @include body-regular;
+    }
+  }
+}

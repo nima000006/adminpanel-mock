@@ -1,0 +1,50 @@
+@use "../../../../../../../assets/styles/abstract/variables" as *;
+
+.my-self-list-drawer-content-container {
+  .custom-select-container {
+    margin: 0;
+  }
+
+  .attach-row {
+    @include flex-gap($s-8);
+    .ant-btn {
+      border-color: $danger-primary;
+      border-style: dashed;
+      background-color: var(--app-bg-layout);
+      padding: $s-32;
+    }
+    .self-upload-text-container {
+      display: flex;
+      gap: $s-8;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+  .info-contact-divider {
+    margin-top: $s-12;
+  }
+
+  .map-label {
+    margin-top: $s-24;
+    margin-bottom: $s-8;
+    text-align: right;
+  }
+
+  .map {
+    margin-top: $s-8;
+  }
+
+  .drawer-header-btn {
+    display: flex;
+    align-items: center;
+    gap: $s-8;
+  }
+
+  .drawer-detail-loading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 240px;
+  }
+}

@@ -1,0 +1,55 @@
+@use "../../../../../../assets/styles/abstract/variables" as *;
+.food-all-foods-list-container {
+  .btn-wrapper {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: $s-32;
+    @media (max-width: 490px) {
+      flex-direction: column;
+      gap: $s-16;
+      align-items: baseline;
+    }
+  }
+  .remove-food-modal-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .food-counter-items {
+    margin-top: 1rem;
+  }
+  .custom-all-foods-chips-container {
+    margin-bottom: 1rem;
+  }
+}
+.food-all-foods-drawer {
+  .drawer-header-btn {
+    @include flex-gap($s-12);
+    .ant-form-item {
+      margin-bottom: 0 !important;
+    }
+    @media (max-width: 576px) {
+      gap: $s-8;
+      .drawer-action-btn {
+        padding: $s-4 $s-6;
+        font-size: $s-12;
+      }
+    }
+  }
+}
+.add-schedules-drawer {
+  .drawer-body {
+    @include flex-col($s-40);
+    .ant-form-item-row {
+      gap: $s-4 !important;
+    }
+    .ant-form-item-label {
+      label {
+        height: 0;
+      }
+    }
+    .ant-form-item-control {
+      width: 100% !important;
+    }
+  }
+}

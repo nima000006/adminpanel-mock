@@ -1,0 +1,54 @@
+@use "../../../assets/styles/abstract/variables" as *;
+
+.single-vertical-item-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: $s-4;
+  width: 100%;
+}
+
+.user-item-hint {
+  @include footnote;
+  width: 100%;
+}
+
+.user-item {
+  display: flex;
+  flex-direction: column;
+  word-wrap: break-word;
+  .ant-statistic-title {
+    @include footnote;
+  }
+  .ant-statistic-content-value {
+    background-color: $black-03;
+    border-radius: 6px;
+    padding: $s-8;
+    width: 100%;
+    text-align: right;
+    min-width: 150px;
+    direction: rtl;
+    @include h5-medium;
+    /* ✅ جلوگیری از بیرون زدن متن طولانی */
+    overflow-wrap: break-word; // (جدیدتر و استانداردتر)
+    word-break: break-word; // برای پشتیبانی بهتر در مرورگرها
+    word-wrap: break-word; // برای مرورگرهای قدیمی
+    white-space: normal; // تا متن بتونه بشکنه
+    @media (max-width: 950px) {
+      font-size: $s-14;
+    }
+  }
+  .value-container {
+    @include flex-gap($s-4);
+    flex-wrap: wrap;
+    direction: rtl;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  .space-between {
+    justify-content: space-between;
+  }
+  span {
+    display: flex;
+    align-items: center;
+  }
+}

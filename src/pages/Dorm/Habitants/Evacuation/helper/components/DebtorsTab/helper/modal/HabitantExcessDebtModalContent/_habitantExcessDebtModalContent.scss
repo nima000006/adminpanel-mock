@@ -1,0 +1,21 @@
+@use "../../../../../../../../../../assets/styles/abstract/variables" as *;
+.habitant-debtors-modal-content-container {
+  @include flex-col($s-40);
+
+  .ant-input-number-group-wrapper {
+    width: 100%;
+  }
+
+  .alert-container {
+    @include flex-col($s-16);
+    .alert-body {
+      display: flex;
+      justify-content: space-between;
+
+      .icon-title-container {
+        @include flex-gap($s-16);
+        align-items: center;
+      }
+    }
+  }
+}

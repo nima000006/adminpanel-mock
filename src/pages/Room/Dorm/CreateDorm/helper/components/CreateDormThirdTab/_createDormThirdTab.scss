@@ -1,0 +1,21 @@
+@use "../../../../../../../assets/styles/abstract/variables" as *;
+.dorm-third-tab-container {
+  padding: $s-16 0;
+  display: flex;
+  flex-direction: column;
+  gap: $s-16;
+  .btn-container {
+    display: flex;
+    gap: $s-16;
+    .cancel-btn {
+      span {
+        @include body-regular;
+      }
+    }
+  }
+  .custom-selects-container {
+    display: flex;
+    flex-direction: column;
+    gap: $s-16;
+  }
+}

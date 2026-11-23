@@ -1,0 +1,8 @@
+@use "../../../../../../../../../../assets/styles/abstract/variables" as *;
+.senior-manager-tab-container {
+  @include flex-col($s-40);
+
+  .senior-manager-tab-image-wrapper {
+    padding-top: $s-40;
+  }
+}

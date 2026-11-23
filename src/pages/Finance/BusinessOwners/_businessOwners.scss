@@ -1,0 +1,8 @@
+@use "../../../assets/styles/abstract/variables" as *;
+.business-owners-container {
+  @include body-regular;
+  .ant-tabs-tab-btn {
+    @include flex-center;
+    gap: $s-8;
+  }
+}

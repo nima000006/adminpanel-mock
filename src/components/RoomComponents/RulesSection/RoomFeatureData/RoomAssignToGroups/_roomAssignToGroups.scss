@@ -1,0 +1,26 @@
+@use "../../../../../assets/styles/abstract/variables" as *;
+.room-assign-to-group-capsule {
+  width: 100%;
+  background-color: rgb(229, 229, 229);
+  @include body-regular;
+  margin: $s-24 0;
+  .label-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .check-box-container {
+    margin: $s-24 0;
+    border: 1px solid #c0bfbf;
+    border-radius: 8px;
+    padding: 0 $s-16;
+    width: fit-content;
+  }
+  .check-box {
+    display: flex;
+    align-items: center;
+    height: 30px;
+    @include body-regular;
+    width: auto;
+  }
+}

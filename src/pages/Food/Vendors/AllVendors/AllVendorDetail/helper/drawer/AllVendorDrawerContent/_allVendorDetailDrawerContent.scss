@@ -1,0 +1,56 @@
+@use "../../../../../../../../assets/styles/abstract/variables" as *;
+.vendor-detail-drawer-content-container {
+  .right-side {
+    .right-side-title-contain {
+      @media (max-width: 470px) {
+        font-size: $s-12;
+      }
+      @media (max-width: 433px) {
+        font-size: $s-10;
+      }
+    }
+  }
+
+  .vendor-detail-drawer-content-wrapper {
+    @include flex-col($s-40);
+    .vendor-information-container {
+      @include flex-col($s-16);
+      .uploader-container {
+        display: flex;
+        gap: $s-16;
+        .ant-btn {
+          border-color: $danger-primary;
+          border-style: dashed;
+          background-color: var(--app-bg-layout);
+          padding: $s-32;
+        }
+      }
+    }
+    .contact-information-container {
+      @include flex-col($s-24);
+    }
+  }
+  @media (max-width: 576px) {
+    gap: $s-8;
+    .drawer-action-btn {
+      padding: 0 $s-6;
+      font-size: $s-10;
+    }
+  }
+  @media (max-width: 470px) {
+    .right-side-title-contain {
+      font-size: 10px;
+    }
+  }
+  .all-vendor-drawer-upload-text-container {
+    display: flex;
+    gap: $s-8;
+    align-items: center;
+    justify-content: center;
+  }
+}
+.all-vendors-detail-modal-container {
+  .desc {
+    @include body-regular;
+  }
+}

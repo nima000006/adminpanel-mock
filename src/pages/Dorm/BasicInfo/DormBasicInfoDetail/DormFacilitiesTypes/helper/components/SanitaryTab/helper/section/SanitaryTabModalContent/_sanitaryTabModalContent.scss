@@ -1,0 +1,4 @@
+@use "../../../../.././../../../../../../assets/styles/abstract/variables" as *;
+.dorm-facilities-sanitary-tab-modal-content-container {
+  @include flex-col($s-16);
+}

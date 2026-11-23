@@ -1,0 +1,4 @@
+@use "../../../../../../../../../assets/styles/abstract/variables" as *;
+.confirmed-reservation-container {
+  @include flex-col($s-40);
+}

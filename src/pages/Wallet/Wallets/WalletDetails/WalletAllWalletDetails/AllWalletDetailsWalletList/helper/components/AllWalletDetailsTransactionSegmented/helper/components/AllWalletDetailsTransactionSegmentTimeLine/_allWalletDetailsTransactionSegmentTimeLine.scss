@@ -1,0 +1,33 @@
+@use "../../../../../../../../../../../../assets/styles/abstract/variables" as *;
+.all-wallet-timeline-container {
+  @include flex-col($s-16);
+
+  .ant-timeline-item {
+    @include body-regular;
+
+    .timeline-item-container {
+      @include flex-space-between;
+      padding: $s-16 0;
+      align-items: start;
+      .item-container {
+        @include flex-col($s-8);
+        .info-container {
+          @include flex-gap($s-8);
+          align-items: center;
+          .info-price-value {
+            @include h4-medium;
+            color: var(--app-text);
+          }
+          .info-text-value {
+            @include body-regular;
+            color: var(--app-text);
+          }
+        }
+      }
+    }
+
+    .create-step {
+      @include flex-space-between;
+    }
+  }
+}

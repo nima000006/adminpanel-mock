@@ -1,0 +1,34 @@
+@use "../../assets/styles/abstract/variables" as *;
+.home-page-container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  container-type: inline-size; // برای فعال سازی کوئری
+
+  .delivery-food-btn {
+    text-align: center;
+    align-items: center;
+    border-color: $primary-6;
+    color: $primary-6;
+  }
+
+  .quick-access-btn {
+    text-align: center;
+    align-items: center;
+    border-color: $primary-6;
+    color: $primary-6;
+  }
+
+  .home-page-img {
+    max-width: 100%;
+    object-fit: contain;
+  }
+
+  @container (max-width: 140px) {
+    .delivery-food-btn span {
+      font-size: $s-8;
+    }
+  }
+}

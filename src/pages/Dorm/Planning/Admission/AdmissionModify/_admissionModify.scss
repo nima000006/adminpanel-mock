@@ -1,0 +1,70 @@
+@use "../../../../../assets/styles/abstract/variables" as *;
+.admission-modify-page-container {
+  @include flex-col($s-24);
+
+  .custom-card-renderer-container {
+    @include flex-col($s-40);
+  }
+  .ant-steps.ant-steps-navigation {
+    @media (max-width: 750px) {
+      overflow-x: scroll;
+    }
+    .ant-steps-item::after {
+      transform: translateY(-50%) translateX(-50%) rotate(-45deg);
+      @media (max-width: 1024px) {
+        inset-inline-start: unset;
+        width: 10px;
+        height: 10px;
+      }
+    }
+  }
+  .ant-steps-item {
+    padding-inline-start: $s-44 !important;
+  }
+  .ant-steps-item:first-child {
+    padding-inline-start: $s-10 !important;
+    @media (max-width: 750px) {
+      padding-inline-start: $s-44 !important;
+    }
+  }
+  .ant-steps-item-title {
+    color: $character-secondary-45;
+    font-family: DanaFaNum;
+    font-size: $s-16;
+    font-style: normal;
+    font-weight: 400;
+    line-height: $s-24;
+    @media (max-width: 1024px) {
+      font-size: $s-14;
+    }
+    @media (max-width: 950px) {
+      font-size: $s-12;
+    }
+  }
+  .ant-steps-icon {
+    @include ant-steps-icon-font;
+    @media (max-width: 1024px) {
+      font-size: $s-14;
+      line-height: $s-12;
+    }
+    @media (max-width: 950px) {
+      font-size: $s-12;
+    }
+  }
+  .ant-steps-item-icon {
+    @media (max-width: 1024px) {
+      width: $s-24 !important;
+      height: $s-24;
+      line-height: unset;
+    }
+  }
+  .ant-steps-item-title {
+    line-height: $s-32;
+    @media (max-width: 1024px) {
+      line-height: $s-24;
+    }
+  }
+  .ant-form-item {
+    margin-bottom: 0;
+  }
+}

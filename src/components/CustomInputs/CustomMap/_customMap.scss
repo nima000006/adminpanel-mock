@@ -1,0 +1,12 @@
+@use "../../../assets/styles/abstract/variables" as *;
+.map-main-content {
+  margin-top: $s-20;
+  .map-container-style {
+    height: 220px;
+    border-radius: 10px;
+  }
+  .leaflet-pane,
+  .leaflet-top {
+    z-index: 0 !important;
+  }
+}

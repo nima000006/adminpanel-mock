@@ -1,0 +1,7 @@
+@use "../../../../../../../assets/styles/abstract/variables" as *;
+.modify-business-tab-container {
+  padding: $s-40 0;
+  .modify-business-tab-items {
+    @include body-regular;
+  }
+}

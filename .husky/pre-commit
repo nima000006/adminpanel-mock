@@ -1,0 +1,30 @@
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
+
+echo "🔍 Running pre-commit checks..."
+
+# 1. Lint and format staged files (fast ~5-10s)
+echo "📝 Linting and formatting staged files..."
+npx lint-staged || {
+  echo "❌ Linting failed. Fix errors before committing."
+  exit 1
+}
+
+# 2. Type check - catches most build errors (fast ~5-15s)
+echo "🔎 Type checking TypeScript..."
+npm run type-check || {
+  echo "❌ TypeScript errors found. Fix them before committing."
+  exit 1
+}
+
+# 3. Test build to ensure bundle compiles (slower ~30-60s, but catches all issues)
+# Recommended: Keep this enabled to prevent CI/CD pipeline failures
+echo "🏗️  Testing production build..."
+npm run build || {
+  echo "❌ Build failed. Fix the errors before committing."
+  echo "💡 This prevents breaking the GitLab CI/CD pipeline."
+  exit 1
+}
+
+echo "✅ All pre-commit checks passed! Commit is safe for CI/CD pipeline."
+echo "🚀 Ready for 'git cz' or 'git push'"

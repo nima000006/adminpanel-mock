@@ -1,0 +1,46 @@
+/** Auto-generated mock data from API/page types. Adjust values as needed for local UI work. */
+
+import type {
+  GetDetailAllSelfsHistoryDetailResponse,
+} from "../../@types/@cateringAllSelfsHistoryDrawer";
+
+export const GET_DETAIL_ALL_SELFS_HISTORY_DETAIL_RESPONSE_MOCK: GetDetailAllSelfsHistoryDetailResponse = {
+  revisionNumber: 1,
+  revisionDate: "2026-05-02T10:20:27.741127",
+  revisionType: "revisionType-mock",
+  id: 1,
+  title: "نمونه title",
+  description: "نمونه description",
+  rules: "rules-mock",
+  ownerBranchCode: 1,
+  ownerBranchName: "نمونه ownerBranchName",
+  genderType: 1,
+  logoName: "نمونه logoName",
+  coverName: "نمونه coverName",
+  phone: "09121234567",
+  restaurantPhone2: "09121234567",
+  managerUserName: "نمونه managerUserName",
+  managerFirstName: "نمونه managerFirstName",
+  managerLastName: "نمونه managerLastName",
+  managerUserId: 1,
+  latitude: 1,
+  longitude: 1,
+  provinceId: 1,
+  cityId: 1,
+  provinceTitle: "نمونه provinceTitle",
+  cityTitle: "نمونه cityTitle",
+  createdDate: "2026-05-02T10:20:27.741127",
+  modifiedDate: "2026-05-02T10:20:27.741127",
+  modifiedByUsername: "نمونه modifiedByUsername",
+  modifiedBy: "modifiedBy-mock",
+  statusType: {
+  id: 1,
+  title: "نمونه title",
+  faTitle: "نمونه faTitle",
+},
+  capacity: 1,
+  address: "address-mock",
+  postalCode: "0012345678",
+  restaurantPhone: "09121234567",
+  branchCodes: [1],
+};

@@ -1,0 +1,64 @@
+@use "../../../../../assets/styles/abstract/variables" as *;
+
+.accounting-info-box-group {
+  border-radius: 8px;
+  background-color: var(--app-bg-layout);
+  padding: $s-12;
+  @include body-regular;
+
+  &-grid {
+    display: grid;
+    gap: $s-16;
+    text-align: center;
+
+    // Desktop
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+
+    // Tablet
+    @media (max-width: 992px) {
+      grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+      gap: $s-12;
+    }
+
+    // Mobile
+    @media (max-width: 575px) {
+      grid-template-columns: 1fr;
+      gap: $s-8;
+    }
+  }
+
+  &-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &-icon {
+    font-size: $s-22;
+    margin-bottom: $s-4;
+
+    &.blue {
+      color: $blue-primary;
+    }
+
+    &.yellow {
+      color: $gold-6;
+    }
+  }
+
+  &-title {
+    font-size: $s-13;
+    color: var(--app-text);
+    text-align: center;
+    @include body-regular;
+  }
+
+  &-value {
+    font-size: $s-13;
+    font-weight: 600;
+    color: var(--app-text);
+    margin-top: $s-4;
+    text-align: center;
+    word-break: break-word;
+  }
+}

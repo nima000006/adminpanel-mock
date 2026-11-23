@@ -1,0 +1,8 @@
+@use "../../../../../assets//styles/abstract/variables" as *;
+.committee-reject-session-modal-container {
+  .reject-session-modal-content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: $s-12;
+  }
+}

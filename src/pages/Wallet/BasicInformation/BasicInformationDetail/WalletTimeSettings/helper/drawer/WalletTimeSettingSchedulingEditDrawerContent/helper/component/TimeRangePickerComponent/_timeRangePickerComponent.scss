@@ -1,0 +1,5 @@
+@use "../../../../../../../../../../../assets/styles/abstract/variables" as *;
+.time-range-picker-container {
+  @include flex-col($s-4);
+  @include body-regular;
+}

@@ -1,0 +1,11 @@
+@use "../../../../../../../../../assets//styles//abstract/variables" as *;
+.drawer-container {
+  .payment-type-cash-child-wrapper {
+    @include flex-gap($s-8);
+    align-items: center;
+    margin-bottom: $s-24;
+    .title {
+      @include h5-medium;
+    }
+  }
+}

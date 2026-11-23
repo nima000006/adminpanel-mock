@@ -1,0 +1,55 @@
+@use "../../../../../../../../assets/styles/abstract/variables" as *;
+
+.business-requests-detail-business-info-container {
+  .custom-alert {
+    .ant-alert-message {
+      @include subtitle2;
+    }
+  }
+  .custom-label-value-container {
+    @include flex-gap($s-10);
+    @include subtitle2;
+    margin-top: $s-46;
+  }
+  .custom-divider {
+    margin-top: $s-32;
+    @media (max-width: 575px) {
+      white-space: pre-wrap;
+    }
+
+    span {
+      @include h4-medium;
+      margin-top: $s-16;
+    }
+  }
+  .custom-statistic {
+    .ant-statistic-content-prefix {
+      @include flex-gap(0);
+      margin: 0;
+      @media (max-width: 1200px) and (min-width: 760px) {
+        display: none;
+      }
+    }
+    .ant-statistic-content {
+      border-radius: $s-8;
+      @include body-medium;
+      background-color: $black-03;
+      @include flex-center;
+      padding: 0 $s-8;
+      .value-container {
+        color: $primary-6;
+      }
+      .custom-suffix {
+        font-size: $s-16;
+        @include flex-center;
+        cursor: pointer;
+        @media (max-width: 1200px) and (min-width: 760px) {
+          display: none;
+        }
+      }
+    }
+  }
+  .custom-desc {
+    margin-top: $s-16;
+  }
+}

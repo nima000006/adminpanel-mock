@@ -1,0 +1,52 @@
+@use "../../../../assets/styles/abstract/variables" as *;
+.business-request-static-collapse-container {
+  background-color: var(--app-bg-container);
+  border-radius: 8px;
+  .business-request-static-collapse {
+    @include body-regular;
+  }
+  .custom-label {
+    @include flex-space-between;
+    font-size: $s-14;
+  }
+}
+.business-request-static-table-container {
+  background-color: var(--app-bg-container);
+  border-radius: 8px;
+  margin-top: $s-24;
+  padding: $s-40;
+  .business-request-actions-container {
+    margin-bottom: $s-24;
+  }
+  .request-time-container {
+    @include flex-col($s-5);
+    align-items: center;
+    .custom-tag {
+      width: $s-36;
+      height: $s-18;
+      border-radius: $s-18;
+      @include footnote;
+      margin: 0 !important;
+      color: $white;
+      &.custom-tag-green {
+        background: $green-7;
+        border-color: $green-7;
+      }
+      &.custom-tag-red {
+        background: $dust-red-7;
+        border-color: $dust-red-7;
+      }
+      &.custom-tag-orange {
+        background: $orange-6;
+        border-color: $orange-6;
+      }
+    }
+  }
+  .custom-tag-status {
+    width: fit-content;
+  }
+  .custom-tag-business-type {
+    @include flex-gap($s-5);
+    width: fit-content;
+  }
+}

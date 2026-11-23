@@ -1,0 +1,11 @@
+@use "../../../../../../../../../../../assets/styles/abstract/variables" as *;
+.my-invoices-and-docs-detail-debt-drawer-content-container {
+  .custom-link {
+    color: $primary-6;
+    @include flex-center;
+    gap: $s-5;
+  }
+  .custom-descriptions {
+    @include body-regular;
+  }
+}

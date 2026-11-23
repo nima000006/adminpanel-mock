@@ -1,0 +1,4 @@
+@use "../../../../../../../../assets/styles/abstract/variables" as *;
+.all-transaction-list-wallet-tab-container {
+  @include flex-col($s-16);
+}

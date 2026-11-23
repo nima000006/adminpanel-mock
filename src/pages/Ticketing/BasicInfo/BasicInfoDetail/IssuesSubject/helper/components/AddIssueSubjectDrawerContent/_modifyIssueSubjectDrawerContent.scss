@@ -1,0 +1,10 @@
+@use "../../../../../../../../assets/styles/abstract/variables" as *;
+.add-issue-subject-custom-checkbox-group-container {
+  .ant-row {
+    @include flex-col($s-8);
+    justify-content: flex-start;
+    .ant-col {
+      @include flex-gap($s-8);
+    }
+  }
+}

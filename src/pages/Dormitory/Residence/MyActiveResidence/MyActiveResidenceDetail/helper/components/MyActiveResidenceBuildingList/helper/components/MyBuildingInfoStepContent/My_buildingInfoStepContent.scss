@@ -1,0 +1,29 @@
+@use "../../../../../../../../../../../assets/styles/abstract/variables" as *;
+
+.attach-container {
+  height: auto;
+  .ant-btn {
+    border-color: $border-color-80;
+    background-color: var(--app-bg-layout);
+    padding: $s-32;
+  }
+
+  .image-attachment-container {
+    @include flex-center;
+    flex-direction: column;
+    gap: $s-8;
+  }
+
+  .residence-upload-no-delete {
+    min-height: $s-160 !important;
+
+    .ant-upload-list {
+      gap: $s-18;
+      height: auto;
+    }
+
+    .custom-upload-btn {
+      height: $s-100 !important;
+    }
+  }
+}

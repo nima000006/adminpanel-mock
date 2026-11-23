@@ -1,0 +1,17 @@
+@use "../../../../../../../../assets/styles/abstract/variables" as *;
+.sending-ticket-detail-card-container {
+  container-type: inline-size;
+  @container (max-width:140px) {
+    button {
+      padding: $s-2;
+    }
+    button span {
+      font-size: $s-10;
+    }
+
+    .ant-tag {
+      font-size: $s-8;
+      padding: $s-2;
+    }
+  }
+}

@@ -1,0 +1,45 @@
+@use "../../../../../../../../../../assets/styles/abstract/variables" as *;
+
+.insurance-detail-payment-type-installment-component-container {
+  margin: $s-40 0;
+  .payment-type-installment-component-container {
+    .insurance-payment-type-timeline-title {
+      display: flex;
+      justify-content: space-between;
+      .title {
+        @include flex-gap($s-12);
+      }
+      .detail-btn-link {
+        display: flex;
+        align-items: center;
+      }
+
+      .paid-root-container {
+        margin: $s-16;
+        .ant-timeline-item-tail {
+          border-inline-start: 2px solid #52c41a;
+        }
+      }
+      .suspended-root-container {
+        margin: $s-16;
+        .ant-timeline-item-tail {
+          background-color: #ff4d4f;
+          border-inline-start: 2px solid #f5222d;
+        }
+      }
+      .pending-paid-root-container {
+        margin: $s-16;
+        .ant-timeline-item-tail {
+          border-inline-start: 2px solid #faad14;
+        }
+      }
+      .over-due-root-container {
+        margin: $s-16;
+        .ant-timeline-item-tail {
+          background-color: #ffadd2;
+          border-inline-start: 2px solid #eb2f96;
+        }
+      }
+    }
+  }
+}

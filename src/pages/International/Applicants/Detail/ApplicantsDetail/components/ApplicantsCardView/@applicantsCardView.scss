@@ -1,0 +1,14 @@
+@use "../../../../../../../assets/styles/abstract/variables" as *;
+.applicants-card-view-container {
+  container-type: inline-size;
+  .ant-tag {
+    margin: 0;
+  }
+
+  @container (max-width: 140px) {
+    .ant-tag {
+      max-width: 70px;
+      font-size: $s-8;
+    }
+  }
+}

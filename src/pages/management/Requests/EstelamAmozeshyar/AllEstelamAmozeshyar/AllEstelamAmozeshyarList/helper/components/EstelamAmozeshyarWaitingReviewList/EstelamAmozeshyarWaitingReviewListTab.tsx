@@ -1,0 +1,205 @@
+import { useEffect, useState } from "react";
+
+import { Form } from "antd";
+import { AiOutlineFilter } from "react-icons/ai";
+
+import CustomButton from "@components/CustomInputs/CustomButton/CustomButton";
+import AdvanceFilterModal from "@components/Modals/AdvanceFilterModal/AdvanceFilterModal";
+import CustomBadge from "@components/Renderers/CustomBadge/CustomBadge";
+import CustomDivider from "@components/Renderers/CustomDivider/CustomDivider";
+import CustomTable from "@components/Renderers/CustomTable/CustomTable";
+import ToolBox from "@components/Renderers/ToolBox/ToolBox";
+import manualPaginationConfig from "@infra/helpers/TableHelpers/config/manualPagination";
+import TABLE_PROPS from "@infra/helpers/TableHelpers/config/TableProps";
+import useQueryParams from "@infra/hooks/useQueryParams";
+import {
+  useGetAllAmozeshyarListAdvanceFilterMutation,
+  useLazyGetAllEstelamAmozeshyarListQuery,
+} from "@infra/states/redux/Apis/management/requests/requestApi";
+import { hasActiveKey } from "@pages/management/_shared/hasActiveKey";
+import {
+  EstelamAmozeshyarByAdvanceFilterRequest,
+  EstelamAmozeshyarListItemType,
+  UseEstelamAmozeshyarAdvanceFilterFormType,
+} from "@pages/management/Requests/EstelamAmozeshyar/@types/@estelamAmozeshyarList";
+import {
+  ESTELAM_AMOZESHYAR_WAITING_REVIEW,
+  EstelamAmozeshyarListTabsKeys,
+} from "@pages/management/Requests/EstelamAmozeshyar/_shared/utils/estelamAmozeshyarUtil";
+
+import useEstelamAmozeshyarAdvanceFilter from "../../modals/advanceFilterModals/EstelamAmozeshyarAdvanceFilter";
+import ManagementEstelamAmozeshyarTableModel from "../../models/ManagementEstelamAmozeshyar/ManagementEstelamAmozeshyarTableModel";
+import "./_estelamAmozeshyarWaitingReviewListTab.scss";
+
+const advanceFilterItems = [
+  "username",
+  "studentNumber",
+  "firstName",
+  "lastName",
+  "mobileNo",
+  "branchId",
+  "dateDateStart",
+  "dateDateEnd",
+];
+
+const EstelamAmozeshyarWaitingReviewListTab = () => {
+  const [dataSource, setDataSource] = useState<EstelamAmozeshyarListItemType[] | []>([]);
+  const [totalPages, setTotalPages] = useState(0);
+  const [advanceModalOpen, setAdvanceModalOpen] = useState(false);
+
+  const { params: url, setSearchParams } = useQueryParams();
+  const [badgeCount, setBadgeCount] = useState(() => {
+    return url?.badger ?? 0;
+  });
+
+  const [form] = Form.useForm<UseEstelamAmozeshyarAdvanceFilterFormType>();
+
+  const { filterItemsList, fetchInitialData } = useEstelamAmozeshyarAdvanceFilter();
+
+  //? ================================  Api Calls ================================
+  const [getList, { isFetching: isGetListLoading }] =
+    useLazyGetAllEstelamAmozeshyarListQuery();
+
+  const [getListByAdvanceFilter, { isLoading: isAdvanceFilterListLoading }] =
+    useGetAllAmozeshyarListAdvanceFilterMutation();
+
+  //? ================================ Effects ================================
+  useEffect(() => {
+    if (EstelamAmozeshyarListTabsKeys.waitingReview === url?.tab || !url?.tab) {
+      if (hasActiveKey(url, advanceFilterItems)) {
+        const filters: EstelamAmozeshyarByAdvanceFilterRequest = {
+          ...(url?.username && { username: url?.username?.trim() }),
+          ...(url?.studentNumber && { studentNumber: url?.studentNumber?.trim() }),
+          ...(url?.mobileNo && { mobileNumber: url?.mobileNo?.trim() }),
+          ...(url?.firstName && { firstname: url?.firstName?.trim() }),
+          ...(url?.lastName && { lastname: url?.lastName?.trim() }),
+          ...(url?.branchId && {
+            branchId: url?.branchId?.split(",")?.map((item) => +item),
+          }),
+          ...(url?.dateDateStart && { requestDateFrom: url?.dateDateStart }),
+          ...(url?.dateDateEnd && { requestDateTo: url?.dateDateEnd }),
+        };
+        getListByAdvanceFilter({
+          statusId: ESTELAM_AMOZESHYAR_WAITING_REVIEW,
+          pageNumber: url?.page ? Number(url?.page) - 1 : 0,
+          pageSize: url?.pageSize ? Number(url?.pageSize) : 8,
+          ...filters,
+        })
+          .unwrap()
+          .then((value) => {
+            setDataSource(value?.content);
+            setTotalPages(value?.totalElements);
+          });
+      } else {
+        const requestParams = {
+          pageNo: url?.page ? Number(url?.page) - 1 : 0,
+          pageSize: url?.pageSize ? Number(url?.pageSize) : 8,
+        };
+
+        getList({
+          status: ESTELAM_AMOZESHYAR_WAITING_REVIEW,
+          params: requestParams,
+        })
+          .unwrap()
+          .then((value) => {
+            setDataSource(value?.content);
+            setTotalPages(value?.totalElements);
+          });
+      }
+    }
+  }, [
+    url?.page,
+    url?.pageSize,
+    url?.tab,
+    ...advanceFilterItems.map((key) => url?.[key]),
+  ]);
+
+  useEffect(() => {
+    if (advanceModalOpen) {
+      fetchInitialData();
+    }
+  }, [advanceModalOpen]);
+
+  //* ================================ Util Functions ================================
+  const openAdvanceFilterHandler = () => {
+    setAdvanceModalOpen(true);
+  };
+
+  const closeAdvanceFilterHandler = () => {
+    setAdvanceModalOpen(false);
+    form.resetFields();
+  };
+
+  //* ▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲ Main TSX ▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲
+  return (
+    <>
+      {advanceModalOpen && (
+        <AdvanceFilterModal
+          isModalOpen={advanceModalOpen}
+          closeModalHandler={closeAdvanceFilterHandler}
+          filterItemsList={filterItemsList}
+          form={form}
+          badgeCounter={(amount) => setBadgeCount(amount?.toString())}
+          defaultParams={{ ...url }}
+        />
+      )}
+
+      <div className="management-requests-estelam-amozeshyar-waiting-review-list-tab">
+        <CustomDivider text="لیست درخواست های استعلام آموزشیار" />
+        <div className="table-container">
+          <ToolBox
+            rightSide={
+              <>
+                <CustomBadge count={badgeCount}>
+                  <CustomButton
+                    type="primary"
+                    icon={<AiOutlineFilter />}
+                    onClick={openAdvanceFilterHandler}
+                  >
+                    فیلتر پیشرفته
+                  </CustomButton>
+                </CustomBadge>
+                {/* //Todo[Atefeh]: در جدول، ستون مورد نظر جستجو دارد. */}
+                {/* <CustomInput
+                suffix={<AiOutlineSearch  />}
+                placeholder="جستجو بر اساس کد ملی / فراگیر"
+                hasVerticalLabel={false}
+              /> */}
+              </>
+            }
+            leftSide={
+              <CustomButton type="primary" ghost disabled>
+                خروجی
+              </CustomButton>
+            }
+          />
+          <CustomTable<EstelamAmozeshyarListItemType>
+            dataSource={dataSource}
+            rowKey="id"
+            columns={ManagementEstelamAmozeshyarTableModel({
+              type: ESTELAM_AMOZESHYAR_WAITING_REVIEW,
+            })}
+            pagination={manualPaginationConfig({
+              total: totalPages,
+              onChange: (page, pageSize) => {
+                setSearchParams({
+                  ...url,
+                  page: page?.toString(),
+                  pageSize: pageSize?.toString(),
+                });
+              },
+              pageNumber: url?.page ? Number(url?.page) : 1,
+              defaultPageSize: url?.pageSize ? Number(url?.pageSize) : 8,
+            })}
+            loading={isGetListLoading || isAdvanceFilterListLoading}
+            className="waiting-review-list-table-container"
+            key={`table-${url?.pageSize || "8"} `}
+            {...TABLE_PROPS(dataSource?.length)}
+          />
+        </div>
+      </div>
+    </>
+  );
+};
+
+export default EstelamAmozeshyarWaitingReviewListTab;

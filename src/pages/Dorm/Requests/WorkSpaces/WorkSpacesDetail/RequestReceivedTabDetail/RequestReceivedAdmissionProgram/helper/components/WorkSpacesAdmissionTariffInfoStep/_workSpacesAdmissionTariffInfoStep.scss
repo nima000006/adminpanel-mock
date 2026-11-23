@@ -1,0 +1,15 @@
+@use "../../../../../../../../../../assets/styles/abstract/variables" as *;
+.request-sending-admission-tariff-info-step-container {
+  padding-top: $s-40;
+
+  .btn-wrapper {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: $s-16;
+  }
+
+  .ant-table-wrapper {
+    margin-top: $s-24;
+  }
+}

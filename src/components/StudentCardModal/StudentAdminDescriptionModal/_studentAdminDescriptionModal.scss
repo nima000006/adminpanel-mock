@@ -1,0 +1,27 @@
+@use "../../../assets/styles/abstract/variables" as *;
+.admin-confirm-modal-container {
+  .ant-modal-container {
+    display: flex;
+    flex-direction: column;
+  }
+  .text-area {
+    @include body-regular;
+    margin: $s-8 0;
+  }
+  .ant-modal-title {
+    @include h5-medium;
+  }
+  .admin-confirm-label {
+    // margin-bottom: 0.5rem;
+    @include h5-regular;
+    color: #6b6b6bd9;
+  }
+  .actions-btns-container {
+    display: flex;
+    gap: $s-16;
+    margin-top: $s-8;
+    button {
+      @include body-regular;
+    }
+  }
+}

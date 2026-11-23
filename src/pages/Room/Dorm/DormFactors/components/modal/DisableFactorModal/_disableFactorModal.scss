@@ -1,0 +1,11 @@
+.disable-modal-content-container {
+  .checkbox-cancelled {
+    .ant-row {
+      display: flex;
+      flex-direction: column;
+    }
+    .ant-col {
+      text-align: right;
+    }
+  }
+}

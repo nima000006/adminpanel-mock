@@ -1,0 +1,12 @@
+@use "../../../../../../../../../../../../assets/styles/abstract/variables" as *;
+.dorm-residence-room-detail-drawer-container {
+  .drawer-body {
+    @include flex-col($s-40);
+    .statistics-container {
+      @include flex-col($s-16);
+    }
+    .room-info-container {
+      @include flex-col($s-16);
+    }
+  }
+}

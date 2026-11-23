@@ -1,0 +1,28 @@
+@use "../../../../../assets/styles/abstract/variables" as *;
+.tables-sticky-column-left {
+  position: sticky !important;
+  left: 0;
+  box-shadow: $table-sticky-box-shadow;
+  overflow: hidden;
+  .business-main-table-btns-container {
+    display: flex;
+    gap: $s-12;
+    .dorm-edit-btn {
+      span {
+        @include body-regular;
+      }
+    }
+    .dorm-action-btn {
+      // background-color: $green;
+      span {
+        @include body-regular;
+      }
+    }
+    .inquiry-action-btn {
+      background-color: $green;
+      span {
+        @include body-regular;
+      }
+    }
+  }
+}

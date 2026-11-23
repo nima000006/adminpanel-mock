@@ -1,0 +1,130 @@
+@use "../../../../assets/styles/abstract/variables" as *;
+.pricing-basic-detail-container {
+  .first-box-pricing-detail {
+    width: 100%;
+    background-color: var(--app-bg-layout);
+    padding: $s-32 $s-12 $s-10 $s-2;
+
+    .dorm-business-wrapper {
+      box-shadow: 0px 0px 4px 0px rgb(243 243 243 / 80%);
+      padding: $s-20;
+      margin-bottom: $s-16;
+      max-width: $s-169;
+      background: $white;
+      border-radius: 20px;
+      @include flex-gap($s-8);
+      @include body-regular;
+
+      .business-text {
+        color: $neutral-7;
+      }
+    }
+
+    .room-score-rules-text-container {
+      .title {
+        @include h5-regular;
+        color: $black-3;
+      }
+      .sub-title {
+        @include body-regular;
+        color: $black-8;
+        margin-top: $s-4;
+      }
+      .rules-section-tabs-container {
+        margin-top: $s-32;
+      }
+      .mini-tab-container {
+        .ant-tabs-tab {
+          margin-left: $s-32;
+        }
+      }
+      .ant-tabs-nav-list {
+        display: flex;
+        gap: 0.4rem;
+
+        .ant-tabs-tab-btn {
+          @include body-regular;
+        }
+        .ant-tabs-tab-with-remove {
+          .ant-tabs-tab-remove {
+            display: none !important;
+          }
+        }
+        .rules-section-btn {
+          display: flex;
+          align-items: center;
+          gap: 0.5rem;
+          .rules-section-btn-label {
+            color: $blue-primary;
+            @include body-regular-bold;
+          }
+        }
+      }
+    }
+  }
+  .date-wrapper {
+    @include flex-gap($s-4);
+    @include body-regular;
+    margin: $s-10;
+  }
+  .second-box-pricing-detail {
+    margin-top: $s-28;
+    .basic-price-text {
+      @include body-regular;
+    }
+    .table-wrapper {
+      border: 1px solid $border-color-80;
+      border-radius: 10px;
+      margin-top: $s-4;
+      padding: $s-8;
+    }
+
+    .tabs-pricing-detail-container {
+      margin-bottom: $s-40;
+
+      .ant-tabs-nav-list {
+        .ant-tabs-tab {
+          margin-left: $s-32;
+          @media (max-width: 1500px) {
+            margin-left: $s-24;
+          }
+          @media (max-width: 1400px) {
+            margin-left: $s-14;
+          }
+          @media (max-width: 1250px) {
+            margin-left: $s-10;
+          }
+          @media (max-width: 900px) {
+            margin-left: $s-5;
+          }
+        }
+        .tabs-label {
+          @include h5-regular;
+          font-size: $s-14;
+          @media (max-width: 1295px) {
+            font-size: $s-13;
+          }
+          @media (max-width: 1200px) {
+            font-size: $s-12;
+          }
+          @media (max-width: 1120px) {
+            font-size: $s-11;
+          }
+          @media (max-width: 900px) {
+            font-size: $s-8;
+          }
+        }
+        .ant-tabs-tab-active {
+          @include h5-regular;
+          color: $blue-primary !important;
+        }
+      }
+    }
+  }
+  .tables-sticky-column-left {
+    position: sticky !important;
+    left: 0;
+    overflow: hidden;
+    box-shadow: $table-sticky-box-shadow;
+  }
+}

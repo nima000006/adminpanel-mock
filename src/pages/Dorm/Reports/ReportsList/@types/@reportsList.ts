@@ -1,0 +1,29 @@
+//! GENERAL
+//! LAYOUT
+export type ReportsListDebtorsTabType = {
+  id: number;
+  firstName: string;
+  lastName: string;
+  lastInstallmentStatus?: number;
+  nextInstallmentDueDate?: string;
+  balanceAmount?: string;
+  price?: string;
+  MobileNumber: string;
+  gender: number;
+  userGroup: number;
+  userId: string;
+  nationalCode: string;
+  residence: string;
+  building: string;
+  room: string;
+  unit: string;
+  typeSchedule: number;
+  startOfSettlement: string;
+  endOfSettlement: string;
+  startDebtors?: string;
+  durationDebtors?: string;
+  startCreditors?: string;
+  durationCreditors?: string;
+  settlementDate?: string;
+};
+//! API

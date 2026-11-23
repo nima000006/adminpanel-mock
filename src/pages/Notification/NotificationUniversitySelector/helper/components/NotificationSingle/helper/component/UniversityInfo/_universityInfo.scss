@@ -1,0 +1,22 @@
+@use "../../../../../../../../../assets/styles/abstract/variables" as *;
+.filter-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: $s-12;
+  width: 100%;
+  @media (max-width: 535px) {
+    flex-direction: column;
+    gap: unset;
+  }
+  .select-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: $s-4;
+    label {
+      @include body-regular;
+      color: $title-black;
+    }
+  }
+}

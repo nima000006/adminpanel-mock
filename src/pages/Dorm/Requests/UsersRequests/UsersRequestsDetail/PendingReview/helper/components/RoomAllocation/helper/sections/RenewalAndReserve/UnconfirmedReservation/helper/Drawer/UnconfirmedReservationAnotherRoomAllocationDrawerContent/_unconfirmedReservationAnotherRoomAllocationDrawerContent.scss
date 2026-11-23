@@ -1,0 +1,35 @@
+@use "../../../../../../../../../../../../../../../../assets/styles/abstract/variables"
+  as *;
+.unconfirmed-reservation-another-room-allocation-drawer-content-container {
+  .drawer-body {
+    @include flex-col($s-40);
+    .text {
+      @include body-regular;
+    }
+    .buildings-tab-container {
+      @include body-regular;
+    }
+    .floors-tab-container {
+      @include body-regular;
+
+      .floor-data {
+        @include flex-col($s-24);
+      }
+      .disabled-row {
+        .ant-table-cell {
+          color: $character-disabled-placeholder-25;
+          pointer-events: none;
+        }
+      }
+    }
+    .another-room-allocation-drawer-content-info-address {
+      margin-bottom: $s-24;
+    }
+  }
+  .action-btn-container {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: $s-8;
+  }
+}

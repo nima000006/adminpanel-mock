@@ -1,0 +1,75 @@
+@use "../../../../../../../../assets/styles/abstract/variables" as *;
+.business-requests-detail-top-chart-container {
+  .custom-divider {
+    margin-top: $s-40;
+    span {
+      @include h4-medium;
+    }
+  }
+  .file-download-container {
+    margin-top: $s-40;
+    @include flex-col($s-5);
+
+    .custom-statistic {
+      .ant-statistic-content-prefix {
+        @include flex-gap(0);
+        margin: 0;
+        @media (max-width: 1200px) and (min-width: 760px) {
+          display: none;
+        }
+      }
+      .ant-statistic-content {
+        border-radius: $s-8;
+        @include body-medium;
+        background-color: $black-03;
+        @include flex-center;
+        padding: 0 $s-8;
+        .value-container {
+          span {
+            color: $primary-6;
+            margin: 0;
+          }
+        }
+        .custom-suffix {
+          font-size: $s-16;
+          @include flex-center;
+          cursor: pointer;
+          margin: 0;
+          @media (max-width: 1200px) and (min-width: 760px) {
+            display: none;
+          }
+        }
+      }
+    }
+
+    span {
+      @include subtitle2;
+      margin-bottom: $s-5;
+    }
+  }
+  .custom-button {
+    flex-direction: row-reverse;
+  }
+  .empty-container {
+    .empty-image {
+      margin-bottom: 16;
+    }
+    p {
+      margin-top: $s-8;
+      margin-bottom: $s-16;
+    }
+  }
+  .business-requests-detail-top-chart-table-container {
+    .btn-container {
+      @include flex-center;
+      .delete-button {
+        color: $dust-red-7;
+      }
+    }
+  }
+  .custom-button-add-row {
+    width: 100%;
+    border-radius: 0 0 $s-8 $s-8;
+    border-color: $neutral-5 !important;
+  }
+}

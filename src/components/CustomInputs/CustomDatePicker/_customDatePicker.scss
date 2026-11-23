@@ -1,0 +1,66 @@
+@use "../../../assets/styles/abstract/variables" as *;
+.date-pick-container {
+  // margin: 1rem 0 2rem 0;
+  // min-height: 54px;
+  .ant-form-item-label {
+    overflow: unset;
+    label {
+      &::after {
+        content: "";
+      }
+    }
+  }
+  label {
+    @include body-regular;
+    height: 0 !important;
+  }
+  // .rmdp-container {
+  //   width: 100%;
+  //   @include body-regular;
+  //   .rmdp-input {
+  //     padding: $s-16;
+  //     width: 100%;
+  //     opacity: 0.7;
+  //     font-size: 1rem;
+  //   }
+  // }
+  .ant-form-item {
+    margin: 0;
+  }
+  .ant-form-item-explain-error {
+    color: var(--error-500);
+    font-family: "DanaFaNum";
+    font-style: normal;
+    font-weight: 500;
+    font-size: $s-12;
+    text-align: right;
+  }
+
+  .ant-picker-input {
+    @include body-regular;
+  }
+
+  .ant-form-item-control {
+    flex: unset;
+    width: 100%;
+  }
+  .ant-form-item-row {
+    gap: 0 !important;
+  }
+  .vertical-label {
+    .ant-form-item-row {
+      display: flex !important;
+      flex-direction: column !important;
+      align-items: flex-start !important;
+      gap: $s-4 !important;
+    }
+  }
+}
+.ant-picker {
+  width: 100%;
+}
+
+.ant-picker-panel-layout {
+  @include body-regular;
+  border-radius: 6px;
+}

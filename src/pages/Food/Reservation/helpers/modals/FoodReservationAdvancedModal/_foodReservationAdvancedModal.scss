@@ -1,0 +1,10 @@
+@use "../../../../../../assets/styles/abstract/variables" as *;
+.food-reserve-advanced-modal-container {
+  .ant-modal-title {
+    @include h5-bold;
+  }
+  .food-filter-submit-btn {
+    margin-top: 2.5rem;
+    width: 100%;
+  }
+}

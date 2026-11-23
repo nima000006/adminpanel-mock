@@ -1,0 +1,7 @@
+@use "../../../../../../../../assets/styles/abstract/variables" as *;
+.tariff-awaiting-review-basic-info-tab-container {
+  .tariff-copy-btn {
+    direction: ltr;
+    margin-top: $s-16;
+  }
+}

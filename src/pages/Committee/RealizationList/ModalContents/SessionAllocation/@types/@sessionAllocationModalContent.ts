@@ -1,0 +1,225 @@
+//! GENERAL
+
+import { BPMS_API_RESPONSE } from "../../../../../../infrastructure/states/redux/Apis/models/committeeApi.model";
+
+//! LAYOUT
+export type NotifType = {
+  id: number;
+  title: string;
+};
+//! API
+export type CommitteeRealizationOtherFile = {
+  understandingReviewPeriod: string;
+  studentNumber: string;
+  AssociationUnderstandingMeeting_id: string;
+  AssociationInfractions_title: string;
+  id: number;
+};
+export type GetCommitteeRealizationOtherFileResponse = {
+  data: CommitteeRealizationOtherFile[];
+  msg: string;
+  status: number;
+};
+export type GetCommitteeRealizationOtherFileRequest = {
+  maxResults: number;
+  AssociationUnderstandingMeeting_id_EQ: number;
+};
+export type GetSelectionMeetingResponse = BPMS_API_RESPONSE<
+  {
+    topicMeeting: string;
+    meetingDate: string;
+    id: number;
+  }[]
+>;
+
+export type GetCommitteeRealizationPresentationResponse = BPMS_API_RESPONSE<
+  {
+    firstName: string;
+    lastName: string;
+    id: number;
+  }[]
+>;
+export type GetCommitteeRealizationAllDataChangeMeetingResponse = BPMS_API_RESPONSE<{
+  studentNumber: string;
+  executionDate: null;
+  sendToEducAssistant: null;
+  StudentViceOpinion: null;
+  numberPreliminaryPunishments: string;
+  sendToReporter: null;
+  SecurityOpinion: null;
+  descSendResearchAssistant: null;
+  reportDate: null;
+  informationSource: string;
+  sendToConsultant: null;
+  id: number;
+  appealDefenseRegistrationDate: null;
+  meeting: number;
+  appealMeeting: number;
+  understandingReviewPeriod: string;
+  plaintiffType: number;
+  reasonSendReporter: null;
+  approvalRebellion: null;
+  descSendStudentPresident: null;
+  verbalWarning: boolean;
+  ReasonsReturningPreliminaryMeeting: string;
+  descProf: null;
+  caregiverName: string;
+  descStudent: string;
+  studentName: string;
+  sendToProtection: null;
+  EducationalAssistantOpinion: null;
+  needToBePresent: boolean;
+  understandingMeetingStatus: null;
+  sentenceType: null;
+  consultantOpinion: null;
+  reporterType: number;
+  tenant_id: null;
+  centralDefenseText: string;
+  descEscalation: string;
+  infractionType: 1;
+  centralDefenseRegistrationDate: string;
+  understandingCommitteCancellingReason: string;
+  Certainty: null;
+  descResearch: null;
+  numberAppealPunishments: string;
+  appealVoteDesc: string;
+  defenseRegistration: true;
+  term: string;
+  descStudentVice: null;
+  createDate: string;
+  reviewPeriod: string;
+  primaryNotificationType: number;
+  lessonCode: string;
+  rebellion: null;
+  charge: null;
+  dateVote: null;
+  studentPhoneNumber: string;
+  dateReferralForDefense: string;
+  AssociationUnderstandingNotification: {
+    tenant_id: null;
+    id: number;
+    title: string;
+  };
+  reporterFollowup: null;
+  typeCounselingSession: null;
+  reasonSendStudentPresident: null;
+  sentToResearchAssistant: boolean;
+  understandingNotificationMessage: string;
+  userId: number;
+  CommentRegistrEduAssistant: null;
+  dateOccurrence: string;
+  descEducationalAssistant: null;
+  ResearchAssistantOpinion: null;
+  defenseRegistrationDate: string;
+  referral: number;
+  caseLatestState: string;
+  centralDefensiveType: null;
+  reporterNationalcode: string;
+  textObjectionAppeal: string;
+  commonReport: string;
+  descSendProtection: null;
+  primaryNotificationMessage: string;
+  appealDefensiveType: null;
+  sendToResearchAssistant: null;
+  numberCentralPunishments: string;
+  ReasonPreliminaryMeeting: number;
+  appealDefenseText: null;
+  educationalFollowup: null;
+  secondCounselingSessionInfo: null;
+  readyForMeeting: null;
+  reporterName: string;
+  reasonSendEducAssistant: null;
+  infoVerbalWarning: string;
+  counselingSessionInfo: null;
+  caseLatestStep: null;
+  reasonEscalation: null;
+  CommentRegistrationDescription: null;
+  caregiverCode: string;
+  numberVotesFavorpPrimitive: string;
+  centralDefenseRegistration: boolean;
+  subjectReport: null;
+  sentToStudentVice: boolean;
+  userGroup: null;
+  studentFollowup: null;
+  descRejectReport: null;
+  defensiveType: null;
+  needToBePresentUnderstanding: boolean;
+  reporterNumber: string;
+  reporterPost: null;
+  executionStatus: null;
+  appealDefenseRegistration: null;
+  sendToStudentPresident: null;
+  priiority: number;
+  UnderstandingProvider: string;
+  sentToEducationalAssistant: boolean;
+  AppealsPenalty: null;
+  CommentRegistrStudentVice: null;
+  DescReturningPreliminaryMeeting: string;
+  SecurityDescription: null;
+  eventReport: string;
+  protectionFollowup: null;
+  descResearchAssistant: null;
+  textObjectionPreliminary: string;
+  doNotAcceptReport: boolean;
+  CommentRegistrResrchAssis: null;
+  eventDate: string;
+  understandingCommitteCancellingDescription: string;
+  checkStudentVice: null;
+  defenseText: string;
+  nationalCode: string;
+  needSendToResearchAssistant: null;
+  primaryProvider: string;
+  penalty: null;
+  dateAppealReferralForDefense: string;
+  researchReview: null;
+  legalArticle: null;
+  Anonymous: boolean;
+  researchFollowup: null;
+  understandingNotificationType: number;
+  reporterFamily: string;
+  recordKeepingStage: null;
+  placeViolation: string;
+  studentOpinion: null;
+  infraction: number;
+  understandingMeetingId: number;
+  descVerbalWarning: string;
+  understandingCommitteDescription: string;
+  secondCounselingSession: null;
+  reasonSendResearchAssistant: null;
+  descSendEducAssistant: null;
+  studentFamily: string;
+  centrulMeeting: number;
+  securityCheck: null;
+  requestType: number;
+  eventLocation: string;
+  descSendReporter: null;
+  violationStatus: number;
+  sentToSecurity: boolean;
+  reporterUni: null;
+  universityId: null;
+  dateCentralReferralForDefense: string;
+  reasonSendProtection: null;
+  descViolation: string;
+  reporterPhoneNumber: string;
+  centralVoteDesc: string;
+  descConsultantOpinion: string;
+  objectionVerdict: boolean;
+  AssociationUnderstandingMeeting: {
+    placeMeeting: number;
+    tenant_id: null;
+    topicMeeting: string;
+    descriptionUnderstandingCommittee: string;
+    meetingDate: string;
+    host: number;
+    id: number;
+    OpinionUnderstandingCommittee: number;
+    createDate: string;
+  };
+  characteristicCode: string;
+  reasonRejectReport: null;
+}>;
+export type GetCommitteeRealizationAllDataChangeMeetingRequest = {
+  _data_: {
+    id: string;
+  };
+};

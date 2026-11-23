@@ -1,0 +1,51 @@
+@use "../../../assets/styles/abstract/variables" as *;
+.notification-container {
+  .tabs-label {
+    @include body-regular;
+  }
+  //   .ant-tabs-nav-wrap {
+  // padding: $s-8 $s-16;
+  // @include card-shadow-2;
+  // border-radius: 20px;
+  // background-color: var(--app-bg-container);
+  // width: 100%;
+  // height: 100%;
+  //   }
+  //   .ant-tabs-nav-list {
+  // .ant-tabs-tab {
+  //   margin-left: $s-32;
+  //   @media (max-width: 1500px) {
+  //     margin-left: $s-24;
+  //   }
+  //   @media (max-width: 1400px) {
+  //     margin-left: $s-14;
+  //   }
+  //   @media (max-width: 1250px) {
+  //     margin-left: $s-10;
+  //   }
+  //   @media (max-width: 900px) {
+  //     margin-left: $s-5;
+  //   }
+  // }
+  // .tabs-label {
+  //   @include h5-regular;
+  //   font-size: $s-14;
+  //   @media (max-width: 1295px) {
+  //     font-size: $s-13;
+  //   }
+  //   @media (max-width: 1200px) {
+  //     font-size: $s-12;
+  //   }
+  //   @media (max-width: 1120px) {
+  //     font-size: $s-11;
+  //   }
+  //   @media (max-width: 900px) {
+  //     font-size: $s-8;
+  //   }
+  // }
+  // .ant-tabs-tab-active {
+  //   @include h5-regular;
+  //   color: $blue-primary !important;
+  // }
+  //   }
+}

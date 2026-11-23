@@ -1,0 +1,6 @@
+@use "../../../../../assets/styles/abstract/variables" as *;
+.dorm-tariff-steps-page-container {
+  .ant-steps-item-title {
+    @include body-regular;
+  }
+}

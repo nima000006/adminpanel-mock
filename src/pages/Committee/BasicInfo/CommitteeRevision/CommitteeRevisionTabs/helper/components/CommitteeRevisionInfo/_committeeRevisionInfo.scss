@@ -1,0 +1,30 @@
+@use "../../../../../../../../assets/styles/abstract/variables" as *;
+.committee-revision-info-container {
+  .make-change-btn {
+    @include body-regular;
+    margin-bottom: $s-35;
+  }
+  .committee-members-box-wrapper {
+    border: 1px solid $border-color-90;
+    border-radius: 10px;
+    padding: $s-16;
+    margin-bottom: $s-35;
+
+    .committee-members-box {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+      gap: $s-24;
+      @media (max-width: 600px) {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      }
+      @media (max-width: 430px) {
+        grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+      }
+    }
+  }
+  .voting-type-box-wrapper {
+    border: 1px solid $border-color-90;
+    border-radius: 10px;
+    padding: $s-16;
+  }
+}

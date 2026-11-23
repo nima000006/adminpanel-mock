@@ -1,0 +1,20 @@
+@use "../../../../assets/styles/abstract/variables" as *;
+.room-reqs-tab-container {
+  .ant-tabs-nav-list {
+    .ant-tabs-tab {
+      margin-left: $s-32;
+      @include body-regular;
+    }
+  }
+}
+
+.table-style {
+  direction: ltr;
+}
+.tables-sticky-column-left {
+  position: sticky !important;
+  left: 0;
+  box-shadow: $table-sticky-box-shadow;
+  background-color: $table-sticky-background-color;
+  overflow: hidden;
+}

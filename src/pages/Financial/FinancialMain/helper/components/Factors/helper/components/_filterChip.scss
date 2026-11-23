@@ -1,0 +1,6 @@
+@use "../../../../../../../../assets/styles/abstract/variables" as *;
+.finance-filter-chip-container {
+  @include flex-gap($s-8);
+  flex-wrap: wrap;
+  margin-top: $s-10;
+}

@@ -1,0 +1,9 @@
+@use "../../../assets/styles/abstract/variables" as *;
+.top-bar-profile-wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: $s-24;
+  @media (max-width: 750px) {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}

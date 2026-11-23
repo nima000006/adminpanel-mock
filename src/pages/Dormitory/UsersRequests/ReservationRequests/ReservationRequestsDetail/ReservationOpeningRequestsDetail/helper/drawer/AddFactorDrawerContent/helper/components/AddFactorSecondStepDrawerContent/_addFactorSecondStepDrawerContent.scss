@@ -1,0 +1,40 @@
+@use "../../../../../../../../../../../../assets/styles/abstract/variables" as *;
+
+.add-factor-second-step-drawer-content {
+  .radio-container {
+    .ant-radio-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: $s-16;
+      width: 100%;
+    }
+
+    .ant-radio-wrapper {
+      flex: 1 1 0;
+      min-width: 0;
+      margin-inline-end: 0 !important;
+      padding: $s-16;
+      background: $neutral-2;
+      border: 1px solid transparent;
+      border-radius: $s-16;
+      cursor: pointer;
+      align-items: center;
+
+      > span:last-child {
+        @include h5-regular;
+        color: $neutral-13;
+        padding-inline-start: $s-8;
+        padding-inline-end: 0;
+      }
+
+      &:hover {
+        border-color: $primary-6;
+      }
+
+      &.ant-radio-wrapper-checked {
+        border-color: $primary-6;
+        background: $neutral-2;
+      }
+    }
+  }
+}

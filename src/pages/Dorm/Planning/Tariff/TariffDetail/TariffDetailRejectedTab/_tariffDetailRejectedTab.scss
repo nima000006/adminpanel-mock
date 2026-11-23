@@ -1,0 +1,7 @@
+@use "../../../../../../assets/styles/abstract/variables" as *;
+.tariff-detail-rejected-tab-container {
+  @include flex-col($s-16);
+  .tariff-detail-tab {
+    @include body-regular;
+  }
+}

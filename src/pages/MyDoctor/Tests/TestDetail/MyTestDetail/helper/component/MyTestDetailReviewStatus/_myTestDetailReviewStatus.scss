@@ -1,0 +1,27 @@
+@use "../../../../../../../../assets/styles/abstract/variables" as *;
+
+.my-test-detail-review-status-container {
+  .empty-content-container {
+    @include flex-col($s-8);
+    align-items: center;
+  }
+
+  .table-container {
+    @include flex-col($s-16);
+    .filter-excel-btns-container {
+      @include flex-space-between;
+    }
+    .actions-btn {
+      @include flex-gap($s-4);
+      .buttons {
+        color: $primary-6;
+      }
+    }
+  }
+}
+
+.my-test-register-action-modal-content-container {
+  .ant-form-item {
+    margin-bottom: 0 !important;
+  }
+}

@@ -1,0 +1,12 @@
+@use "../../../../../../../../assets/styles/abstract/variables" as *;
+.management-all-detail-info-container {
+  .tab-container {
+    @include body-regular;
+    .ant-tabs-tab {
+      background-color: transparent !important;
+    }
+  }
+  .management-all-detail-info-select-container {
+    margin-top: $s-24;
+  }
+}

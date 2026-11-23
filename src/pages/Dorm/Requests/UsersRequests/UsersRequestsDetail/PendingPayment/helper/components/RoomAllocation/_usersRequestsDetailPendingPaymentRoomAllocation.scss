@@ -1,0 +1,8 @@
+@use "../../../../../../../../../assets/styles/abstract/variables" as *;
+.pending-review-payment-unconfirmed-reservation-container {
+  @include flex-col($s-40);
+}
+
+.pending-payment-this-room-allocation-drawer-content-container {
+  @include flex-col($s-40);
+}

@@ -1,0 +1,103 @@
+@use "../../../../../assets/styles/abstract/variables" as *;
+.qr-scanner-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background-color: var(--neutral-3);
+  border-radius: 12px;
+  overflow: hidden;
+  @include body-regular;
+
+  .qr-scanner-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 24px;
+    background-color: var(--app-bg-layout);
+    border-bottom: 1px solid var(--app-border);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+
+    h3 {
+      margin: 0;
+      font-size: 18px;
+      font-weight: 600;
+      color: var(--app-text);
+    }
+
+    .close-btn {
+      font-size: 18px;
+    }
+  }
+
+  .qr-scanner-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+    overflow: auto;
+
+    .scanner-wrapper {
+      width: 100%;
+      max-width: 500px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      // Override library styles if needed
+      > div {
+        width: 100% !important;
+      }
+    }
+
+    .scanner-instruction {
+      margin-top: 24px;
+      font-size: 16px;
+      color: var(--app-text);
+      text-align: center;
+      font-weight: 500;
+    }
+
+    .scanner-error {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 16px;
+      padding: 24px;
+      background-color: var(--app-bg-container);
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+
+      p {
+        margin: 0;
+        color: #ff4d4f;
+        text-align: center;
+        font-size: 14px;
+        line-height: 1.6;
+      }
+    }
+  }
+}
+
+// Responsive design
+@media (max-width: 768px) {
+  .qr-scanner-container {
+    .qr-scanner-header {
+      padding: 12px 16px;
+
+      h3 {
+        font-size: 16px;
+      }
+    }
+
+    .qr-scanner-content {
+      padding: 16px;
+
+      .scanner-instruction {
+        font-size: 14px;
+        margin-top: 16px;
+      }
+    }
+  }
+}

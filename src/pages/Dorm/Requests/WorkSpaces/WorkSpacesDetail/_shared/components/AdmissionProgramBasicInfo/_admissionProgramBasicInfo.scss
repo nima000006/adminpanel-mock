@@ -1,0 +1,12 @@
+@use "../../../../../../../../assets/styles/abstract/variables" as *;
+.work-spaces-admission-program-basic-info {
+  @include flex-col($s-40);
+  .table {
+    .ant-statistic-content-value {
+      min-width: unset;
+    }
+  }
+  .deadline {
+    direction: rtl;
+  }
+}

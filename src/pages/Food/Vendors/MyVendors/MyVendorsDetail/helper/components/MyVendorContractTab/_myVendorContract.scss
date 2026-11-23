@@ -1,0 +1,10 @@
+@use "../../../../../../../../assets/styles/abstract/variables" as *;
+.my-vendors-contract-tab-container {
+  container-type: inline-size; // برای فعال سازی کوئری
+  @include flex-col($s-24);
+  @container (max-width: 140px) {
+    button span {
+      font-size: 8px;
+    }
+  }
+}

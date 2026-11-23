@@ -1,0 +1,30 @@
+@use "../../../../../assets/styles/abstract/variables" as *;
+.bank-account-detail-container {
+  @include flex-col($s-40);
+
+  .pending-divider-extra-wrapper {
+    @include flex-gap($s-16);
+    .badge {
+      width: 64px;
+      height: 20px;
+      background: $dustred-6;
+      color: $white;
+      border-radius: 100px;
+      text-align: center;
+    }
+  }
+  .description-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+
+    .description-img {
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  .btn-handler {
+    @include flex-gap($s-16);
+    justify-content: flex-end;
+  }
+}

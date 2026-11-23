@@ -1,0 +1,11 @@
+@use "../../../../../../../../../../../assets/styles/abstract/variables" as *;
+.wallet-request-users-drawer-model-table-container {
+  margin-top: $s-16;
+  .custom-Custom-diff-days {
+    @include flex-center;
+    text-align: center;
+  }
+  .custom-tag {
+    width: fit-content;
+  }
+}

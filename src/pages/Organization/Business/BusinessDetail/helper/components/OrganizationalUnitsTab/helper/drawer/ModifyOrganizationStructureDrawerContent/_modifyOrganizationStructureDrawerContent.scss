@@ -1,0 +1,7 @@
+@use "../../../../../../../../../../assets/styles/abstract/variables" as *;
+.modify-organization-unit-drawer-container {
+  .parent-unit-label {
+    @include flex-gap($s-4);
+    align-items: center;
+  }
+}

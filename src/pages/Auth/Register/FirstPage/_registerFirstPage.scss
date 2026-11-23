@@ -1,0 +1,10 @@
+@use "../../../../assets/styles/abstract/variables" as *;
+.register-auth-first-page-container {
+  @include flex-col($s-20);
+  height: 100%;
+  .register-auth-first-page-form-container {
+    height: 100%;
+    @include flex-col($s-10);
+    justify-content: space-between;
+  }
+}

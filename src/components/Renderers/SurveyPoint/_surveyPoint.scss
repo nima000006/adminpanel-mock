@@ -1,0 +1,49 @@
+@use "../../../assets/styles/abstract/variables" as *;
+
+.survey-point-container {
+  .survey-point {
+    @include flex-center;
+    padding: $s-4 $s-8;
+    border-radius: 8px;
+  }
+
+  .text {
+    @include h5-bold;
+  }
+
+  .default {
+    border: 1px solid $neutral-5;
+    background-color: var(--app-bg-layout);
+    min-width: 80px;
+    min-height: 20px;
+    .default-text {
+      @include body-regular;
+      color: var(--app-text);
+    }
+  }
+
+  .normal {
+    background-color: $primary-1;
+    min-width: 84px;
+    min-height: 31px;
+    .normal-text {
+      color: $primary-5;
+    }
+  }
+  .medium {
+    background-color: $volcano-1;
+    min-width: 84px;
+    min-height: 31px;
+    .medium-text {
+      color: $volcano-5;
+    }
+  }
+  .emergency {
+    background-color: $dustred-1;
+    min-width: 84px;
+    min-height: 31px;
+    .emergency-text {
+      color: $dustred-5;
+    }
+  }
+}

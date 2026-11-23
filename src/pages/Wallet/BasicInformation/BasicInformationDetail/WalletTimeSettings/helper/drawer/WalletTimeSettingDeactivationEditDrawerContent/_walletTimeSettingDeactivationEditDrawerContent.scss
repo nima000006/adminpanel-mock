@@ -1,0 +1,49 @@
+@use "../../../../../../../../assets/styles/abstract/variables" as *;
+.wallet-time-setting-deactivation-edit-drawer-content-container {
+  @include body-regular;
+  .drawer-action-btns-wrapper {
+    @include flex-gap($s-8);
+  }
+  .form-content {
+    @include flex-col($s-40);
+  }
+  .ant-form-item-extra {
+    @include body-regular;
+  }
+
+  .radio-container {
+    .ant-radio-group {
+      @include flex-col($s-8);
+    }
+    .ant-radio-wrapper {
+      border-radius: 10px;
+      background: $neutral-3;
+      padding: $s-16;
+      cursor: pointer;
+
+      &:hover {
+        border-color: $primary-5;
+      }
+
+      // حالت انتخاب‌شده
+      &.ant-radio-wrapper-checked {
+        border: 1px solid $primary-5;
+        background: $primary-1;
+      }
+
+      .custom-radio-content {
+        margin-right: 10px;
+
+        .radio-title {
+          font-weight: bold;
+          color: var(--app-text-secondary);
+        }
+
+        .radio-desc {
+          color: var(--app-text);
+          margin-top: $s-4;
+        }
+      }
+    }
+  }
+}

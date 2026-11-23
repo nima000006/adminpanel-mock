@@ -1,0 +1,19 @@
+@use "../../../../../../../../assets/styles/abstract/variables" as *;
+.international-admission-program-modify-costs-info-container {
+  @include flex-col($s-40);
+  .costs-info-container {
+    @include flex-col($s-24);
+    .custom-select-container {
+      min-width: 60px;
+    }
+  }
+  .action-btn-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: $s-16;
+  }
+  .ant-input-number-group-wrapper {
+    width: 100% !important;
+  }
+}

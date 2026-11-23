@@ -1,0 +1,29 @@
+@use "../../../../../../../../../../../assets/styles/abstract/variables" as *;
+.uploader-container1 {
+  .ant-btn {
+    border-color: $danger-primary;
+    border-style: dashed;
+    background-color: var(--app-bg-layout);
+    padding: $s-32;
+  }
+}
+.my-contract-create-list-upload-text-container {
+  @include flex-gap($s-8);
+  align-items: center;
+  justify-content: center;
+  .upload-text-main {
+    font-weight: bold;
+  }
+  .upload-logo-main {
+    font-weight: bold;
+  }
+  .upload-text-second {
+    color: $black-8;
+  }
+  .upload-logo-second {
+    color: $black-8;
+  }
+  .custom-upload-btn {
+    min-width: 155.66px;
+  }
+}

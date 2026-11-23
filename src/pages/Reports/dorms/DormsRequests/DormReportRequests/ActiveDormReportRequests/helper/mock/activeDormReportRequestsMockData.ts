@@ -1,0 +1,47 @@
+/** Auto-generated mock data from API/page types. Adjust values as needed for local UI work. */
+
+import type {
+  ListOfRequestDormitoryResponse,
+} from "../../@types/@activeDormReportRequests";
+
+export const LIST_OF_REQUEST_DORMITORY_RESPONSE_MOCK: ListOfRequestDormitoryResponse = {
+  count: 10,
+  curenttherm: null,
+  data: [{
+  id: 1,
+  key: 1,
+  name: "نمونه name",
+  family: "family-mock",
+  jender: "jender-mock",
+  nationalcode: "0012345678",
+  mobile: "09121234567",
+  dormitoryname: "نمونه dormitoryname",
+  dormitorytype: "dormitorytype-mock",
+  dormitoryid: 1,
+  requesttype: "requesttype-mock",
+  score: "score-mock",
+  requestdate: "2026-05-02T10:20:27.741127",
+  studntNumber: "studntNumber-mock",
+  status: 1,
+  branchCode: "0012345678",
+  manual: "manual-mock",
+  refrenceNo: 1,
+  trackNo: 1,
+  adminUsername: null,
+  modifiedDate: null,
+  paymentDate: null,
+  manualPayment: "manualPayment-mock",
+  payemntType: 1,
+  description: "نمونه description",
+  active: true,
+  term: 1,
+  roomTitle: "نمونه roomTitle",
+  buildingTitle: "نمونه buildingTitle",
+  floorTitle: "نمونه floorTitle",
+  fieldName: "نمونه fieldName",
+  levelName: "نمونه levelName",
+}],
+  msg: "نمونه msg",
+  status: 1,
+  totalCount: 10,
+};

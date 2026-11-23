@@ -1,0 +1,75 @@
+@use "../../../../../../../../assets/styles/abstract/variables" as *;
+.wallet-financial-setting-card-info-container {
+  background-color: var(--app-bg-layout);
+  border-radius: $s-16;
+  padding: $s-16;
+  @include flex-col($s-16);
+  @include body-regular;
+
+  .wallet-financial-setting-first-box {
+    @include flex-col($s-12);
+
+    .first-box-first-row-wrapper {
+      display: flex;
+      justify-content: space-between;
+
+      .setting-title-wrapper {
+        @include flex-gap($s-8);
+
+        .setting-icon-Wrapper {
+          width: 20px;
+          height: 20px;
+          border-radius: $s-8;
+          background-color: $blue-5;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+      }
+    }
+
+    .allocated-wrapper {
+      @include flex-gap($s-8);
+      .allocated {
+        color: var(--app-text);
+      }
+      .allocated-value {
+        color: var(--app-text-secondary);
+        font-weight: bold;
+      }
+      @media (max-width: 860px) {
+        @include flex-col($s-8);
+      }
+    }
+
+    .date-wrapper {
+      @include flex-gap($s-8);
+      .date {
+        color: var(--app-text);
+      }
+
+      .date-value {
+        color: var(--app-text-secondary);
+      }
+
+      @media (max-width: 860px) {
+        @include flex-col($s-8);
+      }
+    }
+  }
+
+  .edit-icon-wrapper {
+    display: flex;
+    justify-content: flex-end;
+
+    .edit-icon-box {
+      width: 20px;
+      height: 20px;
+      border-radius: $s-8;
+      border: 1px solid $neutral-5;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+}

@@ -1,0 +1,5 @@
+@use "../../../../../../../../../../../../../../../../assets/styles/abstract/variables"
+  as *;
+.reservation-more-detail-drawer-content-container {
+  @include flex-col($s-40);
+}

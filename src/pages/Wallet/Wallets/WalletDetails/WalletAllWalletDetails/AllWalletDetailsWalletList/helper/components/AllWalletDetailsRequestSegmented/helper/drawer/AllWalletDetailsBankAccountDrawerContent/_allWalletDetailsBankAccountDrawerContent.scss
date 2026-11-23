@@ -1,0 +1,35 @@
+@use "../../../../../../../../../../../../assets/styles/abstract/variables" as *;
+.bank-account-drawer-content-container {
+  .bank-account-drawer-content-wrapper {
+    @include flex-col($s-40);
+
+    .description-wrapper {
+      display: grid;
+      grid-template-columns: 2fr 4fr;
+
+      .description-img {
+        display: flex;
+        align-items: center;
+        @include body-regular;
+      }
+    }
+
+    .badge {
+      width: 50px;
+      height: 25px;
+      background-color: $green-6;
+      color: $white;
+      border-radius: 10px;
+      text-align: center;
+    }
+
+    .rejected-alert {
+      @include flex-col($s-16);
+    }
+  }
+  .custom-alert {
+    .ant-alert-message {
+      @include subtitle2;
+    }
+  }
+}

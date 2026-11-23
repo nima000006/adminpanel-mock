@@ -1,0 +1,4 @@
+@use "../../../../../../assets/styles/abstract/variables" as *;
+.admission-detail-active-page-tab-container {
+  @include body-regular;
+}

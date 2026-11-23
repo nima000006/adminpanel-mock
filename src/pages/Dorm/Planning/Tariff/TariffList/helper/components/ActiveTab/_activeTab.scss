@@ -1,0 +1,16 @@
+@use "../../../../../../../../assets/styles/abstract/variables" as *;
+.dorm-active-tab-container {
+  @include flex-col($s-24);
+  .btn-wrapper {
+    @include flex-gap($s-16);
+    @media (max-width: 450px) {
+      flex-direction: column;
+      gap: $s-16;
+    }
+    .btn-text {
+      @media (max-width: 450px) {
+        width: 100%;
+      }
+    }
+  }
+}

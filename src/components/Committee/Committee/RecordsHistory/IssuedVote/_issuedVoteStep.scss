@@ -1,0 +1,88 @@
+@use "../../../../../assets/styles/abstract/variables" as *;
+.committee-records-submit-issued-vote-step-container {
+  display: flex;
+  flex-direction: column;
+  gap: $s-35;
+  .border-round-box {
+    padding: $s-24;
+    border-radius: 10px;
+    border: $border-1 solid $border-color-90;
+  }
+
+  .flex-col-g24 {
+    display: flex;
+    flex-direction: column;
+    gap: $s-24;
+  }
+  .flex-col-g32 {
+    display: flex;
+    flex-direction: column;
+    gap: $s-32;
+  }
+  .grid-cols-2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: $s-24;
+  }
+  .grid-cols-3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: $s-24;
+  }
+  .punishments-container {
+    display: grid;
+    grid-template-columns: repeat(1fr);
+    gap: $s-16;
+  }
+  .divider-switch-container {
+    display: grid;
+    grid-template-columns: 4fr auto;
+    gap: $s-16;
+    .switch-container {
+      align-self: center;
+      justify-self: end;
+    }
+  }
+  .intensification-sentence-desc {
+    grid-column: 1/3;
+  }
+  .ant-col {
+    width: 100%;
+    text-align: right;
+  }
+  .upload-container {
+    display: flex;
+    flex-direction: column;
+    gap: $s-13;
+    .title {
+      @include body-regular;
+      color: $title-black;
+    }
+    .upload-btn {
+      @include body-regular;
+      color: $title-black;
+    }
+    .ant-upload-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: $s-8;
+    }
+  }
+  .buttons-container {
+    @include flex-center;
+    justify-content: flex-end !important;
+    gap: $s-12;
+    button {
+      @include body-regular;
+    }
+    .back-btn {
+      color: $title-black;
+    }
+  }
+  .margin-top {
+    margin-top: $s-24;
+  }
+  .ant-form-item {
+    margin-bottom: 0 !important;
+  }
+}

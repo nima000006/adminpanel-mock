@@ -1,0 +1,20 @@
+@use "../../../../../../.././../assets/styles/abstract/variables" as *;
+.create-business-step {
+  margin-top: $s-40;
+  @include flex-col($s-40);
+
+  .segmented-container {
+    .ant-segmented-item-label {
+      display: flex;
+      align-items: center;
+      .ant-segmented-item-icon {
+        display: flex;
+      }
+    }
+  }
+
+  .btn-wrapper {
+    @include flex-gap($s-16);
+    justify-content: end;
+  }
+}

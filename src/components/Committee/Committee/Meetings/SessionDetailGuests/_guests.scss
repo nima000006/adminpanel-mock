@@ -1,0 +1,23 @@
+@use "../../../../../assets/styles/abstract/variables" as *;
+.guests-container {
+  .add-new-guests-btn {
+    @include body-regular;
+    margin-bottom: $s-16;
+  }
+  .committee-guests-table {
+    .absent-btn {
+      color: $danger-primary;
+      cursor: pointer;
+    }
+  }
+}
+.meeting-detail-absent-person-modal-container {
+  .inputs-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: $s-12;
+    @media (max-width: 1200px) {
+      grid-template-columns: 1fr;
+    }
+  }
+}

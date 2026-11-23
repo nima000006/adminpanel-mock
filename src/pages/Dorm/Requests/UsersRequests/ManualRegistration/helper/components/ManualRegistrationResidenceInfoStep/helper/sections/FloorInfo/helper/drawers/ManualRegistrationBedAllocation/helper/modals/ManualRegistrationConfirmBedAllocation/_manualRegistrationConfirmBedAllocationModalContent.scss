@@ -1,0 +1,7 @@
+@use "../../../../../../../../../../../../../../../../../assets/styles/abstract/variables"
+  as *;
+.manual-registration-confirmation-bed-allocation-modal-content-container {
+  .text {
+    @include body-regular;
+  }
+}

@@ -1,0 +1,8 @@
+@use "../../../../../../../../assets/styles/abstract/variables" as *;
+
+.residence-returned-details-container {
+  @include flex-col($s-40);
+  .btn-container {
+    direction: ltr;
+  }
+}

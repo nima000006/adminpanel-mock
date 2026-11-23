@@ -1,0 +1,28 @@
+@use "../../../../assets/styles/abstract/variables" as *;
+.auth-change-number-second-page-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+
+  .auth-change-number-title-wrapper {
+    margin-bottom: $s-24;
+    @include flex-col($s-8);
+  }
+  .change-number-form-content-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+
+    .btn-wrapper {
+      @include flex-col($s-8);
+      margin-top: $s-24;
+      .ant-btn-background-ghost {
+        border: none;
+      }
+      .ant-btn-icon {
+        display: flex;
+      }
+    }
+  }
+}

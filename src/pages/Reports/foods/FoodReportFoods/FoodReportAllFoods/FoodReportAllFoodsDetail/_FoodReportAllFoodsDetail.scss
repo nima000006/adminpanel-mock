@@ -1,0 +1,63 @@
+@use "../../../../../../assets/styles/abstract/variables" as *;
+.all-foods-detail-edit-drawer {
+  .drawer-header-btn {
+    @include flex-gap($s-12);
+    .ant-form-item {
+      margin-bottom: 0 !important;
+    }
+    @media (max-width: 576px) {
+      gap: $s-8;
+      .drawer-action-btn {
+        padding: $s-4 $s-6;
+        font-size: $s-12;
+      }
+    }
+  }
+}
+.all-foods-detail-container {
+  .divider-btn-container {
+    @include flex-center;
+    gap: $s-8;
+    @media (max-width: 400px) {
+      flex-direction: column;
+      margin-bottom: $s-16;
+    }
+    .edit-btn {
+      @media (max-width: 430px) {
+        padding: 0 $s-4;
+      }
+    }
+  }
+  .banner-rate-container {
+    margin-bottom: $s-16;
+    @include flex-space-between;
+    @media (max-width: 1060px) {
+      flex-direction: column;
+    }
+    .img-container {
+      @include flex-center;
+      gap: $s-24;
+      .img-wrapper {
+        @include flex-gap($s-24);
+      }
+      @media (max-width: 960px) {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: $s-12;
+      }
+      @media (max-width: 500px) {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: $s-12;
+      }
+
+      .food-img {
+        max-width: fit-content;
+        border-radius: 10px;
+        @media (max-width: 768px) {
+          max-width: $s-64;
+        }
+      }
+    }
+  }
+}

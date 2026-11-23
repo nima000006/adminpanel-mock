@@ -1,0 +1,17 @@
+@use "../../../../../assets/styles/abstract/variables" as *;
+.allocation-room-action-btns-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: $s-12;
+  button {
+    @include body-regular;
+    font-weight: 500;
+  }
+  .text-dangerous {
+    color: #ff4d4f;
+  }
+  .text-primary {
+    color: $blue-primary;
+  }
+}

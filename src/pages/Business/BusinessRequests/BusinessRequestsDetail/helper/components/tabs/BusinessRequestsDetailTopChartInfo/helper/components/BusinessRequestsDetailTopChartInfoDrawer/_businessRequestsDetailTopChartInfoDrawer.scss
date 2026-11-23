@@ -1,0 +1,18 @@
+@use "../../../../../../../../../../../assets/styles/abstract/variables" as *;
+.business-requests-top-chart-drawer-container {
+  .btn-container {
+    @include flex-gap($s-10);
+  }
+  .business-requests-top-chart-drawer-form-container {
+    padding: 0 !important;
+  }
+  .business-requests-top-chart-drawer-content-container {
+    padding: $s-40;
+  }
+  .ant-form-item-tooltip {
+    cursor: default !important;
+  }
+  .custom-select-container {
+    margin-bottom: 0 !important;
+  }
+}

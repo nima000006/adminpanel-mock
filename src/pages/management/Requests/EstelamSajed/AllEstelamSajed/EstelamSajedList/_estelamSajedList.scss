@@ -1,0 +1,21 @@
+@use "../../../../../../assets/styles/abstract/variables" as *;
+.management-requests-estelam-sajed-list-container {
+  container-type: inline-size;
+  .estelam-sajed-table-container {
+    @include body-regular;
+  }
+
+  @container (max-width: 140px) {
+    button {
+      padding: $s-2;
+    }
+    button span {
+      font-size: $s-12;
+    }
+
+    .right-side {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+}

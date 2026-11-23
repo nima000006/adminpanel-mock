@@ -1,0 +1,49 @@
+@use "../../../../../assets/styles/abstract/variables" as *;
+.food-my-vendor-list-container {
+  container-type: inline-size; // برای فعال سازی کوئری
+
+  display: flex;
+  flex-direction: column;
+  gap: $s-32;
+
+  .btn-wrapper {
+    display: flex;
+    justify-content: space-between;
+
+    @media (max-width: 600px) {
+      flex-direction: column;
+      gap: $s-16;
+    }
+  }
+  .food-my-vendor-list-table {
+    .status {
+      @include body-regular;
+    }
+  }
+
+  @container (max-width: 140px) {
+    button span {
+      font-size: $s-7;
+    }
+  }
+}
+.food-my-vendor-drawer {
+  .drawer-header-btn {
+    @include flex-gap($s-12);
+    .ant-form-item {
+      margin-bottom: 0 !important;
+    }
+    @media (max-width: 576px) {
+      gap: $s-8;
+      .drawer-action-btn {
+        padding: $s-4 $s-6;
+        font-size: $s-12;
+      }
+    }
+  }
+  @media (max-width: 470px) {
+    .ant-drawer-title {
+      font-size: $s-12;
+    }
+  }
+}

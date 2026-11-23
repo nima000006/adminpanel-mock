@@ -1,0 +1,15 @@
+@use "../../../../../../../../../assets/styles/abstract/variables" as *;
+.users-requests-detail-pending-list-room-allocation-container {
+  @include flex-col($s-40);
+
+  .pending-list-table-model-container {
+    .rooms-list-btn-container {
+      @include flex-gap($s-8);
+    }
+    .disabled-row {
+      .ant-table-cell {
+        color: $character-disabled-placeholder-25;
+      }
+    }
+  }
+}

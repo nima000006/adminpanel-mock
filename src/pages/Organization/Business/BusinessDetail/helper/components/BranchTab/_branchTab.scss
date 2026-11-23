@@ -1,0 +1,15 @@
+@use "../../../../../../../assets/styles/abstract/variables" as *;
+.modify-business-list-container {
+  @include flex-col($s-16);
+
+  .business-branch-list-table {
+    .checkout-container {
+      @include flex-gap($s-4);
+    }
+  }
+
+  .business-create-branch-btn {
+    padding: $s-8, 0;
+    @include body-regular;
+  }
+}

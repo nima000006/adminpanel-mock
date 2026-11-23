@@ -1,0 +1,31 @@
+@use "../../../../../assets/styles/abstract/variables" as *;
+.committee-realization-detail-register-comment-modal-container {
+  .form {
+    display: flex;
+    flex-direction: column;
+    gap: $s-40;
+    .inputs-container {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: $s-12;
+      @media (max-width: 1200px) {
+        grid-template-columns: 1fr;
+      }
+    }
+    .upload-container {
+      display: flex;
+      flex-direction: column;
+      gap: $s-13;
+      .ant-upload-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: $s-8;
+      }
+    }
+    .attachment-container {
+      display: flex;
+      flex-direction: column;
+      gap: $s-8;
+    }
+  }
+}

@@ -1,0 +1,36 @@
+@use "../../../../assets/styles/abstract/variables" as *;
+.signin-auth-first-page-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+
+  .signin-auth-title-wrapper {
+    margin-bottom: $s-24;
+  }
+  .auth-signin-form-content-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    .input-wrapper {
+      @include flex-col($s-16);
+      margin-bottom: $s-32;
+    }
+    .lable-card-section-wrapper {
+      @include flex-col($s-8);
+      margin-bottom: $s-10;
+    }
+    .signin-panel-btn {
+      .ant-btn-icon {
+        display: flex;
+      }
+    }
+
+    .password-wrapper {
+      @include flex-col($s-4);
+      .ant-checkbox-label {
+        @include body-regular;
+      }
+    }
+  }
+}

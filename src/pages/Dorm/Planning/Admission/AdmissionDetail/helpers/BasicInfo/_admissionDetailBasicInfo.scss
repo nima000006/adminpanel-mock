@@ -1,0 +1,16 @@
+@use "../../../../../../../assets/styles/abstract/variables" as *;
+.admission-detail-basic-info-container {
+  @include flex-col($s-16);
+  .custom-switch-container {
+    margin-bottom: 0;
+  }
+}
+
+.dorm-basic-info-admission-section-modal-title {
+  .dorm-inactive-modal-content-container {
+    @include body-regular;
+    .modal-content-text {
+      margin-bottom: $s-16;
+    }
+  }
+}

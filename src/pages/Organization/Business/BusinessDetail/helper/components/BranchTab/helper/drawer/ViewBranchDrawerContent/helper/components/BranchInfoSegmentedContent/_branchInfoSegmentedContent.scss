@@ -1,0 +1,4 @@
+@use "../../../../../../../../../../../../../assets/styles/abstract/variables" as *;
+.branch-info-segmented-content-container {
+  @include flex-col($s-40);
+}

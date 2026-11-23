@@ -1,0 +1,52 @@
+@use "./variables" as *;
+@forward "./variables";
+
+// Reset styles for consistent cross-browser behavior
+// IMPORTANT: Exclude Ant Design components to prevent breaking their styles
+*:not([class^="ant-"]):not([class*=" ant-"]) {
+  // margin: 0;
+  // padding: 0;
+  box-sizing: border-box;
+}
+
+// Box-sizing for all elements including Ant Design
+* {
+  box-sizing: border-box;
+}
+
+// Body styles
+body {
+  margin: 0 auto;
+  padding: 0;
+  max-width: 100%;
+  background-color: $page-main-background-color;
+  color: var(--app-text);
+  font-family: $font-family;
+  box-sizing: border-box;
+}
+
+// List styles
+ul,
+ol {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+// Heading and paragraph styles
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+// Anchor tag styles
+a {
+  text-decoration: none;
+  color: inherit;
+}

@@ -1,0 +1,55 @@
+@use "../../../../../../../../../../../../assets/styles/abstract/variables" as *;
+.my-wallet-details-account-select-item-container {
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
+  padding: $s-16;
+  border-radius: 16px;
+  background: var(--app-bg-layout);
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+
+  .account-item-content {
+    @include flex-gap($s-8);
+    align-items: center;
+    width: 100%;
+    min-width: 0;
+    overflow: hidden;
+
+    > div:first-child {
+      flex-shrink: 0;
+    }
+
+    .account-number {
+      flex: 1;
+      min-width: 0;
+      font-weight: 600;
+      font-size: 14px;
+      direction: ltr;
+      letter-spacing: 1px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    .info-icon {
+      flex-shrink: 0;
+      font-size: 16px;
+      color: #999;
+      cursor: pointer;
+      transition: color 0.2s;
+
+      &:hover {
+        color: #1890ff;
+      }
+    }
+
+    .label {
+      flex-shrink: 0;
+      font-size: 13px;
+      color: #666;
+    }
+  }
+}

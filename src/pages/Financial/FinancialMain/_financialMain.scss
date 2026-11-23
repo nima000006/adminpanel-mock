@@ -1,0 +1,13 @@
+@use "../../../assets/styles/abstract/variables" as *;
+.financial-main-container {
+  .ant-tabs-nav-list {
+    display: flex;
+    gap: $s-32;
+    .ant-tabs-tab-btn {
+      @include body-regular;
+    }
+    .ant-tabs-tab {
+      margin: 0;
+    }
+  }
+}

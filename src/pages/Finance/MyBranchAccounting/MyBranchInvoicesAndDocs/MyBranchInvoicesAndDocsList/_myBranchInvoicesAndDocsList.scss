@@ -1,0 +1,7 @@
+@use "../../../../../assets/styles/abstract/variables" as *;
+.branch-invoices-and-docs-container {
+  @include body-regular;
+  .ant-tabs-tab-btn {
+    @include flex-center;
+  }
+}

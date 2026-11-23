@@ -1,0 +1,4 @@
+@use "../../../../../../../assets/styles/abstract/variables" as *;
+.report-debtors-detail-factor-container {
+  @include flex-col($s-40);
+}

@@ -1,0 +1,62 @@
+@use "../../../../../../../../../../../../assets/styles/abstract/variables" as *;
+.account-info-drawer-container {
+  padding: $s-16;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--app-bg-layout);
+  align-items: center;
+
+  .account-item-content {
+    @include flex-gap($s-8);
+    align-items: center;
+    @include body-regular;
+
+    .account-number {
+      font-weight: 600;
+      font-size: $s-14;
+      letter-spacing: $s-1;
+    }
+
+    .info-icon {
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    .label {
+      font-size: $s-13;
+      color: var(--app-text);
+    }
+    .account-services {
+      @include flex-gap($s-4);
+      flex-wrap: wrap;
+      align-items: center;
+    }
+    .tooltip-item-container {
+      .title {
+        @include body-regular;
+        color: var(--app-text);
+      }
+      .value {
+        @include h5-medium;
+      }
+    }
+  }
+
+  .delete-icon {
+    border: 1px dashed $dustred-5;
+    padding: 8px;
+    border-radius: 100%;
+    display: flex;
+    cursor: pointer;
+
+    .icon {
+      color: $dustred-5;
+      font-size: $s-14;
+    }
+  }
+}
+
+.modal-text {
+  @include body-regular;
+}

@@ -1,0 +1,2 @@
+export const SESSION_CHANGE = "SESSION_CHANGE";
+export const NORMAL_SESSION = "NORMAL_SESSION";

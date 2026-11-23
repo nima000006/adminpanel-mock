@@ -1,0 +1,9 @@
+@use "../../../../../../../../../../../assets/styles/abstract/variables" as *;
+
+.custom-field-container {
+  @include flex-center;
+  svg {
+    margin-left: $s-10;
+    cursor: pointer;
+  }
+}

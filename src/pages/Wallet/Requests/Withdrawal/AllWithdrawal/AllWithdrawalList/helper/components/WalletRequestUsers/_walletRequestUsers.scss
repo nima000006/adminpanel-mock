@@ -1,0 +1,11 @@
+@use "../../../../../../../../../assets/styles/abstract/variables" as *;
+.ant-badge-status-text {
+  color: $neutral-7 !important;
+  margin: 0 !important;
+}
+.active-card-container {
+  .ant-badge-status-text {
+    color: $primary-7 !important;
+    margin: 0 !important;
+  }
+}

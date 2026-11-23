@@ -1,0 +1,22 @@
+@use "../../../../../assets/styles/abstract/variables" as *;
+.users-requests-list-page-container {
+  .users-requests-list-container {
+    @include flex-col($s-24);
+    .dorm-users-requests-tab-container {
+      @include body-regular;
+    }
+    .user-request-list-toolbox {
+      @media (max-width: 940px) {
+        flex-direction: column;
+        gap: $s-16;
+        align-items: flex-start;
+      }
+    }
+  }
+  .user-requests-tab-container {
+    @include flex-col($s-24);
+  }
+  .admission-select-item {
+    width: 200px;
+  }
+}

@@ -1,0 +1,48 @@
+@use "../../../../../../../../../../../assets/styles/abstract/variables" as *;
+.management-all-detail-bank-info-container {
+  .custom-card {
+    color: $neutral-10;
+    @include body-regular-bold;
+    width: 100%;
+    height: $s-178;
+    padding: $s-16;
+    @include flex-col($s-10);
+    background: url("/images/financeBank.png") no-repeat left;
+    .card-header {
+      @include flex-gap($s-5);
+      align-items: center;
+    }
+    .card-number {
+      direction: ltr;
+      text-align: end;
+      font-weight: 500;
+    }
+    .card-info-number {
+      @include flex-gap($s-5);
+      align-items: center;
+      div {
+        margin: 0;
+        color: $neutral-8 !important;
+        @include subtitle3;
+        @include flex-gap($s-5);
+        flex-direction: row-reverse;
+        align-items: center;
+      }
+      > .custom-paragraph span {
+        height: $s-24;
+        width: $s-24;
+        border-radius: $s-6;
+        cursor: pointer;
+        @include flex-center;
+
+        color: $neutral-10;
+        border: $s-1 solid $neutral-5 !important;
+        @include body-regular;
+      }
+      > .custom-paragraph div:last-child {
+        direction: ltr;
+        text-align: end;
+      }
+    }
+  }
+}

@@ -1,0 +1,20 @@
+@use "../../../../../../../assets/styles/abstract/variables" as *;
+.contracts-detail-info-container {
+  .contracts-detail-info-custom-segmented {
+    .ant-segmented-item-label {
+      width: $s-124 !important;
+    }
+  }
+  .ant-alert-message {
+    font-weight: 400 !important;
+  }
+}
+
+.reminder-modal-custom {
+  .ant-modal-container {
+    background-color: $white !important;
+  }
+  .modal-btn-container {
+    justify-content: flex-end !important;
+  }
+}

@@ -1,0 +1,13 @@
+@use "../../../../../assets/styles/abstract/variables" as *;
+.dorm-basic-info-special-conditions-type-container {
+  @include flex-col($s-16);
+  .dorm-special-condition-table-container {
+    .ant-form-item {
+      margin-bottom: 0 !important;
+    }
+  }
+}
+
+.dorm-basic-info-switch-modal {
+  @include body-regular;
+}

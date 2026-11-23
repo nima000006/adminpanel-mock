@@ -1,0 +1,24 @@
+@use "../../../../../../../../assets/styles/abstract/variables" as *;
+.committee-general-punishment-info-container {
+  .make-change-btn {
+    @include body-regular;
+    margin-bottom: $s-35;
+  }
+  .input-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: $s-16;
+    .grid-cols-3 {
+      display: grid;
+      grid-template-columns: repeat(2fr, 1fr, 1fr);
+      gap: $s-12;
+      // .ant-col {
+      //   width: 100%;
+      //   text-align: right;
+      // }
+      .check-box-container {
+        @include body-regular;
+      }
+    }
+  }
+}

@@ -1,0 +1,7 @@
+@use "../../../../../../../../../../../../../../../../../assets/styles/abstract/variables"
+  as *;
+.manual-registration-payment-type-modal-content-container {
+  .alert-container {
+    @include flex-col($s-16);
+  }
+}

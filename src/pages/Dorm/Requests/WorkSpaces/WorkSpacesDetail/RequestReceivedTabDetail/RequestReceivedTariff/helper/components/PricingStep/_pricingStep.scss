@@ -1,0 +1,8 @@
+@use "../../../../../../../../../../assets/styles/abstract/variables" as *;
+.work-spaces-pricing-step-container {
+  margin-top: $s-40;
+  .btn-wrapper {
+    @include flex-gap($s-8);
+    direction: ltr;
+  }
+}

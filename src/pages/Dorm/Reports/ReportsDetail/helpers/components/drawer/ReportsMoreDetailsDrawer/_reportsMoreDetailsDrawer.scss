@@ -1,0 +1,7 @@
+@use "../../../../../../../../assets/styles/abstract/variables" as *;
+.dorm-reports-more-details-drawer-container {
+  .payment-type-wrapper {
+    @include flex-gap($s-8);
+    margin-bottom: $s-24;
+  }
+}

@@ -1,0 +1,7 @@
+@use "../../../../../../../../assets/styles/abstract/variables" as *;
+.dorm-inActive-admission-schedule-tab-container {
+  @include flex-col($s-20);
+  .alert {
+    margin-top: $s-20;
+  }
+}

@@ -1,0 +1,65 @@
+@use "../../../../../../../../../assets/styles/abstract/variables" as *;
+.my-self-detail-tab-container {
+  @include flex-col($s-40);
+  .self-information-container {
+    @include flex-col($s-24);
+    .divider-btn-container {
+      @include flex-center;
+      gap: $s-8;
+      @media (max-width: 576px) {
+        flex-direction: column;
+      }
+    }
+    .banner-rate-container {
+      @include flex-space-between;
+      @media (max-width: 800px) {
+        flex-direction: column;
+      }
+      .img-container {
+        @include flex-center;
+        gap: $s-24;
+        @media (max-width: 475px) {
+          flex-direction: column;
+        }
+
+        .self-img {
+          max-width: fit-content;
+          @media (max-width: 768px) {
+            max-width: 65px;
+          }
+        }
+      }
+    }
+  }
+  .contact-information-container {
+    @include flex-col($s-24);
+  }
+}
+
+.self-detail-drawer {
+  .self-detail-drawer-action-btns-container {
+    @include flex-center;
+    gap: $s-16;
+    @media (max-width: 576px) {
+      gap: $s-8;
+      .drawer-action-btn {
+        padding: $s-4 $s-6;
+        font-size: $s-12;
+      }
+    }
+    .ant-form-item {
+      margin-bottom: 0 !important;
+    }
+  }
+  @media (max-width: 576px) {
+    .ant-drawer-title {
+      font-size: $s-14 !important;
+    }
+  }
+}
+
+.self-detail-modal-container {
+  .desc {
+    @include body-regular;
+  }
+}

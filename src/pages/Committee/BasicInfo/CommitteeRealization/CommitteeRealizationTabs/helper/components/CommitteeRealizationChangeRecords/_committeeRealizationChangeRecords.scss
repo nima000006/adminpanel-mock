@@ -1,0 +1,47 @@
+@use "../../../../../../../../assets/styles/abstract/variables" as *;
+.committee-realization-change-records-container {
+  .ant-steps-vertical {
+    gap: $s-20;
+  }
+  .ant-steps-item-title {
+    width: 100%;
+  }
+  .ant-steps-item-icon {
+    float: right !important;
+  }
+  .ant-steps-icon {
+    color: $character-disabled-placeholder-25;
+    font-family: DanaFaNum;
+    font-size: $s-16;
+    font-style: normal;
+    font-weight: 400;
+    line-height: $s-24;
+  }
+  .steps-title {
+    @include body-regular;
+    margin-bottom: $s-12;
+  }
+
+  .committee-members-box-wrapper {
+    border: 1px solid $border-color-90;
+    border-radius: 10px;
+    padding: $s-16;
+    margin-bottom: $s-35;
+    .committee-members-box {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(330px, 1fr));
+      gap: $s-24;
+      @media (max-width: 700px) {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      }
+      @media (max-width: 580px) {
+        grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+      }
+    }
+  }
+  .voting-type-box-wrapper {
+    border: 1px solid $border-color-90;
+    border-radius: 10px;
+    padding: $s-16;
+  }
+}

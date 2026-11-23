@@ -1,0 +1,27 @@
+@use "../../../../assets/styles/abstract/variables" as *;
+.dorm-reports-list-page-container {
+  .reports-list-page-wrapper {
+    .dorm-reports-tab-container {
+      @include body-regular;
+    }
+    .dorm-reports-list-toolbox {
+      align-items: flex-start;
+      gap: $s-16;
+      .right-side {
+        @media (max-width: 480px) {
+          flex-direction: column;
+        }
+      }
+      .left-side {
+        @media (max-width: 480px) {
+          flex-direction: column;
+          gap: unset;
+          margin-bottom: $s-8;
+          .ant-form-item {
+            margin-bottom: $s-8;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,19 @@
+@use "../../../../../../../../assets/styles/abstract/variables" as *;
+
+.food-all-vendor-list-drawer-content-container {
+  .attach-row {
+    @include flex-gap($s-8);
+    .ant-btn {
+      border-color: $danger-primary;
+      border-style: dashed;
+      background-color: var(--app-bg-layout);
+      padding: $s-32;
+    }
+  }
+  .info-contact-divider {
+    margin-top: $s-12;
+  }
+  .map {
+    margin-top: $s-32;
+  }
+}

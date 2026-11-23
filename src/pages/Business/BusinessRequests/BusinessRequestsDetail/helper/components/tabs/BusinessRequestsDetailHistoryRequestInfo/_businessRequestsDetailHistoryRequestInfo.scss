@@ -1,0 +1,59 @@
+@use "../../../../../../../../assets/styles/abstract/variables" as *;
+.business-request-detail-history-request-container {
+  .custom-alert {
+    &.ant-alert-info {
+      .ant-alert-icon {
+        font-size: $s-14;
+        margin-top: $s-5;
+      }
+    }
+    .ant-alert-message {
+      @include subtitle2;
+    }
+  }
+  .custom-list {
+    list-style: disc;
+    margin-right: $s-20;
+  }
+  .business-request-detail-history-request-filter-container {
+    margin: $s-20 0;
+  }
+  .ant-timeline {
+    width: fit-content;
+    margin-right: -$s-480;
+    @media (max-width: 950px) {
+      margin-right: -$s-400;
+    }
+    @media (max-width: 800px) {
+      margin-right: -$s-320;
+    }
+    @media (max-width: 700px) {
+      margin-right: -$s-160;
+    }
+  }
+  .custom-label {
+    color: var(--app-text);
+    display: flex;
+    flex-direction: column;
+    margin-bottom: $s-10;
+    @include body-regular;
+    font-size: $s-12;
+  }
+  .ant-timeline-item-content {
+    @include body-regular;
+    p:nth-child(2),
+    p:nth-child(3) {
+      color: var(--app-text);
+      font-size: $s-12;
+      margin-bottom: $s-10;
+    }
+    .ant-tag {
+      font-size: $s-12;
+    }
+  }
+  .anticon-clock-circle {
+    svg {
+      color: $neutral-7 !important;
+    }
+  }
+}

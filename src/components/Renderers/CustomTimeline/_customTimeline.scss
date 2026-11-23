@@ -1,0 +1,9 @@
+@use "../../../assets/styles/abstract/variables" as *;
+.custom-timeline-main-container {
+  @include body-regular;
+}
+.ant-timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}

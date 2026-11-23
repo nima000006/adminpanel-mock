@@ -1,0 +1,13 @@
+@use "../../../../../../../../../../../assets/styles/abstract/variables" as *;
+.users-requests-detail-tariff-drawer-content-container {
+  @include flex-col($s-40);
+  .users-requests-detail-admission-time-type-container {
+    margin-top: $s-40;
+    .users-requests-detail-admission-time-type-field {
+      @include flex-gap($s-10);
+      .users-requests-detail-admission-time-type-icon {
+        color: $character-disabled-placeholder-25;
+      }
+    }
+  }
+}

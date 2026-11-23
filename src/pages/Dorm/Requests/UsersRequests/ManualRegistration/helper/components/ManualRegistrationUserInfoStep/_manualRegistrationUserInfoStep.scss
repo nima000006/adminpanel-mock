@@ -1,0 +1,17 @@
+@use "../../../../../../../../assets/styles/abstract/variables" as *;
+.manual-registration-user-info-step-container {
+  @include flex-col($s-40);
+  .form-container {
+    @include flex-col($s-40);
+  }
+  .search-btn-container {
+    display: flex;
+    justify-content: flex-end;
+  }
+  .step-btn-container {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: $s-16;
+  }
+}

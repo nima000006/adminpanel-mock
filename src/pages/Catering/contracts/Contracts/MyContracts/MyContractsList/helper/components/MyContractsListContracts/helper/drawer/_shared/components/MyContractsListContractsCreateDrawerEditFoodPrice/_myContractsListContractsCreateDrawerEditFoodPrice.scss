@@ -1,0 +1,46 @@
+@use "../../../../../../../../../../../../../../assets/styles/abstract/variables" as *;
+
+.my-contracts-list-contracts-create-drawer-edit-food-price-modal {
+  .my-contracts-list-contracts-create-drawer-edit-food-price-modal__body {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: stretch;
+    gap: $s-20;
+  }
+
+  .my-contracts-list-contracts-create-drawer-edit-food-price-modal__image {
+    width: fit-content;
+    align-self: flex-start;
+
+    .ant-form-item {
+      margin-bottom: 0;
+    }
+
+    .ant-upload-wrapper,
+    .ant-upload,
+    .ant-upload-list-item-container,
+    .ant-upload-list-item {
+      width: $s-100 !important;
+      height: $s-100 !important;
+    }
+
+    .ant-upload-list-item {
+      overflow: hidden;
+      border: 1px solid $neutral-5;
+      border-radius: $s-8;
+      padding: 0;
+    }
+
+    .ant-upload-list-item-thumbnail,
+    .ant-upload-list-item-image {
+      width: 100% !important;
+      height: 100% !important;
+      object-fit: cover;
+    }
+  }
+
+  .my-contracts-list-contracts-create-drawer-edit-food-price-modal__fields {
+    width: 100%;
+  }
+}

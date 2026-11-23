@@ -1,0 +1,4 @@
+export const PRIMARY_COMMITTEE_ID = 1;
+export const REVISION_COMMITTEE_ID = 2;
+export const CENTRAL_COMMITTEE_ID = 3;
+export const REALIZATION_COMMITTEE_ID = 4;

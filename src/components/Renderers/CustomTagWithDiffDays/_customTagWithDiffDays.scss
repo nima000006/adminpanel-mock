@@ -1,0 +1,16 @@
+@use "../../../assets/styles/abstract/variables" as *;
+.custom-tag-with-diff-days-container {
+  .green {
+    background-color: $green;
+  }
+  .yellow {
+    background-color: $yellow;
+  }
+  .red {
+    background-color: $red;
+  }
+  .check-btn {
+    color: $blue-primary;
+    cursor: pointer;
+  }
+}

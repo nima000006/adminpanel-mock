@@ -1,0 +1,283 @@
+import { useState, useEffect } from "react";
+
+import { Col, Row, UploadFile } from "antd";
+
+import {
+  CustomInput,
+  CustomRangePicker,
+  CustomSelect,
+  CustomTextArea,
+} from "@components/CustomInputs";
+import CustomUploader from "@components/CustomInputs/CustomUploader/CustomUploader";
+import { useGetCateringSelfsListMutation } from "@infra/states/redux/Apis/catering/selfs/selfsApi";
+import { useGetAllVendorListMutation } from "@infra/states/redux/Apis/catering/vendors/vendorsApi";
+import { REQUIRED_RULE } from "@infra/validation/validationSchema";
+import { IdTitle } from "@pages/_shared/@types/@generalTypes/@generalTypes";
+import { selectNotFoundContent } from "@pages/_shared/utils";
+import { CATERING_STATUS_TYPES_MAIN_LIST } from "@pages/Catering/_shared/utils";
+import { RequestsContractsListWaitedCreatedDrawerContentDetailsProps } from "@pages/Catering/contracts/Requests/RequestsContractsList/helper/components/RequestsContractsListWaited/helper/components/RequestsContractsListWaitedCreatedDrawerContent/helper/components/RequestsContractsListWaitedCreatedDrawerContentDetails/@types/@requestsContractsListWaitedCreatedDrawerContentDetails";
+
+function RequestsContractsListWaitedCreatedDrawerContentDetails({
+  form,
+  data,
+}: RequestsContractsListWaitedCreatedDrawerContentDetailsProps) {
+  const [vendorsData, setVendorsData] = useState<IdTitle[]>([]);
+  const [selfsData, setSelfsData] = useState<IdTitle[]>([]);
+  const [firstFile, setFirstFile] = useState<UploadFile[]>([]);
+  const [secondFile, setSecondFile] = useState<UploadFile[]>([]);
+  const [thirdFile, setThirdFile] = useState<UploadFile[]>([]);
+  const [fourthFile, setFourthFile] = useState<UploadFile[]>([]);
+
+  //? ================================ Api Calls ================================
+  const [
+    getCateringSelfsList,
+    { isLoading: isSelfDataLoading, isSuccess: isSelfsSuccess },
+  ] = useGetCateringSelfsListMutation();
+
+  const [getVendors, { isLoading: isVendorsDataLoading, isSuccess: isVendorsSuccess }] =
+    useGetAllVendorListMutation();
+
+  //* ================================ Util Functions ================================
+  const getSelfsHandler = () => {
+    if (!isSelfsSuccess) {
+      getCateringSelfsList({
+        params: {
+          pageNumber: 0,
+          pageSize: 100,
+          sortBy: "createdDate",
+          sortDirection: "DESC",
+        },
+        body: {
+          statusType: CATERING_STATUS_TYPES_MAIN_LIST,
+        },
+      })
+        .unwrap()
+        .then((value) =>
+          setSelfsData(
+            value?.content?.map((item) => ({ id: item?.id, title: item?.title }))
+          )
+        );
+    }
+  };
+
+  const getVendorsHandler = () => {
+    if (!isVendorsSuccess) {
+      getVendors({
+        params: {
+          pageNumber: 0,
+          pageSize: 100,
+          sortBy: "createdDate",
+          sortDirection: "DESC",
+        },
+        body: {
+          statusType: CATERING_STATUS_TYPES_MAIN_LIST,
+        },
+      })
+        .unwrap()
+        .then((value) =>
+          setVendorsData(
+            value?.content?.map((item) => ({ id: item?.id, title: item?.title }))
+          )
+        );
+    }
+  };
+
+  //* ================================ Effects  ================================
+  useEffect(() => {
+    if (data?.file1) {
+      setFirstFile([
+        {
+          uid: data?.file1,
+          name: data?.file1,
+          status: "done",
+          url: data?.file1,
+        },
+      ]);
+    } else {
+      setFirstFile([]);
+    }
+    if (data?.file2) {
+      setSecondFile([
+        {
+          uid: data?.file2,
+          name: data?.file2,
+          status: "done",
+          url: data?.file2,
+        },
+      ]);
+    } else {
+      setSecondFile([]);
+    }
+    if (data?.file3) {
+      setThirdFile([
+        {
+          uid: data?.file3,
+          name: data?.file3,
+          status: "done",
+          url: data?.file3,
+        },
+      ]);
+    } else {
+      setThirdFile([]);
+    }
+    if (data?.file4) {
+      setFourthFile([
+        {
+          uid: data?.file4,
+          name: data?.file4,
+          status: "done",
+          url: data?.file4,
+        },
+      ]);
+    } else {
+      setFourthFile([]);
+    }
+  }, [data?.file1, data?.file2, data?.file3, data?.file4]);
+
+  /* //* ▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲ Main TSX ▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲ */
+  return (
+    <>
+      <Row gutter={[16, 16]} className="mt-5!">
+        <Col span={12}>
+          <CustomInput
+            name="contractTitle"
+            label="عنوان قرارداد"
+            placeholder="عنوان قرارداد را وارد کنید"
+            rules={[REQUIRED_RULE]}
+          />
+        </Col>
+        <Col span={12}>
+          <CustomSelect
+            options={vendorsData}
+            name="supplierName"
+            label="تأمین کننده"
+            placeholder="انتخاب تأمین کننده"
+            form={form}
+            rules={[REQUIRED_RULE]}
+            className="mb-0!"
+            isLoading={isVendorsDataLoading}
+            onClick={getVendorsHandler}
+            notFoundContent={!isVendorsSuccess ? selectNotFoundContent : undefined}
+          />
+        </Col>
+        <Col span={12}>
+          <CustomSelect
+            options={selfsData}
+            name="selfName"
+            label="سلف"
+            placeholder="انتخاب سلف"
+            form={form}
+            rules={[REQUIRED_RULE]}
+            className="mb-0!"
+            isLoading={isSelfDataLoading}
+            onClick={getSelfsHandler}
+            notFoundContent={!isSelfsSuccess ? selectNotFoundContent : undefined}
+          />
+        </Col>
+        <Col span={12}>
+          <CustomInput
+            name="contractNumber"
+            label="شماره قرارداد"
+            placeholder="شماره قرارداد را وارد کنید"
+            rules={[REQUIRED_RULE]}
+          />
+        </Col>
+        <Col span={12}>
+          <CustomRangePicker
+            name="contractDateRange"
+            label="شروع و پایان قرارداد"
+            rules={[REQUIRED_RULE]}
+          />
+        </Col>
+      </Row>
+      <Row gutter={[16, 16]} className="mt-5!">
+        <Col span={12}>
+          <CustomInput
+            name="supplierSharePercentage"
+            label="سهم تأمین کننده"
+            placeholder="سهم تأمین کننده را وارد کنید"
+            suffix="%"
+            rules={[REQUIRED_RULE]}
+          />
+        </Col>
+        <Col span={12}>
+          <CustomInput
+            name="studentSharePercentage"
+            label="سهم دانشجویار"
+            placeholder="سهم دانشجویار را وارد کنید"
+            suffix="%"
+            rules={[REQUIRED_RULE]}
+          />
+        </Col>
+        <Col span={12}>
+          <CustomInput
+            name="universitySharePercentage"
+            label="سهم دانشگاه"
+            placeholder="سهم دانشگاه را وارد کنید"
+            suffix="%"
+            rules={[REQUIRED_RULE]}
+          />
+        </Col>
+        <Col span={24}>
+          <CustomTextArea
+            name="contractDescription"
+            label="توضیحات"
+            placeholder="توضیحات قرارداد را وارد کنید"
+            rules={[REQUIRED_RULE]}
+          />
+        </Col>
+        <Col span={24} className="mb-10!">
+          <p className="mb-4 text-right">اسناد مربوطه</p>
+          <Row>
+            <Col lg={6} md={6} sm={8} xs={12}>
+              <CustomUploader
+                fileList={firstFile}
+                setFileList={setFirstFile}
+                isReadOnly={true}
+                maxCount={1}
+                name="file1"
+                hasNullText
+                hasUploaderIcon={false}
+              />
+            </Col>
+            <Col lg={6} md={6} sm={8} xs={12}>
+              <CustomUploader
+                fileList={secondFile}
+                setFileList={setSecondFile}
+                isReadOnly={true}
+                maxCount={1}
+                name="file2"
+                hasNullText
+                hasUploaderIcon={false}
+              />
+            </Col>
+            <Col lg={6} md={6} sm={8} xs={12}>
+              <CustomUploader
+                fileList={thirdFile}
+                setFileList={setThirdFile}
+                isReadOnly={true}
+                maxCount={1}
+                name="file3"
+                hasNullText
+                hasUploaderIcon={false}
+              />
+            </Col>
+            <Col lg={6} md={6} sm={8} xs={12}>
+              <CustomUploader
+                fileList={fourthFile}
+                setFileList={setFourthFile}
+                isReadOnly={true}
+                maxCount={1}
+                name="file4"
+                hasNullText
+                hasUploaderIcon={false}
+              />
+            </Col>
+          </Row>
+        </Col>
+      </Row>
+    </>
+  );
+}
+
+export default RequestsContractsListWaitedCreatedDrawerContentDetails;

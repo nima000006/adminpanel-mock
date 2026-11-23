@@ -1,0 +1,16 @@
+@use "../../../../../../../../../assets/styles/abstract/variables" as *;
+.estelam-sajed-detail-waiting-review {
+  @include flex-gap($s-16);
+  justify-content: flex-end;
+  @media (max-width: 540px) {
+    display: flex;
+    flex-direction: column;
+    button span {
+      font-size: $s-10;
+    }
+  }
+}
+
+.estelam-sajed-confirmed-modal-content {
+  @include body-regular;
+}

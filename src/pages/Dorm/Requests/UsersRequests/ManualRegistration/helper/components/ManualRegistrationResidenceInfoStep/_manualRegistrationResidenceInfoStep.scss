@@ -1,0 +1,14 @@
+@use "../../../../../../../../assets/styles/abstract/variables" as *;
+.manual-registration-residence-info-step-container {
+  @include flex-col($s-40);
+
+  .step-btn-container {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: $s-16;
+  }
+  .bed-allocation-container {
+    @include flex-col($s-16);
+  }
+}

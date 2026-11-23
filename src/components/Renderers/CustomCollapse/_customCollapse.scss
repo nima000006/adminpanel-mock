@@ -1,0 +1,287 @@
+@use "../../../assets/styles/abstract/variables" as *;
+
+// =============================================================================
+// Custom Collapse Styles
+// =============================================================================
+
+.custom-collapse-container {
+  direction: rtl;
+
+  // Expand icon styling
+  .custom-collapse-expand-icon {
+    font-size: 14px;
+    color: $light-gray-back;
+    transition: transform 0.3s ease;
+
+    &.animated {
+      transform: rotate(0deg);
+
+      &.active {
+        transform: rotate(180deg);
+      }
+    }
+  }
+
+  // Panel header
+  .ant-collapse-header {
+    align-items: center !important;
+    padding: 12px 16px !important;
+
+    .ant-collapse-header-text {
+      @include body-regular;
+      color: $light-gray-back;
+    }
+  }
+
+  // Panel content
+  .ant-collapse-content {
+    .ant-collapse-content-box {
+      padding: 16px;
+    }
+  }
+}
+
+// =============================================================================
+// Variants
+// =============================================================================
+
+// Default variant
+.custom-collapse-variant-default {
+  .ant-collapse-item {
+    border-color: var(--app-bg-layout);
+
+    &:last-child {
+      border-radius: 0 0 8px 8px;
+    }
+
+    &:first-child {
+      border-radius: 8px 8px 0 0;
+    }
+
+    &:only-child {
+      border-radius: 8px;
+    }
+  }
+
+  .ant-collapse-header {
+    background-color: var(--app-bg-layout);
+
+    &:hover {
+      background-color: var(--app-bg-layout);
+    }
+  }
+}
+
+// Ghost variant (most common in project)
+.custom-collapse-variant-ghost {
+  .ant-collapse-item {
+    border: none !important;
+
+    > .ant-collapse-header {
+      padding: 8px 0 !important;
+      background-color: transparent;
+
+      &:hover {
+        background-color: transparent;
+      }
+    }
+  }
+
+  .ant-collapse-content {
+    > .ant-collapse-content-box {
+      padding: 8px 0 16px;
+    }
+  }
+}
+
+// Bordered variant
+.custom-collapse-variant-bordered {
+  border: 1px solid var(--app-bg-layout);
+  border-radius: 8px;
+  overflow: hidden;
+
+  .ant-collapse-item {
+    border-bottom: 1px solid var(--app-bg-layout);
+
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+
+  .ant-collapse-header {
+    background-color: white;
+
+    &:hover {
+      background-color: var(--app-bg-layout);
+    }
+  }
+}
+
+// Card variant
+.custom-collapse-variant-card {
+  .ant-collapse-item {
+    margin-bottom: 8px;
+    border: 1px solid $light-gray-back;
+    border-radius: 8px !important;
+    overflow: hidden;
+    background-color: white;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    &.ant-collapse-item-active {
+      border-color: $blue-100;
+      box-shadow: 0 2px 8px rgba($blue-100, 0.1);
+    }
+  }
+
+  .ant-collapse-header {
+    background-color: white;
+
+    &:hover {
+      background-color: var(--app-bg-layout);
+    }
+  }
+
+  .ant-collapse-content {
+    border-top: 1px solid $light-gray-back;
+  }
+}
+
+// =============================================================================
+// Sizes
+// =============================================================================
+
+// Small size
+.custom-collapse-size-small {
+  .ant-collapse-header {
+    padding: 8px 12px !important;
+
+    .ant-collapse-header-text {
+      @include body-regular;
+    }
+  }
+
+  .ant-collapse-content-box {
+    padding: 12px !important;
+  }
+
+  .custom-collapse-expand-icon {
+    font-size: 12px;
+  }
+}
+
+// Middle size (default)
+.custom-collapse-size-middle {
+  .ant-collapse-header {
+    padding: 12px 16px !important;
+
+    .ant-collapse-header-text {
+      @include body-regular;
+    }
+  }
+
+  .ant-collapse-content-box {
+    padding: 16px !important;
+  }
+
+  .custom-collapse-expand-icon {
+    font-size: 14px;
+  }
+}
+
+// Large size
+.custom-collapse-size-large {
+  .ant-collapse-header {
+    padding: 16px 20px !important;
+
+    .ant-collapse-header-text {
+      @include body-regular;
+    }
+  }
+
+  .ant-collapse-content-box {
+    padding: 20px !important;
+  }
+
+  .custom-collapse-expand-icon {
+    font-size: 16px;
+  }
+}
+
+// =============================================================================
+// Icon Position
+// =============================================================================
+
+.custom-collapse-icon-end {
+  .ant-collapse-header {
+    flex-direction: row-reverse;
+
+    .ant-collapse-expand-icon {
+      margin-right: 0;
+      margin-left: 12px;
+    }
+  }
+}
+
+// =============================================================================
+// Borderless override
+// =============================================================================
+
+.custom-collapse-borderless {
+  border: none !important;
+
+  .ant-collapse-item {
+    border: none !important;
+  }
+}
+
+// =============================================================================
+// Active panel styling
+// =============================================================================
+
+.custom-collapse-container {
+  .ant-collapse-item-active {
+    > .ant-collapse-header {
+      .custom-collapse-expand-icon {
+        color: $primary-400;
+      }
+
+      .ant-collapse-header-text {
+        color: $primary-400;
+      }
+    }
+  }
+}
+
+// =============================================================================
+// Responsive styles
+// =============================================================================
+
+@media (max-width: 576px) {
+  .custom-collapse-container {
+    .ant-collapse-header {
+      padding: 10px 12px !important;
+    }
+
+    .ant-collapse-content-box {
+      padding: 12px !important;
+    }
+  }
+}
+
+// =============================================================================
+// Animation improvements
+// =============================================================================
+
+.custom-collapse-container {
+  .ant-collapse-content {
+    transition: all 0.3s ease;
+  }
+
+  .ant-collapse-item {
+    transition: all 0.2s ease;
+  }
+}

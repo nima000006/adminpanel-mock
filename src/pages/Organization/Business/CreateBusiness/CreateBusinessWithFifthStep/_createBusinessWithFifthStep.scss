@@ -1,0 +1,24 @@
+@use "../../../../../assets/styles/abstract/variables" as *;
+.create-business-with-fifth-step-container {
+  .step-content {
+    @include body-regular;
+  }
+  .ant-steps-horizontal {
+    @include body-regular;
+    @media (max-width: 900px) {
+      @include flex-col($s-24);
+    }
+  }
+  .step-rejected {
+    color: $dustred-5;
+    @include body-regular;
+  }
+  .step-returned {
+    color: var(--app-text);
+    @include body-regular;
+  }
+  .step-pending {
+    color: var(--app-text);
+    @include body-regular;
+  }
+}

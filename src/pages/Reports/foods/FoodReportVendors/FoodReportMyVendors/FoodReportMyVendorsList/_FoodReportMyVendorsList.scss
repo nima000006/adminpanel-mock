@@ -1,0 +1,37 @@
+@use "../../../../../../assets/styles/abstract/variables" as *;
+.food-my-vendor-list-container {
+  .btn-wrapper {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: $s-32;
+    @media (max-width: 600px) {
+      flex-direction: column;
+      gap: $s-16;
+    }
+  }
+  .food-my-vendor-list-table {
+    .status {
+      @include body-regular;
+    }
+  }
+}
+.food-my-vendor-drawer {
+  .drawer-header-btn {
+    @include flex-gap($s-12);
+    .ant-form-item {
+      margin-bottom: 0 !important;
+    }
+    @media (max-width: 576px) {
+      gap: $s-8;
+      .drawer-action-btn {
+        padding: $s-4 $s-6;
+        font-size: $s-12;
+      }
+    }
+  }
+  @media (max-width: 470px) {
+    .ant-drawer-title {
+      font-size: $s-12;
+    }
+  }
+}

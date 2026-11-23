@@ -1,0 +1,26 @@
+@use "../../../../../assets/styles/abstract/variables" as *;
+.international-admission-program-modify-page-container {
+  @include flex-col($s-40);
+  .ant-steps-item:first-child {
+    padding-right: 0 !important ;
+  }
+  .custom-steps-container {
+    justify-content: start !important;
+
+    .ant-steps-item-container {
+      justify-content: start !important;
+    }
+
+    @media (max-width: 1200px) {
+      align-items: start !important;
+
+      .ant-steps-item {
+        padding-right: 0 !important;
+      }
+
+      .ant-steps-item-container {
+        justify-content: center !important;
+      }
+    }
+  }
+}

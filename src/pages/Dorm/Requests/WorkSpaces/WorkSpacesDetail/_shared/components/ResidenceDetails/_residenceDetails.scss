@@ -1,0 +1,4 @@
+@use "../../../../../../../../assets/styles/abstract/variables" as *;
+.residence-details-container {
+  @include flex-col($s-16);
+}

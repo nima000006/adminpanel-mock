@@ -1,0 +1,61 @@
+@use "../../../../../../../assets/styles/abstract/variables" as *;
+
+.test-detail-scored-card-container {
+  width: 100%;
+  .point-container {
+    @include flex-col($s-4);
+    align-items: center;
+    padding: $s-8;
+    border-radius: 8px;
+
+    .point {
+      @include footnote;
+      color: var(--neutral-10);
+    }
+    .user-score-container {
+      @include flex-gap($s-8);
+      .score {
+        @include h5-bold;
+      }
+      .score-title {
+        @include body-regular;
+      }
+    }
+  }
+  .emergency {
+    background-color: var(--dustred-1);
+    .score {
+      color: var(--dustred-5);
+    }
+    .score-title {
+      color: var(--dustred-6);
+    }
+  }
+  .medium {
+    background-color: var(--volcano-1);
+    .score {
+      color: var(--volcano-6);
+    }
+    .score-title {
+      color: var(--volcano-6);
+    }
+  }
+  .normal {
+    background-color: var(--primary-1);
+    .score {
+      color: var(--primary-5);
+    }
+    .score-title {
+      color: var(--primary-6);
+    }
+  }
+  .default {
+    background-color: var(--app-bg-layout);
+    .score {
+      color: var(--app-text-secondary);
+    }
+    .score-title {
+      color: var(--app-text-secondary);
+    }
+  }
+}

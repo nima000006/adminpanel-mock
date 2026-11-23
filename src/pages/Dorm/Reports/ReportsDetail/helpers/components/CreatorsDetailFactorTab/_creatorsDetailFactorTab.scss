@@ -1,0 +1,4 @@
+@use "../../../../../../../assets/styles/abstract/variables" as *;
+.report-creators-detail-factor-container {
+  @include flex-col($s-40);
+}

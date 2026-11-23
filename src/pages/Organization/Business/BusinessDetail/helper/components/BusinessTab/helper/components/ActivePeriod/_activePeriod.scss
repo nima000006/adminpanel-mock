@@ -1,0 +1,31 @@
+@use "../../../../../../../../../../assets/styles/abstract/variables" as *;
+.active-period-container {
+  .custom-statistic-container {
+    > div:first-child {
+      .custom-statistic {
+        .ant-statistic-content {
+          border-radius: 0 $s-8 $s-8 0 !important;
+        }
+      }
+    }
+    > div:last-child {
+      .custom-statistic {
+        .ant-statistic-content {
+          border-radius: $s-8 0 0 $s-8 !important;
+        }
+      }
+    }
+    .custom-statistic {
+      .ant-statistic-content {
+        @include flex-gap($s-5);
+        background-color: $black-03;
+        .custom-suffix {
+          color: $neutral-6;
+          margin-left: $s-10;
+          @include flex-center;
+          align-items: start;
+        }
+      }
+    }
+  }
+}

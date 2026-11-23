@@ -1,0 +1,16 @@
+@use "../../../../../assets/styles/abstract/variables" as *;
+.dorm-main-table-btns-container {
+  display: flex;
+  gap: $s-8;
+  .dorm-edit-btn {
+    span {
+      @include body-regular;
+    }
+  }
+  .dorm-action-btn {
+    background-color: $green;
+    span {
+      @include body-regular;
+    }
+  }
+}

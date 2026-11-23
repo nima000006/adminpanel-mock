@@ -1,0 +1,30 @@
+@use "../../../assets/styles/abstract/variables" as *;
+.input-with-register-btn-container {
+  border-radius: 10px;
+  border: $border-1 solid $border-color-80;
+  padding: $s-10;
+  width: fit-content;
+  @include flex-center;
+  background-color: var(--app-bg-container);
+  gap: $s-10;
+  .input-container {
+    @include flex-center;
+    gap: $s-10;
+    .label {
+      @include body-regular;
+      color: $title-black;
+    }
+    .input {
+      @include body-regular;
+      color: $title-black;
+      padding: $s-4 $s-8;
+      border: $border-1 solid $border-color-80;
+      border-radius: 2px;
+      background-color: inherit;
+      max-width: $s-70;
+    }
+  }
+  .register-btn {
+    @include body-regular;
+  }
+}

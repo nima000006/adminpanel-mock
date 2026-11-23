@@ -1,0 +1,11 @@
+@use "../../../../../../../assets/styles/abstract/variables" as *;
+.contracts-detail-financial-rules-container {
+  .contracts-detail-financial-rules-select-container {
+    .ant-select-selector {
+      height: $s-40 !important;
+    }
+    .ant-select-arrow {
+      top: 60% !important;
+    }
+  }
+}

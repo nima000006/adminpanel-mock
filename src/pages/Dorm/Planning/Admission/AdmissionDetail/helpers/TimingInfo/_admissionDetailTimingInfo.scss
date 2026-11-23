@@ -1,0 +1,8 @@
+@use "../../../../../../../assets/styles/abstract/variables" as *;
+.admission-detail-timing-info-container {
+  .admission-detail-active-list-table {
+    .ant-statistic-content-value {
+      min-width: unset;
+    }
+  }
+}

@@ -1,0 +1,9 @@
+@use "../../../assets/styles/abstract/variables.scss" as *;
+.custom-search-box-container {
+  input:-webkit-autofill,
+  input:-webkit-autofill:hover,
+  input:-webkit-autofill:focus {
+    -webkit-box-shadow: 0 0 0 30px $white inset !important;
+    -webkit-text-fill-color: $neutral-11 !important;
+  }
+}

@@ -1,0 +1,9 @@
+@use "../../../../../../assets/styles/abstract/variables" as *;
+.tariff-detail-returned-tab-container {
+  @include flex-col($s-20);
+  .dorm-tariff-steps-page-container {
+    .ant-steps-item-title {
+      @include body-regular;
+    }
+  }
+}

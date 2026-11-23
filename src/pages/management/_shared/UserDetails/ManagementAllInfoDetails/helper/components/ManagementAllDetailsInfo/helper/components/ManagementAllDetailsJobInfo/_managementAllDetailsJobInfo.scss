@@ -1,0 +1,14 @@
+@use "../../../../../../../../../../../assets/styles/abstract/variables" as *;
+.management-all-detail-job-container {
+  .custom-divider {
+    margin: $s-32 0 $s-24 0;
+    span {
+      @include subtitle3;
+      font-size: $s-14;
+      white-space: break-spaces;
+    }
+  }
+  .button-container {
+    @include flex-gap($s-5);
+  }
+}

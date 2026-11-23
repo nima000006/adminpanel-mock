@@ -1,0 +1,70 @@
+@use "../../../../assets/styles/abstract/variables" as *;
+.payment-rules-detail-container {
+  .first-box-payment-detail {
+    width: 100%;
+    background-color: var(--app-bg-layout);
+    padding: $s-32 $s-12 $s-10 $s-2;
+
+    .dorm-business-wrapper {
+      box-shadow: 0px 0px 4px 0px rgb(243 243 243 / 80%);
+      @include flex-gap($s-8);
+      padding: $s-20;
+      margin-bottom: $s-16;
+      max-width: $s-169;
+      background: $white;
+      border-radius: 20px;
+      @include body-regular;
+
+      .business-text {
+        color: $neutral-7;
+      }
+    }
+
+    .room-score-rules-text-container {
+      .title {
+        @include h5-regular;
+        color: $black-3;
+      }
+      .sub-title {
+        @include body-regular;
+        color: $black-8;
+        margin-top: $s-4;
+      }
+      .rules-section-tabs-container {
+        margin-top: $s-32;
+      }
+      .mini-tab-container {
+        .ant-tabs-tab {
+          margin-left: $s-32;
+        }
+      }
+      .ant-tabs-nav-list {
+        display: flex;
+        gap: $s-6;
+
+        .ant-tabs-tab-btn {
+          @include body-regular;
+        }
+        .ant-tabs-tab-with-remove {
+          .ant-tabs-tab-remove {
+            display: none !important;
+          }
+        }
+        .rules-section-btn {
+          display: flex;
+          align-items: center;
+          gap: $s-8;
+          .rules-section-btn-label {
+            color: $blue-primary;
+            @include body-regular-bold;
+          }
+        }
+      }
+    }
+  }
+  .date-wrapper {
+    @include flex-gap($s-4);
+    @include body-regular;
+    margin: $s-10;
+  }
+}

@@ -1,0 +1,39 @@
+@use "../../../assets/styles/abstract/variables" as *;
+.radio-container {
+  display: flex;
+  flex-direction: column;
+  gap: $s-4;
+  span {
+    @include body-regular;
+  }
+  label {
+    @include body-regular;
+    color: $title-black;
+    &::after {
+      content: "" !important;
+    }
+  }
+  .ant-form-item-explain-error {
+    color: var(--error-500);
+    font-family: "DanaFaNum";
+    font-style: normal;
+    font-weight: 500;
+    font-size: $s-12;
+    text-align: right;
+  }
+  .ant-form-item-control {
+    flex: unset;
+    width: 100%;
+  }
+  .ant-form-item-row {
+    gap: 0 !important;
+  }
+  .vertical-label {
+    .ant-form-item-row {
+      display: flex !important;
+      flex-direction: column !important;
+      align-items: flex-start !important;
+      gap: $s-4 !important;
+    }
+  }
+}

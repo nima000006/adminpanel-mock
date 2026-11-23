@@ -1,0 +1,95 @@
+@use "../../../../../../../../../../../../../../assets/styles/abstract/variables" as *;
+
+.all-contracts-list-contracts-default-images-modal {
+  .all-contracts-list-contracts-default-images-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: $s-20;
+    max-height: 460px;
+    overflow: auto;
+    padding: $s-4;
+  }
+
+  .all-contracts-list-contracts-default-images-card.ant-btn {
+    display: flex;
+    width: 100%;
+    height: auto;
+    flex-direction: column;
+    align-items: stretch;
+    gap: $s-8;
+    padding: $s-16;
+    border: 1px solid transparent;
+    border-radius: $s-16;
+    background-color: transparent;
+    box-shadow: none;
+    color: inherit;
+    cursor: pointer;
+    transition: border-color 0.2s ease;
+
+    &:hover,
+    &:focus,
+    &:active {
+      border-color: transparent !important;
+      background-color: transparent !important;
+      color: inherit !important;
+    }
+
+    &.all-contracts-list-contracts-default-images-card--selected,
+    &.all-contracts-list-contracts-default-images-card--selected:hover,
+    &.all-contracts-list-contracts-default-images-card--selected:focus,
+    &.all-contracts-list-contracts-default-images-card--selected:active {
+      border-color: $primary-5 !important;
+      background-color: transparent !important;
+      color: inherit !important;
+    }
+
+    > span {
+      display: flex;
+      width: 100%;
+      flex-direction: column;
+      align-items: stretch;
+      gap: $s-8;
+    }
+
+    .all-contracts-list-contracts-default-images-card__title {
+      margin: 0;
+      color: $neutral-10;
+      font-size: $s-16;
+      font-weight: 500;
+      line-height: normal;
+      text-align: right;
+    }
+
+    &.all-contracts-list-contracts-default-images-card--selected
+      .all-contracts-list-contracts-default-images-card__title {
+      color: $primary-5;
+    }
+
+    .all-contracts-list-contracts-default-images-uploader {
+      height: auto !important;
+      min-height: auto;
+      width: 100%;
+
+      .ant-form-item {
+        margin-bottom: 0;
+      }
+
+      .ant-upload-wrapper,
+      .ant-upload,
+      .ant-upload-select {
+        display: block;
+        width: 100%;
+      }
+
+      .custom-upload-btn {
+        width: 100% !important;
+        height: 121px !important;
+        padding: 0;
+        overflow: hidden;
+        border: none;
+        border-radius: $s-16;
+        pointer-events: none;
+      }
+    }
+  }
+}

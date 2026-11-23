@@ -1,0 +1,90 @@
+@use "../../../../assets/styles/abstract/variables" as *;
+.create-new-modal-room-container {
+  width: 80vw !important;
+  max-height: 90%;
+  // overflow: scroll;
+  border-radius: 20px;
+  //overflow-x: hidden;
+  .ant-modal-container {
+    margin: 0;
+    padding: 0;
+    background-color: $modal-bg-color;
+    .ant-modal-header {
+      padding: $s-16;
+    }
+    .ant-modal-title {
+      @include h5-regular;
+      font-size: $s-19;
+      font-weight: bold;
+    }
+    .ant-modal-body {
+      padding: $s-24;
+      display: flex;
+      flex-direction: column;
+      gap: $s-24;
+    }
+  }
+  .label {
+    @include h5-bold;
+    color: $black-60;
+  }
+  .active-and-role-section-container {
+    .active-section-checkbox {
+      margin-top: $s-8;
+    }
+  }
+  .new-room-tabs-container {
+    .ant-tabs-nav-list {
+      .ant-tabs-tab {
+        margin-left: $s-24;
+        @include body-regular;
+      }
+    }
+  }
+  .single-create-container {
+    .inputs-container {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: $s-19;
+    }
+    .type-of-single-room {
+      margin-top: $s-48;
+      .type-data-container {
+        display: flex;
+        align-items: flex-end;
+        justify-content: flex-start;
+        gap: $s-16;
+        padding-top: $s-19;
+        padding-right: $s-32;
+        .radio-container {
+          width: 50%;
+        }
+        .type-data-inputs-container {
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+          gap: $s-19;
+        }
+        .suit-select-container {
+          display: flex;
+          align-items: flex-end;
+          gap: $s-16;
+          width: 100%;
+          .custom-select-field-container {
+            max-width: 50%;
+          }
+        }
+      }
+    }
+  }
+  .btns-container {
+    display: flex;
+    align-items: center;
+    gap: $s-32;
+    button {
+      @include body-regular;
+    }
+  }
+}
+.ant-modal-wrap {
+  margin-bottom: $s-16;
+}

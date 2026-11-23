@@ -1,0 +1,4 @@
+@use "../../../../../assets/styles/abstract/variables" as *;
+.international-admission-list-tab-container {
+  @include body-regular;
+}

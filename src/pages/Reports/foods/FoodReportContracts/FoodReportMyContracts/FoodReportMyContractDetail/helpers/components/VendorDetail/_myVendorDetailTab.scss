@@ -1,0 +1,38 @@
+@use "../../../../../../../../../assets/styles/abstract/variables" as *;
+.my-contract-vendor-detail-tab-container {
+  @include flex-col($s-40);
+  .vendor-information-container {
+    @include flex-col($s-24);
+    .divider-btn-container {
+      @include flex-center;
+      gap: $s-8;
+      @media (max-width: 576px) {
+        flex-direction: column;
+      }
+    }
+    .banner-rate-container {
+      @include flex-space-between;
+      @media (max-width: 800px) {
+        flex-direction: column;
+        gap: $s-24;
+      }
+      .img-container {
+        @include flex-center;
+        gap: $s-24;
+        @media (max-width: 500px) {
+          flex-direction: column;
+          gap: $s-8;
+        }
+        .vendor-img {
+          max-width: fit-content;
+          @media (max-width: 768px) {
+            max-width: 65px;
+          }
+        }
+      }
+    }
+  }
+  .contact-information-container {
+    @include flex-col($s-24);
+  }
+}

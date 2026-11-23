@@ -1,0 +1,6 @@
+@use "../../../../../../../../../assets/styles/abstract/variables" as *;
+.all-detail-vendor-contract-drawer-content-container {
+  .all-detail-vendor-contract-drawer-content-wrapper {
+    @include flex-col($s-40);
+  }
+}

@@ -1,0 +1,73 @@
+.vs
+bin
+obj
+node_modules
+yarn.lock
+yarn-error.log
+/package-lock.json
+/yarn-error.log
+/node_modules
+/yarn.lock
+*.pdf
+# *.xml
+
+# See https://help.github.com/ignore-files/ for more about ignoring files.
+
+# dependencies
+
+
+# testing
+/coverage
+
+# production
+/build
+/dist
+/dev-dist
+dist
+dist-ssr
+buildtime.txt
+stats.html
+tsconfig.tsbuildinfo
+*.tsbuildinfo
+
+
+# misc
+.DS_Store
+#/.env
+/.eslintcache
+# .env.local
+# .env.production
+# .env.staging
+# .env.development.local
+# .env.test.local
+# .env.production.local
+.scannerwork
+
+npm-debug.log*
+yarn-debug.log*
+package-lock.json
+!/.vscode/settings.json
+!/.vscode/extensions.json
+
+package-lock.json
+yarn-error.log
+/node_modules
+yarn.lock
+/src/store/constants/appBuildTime.js
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# Sentry Config File
+.env.sentry-build-plugin
+
+# secrets / local env (do not push)
+.env
+.env.*
+!.env.example

@@ -1,0 +1,37 @@
+@use "../../../../../../../../../assets/styles/abstract/variables" as *;
+
+.my-wallet-details-info-card-container {
+  background-color: var(--app-bg-layout);
+  border-radius: 8px;
+  padding: $s-8;
+  @include body-regular;
+  width: 100%;
+
+  .info-card {
+    @include flex-col($s-8);
+
+    .info-card-icon {
+      background: $primary-4;
+      border-radius: 12px;
+      width: 40px;
+      height: 40px;
+      color: $white;
+      @include flex-center;
+    }
+
+    .info-card-text {
+      @include flex-col($s-8);
+      flex-wrap: wrap;
+    }
+
+    .info-card-tag {
+      @include flex-gap($s-8);
+      flex-wrap: wrap;
+
+      .tag {
+        @include flex-gap($s-4);
+        flex-wrap: wrap;
+      }
+    }
+  }
+}

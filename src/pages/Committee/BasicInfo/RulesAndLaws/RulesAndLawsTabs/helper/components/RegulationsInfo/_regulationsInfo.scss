@@ -1,0 +1,50 @@
+@use "../../../../../../../../assets/styles/abstract/variables" as *;
+.committee-regulations-info {
+  .make-change-btn {
+    @include body-regular;
+    margin-bottom: $s-35;
+  }
+  .input-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: $s-16;
+    .grid-cols-3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: $s-12;
+      .ant-col {
+        width: 100%;
+        text-align: right;
+      }
+    }
+    .attach-row {
+      .step-title {
+        @include h5-regular;
+        color: $title-black;
+      }
+      .upload-container {
+        display: flex;
+        flex-direction: column;
+        gap: $s-13;
+        .ant-upload-list {
+          display: flex;
+          gap: $s-8;
+        }
+      }
+      .ant-row {
+        display: flex;
+        flex-direction: column;
+        gap: $s-8;
+      }
+    }
+  }
+  .images-container {
+    width: 100%;
+    // display: flex;
+    // flex-direction: column;
+  }
+  .ant-upload-list {
+    display: flex;
+    flex-direction: column;
+  }
+}

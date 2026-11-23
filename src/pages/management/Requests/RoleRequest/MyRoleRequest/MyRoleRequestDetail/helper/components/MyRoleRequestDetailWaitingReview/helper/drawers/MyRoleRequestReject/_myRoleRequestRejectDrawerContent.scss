@@ -1,0 +1,6 @@
+@use "../../../../../../../../../../../../assets/styles/abstract/variables" as *;
+.my-role-request-reject-drawer-content-container {
+  .action-btn-container {
+    @include flex-gap($s-12);
+  }
+}

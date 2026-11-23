@@ -1,0 +1,178 @@
+@use "../../../assets/styles/abstract/variables" as *;
+.top-bar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  box-shadow:
+    0 0 4px 0 rgba(0, 0, 0, 0.06),
+    0 2px 4px 0 rgba(0, 0, 0, 0.08) !important;
+  .uni-collapse-and-logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: $s-16;
+    @media (max-width: 700px) {
+      gap: $s-4;
+    }
+    .uni-logo-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      padding-right: $s-16;
+      @media (max-width: 900px) {
+        max-width: $s-150;
+      }
+    }
+  }
+  .dashboard-container {
+    padding-left: $s-32;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: $s-48;
+    @media (max-width: 900px) {
+      gap: $s-30;
+    }
+    @media (max-width: 780px) {
+      gap: $s-20;
+      padding-left: $s-20;
+    }
+    @media (max-width: 623px) {
+      gap: $s-8;
+    }
+
+    .user-status-container {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      .profile-name-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: $s-4;
+        @media (max-width: 780px) {
+          gap: $s-4;
+        }
+        .name-label {
+          @include body-regular;
+          @media (max-width: 810px) {
+            font-size: $s-12;
+          }
+          @media (max-width: 750px) {
+            font-size: $s-10;
+          }
+          @media (max-width: 690px) {
+            font-size: $s-8;
+          }
+        }
+        .user-initial-avatar {
+          width: 24px;
+          height: 24px;
+          border-radius: 50%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          color: white;
+          font-size: $s-12;
+          font-weight: bold;
+          .initial {
+            transform: translateY(-3px);
+          }
+        }
+      }
+    }
+    .notifications-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: $s-8;
+      @media (max-width: 780px) {
+        gap: $s-4;
+      }
+      @media (max-width: 570px) {
+        display: none;
+      }
+      .notification-label {
+        @include body-regular;
+        @media (max-width: 810px) {
+          font-size: $s-12;
+        }
+        @media (max-width: 700px) {
+          font-size: $s-10;
+        }
+      }
+    }
+    .date-and-time-container {
+      display: flex;
+      gap: $s-8;
+      @media (max-width: 780px) {
+        gap: $s-4;
+      }
+      @media (max-width: 570px) {
+        display: none;
+      }
+    }
+    .calendar-label {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      gap: $s-4;
+      @include body-regular;
+      @media (max-width: 810px) {
+        font-size: $s-14;
+      }
+      @media (max-width: 730px) {
+        font-size: $s-12;
+      }
+      @media (max-width: 690px) {
+        font-size: $s-10;
+      }
+      .calendar-value {
+        @media (max-width: 690px) {
+          font-size: $s-8;
+        }
+      }
+    }
+  }
+  .top-bar-icon {
+    font-size: $s-24;
+    color: "#444";
+    @media (max-width: 810px) {
+      font-size: $s-20;
+    }
+    @media (max-width: 710px) {
+      font-size: $s-16;
+    }
+    @media (max-width: 690px) {
+      font-size: $s-12;
+    }
+  }
+  .top-bar-user-img {
+    width: $s-24;
+    height: $s-24;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    @media (max-width: 810px) {
+      width: $s-20;
+      height: $s-20;
+    }
+    @media (max-width: 710px) {
+      width: $s-16;
+      height: $s-16;
+    }
+    @media (max-width: 690px) {
+      width: $s-12;
+      height: $s-12;
+    }
+  }
+}
+.ant-dropdown-menu-title-content {
+  @include body-regular;
+}
+.logout-item {
+  color: red;
+}

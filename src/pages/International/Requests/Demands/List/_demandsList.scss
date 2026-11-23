@@ -1,0 +1,34 @@
+@use "../../../../../assets/styles/abstract/variables" as *;
+.international-demand-list-page-container {
+  container-type: inline-size;
+  @include flex-col($s-40);
+
+  .demand-table-container {
+    @include flex-col($s-16);
+    .international-demand-tabs-container {
+      @include body-regular;
+    }
+  }
+
+  @container (max-width: 140px) {
+    button {
+      padding: $s-2;
+    }
+    button span {
+      font-size: $s-12;
+    }
+
+    .ant-select {
+      max-width: 90px;
+    }
+
+    .action-btns-container {
+      display: flex;
+      flex-direction: column;
+      gap: $s-4;
+    }
+    .divider-container .divider-main span {
+      font-size: $s-12;
+    }
+  }
+}

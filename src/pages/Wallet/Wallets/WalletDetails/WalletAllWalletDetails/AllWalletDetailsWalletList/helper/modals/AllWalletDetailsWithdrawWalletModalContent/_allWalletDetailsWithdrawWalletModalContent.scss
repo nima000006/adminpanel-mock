@@ -1,0 +1,11 @@
+@use "../../../../../../../../../assets/styles/abstract/variables" as *;
+.withdraw-wallet-modal-content-container {
+  .stepper-container {
+    .ant-steps-item-title {
+      @include body-regular;
+    }
+    .ant-steps-icon {
+      @include body-regular;
+    }
+  }
+}

@@ -1,0 +1,6 @@
+@use "../../../../../../../../../assets/styles/abstract/variables" as *;
+.my-management-requests-estelam-sajed-confirmed-list-tab {
+  .table-container {
+    @include flex-col($s-16);
+  }
+}

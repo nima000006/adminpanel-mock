@@ -1,0 +1,8 @@
+@use "../../../../assets/styles/abstract/variables" as *;
+.international-branch-container {
+  .tab-title-container {
+    @include flex-center;
+    @include body-regular;
+    gap: $s-5;
+  }
+}

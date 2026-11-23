@@ -1,0 +1,14 @@
+@use "../../../../../../../assets/styles/abstract/variables" as *;
+.committee-individual-inquiry-envelope-information-step {
+  .inquiry-envelope-information {
+    display: flex;
+    flex-direction: column;
+    gap: $s-20;
+  }
+  .inputs-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    row-gap: $s-20;
+    column-gap: $s-10;
+  }
+}

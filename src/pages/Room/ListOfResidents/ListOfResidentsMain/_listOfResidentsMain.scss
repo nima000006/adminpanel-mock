@@ -1,0 +1,22 @@
+@use "../../../../assets/styles/abstract/variables" as *;
+
+.list-of-residents-main-container {
+  width: 100%;
+
+  .action-btn-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    gap: $s-16;
+    .right-side-wrapper {
+      @include flex-gap($s-8);
+      @media (max-width: 530px) {
+        flex-direction: column;
+        // gap: $s-16;
+      }
+    }
+  }
+  .semester-container-main {
+    min-width: 180px;
+  }
+}

@@ -1,0 +1,7 @@
+@use "../../../../../../../../../assets/styles/abstract/variables" as *;
+.users-requests-detail-cancelled-requests-info-container {
+  @include flex-col($s-40);
+  .alert {
+    width: 100%;
+  }
+}

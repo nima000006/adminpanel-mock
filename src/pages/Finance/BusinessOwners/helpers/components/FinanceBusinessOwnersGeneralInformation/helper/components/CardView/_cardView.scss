@@ -1,0 +1,68 @@
+@use "../../../../../../../../../assets/styles/abstract/variables" as *;
+.financial-business-owner-card-container {
+  .custom-pagination {
+    margin-top: $s-16;
+  }
+  .card {
+    padding: $s-24;
+    border: 1px solid $neutral-5;
+    border-radius: 8px;
+    @include body-regular;
+    @include flex-col($s-24);
+  }
+  .row {
+    @include flex-gap($s-8);
+
+    .text {
+      color: $neutral-9;
+    }
+    .tag {
+      width: fit-content;
+    }
+
+    @media (max-width: 1120px) {
+      @include flex-col($s-8);
+    }
+  }
+
+  .amount {
+    font-weight: 600;
+  }
+
+  .btn-wrapper {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+  }
+
+  .service-tag {
+    @include flex-gap($s-4);
+    padding: $s-4;
+    width: fit-content;
+
+    .icon-wrapper {
+      width: 20px;
+      height: 20px;
+      border-radius: 5px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .dorm-color {
+      background-color: $purple-6;
+    }
+    .my-doctor-color {
+      background-color: $cyan-6;
+    }
+    .food-color {
+      background-color: $lime-6;
+    }
+    .insurance-color {
+      background-color: $green-6;
+    }
+    .card-color {
+      background-color: $primary-6;
+    }
+  }
+}

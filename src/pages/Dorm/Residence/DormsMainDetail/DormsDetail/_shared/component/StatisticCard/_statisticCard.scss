@@ -1,0 +1,70 @@
+@use "../../../../../../../../assets/styles/abstract/variables" as *;
+.dorm-residence-statistic-card-container {
+  @include flex-col($s-8);
+  padding: $s-16;
+  border-radius: 8px;
+  background-color: var(--app-bg-layout);
+  .icon-container {
+    text-align: end;
+  }
+  .text {
+    @include headline-3;
+  }
+  .text-light {
+    color: var(--app-text);
+  }
+  .text-dark {
+    color: $neutral-10;
+  }
+  //!todo we need to impliment this code if this styles are same in all pages
+  // &.style-1 {
+  //   background-color: $dustred-1;
+
+  //   h3 {
+  //     color: $dustred-6;
+  //     font-size: 18px;
+  //   }
+  // }
+
+  // &.style-2 {
+  //   background-color: $blue-1;
+
+  //   h3 {
+  //     color: $blue-6;
+  //     font-size: 18px;
+  //   }
+  // }
+
+  // &.style-3 {
+  //   background-color: $gold-1;
+
+  //   h3 {
+  //     color: $gold-6;
+  //     font-size: 18px;
+  //   }
+  // }
+  // &.style-4 {
+  //   background-color: $primary-1;
+
+  //   h3 {
+  //     color: $primary-6;
+  //     font-size: 18px;
+  //   }
+  // }
+  // &.style-5 {
+  //   background-color: $green-1;
+
+  //   h3 {
+  //     color: $green-6;
+  //     font-size: 18px;
+  //   }
+  // }
+  // &.style-6 {
+  //   background-color: $purple-1;
+
+  //   h3 {
+  //     color: $purple-6;
+  //     font-size: 18px;
+  //   }
+  // }
+}

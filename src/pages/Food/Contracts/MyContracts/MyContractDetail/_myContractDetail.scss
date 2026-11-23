@@ -1,0 +1,4 @@
+@use "../../../../../assets/styles/abstract/variables" as *;
+.my-detail-contracts-page-container {
+  @include body-regular;
+}

@@ -1,0 +1,46 @@
+@use "../../../../../../assets/styles/abstract/variables" as *;
+.finance-business-owners-general-information-container {
+  container-type: inline-size;
+  @include flex-col($s-40);
+  .toolBox {
+    margin-bottom: $s-20;
+  }
+  .img-wrapper {
+    @include flex-col($s-16);
+    align-items: center;
+  }
+
+  .sub-content {
+    @include flex-col($s-20);
+
+    .ant-segmented {
+      margin-bottom: $s-16;
+    }
+  }
+  .ant-segmented-item-label {
+    @include flex-center;
+  }
+
+  @container (max-width: 140px) {
+    button {
+      // padding: $s-4;
+    }
+    button span {
+      font-size: $s-7;
+    }
+    .ant-segmented-group {
+      max-width: $s-85;
+    }
+
+    .ant-segmented-item-label span {
+      font-size: $s-10;
+    }
+    .ant-form-item-control-input-content {
+      max-width: $s-100;
+    }
+
+    .amount {
+      font-size: $s-8;
+    }
+  }
+}

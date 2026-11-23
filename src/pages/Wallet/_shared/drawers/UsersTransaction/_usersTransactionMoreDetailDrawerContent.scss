@@ -1,0 +1,27 @@
+@use "../../../../../assets/styles/abstract/variables" as *;
+.users-transaction-more-detail-drawer-content-container {
+  @include flex-col($s-40);
+  .all-transaction-detail-price-wrapper {
+    padding: $s-16;
+    background-color: var(--app-bg-layout);
+    border-radius: 8px;
+    @include flex-col($s-8);
+    align-items: center;
+  }
+  .all-transaction-detail-user-descriptions {
+    @include body-regular;
+  }
+
+  .divider-extra-content {
+    @include flex-gap($s-8);
+    align-items: center;
+    color: $blue-primary;
+  }
+  .custom-value-container {
+    @include flex-center;
+    gap: $s-5;
+    svg {
+      color: $black-8;
+    }
+  }
+}

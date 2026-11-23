@@ -1,0 +1,9 @@
+FROM node:22.22.0-alpine AS builder
+RUN npm config set fetch-retry-mintimeout 20000
+RUN npm config set fetch-retry-maxtimeout 120000
+RUN mkdir app
+WORKDIR /root/app
+COPY . .
+RUN npm install
+RUN source .env.staging
+RUN npm run test

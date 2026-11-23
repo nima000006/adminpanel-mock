@@ -1,0 +1,31 @@
+@use "../../../../../assets/styles/abstract/variables" as *;
+.all-contracts-list-page-container {
+  container-type: inline-size; // برای فعال سازی کوئری
+  .all-contracts-list-table {
+    .all-contracts-list-buttons {
+      @include flex-center;
+    }
+  }
+  @include flex-col($s-24);
+  .btn-wrapper {
+    @include flex-space-between;
+    @media (max-width: 450px) {
+      flex-direction: column;
+      gap: $s-16;
+    }
+    .btn-text {
+      @include body-regular;
+      @media (max-width: 450px) {
+        width: 100%;
+      }
+    }
+  }
+  .custom-switch-container {
+    margin-bottom: 0;
+  }
+  @container (max-width: 140px) {
+    button span {
+      font-size: $s-8;
+    }
+  }
+}

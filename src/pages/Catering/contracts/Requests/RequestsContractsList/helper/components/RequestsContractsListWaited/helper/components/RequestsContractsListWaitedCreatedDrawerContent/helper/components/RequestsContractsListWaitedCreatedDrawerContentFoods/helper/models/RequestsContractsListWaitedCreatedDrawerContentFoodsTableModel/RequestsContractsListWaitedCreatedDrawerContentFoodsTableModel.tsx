@@ -1,0 +1,108 @@
+import { CustomButton } from "@components/CustomInputs";
+import { CustomColumnType } from "@components/Renderers/CustomTable/CustomTable";
+import { GetServerColumnSearchProps } from "@infra/helpers/TableHelpers/TableServerSideSearchable/TableServerSideSearchable";
+import { dataPlaceHolder } from "@infra/helpers/utils";
+import { FixedType } from "@infra/models/modules/GeneralTypes/GeneralTypes";
+import { renderCateringProductCategoryCustomTag } from "@pages/Catering/_shared/utils";
+import { GetDetailAllSelfsProductsContent } from "@pages/Catering/Selfs/AllSelfs/AllSelfDetail/helper/components/CateringAllSelfsFoodSchedule/@types/@cateringAllSelfsFoodSchedule";
+
+const RequestsContractsListWaitedCreatedDrawerContentFoodsTableModel = ({
+  editPriceClickHandler,
+  removeFromContractClickHandler,
+}: {
+  editPriceClickHandler: (record: GetDetailAllSelfsProductsContent) => void;
+  removeFromContractClickHandler: (id: number) => void;
+}): CustomColumnType<GetDetailAllSelfsProductsContent>[] => [
+  {
+    title: "غذا",
+    dataIndex: "baseProductTitle",
+    key: "baseProductTitle",
+    width: 160,
+    // TODO[nima]: uncomment this when the API is ready
+    // ...GetServerColumnSearchProps({
+    //   dataIndex: "baseProductTitle",
+    //   label: "غذا",
+    //   type: "text",
+    // }),
+    render: (value: string) => dataPlaceHolder({ data: value }),
+  },
+  {
+    title: "نوع غذا",
+    dataIndex: "categoryId",
+    key: "categoryId",
+    width: 140,
+    render: (value: number) => renderCateringProductCategoryCustomTag(value),
+  },
+  {
+    title: "عنوان نمایشی در پنل ادمین",
+    dataIndex: "title",
+    key: "title",
+    width: 260,
+    ...GetServerColumnSearchProps({
+      dataIndex: "viewTitle",
+      label: "عنوان نمایشی در پنل ادمین",
+      type: "text",
+    }),
+    render: (value: string) => dataPlaceHolder({ data: value }),
+  },
+  {
+    title: "قیمت دانشجویی",
+    dataIndex: "studentalPrice",
+    key: "studentalPrice",
+    width: 150,
+    ...GetServerColumnSearchProps({
+      dataIndex: "studentalPrice",
+      label: "قیمت دانشجویی",
+      type: "sort",
+    }),
+    render: (value: number) =>
+      dataPlaceHolder({
+        data: value,
+        isPrice: true,
+        isRial: true,
+        currency: { isAvailable: true, type: "تومان" },
+      }),
+  },
+  {
+    title: "حداکثر قیمت",
+    dataIndex: "maxPrice",
+    key: "maxPrice",
+    width: 150,
+    ...GetServerColumnSearchProps({
+      dataIndex: "maxPrice",
+      label: "حداکثر قیمت",
+      type: "sort",
+    }),
+    render: (value: number) =>
+      dataPlaceHolder({
+        data: value,
+        isPrice: true,
+        isRial: true,
+        currency: { isAvailable: true, type: "تومان" },
+      }),
+  },
+  {
+    title: "",
+    dataIndex: "id",
+    key: "actions",
+    fixed: "right" as FixedType,
+    width: 210,
+    className: "tables-sticky-column-left",
+    render: (_: unknown, record: GetDetailAllSelfsProductsContent) => (
+      <div className="flex gap-2">
+        <CustomButton type="link" onClick={() => editPriceClickHandler(record)}>
+          ویرایش قیمت
+        </CustomButton>
+        <CustomButton
+          type="link"
+          danger
+          onClick={() => removeFromContractClickHandler(record.id)}
+        >
+          حذف از قرارداد
+        </CustomButton>
+      </div>
+    ),
+  },
+];
+
+export default RequestsContractsListWaitedCreatedDrawerContentFoodsTableModel;

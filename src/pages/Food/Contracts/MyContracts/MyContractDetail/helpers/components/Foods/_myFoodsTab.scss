@@ -1,0 +1,85 @@
+@use "../../../../../../../../assets/styles/abstract/variables" as *;
+.my-contracts-foods-tab-container {
+  container-type: inline-size; // برای فعال سازی کوئری
+  @include flex-col($s-24);
+  .btn-wrapper {
+    @include flex-space-between;
+    @media (max-width: 450px) {
+      flex-direction: column;
+      gap: $s-16;
+    }
+    .btn-text {
+      @include body-regular;
+      @media (max-width: 450px) {
+        width: 100%;
+      }
+    }
+  }
+  @container (max-width: 140px) {
+    button span {
+      font-size: $s-8;
+    }
+  }
+}
+
+.my-contracts-detail-page-drawer {
+  @media (max-width: 576px) {
+    .ant-drawer-title {
+      font-size: $s-14 !important;
+    }
+  }
+  .my-contracts-detail-food-tab-drawer-action-btns-container {
+    @include flex-center;
+    gap: $s-16;
+    @media (max-width: 576px) {
+      gap: $s-8;
+      .drawer-action-btn {
+        padding: $s-4 $s-6;
+        font-size: $s-12;
+      }
+    }
+    .ant-form-item {
+      margin-bottom: 0 !important;
+    }
+  }
+  .uploader-container {
+    display: flex;
+    @media (max-width: 576px) {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+    .ant-btn {
+      border-color: $danger-primary;
+      border-style: dashed;
+      background-color: var(--app-bg-layout);
+      padding: $s-32;
+    }
+  }
+
+  .banner-rate-container {
+    @include flex-space-between;
+    flex-direction: column;
+    .img-container {
+      @include flex-center;
+      gap: $s-24;
+
+      @media (max-width: 768px) {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: $s-16;
+      }
+      @media (max-width: 465px) {
+        grid-template-columns: 1fr;
+        gap: $s-8;
+      }
+
+      .self-img {
+        max-width: fit-content;
+        border-radius: 10px;
+        @media (max-width: 768px) {
+          max-width: 65px;
+        }
+      }
+    }
+  }
+}

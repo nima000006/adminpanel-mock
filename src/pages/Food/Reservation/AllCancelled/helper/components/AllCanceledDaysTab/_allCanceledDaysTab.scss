@@ -1,0 +1,12 @@
+@use "../../../../../../../assets/styles/abstract/variables" as *;
+.all-canceled-days-list-container {
+  container-type: inline-size; // برای فعال سازی کوئری
+  @include flex-col($s-4);
+
+  @container (max-width: 140px) {
+    .ant-select {
+      font-size: $s-8;
+      max-width: 100px;
+    }
+  }
+}

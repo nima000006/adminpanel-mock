@@ -1,0 +1,6 @@
+@use "../../../../../../../../assets/styles/abstract/variables" as *;
+.admission-program-detail-costs {
+  .costs-items-container {
+    @include flex-col($s-24);
+  }
+}

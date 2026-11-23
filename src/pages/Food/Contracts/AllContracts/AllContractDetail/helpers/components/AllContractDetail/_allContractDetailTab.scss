@@ -1,0 +1,21 @@
+@use "../../../../../../../../assets/styles/abstract/variables" as *;
+.all-contracts-detail-tab-container {
+  container-type: inline-size; // برای فعال سازی کوئری
+  @include flex-col($s-24);
+  .divider-btn-container {
+    @include flex-center;
+    gap: $s-8;
+    @media (max-width: 576px) {
+      flex-direction: column;
+    }
+    .custom-switch-container {
+      margin-bottom: 0;
+    }
+  }
+
+  @container (max-width: 140px) {
+    button span {
+      font-size: $s-8;
+    }
+  }
+}

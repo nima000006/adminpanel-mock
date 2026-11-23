@@ -1,0 +1,7 @@
+@use "../../../../../../../../../../../assets/styles/abstract/variables" as *;
+.admission-program-create-field-container {
+  @include flex-col($s-40);
+  .search-btn {
+    width: 100%;
+  }
+}

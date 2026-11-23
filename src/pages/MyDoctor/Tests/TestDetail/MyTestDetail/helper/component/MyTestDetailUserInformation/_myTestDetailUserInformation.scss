@@ -1,0 +1,5 @@
+@use "../../../../../../../../assets/styles/abstract/variables" as *;
+
+.my-test-detail-all-user-information-container {
+  @include flex-col($s-40);
+}

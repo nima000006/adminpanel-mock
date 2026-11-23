@@ -1,0 +1,32 @@
+@use "../../../assets/styles/abstract/variables" as *;
+.requests-demand-card-container {
+  .card-container {
+    @include flex-col($s-8);
+    align-items: center;
+    border-radius: 8px;
+    padding: $s-12;
+    cursor: pointer;
+  }
+
+  .inactive-card-container {
+    border: 1px solid var(--app-border); /* Replaced $neutral-4 */
+    background-color: var(--app-bg-container); /* Replaced $neutral-1 */
+    .title {
+      @include h5-medium;
+      color: var(--app-text-secondary); /* Replaced $neutral-7 */
+    }
+  }
+  .active-card-container {
+    border: 1px solid var(--app-primary);
+    background-color: var(
+      --app-bg-layout
+    ); /* Replaced $primary-1 (often a very light blue) */
+    .title {
+      @include h5-medium;
+      color: var(--app-primary);
+    }
+  }
+  .title-without-badge {
+    @include body-regular;
+  }
+}

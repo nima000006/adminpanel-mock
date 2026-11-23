@@ -1,0 +1,6 @@
+@use "../../../../../../../assets/styles/abstract/variables" as *;
+.admission-detail-level-of-action-container {
+  .admission-detail-level-of-action-tree {
+    @include body-regular;
+  }
+}

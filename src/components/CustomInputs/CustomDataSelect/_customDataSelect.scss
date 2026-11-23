@@ -1,0 +1,35 @@
+@use "../../../assets/styles/abstract/variables" as *;
+.custom-data-select-container {
+  width: 100%;
+  label {
+    @include body-regular;
+    color: $title-black;
+    height: 0 !important;
+  }
+  select {
+    @include body-regular;
+    color: $title-black;
+  }
+  .ant-form-item {
+    margin: 0;
+  }
+  .ant-form-item-control {
+    flex: unset;
+    width: 100%;
+  }
+  .ant-form-item-label {
+    label {
+      &::after {
+        content: "";
+      }
+    }
+  }
+  .ant-form-item-explain-error {
+    color: var(--error-500);
+    font-family: "DanaFaNum";
+    font-style: normal;
+    font-weight: 500;
+    font-size: $s-12;
+    text-align: right;
+  }
+}

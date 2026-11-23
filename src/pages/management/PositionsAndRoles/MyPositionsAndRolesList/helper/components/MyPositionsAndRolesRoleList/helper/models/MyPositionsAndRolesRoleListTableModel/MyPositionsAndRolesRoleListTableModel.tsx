@@ -1,0 +1,98 @@
+import { Link } from "react-router";
+
+import CustomButton from "@components/CustomInputs/CustomButton/CustomButton";
+import CustomSwitch from "@components/CustomInputs/CustomSwitch/CustomSwitch";
+import { CustomColumnType } from "@components/Renderers/CustomTable/CustomTable";
+import SamimServiceTag from "@components/Renderers/SamimServiceTag/SamimServiceTag";
+import { dataPlaceHolder, makeSearchParams } from "@infra/helpers/utils";
+import { FixedType } from "@infra/models/modules/GeneralTypes/GeneralTypes";
+import { MANAGEMENT_MY_POSITIONS_AND_ROLES_ROLES_DETAIL_PAGE_ROUTE } from "@infra/router/routes/management";
+import { ManagementRole } from "@pages/management/PositionsAndRoles/_shared/utils/@types/@managementRole";
+import { generateFilters } from "@pages/management/PositionsAndRoles/_shared/utils/roleGenerateFilters";
+import { roleRecordStatus } from "@pages/management/PositionsAndRoles/_shared/utils/roleRecordStatus";
+
+const MyPositionsAndRolesRoleListTableModel = (
+  switchHandler: (name: string, isActive: boolean) => void,
+  data: ManagementRole[],
+  onEditClickHandler: (record: ManagementRole) => void
+): CustomColumnType<
+  ManagementRole & { recordStatus: keyof typeof roleRecordStatus }
+>[] => [
+  {
+    title: "نام نقش",
+    dataIndex: "title",
+    key: "title",
+    width: 299,
+    sortable: true,
+    render: (value: string | null) => dataPlaceHolder({ data: value }),
+  },
+  {
+    title: "نام سرویس",
+    dataIndex: "serviceName",
+    key: "serviceName",
+    width: 299,
+    filters: generateFilters(data, "serviceName"),
+    onFilter: (value, record) => record.serviceName === value,
+    render: (value: string | null) => <SamimServiceTag service={value} isText={true} />,
+  },
+  {
+    title: "وضعیت",
+    dataIndex: "status",
+    key: "status",
+    width: 299,
+    filters: [
+      { text: "فعال", value: true },
+      { text: "غیرفعال", value: false },
+    ],
+    onFilter: (value, record) => record.status === value,
+    render: (status: boolean, record) => (
+      <CustomSwitch
+        key={`${record.id}-${status}`}
+        checkedChildren="فعال"
+        unCheckedChildren="غیرفعال"
+        valuePropName="status"
+        checked={status}
+        onChange={(newChecked: boolean) => {
+          if (!record.name) return;
+          switchHandler(record.name, newChecked);
+        }}
+        disabled
+      />
+    ),
+  },
+  {
+    title: "",
+    dataIndex: "id",
+    key: "id",
+    fixed: "right" as FixedType,
+    className: "tables-sticky-column-left",
+    width: 169,
+    render: (value: number, record: ManagementRole) => {
+      return (
+        <div className="table-btns-container">
+          <CustomButton type="link" disabled>
+            <Link
+              to={{
+                pathname: MANAGEMENT_MY_POSITIONS_AND_ROLES_ROLES_DETAIL_PAGE_ROUTE,
+                search: makeSearchParams({
+                  id: value,
+                  name: record?.name,
+                  title: record?.title,
+                  serviceName: record?.serviceName,
+                }),
+              }}
+            >
+              مشاهده کاربران
+            </Link>
+          </CustomButton>
+
+          <CustomButton type="link" onClick={() => onEditClickHandler(record)} disabled>
+            ویرایش
+          </CustomButton>
+        </div>
+      );
+    },
+  },
+];
+
+export default MyPositionsAndRolesRoleListTableModel;

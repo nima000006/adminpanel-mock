@@ -1,0 +1,33 @@
+@use "../../../../../assets/styles/abstract/variables" as *;
+.accusation-case-process-flow-tab-container {
+  .ant-steps-vertical {
+    gap: $s-20;
+  }
+  .ant-steps-item-title {
+    width: 100%;
+  }
+  .ant-steps-item-icon {
+    float: right !important;
+  }
+  .step-item-container {
+    .step-body {
+      padding-top: $s-12;
+      .desc {
+        @include body-regular;
+        color: $character-secondary-45;
+      }
+    }
+    .step-title {
+      @include body-regular;
+      color: $title-black;
+    }
+    .step-subtitle {
+      display: inline-block;
+      @include body-regular;
+      color: $character-secondary-45;
+    }
+  }
+  .ant-steps-icon {
+    @include ant-steps-icon-font;
+  }
+}

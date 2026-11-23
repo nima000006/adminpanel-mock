@@ -1,0 +1,6 @@
+@use "../../../../../../../../../../../../assets/styles/abstract/variables" as *;
+.pending-list-room-allocation-reject-modal-content-container {
+  .text {
+    @include body-regular;
+  }
+}

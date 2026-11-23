@@ -1,0 +1,28 @@
+@use "../../../assets/styles/abstract/variables" as *;
+.divider-container {
+  display: grid;
+  grid-template-columns: 4fr auto;
+  align-items: center;
+
+  @media (max-width: 575px) {
+    grid-template-columns: 1fr;
+    .extra-content-container {
+      padding-right: 0;
+      justify-self: start;
+    }
+  }
+  .divider-main {
+    span {
+      @include h4-medium;
+      font-weight: 500;
+      line-height: 28px;
+      color: $title-black;
+      @media (max-width: 767px) {
+        white-space: normal;
+      }
+    }
+  }
+  .extra-content-container {
+    padding-right: $s-16;
+  }
+}

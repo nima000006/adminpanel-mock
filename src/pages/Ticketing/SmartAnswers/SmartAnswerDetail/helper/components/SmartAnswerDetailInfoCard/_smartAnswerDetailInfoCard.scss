@@ -1,0 +1,24 @@
+@use "../../../../../../../assets/styles/abstract/variables" as *;
+.smart-answer-detail-info-crd-container {
+  container-type: inline-size;
+  @container (max-width:140px) {
+    padding: 1px;
+    button {
+      padding: $s-2;
+    }
+    button span {
+      font-size: $s-8;
+    }
+    .ant-tag {
+      font-size: $s-8;
+    }
+  }
+  .custom-alert-color {
+    background-color: var(--color-custom-alert);
+    border: 1px solid #6c8fd0;
+
+    .ant-alert-icon {
+      color: #96a6c2;
+    }
+  }
+}

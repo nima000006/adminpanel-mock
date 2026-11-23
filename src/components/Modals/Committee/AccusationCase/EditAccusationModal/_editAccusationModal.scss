@@ -1,0 +1,141 @@
+@use "../../../../../assets/styles/abstract/variables" as *;
+.committee-accusation-case-edit-accusation-modal-container {
+  width: 90vw !important;
+  max-height: 90%;
+  border-radius: 20px;
+  .ant-modal-container {
+    margin: 0;
+    padding: 0;
+    background-color: $modal-bg-color;
+    .ant-modal-header {
+      padding: $s-16 $s-24;
+    }
+    .ant-modal-title {
+      @include h5-medium;
+      font-weight: bold;
+    }
+    .ant-modal-body {
+      .modal-body-container {
+        padding: $s-20;
+        .modal-body {
+          display: flex;
+          flex-direction: column;
+          gap: $s-40;
+          .ant-radio-group {
+            display: flex;
+            flex-wrap: wrap;
+            gap: $s-32;
+          }
+          .divider-btn-container {
+            display: grid;
+            grid-template-columns: 4fr auto;
+            gap: $s-16;
+            margin-bottom: $s-32;
+            .specific-divider {
+              @include h5-regular;
+              color: $title-black;
+              @media (max-width: 800px) {
+                font-size: $s-14;
+              }
+              @media (max-width: 670px) {
+                font-size: $s-12;
+              }
+            }
+            .switch-container {
+              @include flex-center;
+              gap: $s-12;
+              .switch {
+                margin-bottom: 0;
+              }
+            }
+          }
+        }
+      }
+    }
+    .border-round-box {
+      padding: $s-24;
+      border-radius: 10px;
+      border: $border-1 solid $border-color-90;
+    }
+    .accused-info-container {
+      .ant-collapse-expand-icon {
+        position: absolute;
+        left: 0;
+        border-radius: 50%;
+        .collapse-icon {
+          font-size: $s-18;
+        }
+      }
+      .btn-container {
+        align-self: center;
+        justify-self: end;
+        .search-btn {
+          @include h5-regular;
+          @media (max-width: 950px) {
+            font-size: $s-14;
+            padding: $s-4 $s-10;
+          }
+        }
+      }
+      .accused-info-items-container {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: $s-12;
+        @media (max-width: 1200px) {
+          grid-template-columns: repeat(2, 1fr);
+        }
+        @media (max-width: 600px) {
+          grid-template-columns: repeat(1, 1fr);
+        }
+        @media (max-width: 950px) {
+          gap: $s-8;
+        }
+      }
+    }
+    .violation-information-container {
+      .violation-type-wrapper {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: $s-12;
+      }
+      .violation-wrapper {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: $s-12;
+        margin-top: $s-32;
+      }
+      .text-area-wrapper {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    .upload-container {
+      display: flex;
+      flex-direction: column;
+      gap: $s-13;
+      .ant-upload-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: $s-8;
+      }
+      .upload-btn {
+        @include body-regular;
+      }
+    }
+    .initial-referral {
+      .css-dev-only-do-not-override-pr0fja {
+        @include body-regular;
+      }
+    }
+    .custom-btn {
+      @include body-regular;
+    }
+    .submit-buttons-container {
+      @include flex-center;
+      justify-content: flex-start;
+      gap: $s-13;
+      background-color: var(--app-bg-container);
+      padding: $s-16 $s-24;
+    }
+  }
+}

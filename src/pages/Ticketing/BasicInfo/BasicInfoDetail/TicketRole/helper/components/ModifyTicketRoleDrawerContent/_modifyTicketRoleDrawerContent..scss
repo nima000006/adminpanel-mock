@@ -1,0 +1,9 @@
+@use "../../../../../../../../assets/styles/abstract/variables" as *;
+.add-super-agent-custom-transfer-container {
+  .ant-transfer-section {
+    width: 100% !important;
+  }
+  .ant-pagination {
+    padding: $s-10 !important;
+  }
+}

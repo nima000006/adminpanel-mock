@@ -1,0 +1,17 @@
+@use "../../../../../../../../assets/styles/abstract/variables" as *;
+.business-requests-detail-info-container {
+  .custom-alert {
+    .ant-alert-message {
+      @include subtitle2;
+    }
+    &.custom-alert-duplicate {
+      margin-top: $s-16;
+    }
+  }
+  .custom-divider {
+    span {
+      @include h4-medium;
+      margin-top: $s-16;
+    }
+  }
+}

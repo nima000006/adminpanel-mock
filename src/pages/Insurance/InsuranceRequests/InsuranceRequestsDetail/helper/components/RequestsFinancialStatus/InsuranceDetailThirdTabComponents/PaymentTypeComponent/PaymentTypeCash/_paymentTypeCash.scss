@@ -1,0 +1,32 @@
+@use "../../../../../../../../../../assets//styles/abstract/variables" as *;
+.insurance-detail-payment-type-cash-container {
+  margin-bottom: $s-40;
+  .payment-type-cash-wrapper {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: $s-24;
+    @media (max-width: 530px) {
+      flex-direction: column;
+      gap: $s-16;
+      align-items: flex-start;
+    }
+    .payment-type-cash-child-wrapper {
+      @include flex-gap($s-8);
+      align-items: center;
+      .title {
+        @include h5-medium;
+      }
+      .status {
+        @include body-regular;
+        padding: 0 $s-8;
+        border-radius: 2px;
+        min-width: fit-content;
+        text-align: center;
+      }
+      .detail-btn-link {
+        display: flex;
+        align-items: center;
+      }
+    }
+  }
+}

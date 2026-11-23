@@ -1,0 +1,41 @@
+@use "../../../assets/styles/abstract/variables" as *;
+.samim-service-tag-container {
+  @include flex-gap($s-4);
+  padding: $s-4;
+  width: fit-content;
+
+  .icon-wrapper {
+    width: 20px;
+    height: 20px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .red {
+    background-color: $dustred-6;
+  }
+  .purple {
+    background-color: $purple-6;
+  }
+  .cyan {
+    background-color: $cyan-6;
+  }
+  .lime {
+    background-color: $lime-6;
+  }
+  .green {
+    background-color: $green-6;
+  }
+  .blue {
+    background-color: $primary-6;
+  }
+  .teal {
+    background-color: $teal-6;
+  }
+
+  &.teal {
+    color: $teal-6 !important;
+  }
+}

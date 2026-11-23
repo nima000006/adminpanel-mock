@@ -1,0 +1,9 @@
+@use "../../../assets/styles/abstract/variables" as *;
+.custom-tag-main-container {
+  @include body-regular;
+  text-align: center;
+}
+.ant-tag {
+  @include body-regular;
+  @include flex-center;
+}

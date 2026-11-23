@@ -1,0 +1,228 @@
+variables:
+  BASE_IMAGE: $HARBOR_ADDR/hub/library/nginx:latest
+  BUILD_IMAGE: $HARBOR_ADDR/hub/library/node:24.1.0-alpine
+  IMG_TAG: ${CI_COMMIT_BRANCH}-${CI_COMMIT_SHORT_SHA}
+  IMAGE_NAME: apanel
+  DEV_PATH: apanel
+  SRV_NAME: apanel
+  IMAGE_REPO: uni
+  PROJECT_ENV: .env.dev
+  RUN_PROJECT: dev
+
+workflow:
+  rules:
+    - if: $CI_COMMIT_REF_NAME == "stage"
+      variables:
+        PROJECT_ENV: .env.staging
+        RUN_PROJECT: stage
+    - if: $CI_COMMIT_REF_NAME == "uat"
+      variables:
+        PROJECT_ENV: .env.uat
+        RUN_PROJECT: uat
+    - if: $CI_COMMIT_REF_NAME == "main"
+      variables:
+        PROJECT_ENV: .env.production
+        RUN_PROJECT: build
+    - when: always
+
+stages:
+  - .pre
+  - artifacts
+  - build
+  - deploy
+
+test:
+  stage: .pre
+  only:
+    - dev
+    - stage
+    - main
+    - uat
+  tags:
+    - build
+  # only:
+  #   - merge_requests
+  image:
+    name: $BUILD_IMAGE
+  script:
+    - npm config set fetch-retry-mintimeout 20000
+    - npm config set fetch-retry-maxtimeout 120000
+    - npm install -f
+    - source $PROJECT_ENV
+    - npm run test
+  cache:
+    paths:
+      - node_modules
+    key: "$CI_BUILD_REF_NAME"
+
+artifacts:
+  stage: artifacts
+  tags:
+    - build
+  only:
+    - dev
+    - stage
+    - main
+    - uat
+  needs:
+    - test
+  image:
+    name: $BUILD_IMAGE
+  script:
+    - npm config set fetch-retry-mintimeout 20000
+    - npm config set fetch-retry-maxtimeout 120000
+    - npm install -f
+    - source $PROJECT_ENV
+    - export NODE_OPTIONS="--max-old-space-size=4096"
+    - npm run $RUN_PROJECT
+  cache:
+    paths:
+      - node_modules
+    key: "$CI_BUILD_REF_NAME"
+  artifacts:
+    untracked: false
+    expire_in: 2 weeks
+    paths:
+      - dist
+
+containerize:
+  stage: build
+  image:
+    name: $HARBOR_ADDR/gcr/kaniko-project/executor:debug #gcr.io/kaniko-project/executor:debug
+    entrypoint: [""]
+  tags:
+    - build
+  needs:
+    - artifacts
+  only:
+    - dev
+    - stage
+    - main
+    - uat
+  before_script:
+    - mkdir -p /kaniko/.docker
+    - >- #Initialization docker auths and proxy
+      echo '{ "auths":{ "'"${HARBOR_ADDR}"'": {"auth": "'"$(printf "%s:%s" "${HARBOR_USERNAME}" "${HARBOR_PASSWORD}" | base64 | tr -d '\n')"'" }},
+              "proxies":{"default":{"httpProxy": "'"${HTTP_PROXY}"'","httpsProxy": "'"${HTTPS_PROXY}"'","noProxy": "'"${NO_PROXY}"'"}}
+            }' > /kaniko/.docker/config.json
+  script:
+    ## build portal-backend image
+    - >- #Create and push the application
+      /kaniko/executor
+      --cache=true
+      --cache-copy-layers
+      --cache-ttl 744h
+      --context "${CI_PROJECT_DIR}"
+      --build-arg BUILD_IMAGE=$BUILD_IMAGE
+      --build-arg BASE_IMAGE=$BASE_IMAGE
+      --dockerfile "Dockerfile"
+      --destination "$HARBOR_ADDR/$IMAGE_REPO/$IMAGE_NAME:${CI_COMMIT_BRANCH}-${CI_COMMIT_SHORT_SHA}"
+
+deploy:
+  stage: deploy
+  tags:
+    - deploy-dev
+  only:
+    - dev
+  needs:
+    - containerize
+  script:
+    - cd ${BASE_DIR}/${DEV_PATH}
+    - echo "IMG_TAG=${IMG_TAG}" >> .env
+    - docker compose pull
+    - docker compose up -d $SRV_NAME
+    - docker compose ps
+    - sleep 10
+    - docker compose logs $SRV_NAME --tail 15 -t
+
+#---
+
+deploy:stage:
+  variables:
+    CHART_NAME: apanel
+    DEPLOY_TIMEOUT: 180s
+  stage: deploy
+  tags:
+    - uni-stage
+  only:
+    - stage
+  needs:
+    - containerize
+  environment:
+    name: stage
+    url: https://apanel.staging.example.com
+  resource_group: stage
+  image:
+    name: $HARBOR_ADDR/hub/alpine/k8s:1.26.13
+    entrypoint: [""]
+  script:
+    # check helm charts
+    - helm lint helm/ -f helm/values-stage.yaml
+    # deploy chart
+    - >
+      helm -n uni upgrade -i --atomic --timeout $DEPLOY_TIMEOUT $CHART_NAME helm/ -f helm/values-stage.yaml 
+      --set image.tag=${IMG_TAG}
+
+    # check deployed objects
+    - kubectl -n uni get all,ingress,endpoints -l app.kubernetes.io/name=$CHART_NAME
+#---
+#---
+
+deploy:uat:
+  variables:
+    CHART_NAME: apanel
+    DEPLOY_TIMEOUT: 180s
+  stage: deploy
+  tags:
+    - uni-uat
+  only:
+    - uat
+  needs:
+    - containerize
+  environment:
+    name: uat
+    url: https://apanel.uat.example.com
+  image:
+    name: $HARBOR_ADDR/hub/alpine/k8s:1.26.13
+    entrypoint: [""]
+  script:
+    # check helm charts
+    - helm lint helm/ -f helm/values-uat.yaml
+    # deploy chart
+    - >
+      helm -n uni upgrade -i --atomic --timeout $DEPLOY_TIMEOUT $CHART_NAME helm/ -f helm/values-uat.yaml 
+      --set image.tag=${IMG_TAG}
+
+    # check deployed objects
+    - kubectl -n uni get all,ingress,endpoints -l app.kubernetes.io/name=$CHART_NAME
+
+#---
+
+deploy:prod:
+  variables:
+    CHART_NAME: apanel
+    DEPLOY_TIMEOUT: 180s
+  stage: deploy
+  tags:
+    - uni-prod
+  only:
+    - main
+  needs:
+    - containerize
+  environment:
+    name: prod
+    url: https://apanel.daneshjouyar.iau.ir
+  resource_group: prod
+  image:
+    name: $HARBOR_ADDR/hub/alpine/k8s:1.26.13
+    entrypoint: [""]
+  script:
+    # check helm charts
+    - helm lint helm/ -f helm/values-prod.yaml
+    # deploy chart
+    - >
+      helm -n uni upgrade -i --atomic --timeout $DEPLOY_TIMEOUT $CHART_NAME helm/ -f helm/values-prod.yaml 
+      --set image.tag=${IMG_TAG}
+
+    # check deployed objects
+    - kubectl -n uni get all,ingress,endpoints -l app.kubernetes.io/name=$CHART_NAME

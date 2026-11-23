@@ -1,0 +1,11 @@
+@use "../../../../../../../../../../assets/styles/abstract/variables" as *;
+.on-account-transaction-drawer-content-container {
+  .divider-extra-content {
+    @include flex-gap($s-4);
+    align-items: center;
+    color: $primary-6;
+  }
+  .transaction-detail-user-descriptions {
+    @include body-regular;
+  }
+}

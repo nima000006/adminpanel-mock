@@ -1,0 +1,49 @@
+@use "../../../../../../assets/styles/abstract/variables" as *;
+.factor-table-container {
+  .action-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    @media (max-width: 580px) {
+      flex-direction: column;
+      gap: $s-16;
+      align-items: flex-start;
+    }
+    .advanceFilter {
+      @include body-regular;
+    }
+    .search-container {
+      width: 200px;
+      input {
+        @include body-regular;
+      }
+    }
+    .clear-btn {
+      @include body-regular;
+    }
+    .filter-tag-container {
+      display: flex;
+      gap: $s-16;
+      align-items: center;
+    }
+  }
+  .factor-table {
+    margin-top: $s-16;
+  }
+  .advance-filters-container {
+    margin: 1rem 0;
+  }
+  .print-btns-container {
+    display: flex;
+    gap: $s-8;
+  }
+}
+
+.paid-action-btns-container {
+  display: flex;
+  gap: $s-8;
+  @media (max-width: 450px) {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

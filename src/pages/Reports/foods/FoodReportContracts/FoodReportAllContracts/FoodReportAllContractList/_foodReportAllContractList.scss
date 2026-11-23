@@ -1,0 +1,25 @@
+@use "../../../../../../assets/styles/abstract/variables" as *;
+.all-contracts-list-page-container {
+  @include flex-col($s-24);
+  .all-contracts-list-table {
+    .all-contracts-list-buttons {
+      @include flex-center;
+    }
+  }
+  .btn-wrapper {
+    @include flex-space-between;
+    .btn-text {
+      @include body-regular;
+      @media (max-width: 450px) {
+        width: 100%;
+      }
+    }
+    @media (max-width: 450px) {
+      flex-direction: column;
+      gap: $s-16;
+    }
+  }
+  .custom-switch-container {
+    margin-bottom: 0;
+  }
+}

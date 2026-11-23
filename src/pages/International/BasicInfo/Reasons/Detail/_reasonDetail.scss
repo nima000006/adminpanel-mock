@@ -1,0 +1,19 @@
+@use "../../../../../assets/styles/abstract/variables" as *;
+.international-reason-detail-page-container {
+  @include flex-col($s-16);
+  .divider-btn {
+    display: flex;
+    gap: $s-8;
+  }
+  .action-btn {
+    @include flex-space-between;
+    .ant-form-item {
+      margin-bottom: 0;
+    }
+  }
+  .international-reason-detail-table-model-container {
+    .actions-btn-container {
+      @include flex-center;
+    }
+  }
+}

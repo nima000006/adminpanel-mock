@@ -1,0 +1,32 @@
+@use "../../../assets/styles/abstract/variables" as *;
+.custom-steps-container {
+  @media (min-width: 576px) {
+    @include flex-center;
+    flex-wrap: wrap;
+  }
+
+  .ant-steps-item {
+    padding-inline-start: $s-44 !important;
+    @media (max-width: 575px) {
+      padding: 0 !important;
+    }
+  }
+  .ant-steps-item-icon {
+    @media (max-width: 1024px) {
+      width: $s-24 !important;
+      height: $s-24;
+      line-height: unset;
+    }
+  }
+  .ant-steps-item-container {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center;
+  }
+  .ant-steps-icon {
+    @include ant-steps-icon-font;
+  }
+  .ant-steps-item-title {
+    @include body-regular;
+  }
+}

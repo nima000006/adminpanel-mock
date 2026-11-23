@@ -1,0 +1,11 @@
+.view-organization-position-info-drawer-content-container {
+  .segmented-container {
+    display: block;
+
+    .ant-segmented-group {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+    }
+  }
+}

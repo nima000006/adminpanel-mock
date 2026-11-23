@@ -1,0 +1,31 @@
+@use "../../../../../../../../assets/styles/abstract/variables" as *;
+.my-invoices-docs-debt-detail-container {
+  .my-invoices-docs-debt-detail-table-container {
+    margin-top: $s-24;
+    .icon-wrapper {
+      width: $s-20;
+      height: $s-20;
+      border-radius: $s-5;
+      @include flex-center;
+    }
+    .dorm-color {
+      background-color: $purple-6;
+    }
+    .my-doctor-color {
+      background-color: $cyan-6;
+    }
+    .food-color {
+      background-color: $lime-6;
+    }
+    .insurance-color {
+      background-color: $green-6;
+    }
+    .card-color {
+      background-color: $primary-6;
+    }
+    .custom-tag {
+      width: fit-content;
+      gap: $s-5;
+    }
+  }
+}

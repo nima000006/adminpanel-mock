@@ -1,0 +1,47 @@
+@use "../../../../../assets/styles/abstract/variables" as *;
+.wallet-security-setting-card-info-container {
+  .wallet-security-setting-card-info-wrapper {
+    background-color: var(--app-bg-layout);
+    border-radius: $s-16;
+    padding: $s-16;
+    @include flex-col($s-16);
+    @include body-regular;
+
+    .first-box-first-row-wrapper {
+      display: flex;
+      justify-content: space-between;
+
+      .setting-title-wrapper {
+        @include flex-gap($s-8);
+
+        .setting-icon-Wrapper {
+          width: 20px;
+          height: 20px;
+          border-radius: $s-8;
+          background-color: $blue-5;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+      }
+    }
+
+    .status-wrapper {
+      @include flex-gap($s-24);
+      .status {
+        color: var(--app-text);
+      }
+    }
+
+    .date-wrapper {
+      @include flex-gap($s-8);
+      .date {
+        color: var(--app-text);
+      }
+
+      .date-value {
+        color: var(--app-text-secondary);
+      }
+    }
+  }
+}

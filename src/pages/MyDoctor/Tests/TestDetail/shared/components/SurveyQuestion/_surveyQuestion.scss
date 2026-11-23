@@ -1,0 +1,27 @@
+@use "../../../../../../../assets/styles/abstract/variables" as *;
+
+.survey-question-container {
+  @include flex-col($s-8);
+  .ant-segmented-item-label {
+    @include flex-center;
+  }
+  .question-point-container {
+    @include flex-gap($s-8);
+  }
+  .question-text {
+    @include body-regular;
+  }
+  @media (max-width: 1000px) {
+    .ant-segmented-group {
+      flex-direction: column;
+    }
+  }
+
+  .ant-segmented-item-selected {
+    background-color: $primary-6;
+    color: $neutral-1;
+  }
+  .ant-segmented.ant-segmented-rtl {
+    width: fit-content;
+  }
+}

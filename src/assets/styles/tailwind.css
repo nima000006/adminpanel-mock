@@ -1,0 +1,586 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+:root {
+  /* ======================================= */
+  /*              LIGHT THEME                */
+  /* ======================================= */
+
+  /* Core Layout */
+  --app-bg-container: #ffffff;
+  --app-bg-layout: #eff2f5;
+  --app-bg-elevated: #ffffff;
+
+  /* Text */
+  --app-text: rgba(0, 0, 0, 0.88);
+  --app-text-secondary: rgba(0, 0, 0, 0.65);
+  --app-text-placeholder: rgba(0, 0, 0, 0.45);
+  --app-text-inverse: #ffffff;
+
+  /* Borders */
+  --app-border: #d9d9d9;
+  --app-border-secondary: #f0f0f0;
+
+  /* Brand Colors (Primary) */
+  --app-primary: #1890ff;
+  --app-primary-hover: #40a9ff;
+  --app-primary-active: #096dd9;
+
+  /* Functional Colors */
+  --app-success: #389e0d;
+  --app-warning: #faad14;
+  --app-error: #ff4d4f;
+  --app-info: #1890ff;
+
+  /* Natural / Core Tunes */
+  --app-natural: #389e0d;
+  --app-natural-hover: #5b8c00;
+  --app-natural-active: #237804;
+  --app-natural-bg: #f6ffed;
+  --app-natural-border: #b7eb8f;
+
+  /* Disabled States */
+  --app-bg-disabled: rgba(0, 0, 0, 0.04);
+  --app-text-disabled: rgba(0, 0, 0, 0.25);
+  --app-border-disabled: #d9d9d9;
+
+  /* ========== Ant Design v6 CSS Variables ========== */
+  --ant-color-text: var(--app-text);
+  --ant-color-text-base: var(--app-text);
+  --ant-color-text-secondary: var(--app-text-secondary);
+  --ant-color-text-placeholder: var(--app-text-placeholder);
+  --ant-color-text-light-solid: #ffffff;
+  --ant-color-bg-container: var(--app-bg-container);
+  --ant-color-border: var(--app-border);
+  --ant-color-primary: var(--app-primary);
+  --ant-color-primary-hover: var(--app-primary-hover);
+  --ant-color-primary-active: var(--app-primary-active);
+
+  /* ========== Project-Specific Brand Colors (Legacy) ========== */
+  --primary-400: #0500ff;
+  --blue-link: #1677ff;
+  --information-100: #d7e7ff;
+  --success-500: #1a9e17;
+  --error-400: #dc2e2e;
+  --error-500: #bc0000;
+  --white: #ffffff;
+  --black: #222222;
+  --green: #389e0d;
+  --yellow: #faad14;
+  --red: #a8071a;
+
+  /* ========== Ant Design Color Palette (Legacy) ========== */
+  --primary-1: #e6f7ff;
+  --primary-6: #1890ff;
+  --dustred-1: #fff1f0;
+  --dustred-2: #ffccc7;
+  --dustred-6: #f5222d;
+  --volcano-1: #fff2e8;
+  --volcano-6: #fa541c;
+  --green-1: #f6ffed;
+  --green-4: #95de64;
+  --green-6: #52c41a;
+  --green-3: #b7eb8f;
+  --yellow-1: #fffbe6;
+  --yellow-3: #ffe58f;
+  --yellow-4: #fff566;
+  --cyan-1: #e6fffb;
+  --cyan-6: #91caff;
+  --neutral-1: #ffffff;
+  --neutral-2: #fafafa;
+  --neutral-3: #f5f5f5;
+  --neutral-4: #f0f0f0;
+  --neutral-5: #d9d9d9;
+  --neutral-6: #bfbfbf;
+  --neutral-7: #8c8c8c;
+  --neutral-8: #595959;
+  --neutral-9: #434343;
+  --neutral-10: #262626;
+  --neutral-11: #1f1f1f;
+  --neutral-12: #141414;
+  --neutral-13: #000000;
+  --neutral-14: #00000073;
+
+  /* Additional Palette */
+  --primary-4: #69c0ff;
+  --primary-5: #40a9ff;
+  --primary-7: #096dd9;
+  --primary-8: #0050b3;
+  --primary-9: #003a8c;
+  --orange-6: #fa8c16;
+  --teal-6: #3b8690;
+  --teal-8: #145f69;
+  --dustred-4: #ff7875;
+  --dustred-5: #ff4d4f;
+  --magenta-1: #fff0f6;
+
+  /* customized utils (used mostly inside the multi view calendar) HSL Variables (referenced by util classes) */
+  --background: 0 0% 100%;
+  --foreground: 222.2 84% 4.9%;
+  --card: 0 0% 100%;
+  --card-foreground: 222.2 84% 4.9%;
+  --primary: 221.2 83.2% 53.3%;
+  --primary-foreground: 210 40% 98%;
+  --muted: 210 40% 96.1%;
+  --muted-foreground: 215.4 16.3% 46.9%;
+  --accent: 210 40% 96.1%;
+  --accent-foreground: 222.2 47.4% 11.2%;
+  --border: 214.3 31.8% 91.4%;
+  --input: 214.3 31.8% 91.4%;
+  --ring: 221.2 83.2% 53.3%;
+  --radius: 0.5rem;
+  --custom-alert: #e9eef8;
+}
+
+/* ======================================= */
+/*              DARK THEME                 */
+/* ======================================= */
+:root:where(.dark) {
+  /* Core Layout */
+  --app-bg-container: #1e1e1e;
+  --app-bg-layout: #121212;
+  --app-bg-elevated: #2d2d2d;
+
+  /* Text */
+  --app-text: rgba(255, 255, 255, 0.87);
+  --app-text-secondary: rgba(255, 255, 255, 0.6);
+  --app-text-placeholder: rgba(255, 255, 255, 0.38);
+  --app-text-inverse: #ffffff;
+
+  /* Borders */
+  --app-border: #424242;
+  --app-border-secondary: #303030;
+
+  /* Brand Colors (Primary) -
+  --app-primary: #177ddc;
+  --app-primary-hover: #165996;
+  --app-primary-active: #0958d9;
+
+  /* Functional Colors */
+  --app-success: #2e8b0b;
+  --app-warning: #d4920b;
+  --app-error: #d9363e;
+  --app-info: #177ddc;
+  --error-400: #ff3d60;
+  --error-500: #f57983;
+
+  /* Natural / Core Tunes */
+  --app-natural: #49aa19;
+  --app-natural-hover: #5b8c00;
+  --app-natural-active: #237804;
+  --app-natural-bg: #162312;
+  --app-natural-border: #237804;
+
+  /* Disabled States */
+  --app-bg-disabled: rgba(255, 255, 255, 0.08);
+  --app-text-disabled: rgba(255, 255, 255, 0.3);
+  --app-border-disabled: #424242;
+
+  /* Ant Design Map Updates */
+  --ant-color-text: var(--app-text);
+  --ant-color-bg-container: var(--app-bg-container);
+  --ant-color-border: var(--app-border);
+
+  /* ========================================================== */
+  /* NEUTRAL PALETTE — Dark Mode (inverted scale)               */
+  /* ========================================================== */
+  --neutral-1: #1e1e1e; /* was #ffffff → card/container bg */
+  --neutral-2: #252525; /* was #fafafa → subtle bg */
+  --neutral-3: #2d2d2d; /* was #f5f5f5 → section bg */
+  --neutral-4: #353535; /* was #f0f0f0 → border/divider bg */
+  --neutral-5: #424242; /* was #d9d9d9 → border */
+  --neutral-6: #5a5a5a; /* was #bfbfbf → muted icon/border */
+  --neutral-7: #8c8c8c; /* stays #8c8c8c → midpoint (same) */
+  --neutral-8: #a6a6a6; /* was #595959 → secondary text */
+  --neutral-9: #bfbfbf; /* was #434343 → emphasis text */
+  --neutral-10: #d9d9d9; /* was #262626 → strong text */
+  --neutral-11: #e8e8e8; /* was #1f1f1f → heading text */
+  --neutral-12: #f0f0f0; /* was #141414 → near-white text */
+  --neutral-13: #ffffff; /* was #000000 → max contrast text */
+  --neutral-14: rgba(255, 255, 255, 0.45); /* was #00000073 → overlay */
+
+  /* ========================================================== */
+  /* PRIMARY PALETTE — Dark Mode                                */
+  /* ========================================================== */
+  --primary-1: #111d2c; /* was #e6f7ff → primary bg tint */
+  --primary-4: #3c7fd4; /* was #69c0ff → lighter primary */
+  --primary-5: #1668dc; /* was #40a9ff → primary hover */
+  --primary-6: #177ddc; /* was #1890ff → main primary */
+  --primary-7: #1554ad; /* was #096dd9 → primary active */
+  --primary-8: #10397e; /* was #0050b3 → dark primary */
+  --primary-9: #0c264f; /* was #003a8c → darkest primary */
+
+  /* ========================================================== */
+  /* FUNCTIONAL PALETTE — Dark Mode                             */
+  /* ========================================================== */
+  /* Dust Red (Error/Danger) */
+  --dustred-1: #2a1215; /* was #fff1f0 → error bg */
+  --dustred-2: #431418; /* was #ffccc7 → error light */
+  --dustred-4: #b33b3b; /* was #ff7875 → error medium */
+  --dustred-5: #d32029; /* was #ff4d4f → error text */
+  --dustred-6: #a61d24; /* was #f5222d → error strong */
+
+  /* Green (Success) */
+  --green-1: #162312; /* was #f6ffed → success bg */
+  --green-3: #274916; /* was #b7eb8f → success border */
+
+  /* Yellow (Warning) */
+  --yellow-1: #2b2111; /* was #fffbe6 → warning bg */
+  --yellow-3: #594214; /* was #ffe58f → warning border */
+  --yellow-4: #7c5914; /* was #fff566 → warning medium */
+
+  /* Cyan (Info) */
+  --cyan-1: #112123; /* was #e6fffb → info bg */
+  --cyan-6: #3c7fd4; /* was #91caff → info accent */
+
+  /* Orange (Warning/Caution) */
+  --orange-6: #d87a16; /* was #fa8c16 → slightly muted */
+
+  /* Teal */
+  --teal-6: #6aadb5; /* was #3b8690 → lighter for dark bg contrast */
+  --teal-8: #3a7d86; /* was #145f69 → lighter gradient end */
+
+  /* Volcano (Medium / Caution) */
+  --volcano-1: #2b1611; /* was #fff2e8 → volcano bg */
+  --volcano-6: #d4380d; /* was #fa541c → volcano strong */
+
+  /* Magenta */
+  --magenta-1: #291321; /* was #fff0f6 → magenta bg */
+
+  --custom-alert: #1a2540;
+}
+
+/* Global body styles  */
+body {
+  background-color: var(--app-bg-layout);
+  color: var(--app-text);
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
+}
+
+@theme {
+  /* Project Brand Colors */
+  --color-primary-400: var(--primary-400);
+  --color-blue-link: var(--blue-link);
+  --color-information-100: var(--information-100);
+  --color-success-500: var(--success-500);
+  --color-error-400: var(--error-400);
+  --color-error-500: var(--error-500);
+  --color-white: var(--white);
+  --color-black: var(--black);
+  --color-green: var(--green);
+  --color-yellow: var(--yellow);
+  --color-red: var(--red);
+  --color-primary-1: var(--primary-1);
+  --color-primary-4: var(--primary-4);
+  --color-primary-5: var(--primary-5);
+  --color-primary-6: var(--primary-6);
+  --color-primary-7: var(--primary-7);
+  --color-primary-8: var(--primary-8);
+  --color-primary-9: var(--primary-9);
+  --color-dustred-1: var(--dustred-1);
+  --color-dustred-2: var(--dustred-2);
+  --color-dustred-4: var(--dustred-4);
+  --color-dustred-5: var(--dustred-5);
+  --color-dustred-6: var(--dustred-6);
+  --color-green-1: var(--green-1);
+  --color-green-3: var(--green-3);
+  --color-green-4: var(--green-4);
+  --color-green-6: var(--green-6);
+  --color-yellow-1: var(--yellow-1);
+  --color-yellow-3: var(--yellow-3);
+  --color-yellow-4: var(--yellow-4);
+  --color-cyan-1: var(--cyan-1);
+  --color-cyan-6: var(--cyan-6);
+  --color-orange-6: var(--orange-6);
+  --color-teal-6: var(--teal-6);
+  --color-teal-8: var(--teal-8);
+  --color-volcano-1: var(--volcano-1);
+  --color-volcano-6: var(--volcano-6);
+  --color-magenta-1: var(--magenta-1);
+  --color-custom-alert: var(--custom-alert);
+
+  --color-neutral-1: var(--neutral-1);
+  --color-neutral-2: var(--neutral-2);
+  --color-neutral-3: var(--neutral-3);
+  --color-neutral-4: var(--neutral-4);
+  --color-neutral-5: var(--neutral-5);
+  --color-neutral-6: var(--neutral-6);
+  --color-neutral-7: var(--neutral-7);
+  --color-neutral-8: var(--neutral-8);
+  --color-neutral-9: var(--neutral-9);
+  --color-neutral-10: var(--neutral-10);
+  --color-neutral-11: var(--neutral-11);
+  --color-neutral-12: var(--neutral-12);
+  --color-neutral-13: var(--neutral-13);
+  --color-neutral-14: var(--neutral-14);
+
+  /* Generic App Semantics */
+  --app-color-primary: var(--primary-6);
+  --app-color-success: var(--green);
+  --app-color-warning: var(--yellow);
+  --app-color-error: var(--app-error);
+  --app-color-info: var(--primary-6);
+
+  /* Layout */
+
+  --color-layout: var(--app-bg-layout);
+  --color-container: var(--app-bg-container);
+  --color-elevated: var(--app-bg-elevated);
+
+  /* Text */
+
+  --color-app-text: var(--app-text);
+  --color-app-text-secondary: var(--app-text-secondary);
+  --color-app-text-placeholder: var(--app-text-placeholder);
+  --color-app-text-inverse: var(--app-text-inverse);
+
+  /* Borders */
+  --app-border: #424242;
+  --app-border-secondary: #303030;
+}
+
+@layer utilities {
+  .body-regular {
+    font-family: "DanaFaNum" !important;
+    font-size: 14px !important;
+    font-style: normal !important;
+    font-weight: 400 !important;
+    line-height: 22px !important;
+  }
+}
+
+@layer utilities {
+  .h3-medium {
+    font-family: DanaFaNum;
+    color: var(--app-text);
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 32px;
+  }
+}
+
+@layer utilities {
+  .h4-medium {
+    font-family: DanaFaNum;
+    font-size: 1.25rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 22px;
+    color: var(--app-text);
+  }
+}
+
+@layer utilities {
+  .h5-medium {
+    font-family: DanaFaNum;
+    color: var(--app-text);
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px;
+  }
+}
+
+@layer utilities {
+  .h5-bold {
+    font-family: DanaFaNum;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 24px;
+    color: var(--app-text-placeholder);
+  }
+}
+
+@layer utilities {
+  .h5-regular {
+    font-family: DanaFaNum;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+  }
+}
+
+@layer utilities {
+  .footnote {
+    color: var(--app-text-secondary);
+    text-align: right;
+    font-variant-numeric: lining-nums tabular-nums;
+    font-family: "DanaFaNum";
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+  }
+}
+
+/**
+ * ============================================================================
+ * UTILITY CLASSES FOR SHADCN/UI COMPONENTS
+ * ============================================================================
+ */
+@layer utilities {
+  /* Background utilities */
+  .bg-background {
+    background-color: hsl(var(--background));
+  }
+  .bg-foreground {
+    background-color: hsl(var(--foreground));
+  }
+  .bg-card {
+    background-color: hsl(var(--card));
+  }
+  .bg-primary {
+    background-color: hsl(var(--primary));
+  }
+  .bg-muted {
+    background-color: hsl(var(--muted));
+  }
+  .bg-accent {
+    background-color: hsl(var(--accent));
+  }
+
+  /* Text utilities */
+  .text-foreground {
+    color: hsl(var(--foreground));
+  }
+  .text-card-foreground {
+    color: hsl(var(--card-foreground));
+  }
+  .text-primary {
+    color: hsl(var(--primary));
+  }
+  .text-primary-foreground {
+    color: hsl(var(--primary-foreground));
+  }
+  .text-muted-foreground {
+    color: hsl(var(--muted-foreground));
+  }
+  .text-accent-foreground {
+    color: hsl(var(--accent-foreground));
+  }
+
+  /* Border utilities */
+  .border-input {
+    border-color: hsl(var(--input));
+  }
+  .border-primary {
+    border-color: hsl(var(--primary));
+  }
+
+  /* Focus ring utilities */
+  .ring-primary {
+    --tw-ring-color: hsl(var(--primary));
+  }
+}
+
+@layer utilities {
+  /* Dormitory Card Gradient */
+  .bg-dormitory-gradient {
+    background: linear-gradient(to top left, #1e0097, #6e0189);
+  }
+
+  /* Food Card Gradient */
+  .bg-food-gradient {
+    background: linear-gradient(to top left, #5ab711, #91d55b);
+  }
+
+  /* Doctor Card Gradient */
+  .bg-doctor-gradient {
+    background: linear-gradient(to top left, #0da460, #21b573);
+  }
+
+  /* Consultant Card Gradient */
+  .bg-consultant-gradient {
+    background: linear-gradient(to top left, #d90429, #ef476f);
+  }
+
+  /* Student Card Gradient */
+  .bg-student-card-gradient {
+    background: linear-gradient(to top left, #005bea, #00c6fb);
+  }
+
+  /* Insurance Card Gradient */
+  .bg-insurance-gradient {
+    background: linear-gradient(to top left, #0b8457, #34d399);
+  }
+
+  /* Support Card Gradient */
+  .bg-support-gradient {
+    background: linear-gradient(to top left, #4b5563, #9ca3af);
+  }
+
+  /* Moral Committee Card Gradient */
+  .bg-moral-gradient {
+    background: linear-gradient(to top left, #7c3aed, #c084fc);
+  }
+
+  /* Daneshjouyar Card Gradient */
+  .bg-daneshjouyar-gradient {
+    background: linear-gradient(to top left, #f59e0b, #fcd34d);
+  }
+
+  /* Job Card Gradient */
+  .bg-job-gradient {
+    background: linear-gradient(to top left, #0f766e, #2dd4bf);
+  }
+
+  /* Super App Card Gradient */
+  .bg-superapp-gradient {
+    background: linear-gradient(to top left, #111827, #374151);
+  }
+
+  /* Java Dormitory Card Gradient */
+  .bg-java-dormitory-gradient {
+    background: linear-gradient(to top left, #b91c1c, #f97316);
+  }
+
+  /* Wallet Card Gradient */
+  .bg-wallet-gradient {
+    background: linear-gradient(to top left, #15803d, #4ade80);
+  }
+
+  /* Survey Card Gradient */
+  .bg-survey-gradient {
+    background: linear-gradient(to top left, #9333ea, #ec4899);
+  }
+
+  /* Ticket Card Gradient */
+  .bg-ticket-gradient {
+    background: linear-gradient(to top left, #9333ea, #ec4899);
+  }
+
+  /* Accounting Card Gradient */
+  .bg-accounting-gradient {
+    background: linear-gradient(to top left, #ff85d5, #a600b5);
+  }
+
+  /* Auth Card Gradient */
+  .bg-auth-gradient {
+    background: linear-gradient(to top left, #5ac1fb, #088dd7);
+  }
+
+  /* Genetic Card Gradient */
+  .bg-genetic-gradient {
+    background: linear-gradient(to top left, var(--teal-6), var(--teal-8));
+  }
+
+  /* Shop Card Gradient */
+  .bg-shop-gradient {
+    background: linear-gradient(to top left, #fda8a4, #c6332d);
+  }
+}
+
+@layer utilities {
+  .scrollbar-none {
+    scrollbar-width: none;
+  }
+  .scrollbar-none::-webkit-scrollbar {
+    display: none;
+  }
+}

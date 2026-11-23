@@ -1,0 +1,114 @@
+@use "../../../../../../assets/styles/abstract/variables" as *;
+
+.shop-all-products-request-detail-card {
+  display: flex;
+  flex-direction: column;
+  gap: $s-24;
+  border-radius: $s-16;
+}
+
+.shop-all-products-request-detail-divider-title {
+  display: inline-flex;
+  align-items: center;
+  gap: $s-8;
+}
+
+.shop-all-products-request-detail-info {
+  .ant-descriptions-item-label {
+    width: $s-160;
+    color: $neutral-8 !important;
+    font-weight: 400 !important;
+  }
+
+  .ant-descriptions-item-content {
+    color: $neutral-11;
+  }
+
+  .ant-descriptions-row > th,
+  .ant-descriptions-row > td {
+    padding-block: $s-8;
+  }
+
+  @media (min-width: 768px) {
+    .ant-descriptions-item + .ant-descriptions-item {
+      border-inline-start: 1px solid $neutral-4;
+      padding-inline-start: $s-16;
+    }
+  }
+}
+
+.shop-all-products-request-detail-status {
+  display: inline-flex;
+  align-items: center;
+  gap: $s-8;
+}
+
+.shop-all-products-request-detail-status-dot {
+  width: $s-6;
+  height: $s-6;
+  border-radius: 50%;
+  background: $neutral-6;
+  flex-shrink: 0;
+
+  &.is-awaiting {
+    background: $primary-6;
+  }
+
+  &.is-accepted {
+    background: $green-6;
+  }
+
+  &.is-rejected {
+    background: $error-400;
+  }
+}
+
+.shop-all-products-request-detail-catalog {
+  display: flex;
+  flex-direction: column;
+  gap: $s-24;
+  width: 100%;
+
+  @media (min-width: 768px) {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+}
+
+.shop-all-products-request-detail-cover {
+  flex-shrink: 0;
+  width: 100%;
+  max-width: $s-178;
+
+  @media (min-width: 768px) {
+    width: $s-178;
+  }
+
+  .ant-upload-list-item,
+  .ant-upload-list-item-container,
+  .ant-upload-list-picture-card .ant-upload-list-item {
+    width: 100% !important;
+    height: $s-240 !important;
+    margin: 0 !important;
+    border-radius: $s-8;
+    overflow: hidden;
+  }
+
+  .ant-upload-list-item-thumbnail img,
+  .ant-upload-list-item-image {
+    object-fit: contain;
+  }
+}
+
+.shop-all-products-request-detail-catalog-fields {
+  flex: 1;
+  min-width: 0;
+}
+
+.shop-all-products-request-detail-images {
+  .ant-upload-list-item,
+  .ant-upload-list-item-container {
+    width: $s-100 !important;
+    height: $s-100 !important;
+  }
+}

@@ -1,0 +1,17 @@
+@use "../../../../../../assets/styles/abstract/variables" as *;
+.all-food-schedules-container {
+  @include flex-col($s-16);
+  .segment-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .ant-segmented-item-label {
+    display: flex;
+    align-items: center;
+  }
+}
+.guidance-badge-container {
+  padding-right: $s-16;
+  @include flex-gap($s-16);
+}

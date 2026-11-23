@@ -1,0 +1,40 @@
+@use "../../../../../../../assets/styles/abstract/variables" as *;
+.create-dorm-first-tab-container {
+  padding: $s-16 0;
+  display: flex;
+  flex-direction: column;
+  gap: $s-16;
+  .ant-divider-inner-text {
+    @include h5-regular;
+  }
+  .row {
+    margin-top: $s-16;
+  }
+  .map-container {
+    // margin-top: $s-20;
+    @include body-regular;
+    font-weight: #666;
+    font-weight: 500;
+    font-size: $s-16;
+
+    .map-main-content {
+      margin-top: $s-20;
+      .map-container-style {
+        height: 220px;
+        border-radius: 10px;
+      }
+    }
+  }
+  .ant-form-item-required {
+    direction: ltr;
+  }
+  .btn-container {
+    display: flex;
+    gap: $s-16;
+    .cancel-btn {
+      span {
+        @include body-regular;
+      }
+    }
+  }
+}

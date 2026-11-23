@@ -1,0 +1,9 @@
+@use "../../../../../../../assets/styles/abstract/variables" as *;
+.my-management-roles-details-container {
+  .my-management-role-detail-table-container {
+    margin-top: $s-16;
+  }
+}
+.management-breadcrumb-title {
+  color: $neutral-7 !important;
+}

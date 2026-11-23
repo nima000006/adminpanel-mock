@@ -1,0 +1,3 @@
+export const BASIC_PRICE = "BASIC_PRICE";
+export const DAILY_DISCOUNT = "DAILY_DISCOUNT";
+export const GROUP_ADJUSTMENT = "GROUP_ADJUSTMENT";

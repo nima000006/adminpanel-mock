@@ -1,0 +1,33 @@
+@use "../../../../../../../../../../assets/styles/abstract/variables" as *;
+//!
+.remove-history-agreement-modal-container {
+  @include body-regular;
+}
+//!
+.remove-history-other-document-container {
+  .btn-wrapper {
+    @include flex-gap($s-12);
+    justify-content: flex-end;
+    margin-top: $s-35;
+  }
+  .documents-container {
+    display: flex;
+    flex-direction: column;
+    gap: $s-35;
+    .file-wrapper {
+      display: flex;
+      flex-direction: column;
+      gap: $s-35;
+
+      .attachments-file-container {
+        display: flex;
+        flex-direction: column;
+        gap: $s-8;
+        .attachments-title {
+          @include body-regular;
+          color: $title-black;
+        }
+      }
+    }
+  }
+}

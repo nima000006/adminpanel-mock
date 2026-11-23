@@ -1,0 +1,7 @@
+@use "../../../../../../../assets/styles/abstract/variables" as *;
+.dorm-admission-create-modal-content {
+  @include flex-col($s-8);
+  .modal-content-text {
+    @include body-regular;
+  }
+}

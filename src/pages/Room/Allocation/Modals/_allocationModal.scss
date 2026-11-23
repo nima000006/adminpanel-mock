@@ -1,0 +1,183 @@
+@use "../../../../assets/styles/abstract/variables" as *;
+.room-allocation-modal-container {
+  width: 80vw !important;
+  max-height: 90%;
+  border-radius: 20px;
+  .room-allocation-modal-content {
+    padding: $s-24;
+    display: flex;
+    flex-direction: column;
+    gap: $s-24;
+    .bread-crumb {
+      @include body-regular;
+      color: $character-secondary-45;
+      padding: $s-20;
+      background-color: var(--app-bg-container);
+      width: fit-content;
+      border-radius: 10px;
+    }
+    .tabs-container {
+      background-color: var(--app-bg-layout);
+      padding: $s-12;
+
+      .allocation-modal-tabs-label {
+        @include body-regular;
+      }
+      .uni-user-content-container {
+        display: flex;
+        flex-direction: column;
+        gap: $s-40;
+      }
+      .independent-user-container {
+        .independent-user-reservation-form {
+          display: flex;
+          flex-direction: column;
+          gap: $s-40;
+        }
+        .user-information {
+          display: flex;
+          flex-direction: column;
+          gap: $s-12;
+          .inputs-container {
+            @include flex-center;
+            justify-content: flex-start;
+            gap: $s-12;
+          }
+        }
+      }
+      .reservation-item-container {
+        display: flex;
+        flex-direction: column;
+        gap: $s-13;
+        .radio-buttons-container {
+          @include flex-space-between;
+          width: 100%;
+          .reservation-item {
+            width: 100%;
+          }
+        }
+        .inputs-container {
+          @include flex-center;
+          gap: $s-8;
+        }
+      }
+      .price-item-container {
+        @include flex-space-between;
+        align-items: flex-start;
+        gap: $s-32;
+        width: 100%;
+        .price-item {
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          gap: $s-14;
+          .action-container {
+            @include flex-center;
+            gap: $s-14;
+          }
+        }
+      }
+    }
+    .uni-user-reservation-form {
+      display: flex;
+      flex-direction: column;
+      gap: $s-40;
+      .discount-container {
+        display: flex;
+        flex-direction: column;
+        gap: $s-40;
+        background-color: #fff1f0;
+        padding: $s-20;
+        border-radius: 2px;
+        .discount-header {
+          @include flex-space-between;
+          .discount-header-button {
+            @include body-regular;
+            color: $character-danger;
+            background-color: transparent;
+          }
+          .discount-header-title {
+            @include body-regular;
+            color: $title-black;
+          }
+        }
+        .discount-lists-container {
+          display: flex;
+          flex-direction: column;
+          gap: $s-12;
+          .list {
+            @include flex-space-between;
+            background-color: var(--app-bg-container);
+            padding: $s-8 $s-20;
+            border-radius: 2px;
+            .list-action-btn {
+              padding: $s-4 $s-16;
+            }
+            .list-body {
+              @include flex-center;
+              justify-content: flex-end;
+              gap: $s-40;
+              .list-body-item {
+                display: flex;
+                flex-direction: column;
+                gap: $s-4;
+                .title {
+                  @include footnote;
+                }
+                .desc {
+                  @include h5-regular;
+                  color: $title-black;
+                }
+              }
+            }
+          }
+        }
+      }
+      .factor-container {
+        display: flex;
+        flex-direction: column;
+        gap: $s-20;
+        .factor-body {
+          display: flex;
+          justify-content: flex-start;
+          align-items: flex-start;
+          gap: $s-18;
+          .ant-col {
+            width: 100%;
+            text-align: right;
+          }
+        }
+      }
+    }
+    .register-btn {
+      @include body-regular;
+      color: $white;
+    }
+    .room-allocation-action-container {
+      display: flex;
+      align-items: center;
+      gap: $s-24;
+      padding: $s-32;
+      button {
+        @include body-regular;
+      }
+    }
+  }
+  .ant-modal-container {
+    padding: 0;
+    background-color: $modal-bg-color;
+    .ant-modal-header {
+      padding: $s-16;
+      .ant-modal-title {
+        @include h5-medium;
+        color: $title-black;
+      }
+    }
+    .ant-tabs-tab {
+      margin-left: $s-32;
+    }
+    .ant-tabs-nav {
+      margin-bottom: $s-24;
+    }
+  }
+}

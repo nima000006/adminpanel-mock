@@ -1,0 +1,11 @@
+@use "../../../../../../../../../../../../assets/styles/abstract/variables" as *;
+.dorm-residence-bed-detail-drawer-container {
+  height: 100%;
+  .drawer-body {
+    @include flex-col($s-40);
+    height: calc(100% - 50px);
+    .date-container {
+      margin-top: auto;
+    }
+  }
+}

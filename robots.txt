@@ -1,0 +1,95 @@
+# Robots.txt for پنل مدیریت دانشجویار
+# This is an admin panel - most content should not be indexed
+
+# Default policy for all robots
+User-agent: *
+Disallow: /
+
+# Allow access to sitemap (if needed for internal purposes)
+Allow: /sitemap.xml
+
+# Specific rules for major search engines
+User-agent: Googlebot
+Disallow: /
+Allow: /sitemap.xml
+
+User-agent: Bingbot
+Disallow: /
+Allow: /sitemap.xml
+
+User-agent: Slurp
+Disallow: /
+Allow: /sitemap.xml
+
+User-agent: DuckDuckBot
+Disallow: /
+Allow: /sitemap.xml
+
+User-agent: Baiduspider
+Disallow: /
+Allow: /sitemap.xml
+
+User-agent: YandexBot
+Disallow: /
+Allow: /sitemap.xml
+
+# Social media crawlers - allow for better link previews
+User-agent: facebookexternalhit
+Disallow: /
+Allow: /sitemap.xml
+
+User-agent: Twitterbot
+Disallow: /
+Allow: /sitemap.xml
+
+User-agent: LinkedInBot
+Disallow: /
+Allow: /sitemap.xml
+
+User-agent: WhatsApp
+Disallow: /
+Allow: /sitemap.xml
+
+# Block access to sensitive directories and files
+User-agent: *
+Disallow: /api/
+Disallow: /admin/
+Disallow: /private/
+Disallow: /internal/
+Disallow: /config/
+Disallow: /logs/
+Disallow: /tmp/
+Disallow: /temp/
+Disallow: /backup/
+Disallow: /test/
+Disallow: /testing/
+Disallow: /staging/
+Disallow: /dev/
+Disallow: /development/
+
+# Block access to file types that shouldn't be crawled
+User-agent: *
+Disallow: /*.json$
+Disallow: /*.log$
+Disallow: /*.tmp$
+Disallow: /*.bak$
+Disallow: /*.sql$
+Disallow: /*.db$
+Disallow: /*.env$
+Disallow: /*.config$
+Disallow: /*.ini$
+Disallow: /*.yml$
+Disallow: /*.yaml$
+
+# Crawl delay to be respectful to the server
+Crawl-delay: 1
+
+# Host directive for canonical domain
+Host: https://apanel.daneshjouyar.iau.ir
+
+# Sitemap location
+Sitemap: https://apanel.daneshjouyar.iau.ir/sitemap.xml
+
+# Additional sitemaps for different sections (if applicable)
+# Sitemap: https://apanel.daneshjouyar.iau.ir/sitemap-users.xml
+# Sitemap: https://apanel.daneshjouyar.iau.ir/sitemap-reports.xml

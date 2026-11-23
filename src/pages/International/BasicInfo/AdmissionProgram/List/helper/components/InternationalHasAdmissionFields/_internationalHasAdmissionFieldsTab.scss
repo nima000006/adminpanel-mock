@@ -1,0 +1,13 @@
+@use "../../../../../../../../assets/styles/abstract/variables" as *;
+.international-has-admission-fields-tab-container {
+  @include flex-col($s-40);
+  .search-btn {
+    width: 100%;
+  }
+  .table-container {
+    @include flex-col($s-16);
+    .filter-excel-btn-container {
+      @include flex-space-between;
+    }
+  }
+}

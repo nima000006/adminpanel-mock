@@ -1,0 +1,6 @@
+@use "../../../../../../assets/styles/abstract/variables" as *;
+.submit-request-tab-container {
+  .ant-tabs-tab-btn {
+    @include body-regular;
+  }
+}

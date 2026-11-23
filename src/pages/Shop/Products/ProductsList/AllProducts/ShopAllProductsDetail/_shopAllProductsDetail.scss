@@ -1,0 +1,84 @@
+@use "../../../../../../assets/styles/abstract/variables" as *;
+
+$product-cover-width: 11.25rem; // Figma cover width (180px)
+$product-cover-height: 15rem; // Figma cover height (240px, 3:4)
+$description-label-width: 10rem; // Figma description label width (160px)
+
+.shop-all-products-detail-card {
+  display: flex;
+  flex-direction: column;
+  gap: $s-24;
+  border-radius: $s-16;
+}
+
+.shop-all-products-detail-divider-title {
+  display: inline-flex;
+  align-items: center;
+  gap: $s-8;
+}
+
+.shop-all-products-detail-info {
+  display: flex;
+  flex-direction: column;
+  gap: $s-24;
+  width: 100%;
+
+  @media (min-width: 768px) {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+}
+
+.shop-all-products-detail-cover {
+  flex-shrink: 0;
+  width: 100%;
+  max-width: $product-cover-width;
+
+  @media (min-width: 768px) {
+    width: $product-cover-width;
+  }
+
+  .ant-upload-list-item,
+  .ant-upload-list-item-container,
+  .ant-upload-list-picture-card .ant-upload-list-item {
+    width: 100% !important;
+    height: $product-cover-height !important;
+    margin: 0 !important;
+    border-radius: $s-8;
+    overflow: hidden;
+  }
+
+  .ant-upload-list-item-thumbnail img,
+  .ant-upload-list-item-image {
+    object-fit: contain;
+  }
+}
+
+.shop-all-products-detail-fields {
+  flex: 1;
+  min-width: 0;
+
+  .ant-descriptions-item-label {
+    width: $description-label-width;
+    color: $neutral-8 !important;
+    font-weight: 400 !important;
+  }
+
+  .ant-descriptions-item-content {
+    color: $neutral-11;
+  }
+
+  .ant-descriptions-row > th,
+  .ant-descriptions-row > td {
+    padding-block: $s-8;
+  }
+}
+
+.shop-all-products-detail-description-text {
+  margin: 0;
+  color: $neutral-11;
+  font-size: $s-14;
+  line-height: $s-24;
+  text-align: right;
+  white-space: pre-wrap;
+}

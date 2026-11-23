@@ -1,0 +1,28 @@
+@use "../../../../../assets/styles/abstract/variables" as *;
+.international-applicants-detail-container {
+  container-type: inline-size;
+
+  .ant-segmented-item-label {
+    display: flex;
+    align-items: center;
+  }
+
+  .ant-segmented {
+    @media (max-width: 570px) {
+      margin-bottom: $s-10;
+    }
+  }
+
+  @container (max-width: 140px) {
+    button {
+      padding: $s-2;
+    }
+    button span {
+      font-size: $s-12;
+    }
+
+    .divider-container .divider-main span {
+      font-size: $s-12;
+    }
+  }
+}

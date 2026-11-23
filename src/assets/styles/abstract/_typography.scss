@@ -1,0 +1,46 @@
+/* ==========================================================================
+   Font Family: DanaFaNum
+   Description: Persian/Farsi font with proper weight variants
+   Weights: 300 (Light), 400 (Regular), 500 (Medium), 700 (Bold)
+   Format: WOFF2 for optimal performance (~70% smaller than TTF)
+   ========================================================================== */
+
+@font-face {
+  font-family: "DanaFaNum";
+  font-style: normal;
+  font-weight: 300;
+  src:
+    url("/fonts/DanaFaNum-Light.woff2") format("woff2"),
+    url("/fonts/DanaFaNum-Light.ttf") format("truetype");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "DanaFaNum";
+  font-style: normal;
+  font-weight: 400;
+  src:
+    url("/fonts/DanaFaNum-Regular.woff2") format("woff2"),
+    url("/fonts/DanaFaNum-Regular.ttf") format("truetype");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "DanaFaNum";
+  font-style: normal;
+  font-weight: 500;
+  src:
+    url("/fonts/DanaFaNum-Medium.woff2") format("woff2"),
+    url("/fonts/DanaFaNum-Medium.ttf") format("truetype");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "DanaFaNum";
+  font-style: normal;
+  font-weight: 700;
+  src:
+    url("/fonts/DanaFaNum-Bold.woff2") format("woff2"),
+    url("/fonts/DanaFaNum-Bold.ttf") format("truetype");
+  font-display: swap;
+}

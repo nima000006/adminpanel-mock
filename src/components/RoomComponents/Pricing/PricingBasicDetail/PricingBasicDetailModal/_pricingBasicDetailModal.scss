@@ -1,0 +1,13 @@
+@use "../../../../../assets/styles/abstract/variables" as *;
+.pricing-basic-detail-modal {
+  .pricing-basic-detail-modal-container {
+    margin-top: $s-28;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: $s-16;
+  }
+  .btn-container {
+    @include flex-gap($s-12);
+    margin-top: $s-16;
+  }
+}

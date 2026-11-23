@@ -1,0 +1,25 @@
+@use "../../../../../assets/styles/abstract/variables" as *;
+.inquiry-users-search-page-container {
+  width: 100%;
+  // padding: $s-24;
+  display: flex;
+  flex-direction: column;
+  gap: $s-25;
+  margin: 0 auto;
+  .title {
+    @include body-regular;
+    color: $title-black;
+    text-align: center;
+  }
+  .gary-title {
+    color: $character-secondary-45;
+  }
+  // .user-info-container {
+  //   display: flex;
+  //   align-items: flex-end;
+  //   gap: $s-12;
+  //   .advance-filter-btn {
+  //     margin-top: $s-16;
+  //   }
+  // }
+}

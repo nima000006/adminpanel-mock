@@ -1,0 +1,179 @@
+@use "../../../../../../../../../assets/styles/abstract/variables" as *;
+.all-food-schedule-list-page-container {
+  @include flex-col($s-24);
+  .btn-wrapper {
+    @include flex-space-between;
+    @media (max-width: 500px) {
+      flex-direction: column;
+      gap: $s-16;
+    }
+    .btn-text {
+      @include body-regular;
+      @media (max-width: 500px) {
+        width: 100%;
+      }
+    }
+    .action-btn-wrapper {
+      @include flex-center;
+      gap: $s-16;
+      @media (max-width: 600px) {
+        flex-direction: column;
+        width: 100%;
+      }
+    }
+  }
+  .meal {
+    @include body-regular;
+  }
+  .status {
+    @include body-regular;
+  }
+}
+
+.all-food-schedule-list-page-drawer {
+  @media (max-width: 550px) {
+    .right-side-title-contain {
+      font-size: $s-12 !important;
+    }
+  }
+  .all-food-schedule-list-page-drawer-action-btns-container {
+    @include flex-center;
+    gap: $s-16;
+
+    @media (max-width: 576px) {
+      gap: $s-8;
+      .drawer-action-btn {
+        padding: $s-4 $s-6;
+        font-size: $s-12;
+      }
+    }
+    @media (max-width: 440px) {
+      gap: $s-4;
+      .drawer-action-btn {
+        padding: $s-4;
+      }
+    }
+    .ant-form-item {
+      margin-bottom: 0 !important;
+    }
+  }
+  @media (max-width: 576px) {
+    .ant-drawer-title {
+      font-size: $s-14 !important;
+    }
+  }
+  .drawer-body {
+    @include flex-col($s-40);
+    .ant-form-item-row {
+      gap: $s-4 !important;
+    }
+    .ant-form-item-label {
+      label {
+        height: 0;
+      }
+    }
+    .ant-form-item-control {
+      width: 100% !important;
+    }
+    .ant-picker-selection-item-content {
+      @include footnote;
+    }
+  }
+}
+
+.all-multi-food-multi-day-food-schedule-list-page-drawer {
+  @media (max-width: 550px) {
+    .right-side-title-contain {
+      font-size: $s-12 !important;
+    }
+  }
+
+  .ant-steps.ant-steps-navigation {
+    @media (max-width: 750px) {
+      overflow-x: scroll;
+    }
+    .ant-steps-item::after {
+      transform: translateY(-50%) translateX(-50%) rotate(-45deg);
+      @media (max-width: 1024px) {
+        inset-inline-start: unset;
+        width: 10px;
+        height: 10px;
+      }
+    }
+  }
+  .ant-steps-item {
+    padding-inline-start: $s-44 !important;
+  }
+  .ant-steps-item:first-child {
+    padding-inline-start: $s-10 !important;
+    @media (max-width: 750px) {
+      padding-inline-start: $s-44 !important;
+    }
+  }
+  .ant-steps-item-title {
+    color: $character-secondary-45;
+    font-family: DanaFaNum;
+    font-size: $s-16;
+    font-style: normal;
+    font-weight: 400;
+    line-height: $s-24;
+    @media (max-width: 1024px) {
+      font-size: $s-14;
+    }
+    @media (max-width: 950px) {
+      font-size: $s-12;
+    }
+  }
+  .ant-steps-icon {
+    @include ant-steps-icon-font;
+    @media (max-width: 1024px) {
+      font-size: $s-14;
+      line-height: $s-12;
+    }
+    @media (max-width: 950px) {
+      font-size: $s-12;
+    }
+  }
+  .ant-steps-item-icon {
+    @media (max-width: 1024px) {
+      width: $s-24 !important;
+      height: $s-24;
+      line-height: unset;
+    }
+  }
+  .ant-steps-item-title {
+    line-height: $s-32;
+    @media (max-width: 1024px) {
+      line-height: $s-24;
+    }
+  }
+
+  .drawer-action-btns-container {
+    @include flex-center;
+    gap: $s-16;
+
+    @media (max-width: 576px) {
+      gap: $s-8;
+      .drawer-action-btn {
+        padding: $s-4 $s-6;
+        font-size: $s-12;
+      }
+    }
+    @media (max-width: 440px) {
+      gap: $s-4;
+      .drawer-action-btn {
+        padding: $s-4;
+      }
+    }
+  }
+
+  .drawer-body {
+    @include flex-col($s-40);
+    .ant-form-item-control {
+      width: 100% !important;
+    }
+    .ant-picker-selection-item-content {
+      @include footnote;
+    }
+  }
+}

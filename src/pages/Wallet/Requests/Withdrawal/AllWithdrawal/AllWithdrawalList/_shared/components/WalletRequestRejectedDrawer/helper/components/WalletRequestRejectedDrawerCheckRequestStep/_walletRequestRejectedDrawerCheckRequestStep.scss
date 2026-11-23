@@ -1,0 +1,20 @@
+@use "../../../../../../../../../../../../assets/styles/abstract/variables" as *;
+.wallet-request-rejected-drawer-check-request-step-container {
+  .custom-info-box {
+    @include body-regular;
+    background: $neutral-2;
+    padding: $s-16;
+    @include flex-col($s-10);
+    border-radius: $s-8;
+
+    span {
+      @include flex-gap($s-10);
+      @include flex-center;
+    }
+
+    > span:last-child {
+      @include h3-medium;
+      font-weight: bold;
+    }
+  }
+}

@@ -1,0 +1,60 @@
+@use "../../../../../assets/styles/abstract/variables" as *;
+.apartment-detail-container {
+  .floor-stat-container {
+    margin: 0.4rem $s-24 1.2rem $s-24;
+
+    .custom-card-renderer-container {
+      background-color: #fff;
+      box-shadow: 0px 1px 21px 0px rgba(0, 0, 0, 0.15);
+      -webkit-box-shadow: 0px 1px 21px 0px rgba(0, 0, 0, 0.15);
+      -moz-box-shadow: 0px 1px 21px 0px rgba(0, 0, 0, 0.15);
+      width: 50%;
+      @media (max-width: 950px) {
+        width: 70%;
+      }
+      @media (max-width: 768px) {
+        width: 100%;
+      }
+      .floor-stat-renderer-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 3rem;
+        @include body-regular;
+        color: $neutral-7;
+        .total-floor-count {
+          display: flex;
+          align-items: center;
+          gap: 0.5rem;
+        }
+        .total-floor-cap {
+          display: flex;
+          align-items: center;
+          gap: 0.5rem;
+        }
+        .floor-remaining {
+          display: flex;
+          align-items: center;
+          gap: 0.5rem;
+        }
+        .floor-with-cap {
+          display: flex;
+          align-items: center;
+          gap: 0.5rem;
+        }
+      }
+    }
+  }
+  .ant-tabs-tab-btn {
+    @include body-regular;
+  }
+  .new-room-btn {
+    margin: $s-16;
+    @include body-regular;
+    color: $blue-primary;
+    border: 1px solid $blue-primary;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}

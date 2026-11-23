@@ -1,0 +1,14 @@
+@use "../../../../../../assets/styles/abstract/variables" as *;
+.modify-banner-context-container {
+  .banner-service-image-content-placeholder {
+    @include flex-gap($s-8);
+    align-items: center;
+    justify-content: center;
+
+    .ant-btn {
+      width: 180px !important;
+      height: 90px !important;
+      border: 1px dashed #999;
+    }
+  }
+}

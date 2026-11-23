@@ -1,0 +1,4 @@
+@use "../../../../../../assets/styles/abstract/variables" as *;
+.management-requests-estelam-sajed-detail-container {
+  @include flex-col($s-40);
+}

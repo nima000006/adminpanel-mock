@@ -1,0 +1,14 @@
+@use "../../../../../assets/styles/abstract/variables" as *;
+.otp-container {
+  display: flex;
+  gap: $s-16;
+  direction: ltr;
+}
+.otp-input {
+  text-align: center;
+  font-size: $s-24;
+  &:focus {
+    border-color: $primary-6 !important;
+    box-shadow: 0 0 0 2px rgba(24, 144, 255, 0.2);
+  }
+}

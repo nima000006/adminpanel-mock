@@ -1,0 +1,40 @@
+@use "../../../../assets/styles/abstract/variables" as *;
+//todo [saman]: next ui wireFrame
+// .create-dorm-main-container {
+//   display: flex;
+//   flex-direction: column;
+//   gap: $s-32;
+//   .dorm-info-inputs-container {
+//     display: flex;
+//     flex-direction: column;
+//     gap: $s-8;
+//     .row {
+//       display: flex;
+//       gap: $s-16;
+//     }
+//     .dorm-info-checkboxes {
+//       grid-column: 1/4;
+//       width: 100%;
+//       span {
+//         @include body-regular;
+//       }
+//     }
+//   }
+//   .btn-container {
+//     display: flex;
+//     gap: $s-16;
+//     .cancel-btn {
+//       span {
+//         @include body-regular;
+//       }
+//     }
+//   }
+// }
+.stepper-container {
+  .ant-steps-item-title {
+    @include body-regular;
+  }
+  .ant-steps-icon {
+    @include body-regular;
+  }
+}

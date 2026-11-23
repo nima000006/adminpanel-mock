@@ -1,0 +1,19 @@
+@use "../../../../assets/styles/abstract/variables" as *;
+
+.delivered-room-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  justify-content: center;
+  align-items: flex-start;
+  .room-request-delivered-btn {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    gap: 8px;
+    @media (max-width: 500px) {
+      flex-direction: column;
+      gap: $s-16;
+    }
+  }
+}

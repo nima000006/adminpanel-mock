@@ -1,0 +1,24 @@
+@use "../../../../../../../assets/styles/abstract/variables" as *;
+.all-management-roles-details-container {
+  container-type: inline-size;
+  .all-management-role-detail-table-container {
+    margin-top: $s-16;
+  }
+
+  @container (max-width: 140px) {
+    button {
+      padding: $s-2;
+    }
+    button span {
+      font-size: $s-12;
+    }
+
+    .left-side {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+}
+.management-breadcrumb-title {
+  color: $neutral-7 !important;
+}

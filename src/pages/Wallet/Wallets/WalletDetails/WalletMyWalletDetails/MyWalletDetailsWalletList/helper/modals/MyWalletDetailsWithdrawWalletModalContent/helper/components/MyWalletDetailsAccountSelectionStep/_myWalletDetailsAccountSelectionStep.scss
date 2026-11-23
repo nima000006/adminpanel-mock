@@ -1,0 +1,66 @@
+@use "../../../../../../../../../../../../assets/styles/abstract/variables" as *;
+.my-wallet-details-account-selection-step-container {
+  margin-top: $s-40;
+  @include flex-col($s-24);
+
+  .account-select-item-wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: $s-16;
+  }
+  .bank-account-container {
+    width: 100%;
+    min-width: 0;
+
+    .radio-container,
+    .ant-form-item,
+    .ant-form-item-control,
+    .ant-form-item-control-input,
+    .ant-form-item-control-input-content {
+      width: 100%;
+      min-width: 0;
+      max-width: 100%;
+    }
+
+    .ant-radio-group {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: $s-8;
+      width: 100%;
+    }
+
+    .ant-radio-wrapper {
+      width: 100%;
+      max-width: 100%;
+      min-width: 0;
+      margin-inline: 0 !important;
+      align-items: center;
+      gap: $s-8;
+      box-sizing: border-box;
+
+      .ant-radio {
+        flex-shrink: 0;
+      }
+
+      .ant-radio-label,
+      > span:last-child {
+        flex: 1;
+        min-width: 0;
+        overflow: hidden;
+      }
+    }
+  }
+
+  .empty-container {
+    text-align: center;
+    .empty-image {
+      margin-bottom: $s-16;
+      margin: auto;
+    }
+    p {
+      margin-top: $s-8;
+      margin-bottom: $s-16;
+      @include body-regular;
+    }
+  }
+}

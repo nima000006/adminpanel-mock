@@ -1,0 +1,1 @@
+export { default } from "@pages/Dormitory/Admission/_shared/helper/components/AdmissionStepsFinancialContent/helper/components/AdmissionStepsFinancialCancellationPolicy/AdmissionStepsFinancialCancellationPolicy";

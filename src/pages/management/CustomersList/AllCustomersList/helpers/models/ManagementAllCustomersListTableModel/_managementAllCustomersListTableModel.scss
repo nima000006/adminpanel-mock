@@ -1,0 +1,13 @@
+@use "../../../../../../../assets/styles/abstract/variables" as *;
+.management-all-customer-list-container {
+  .management-all-customer-custom-button {
+    padding: $s-5 !important;
+  }
+  .management-all-customer-list-buttons-container {
+    height: $s-38;
+    @include flex-center;
+  }
+  .management-all-custom-tag {
+    width: fit-content;
+  }
+}

@@ -1,0 +1,6 @@
+@use "../../../../../../assets/styles/abstract/variables" as *;
+.users-requests-detail-pending-review-page-container {
+  .dorm-users-requests-detail-tab-container {
+    @include body-regular;
+  }
+}

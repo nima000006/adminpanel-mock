@@ -1,0 +1,161 @@
+@use "../../../../../../../../assets/styles/abstract/variables" as *;
+.committee-individual-inquiry-envelope-review-step-print {
+  @include flex-center;
+  flex-direction: column;
+  .information-container {
+    position: relative;
+  }
+
+  .envelope-header {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    position: absolute;
+    top: 72px;
+    right: 80px;
+    left: 55px;
+    max-width: 562px;
+    margin: auto;
+    .title-position {
+      margin-top: 67px;
+      width: fit-content;
+    }
+    .user-img {
+      object-fit: cover;
+    }
+    .img-container {
+      position: absolute;
+      right: 535px;
+    }
+    .text-wrapper {
+      position: absolute;
+      top: -3px;
+      right: 444px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      .text-date-title {
+        font-family: "BNazanin";
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 28px;
+        color: $title-black;
+      }
+    }
+  }
+
+  .user-info-container {
+    position: absolute;
+    top: 225px;
+    right: 80px;
+    max-width: 667px;
+    margin: auto;
+    .title-wrapper {
+      display: flex;
+      align-items: flex-end;
+      flex-direction: column;
+      gap: $s-8;
+      margin-bottom: $s-32;
+    }
+
+    .desc-wrapper {
+      display: flex;
+      align-items: flex-end;
+      text-align: right;
+      flex-direction: column;
+      gap: $s-4;
+      margin-bottom: $s-32;
+    }
+    .text-paragraph {
+      font-family: "BNazanin";
+      font-weight: 400;
+      font-size: 22px;
+      line-height: 37px;
+      color: $title-black;
+      direction: rtl;
+    }
+    .table-wrapper {
+      display: flex;
+      flex-direction: column;
+      gap: $s-8;
+      margin-bottom: 50px;
+    }
+    .name-wrapper {
+      max-width: 124px;
+      position: absolute;
+      left: 21px;
+    }
+    .excessive-space {
+      bottom: -450px;
+    }
+    .text-name {
+      font-family: "BNazanin";
+      line-height: 24px;
+    }
+    .text-title-name {
+      font-size: 20px;
+      font-weight: 700;
+    }
+    .text-post-name {
+      font-size: 18px;
+      font-weight: 400;
+    }
+  }
+  .text-title {
+    font-family: "BNazanin";
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 24px;
+    color: $title-black;
+    text-align: right;
+  }
+  .committee-accusation-envelop-list {
+    max-width: 675px;
+    thead {
+      height: 35px;
+    }
+    th {
+      font-family: "BNazanin";
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 24px;
+      text-align: center !important;
+      padding: 0 !important;
+      background-color: $envelope-blue !important;
+    }
+    .ant-table-body {
+      overflow-y: hidden !important;
+      max-height: fit-content !important;
+    }
+    tbody {
+      tr {
+        .date-text,
+        td {
+          font-weight: 400;
+          font-size: 13px;
+          line-height: 24px;
+          text-align: center !important;
+          padding: $s-2 !important;
+        }
+        td {
+          background-color: #f8f8f8 !important;
+        }
+        td:first-child {
+          background-color: $envelope-blue !important;
+        }
+      }
+    }
+  }
+  .no-accusation-message {
+    background-color: $envelope-blue;
+    font-family: "BNazanin";
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 35px;
+    color: $title-black;
+    border-radius: 21px;
+    padding: 8px 14px 0 14px;
+    text-align: center;
+    margin-top: 60px;
+  }
+}

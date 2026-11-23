@@ -1,0 +1,94 @@
+/*
+  @property must be registered globally, once, at the top level of your CSS.
+  It cannot live inside a CSS Module scoped per-component instance, so this
+  file should be imported exactly once (e.g. from your root layout or
+  globals.css), not re-imported per usage.
+*/
+@property --angle {
+  syntax: "<angle>";
+  inherits: false;
+  initial-value: 0deg;
+}
+
+.glow-border {
+  position: relative;
+  /* isolation: isolate creates a new stacking context so the pseudo's
+     z-index: -1 only drops behind THIS element, not behind unrelated
+     siblings/ancestors elsewhere on the page (a common failure mode of
+     negative z-index tricks once they're dropped into a real app). */
+  isolation: isolate;
+  border-radius: var(--glow-radius, 10px);
+  /* No forced display value here on purpose. A <div> is block by default
+     and naturally stretches to fill its parent's width - which is what
+     you want in a flex/grid layout. Forcing inline-block (as this used
+     to do) makes the wrapper shrink-wrap to content instead, which is
+     what squeezed full-width children previously. If you render this
+     as="span" for inline usage (e.g. wrapping a button), it will
+     naturally be inline - no extra config needed. */
+}
+
+.glow-border::after,
+.glow-border::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  width: 100%;
+  height: 100%;
+  /* This padding is what creates the thin ring overhang behind the card.
+     It ONLY works if this pseudo-element uses content-box sizing - if a
+     global reset (Tailwind Preflight does this) sets box-sizing: border-box
+     on *::before/*::after, the padding gets absorbed inward instead of
+     expanding the box, and the ring silently disappears. Forcing it here
+     makes the component reset-proof regardless of the host app's globals. */
+  box-sizing: content-box;
+  padding: var(--glow-thickness, 1px);
+  border-radius: var(--glow-radius, 10px);
+  background-image: conic-gradient(
+    from var(--angle) at 50% 50%,
+    var(--glow-color, #ffffff) 0%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  z-index: -1;
+  animation: glow-spin var(--glow-speed, 3s) linear infinite;
+}
+
+.glow-border::before {
+  filter: blur(var(--glow-blur, 1rem));
+  opacity: var(--glow-opacity, 0.5);
+}
+
+/* The content needs its own opaque background, otherwise the glow shows
+   through the whole card instead of reading as a thin border ring.
+   Default is intentionally "transparent" - this component has no idea
+   what theme/colors your app uses, and hardcoding any specific color
+   here (light OR dark) would fight your app's actual theme switching.
+   Either pass `contentBackground` explicitly, or - better - put your
+   real theme-aware background class directly on your own content
+   (e.g. a Tailwind bg-* utility tied to your CSS variables), so it
+   naturally responds to light/dark mode like the rest of your app. */
+.glow-border-content {
+  position: relative;
+  z-index: 1;
+  height: 100%;
+  width: 100%;
+  border-radius: inherit;
+  background: var(--glow-content-bg, transparent);
+}
+
+@keyframes glow-spin {
+  from {
+    --angle: 0deg;
+  }
+  to {
+    --angle: 360deg;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .glow-border::after,
+  .glow-border::before {
+    animation: none;
+  }
+}

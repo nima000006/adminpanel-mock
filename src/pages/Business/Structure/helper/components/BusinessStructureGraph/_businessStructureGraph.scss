@@ -1,0 +1,12 @@
+@use "../../../../../../assets/styles/abstract/variables" as *;
+.business-structure-graph-container {
+  padding-top: $s-40;
+  .graph-container {
+    border-radius: 20px;
+    border: $border-1 solid $black;
+    overflow: hidden;
+    canvas {
+      width: 100% !important;
+    }
+  }
+}

@@ -1,0 +1,22 @@
+@use "../../../../../assets/styles/abstract/variables" as *;
+.inquiry-users-list-page-container {
+  display: flex;
+  flex-direction: column;
+  gap: $s-20;
+  .search-btn {
+    @include body-regular;
+  }
+  .table-btns-container {
+    text-align: center;
+    .action-btn {
+      color: $blue-primary;
+      cursor: pointer;
+    }
+  }
+  .tables-sticky-column-left {
+    position: sticky !important;
+    left: 0;
+    overflow: hidden;
+    box-shadow: $table-sticky-box-shadow;
+  }
+}

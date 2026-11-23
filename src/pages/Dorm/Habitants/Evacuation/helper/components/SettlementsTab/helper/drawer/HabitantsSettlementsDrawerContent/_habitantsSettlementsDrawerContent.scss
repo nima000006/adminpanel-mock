@@ -1,0 +1,8 @@
+@use "../../../../../../../../../../assets/styles/abstract/variables" as *;
+.habitant-settlement-drawer-content-container {
+  .status-alert-body {
+    @media (max-width: 575px) {
+      @include flex-col($s-20);
+    }
+  }
+}

@@ -1,0 +1,48 @@
+@use "../../../../../../../../assets/styles/abstract/variables" as *;
+.building-create-and-modify-page-container {
+  @include flex-col($s-40);
+  .building-list-upload-text-container {
+    @include flex-center;
+    gap: $s-8;
+  }
+  .status-container {
+    .ant-form-item {
+      margin-bottom: 0;
+      min-width: 200px;
+    }
+  }
+  .building-info {
+    @include flex-col($s-16);
+  }
+  .location-info {
+    @include flex-col($s-16);
+  }
+  .rules-info {
+    @include flex-col($s-16);
+  }
+  .dorm-facilities-tabs {
+    @include body-regular;
+  }
+  .action-btns-container {
+    @include flex-gap($s-16);
+    justify-content: end;
+  }
+  .building-image-attachment-container {
+    display: flex;
+    gap: $s-8;
+    align-items: center;
+    justify-content: center;
+    .upload-text-second {
+      color: #777;
+    }
+    .upload-logo-second {
+      color: #777;
+    }
+  }
+}
+
+.update-building-confirmation-modal-container {
+  .desc {
+    @include body-regular;
+  }
+}

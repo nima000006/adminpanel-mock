@@ -1,0 +1,16 @@
+@use "../../../../../../../../../assets/styles/abstract/variables" as *;
+.estelam-amozeshyar-detail-waiting-review {
+  @media (max-width: 540px) {
+    display: flex;
+    flex-direction: column;
+    button span {
+      font-size: $s-10;
+    }
+  }
+  @include flex-gap($s-16);
+  justify-content: flex-end;
+}
+
+.estelam-amozeshyar-confirmed-modal-content {
+  @include body-regular;
+}

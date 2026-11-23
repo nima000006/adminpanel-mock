@@ -1,0 +1,18 @@
+@use "../../../../../../../../assets/styles/abstract/variables" as *;
+.genetics-participants-tabs-container {
+  .ant-tabs-ink-bar {
+    right: 0;
+  }
+
+  .ant-tabs-nav {
+    border-right: 1px solid $border-color-80;
+  }
+
+  .ant-tabs-body-holder {
+    border: none;
+  }
+
+  .ant-tabs-tab-btn {
+    @include body-regular;
+  }
+}

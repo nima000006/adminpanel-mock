@@ -1,0 +1,39 @@
+@use "../../../../../../assets/styles/abstract/variables" as *;
+.management-requests-my-role-request-list-container {
+  container-type: inline-size;
+  .ant-badge-status-text {
+    color: $neutral-7 !important;
+  }
+  .active-card-container {
+    .ant-badge-status-text {
+      color: $primary-7 !important;
+    }
+  }
+  .role-request-card-container {
+    @include flex-gap($s-10);
+    @media (max-width: 575px) {
+      @include flex-col($s-10);
+    }
+    > div {
+      width: 100%;
+    }
+  }
+  .role-request-table-container {
+    @include body-regular;
+  }
+
+  @container (max-width: 140px) {
+    button {
+      padding: $s-2;
+    }
+    button span {
+      font-size: $s-12;
+    }
+    .divider-container .divider-main span {
+      font-size: $s-12;
+    }
+  }
+}
+.management-breadcrumb-title {
+  color: $neutral-7;
+}

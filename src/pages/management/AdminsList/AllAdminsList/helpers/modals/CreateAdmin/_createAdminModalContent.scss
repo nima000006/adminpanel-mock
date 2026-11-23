@@ -1,0 +1,51 @@
+@use "../../../../../../../assets/styles/abstract/variables" as *;
+.create-admin-modal-content-container {
+  .stepper-container {
+    padding: $s-24;
+  }
+
+  .rule-item {
+    display: flex;
+    align-items: center;
+    gap: $s-8;
+    margin-bottom: $s-6;
+
+    p {
+      margin: 0;
+      transition: color 0.3s ease;
+    }
+
+    svg {
+      transition: color 0.3s ease;
+      font-size: $s-18;
+    }
+
+    &.valid {
+      color: $success-500;
+
+      p {
+        color: $success-500;
+      }
+
+      svg {
+        color: $success-500;
+      }
+    }
+
+    &.invalid {
+      color: var(--error-500);
+
+      p {
+        color: var(--error-500);
+      }
+
+      svg {
+        color: var(--error-500);
+      }
+    }
+  }
+
+  .ant-checkbox-label {
+    @include body-regular;
+  }
+}

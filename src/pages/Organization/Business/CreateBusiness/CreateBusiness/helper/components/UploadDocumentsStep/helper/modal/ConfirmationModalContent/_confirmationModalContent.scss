@@ -1,0 +1,10 @@
+@use "../../../../../../../../../../../assets/styles/abstract/variables" as *;
+.business-upload-confirm-modal-container {
+  @include flex-col($s-24);
+  .alert {
+    margin-top: $s-20;
+  }
+  .ant-checkbox-group {
+    @include flex-col($s-8);
+  }
+}

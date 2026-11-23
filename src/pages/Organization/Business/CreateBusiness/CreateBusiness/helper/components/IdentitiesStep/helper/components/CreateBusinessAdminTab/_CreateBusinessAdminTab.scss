@@ -1,0 +1,13 @@
+@use "../../../../../../../../../../../assets/styles/abstract/variables" as *;
+.create-business-admin-tab-container {
+  .uploader {
+    margin-bottom: $s-100;
+  }
+  .upload-logo {
+    @include flex-col($s-8);
+    align-items: center;
+  }
+  .ant-btn {
+    padding: $s-60 $s-32;
+  }
+}

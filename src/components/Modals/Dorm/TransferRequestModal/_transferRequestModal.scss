@@ -1,0 +1,62 @@
+@use "../../../../assets/styles/abstract/variables" as *;
+.room-modal-transfer-container {
+  margin: 0 auto;
+  .ant-modal-container {
+    margin: 0;
+    padding: 0;
+    background-color: $modal-bg-color;
+    .ant-modal-header {
+      padding: $s-16 $s-40;
+    }
+    .ant-modal-title {
+      @include h5-regular;
+      font-size: $s-19;
+      font-weight: bold;
+    }
+    .ant-modal-body {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: $s-19;
+      max-width: 90%;
+      margin: 0 auto;
+    }
+
+    .action-btns-container {
+      display: flex;
+      align-self: flex-start;
+      align-items: center;
+      gap: $s-19;
+      margin-bottom: $s-16;
+      button {
+        @include body-regular;
+      }
+    }
+    .label-container {
+      display: flex;
+      justify-content: space-between;
+      .price-container {
+        display: flex;
+        gap: $s-8;
+        .price-label {
+          @include body-medium;
+          color: $character-secondary-45;
+        }
+        .price {
+          @include body-medium;
+        }
+      }
+      .label {
+        @include body-medium;
+      }
+    }
+  }
+  .exchange-with-notice-container {
+    display: flex;
+    gap: $s-8;
+    .label {
+      @include body-regular;
+    }
+  }
+}

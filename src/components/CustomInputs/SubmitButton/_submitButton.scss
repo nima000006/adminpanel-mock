@@ -1,0 +1,7 @@
+@use "../../../assets/styles/abstract/variables" as *;
+.submit-button {
+  direction: ltr;
+  span {
+    @include body-regular;
+  }
+}

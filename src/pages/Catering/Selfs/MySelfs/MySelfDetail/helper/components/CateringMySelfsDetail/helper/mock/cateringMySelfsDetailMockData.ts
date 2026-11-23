@@ -1,0 +1,51 @@
+/** Auto-generated mock data from API/page types. Adjust values as needed for local UI work. */
+
+import type {
+  getDetailMySelfsResponse,
+} from "../../@types/@cateringMySelfsDetail";
+
+export const GET_DETAIL_MY_SELFS_RESPONSE_MOCK: getDetailMySelfsResponse = {
+  id: 1,
+  title: "نمونه title",
+  description: "نمونه description",
+  rules: "rules-mock",
+  ownerBranchCodeBranchCode: 1,
+  ownerBranchCodeBranchName: "نمونه ownerBranchCodeBranchName",
+  genderType: 1,
+  logoName: "نمونه logoName",
+  coverName: "نمونه coverName",
+  logoTitle: "نمونه logoTitle",
+  coverTitle: "نمونه coverTitle",
+  phone: "09121234567",
+  managerUserName: "نمونه managerUserName",
+  managerFirstName: "نمونه managerFirstName",
+  managerLastName: "نمونه managerLastName",
+  managerUserId: 1,
+  latitude: 1,
+  longitude: 1,
+  score: 1,
+  modifiedDate: "2026-05-02T10:20:27.741127",
+  createdDate: "2026-05-02T10:20:27.741127",
+  statusType: {
+  id: 1,
+  title: "نمونه title",
+  faTitle: "نمونه faTitle",
+},
+  status: 1,
+  capacity: 1,
+  branchDtos: [{
+  branchCode: 1,
+  branchName: "نمونه branchName",
+}],
+  restaurantPhone: "09121234567",
+  restaurantPhone2: "09121234567",
+  provinceName: "نمونه provinceName",
+  provinceId: 1,
+  cityName: "نمونه cityName",
+  cityId: 1,
+  address: "address-mock",
+  postalCode: "0012345678",
+  modifiedByUsername: "نمونه modifiedByUsername",
+  modifiedBy: "modifiedBy-mock",
+  private: true,
+};

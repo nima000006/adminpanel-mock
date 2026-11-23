@@ -1,0 +1,58 @@
+@use "../../../../../../../assets/styles/abstract/variables" as *;
+.food-pending-returned-money-tab-container {
+  container-type: inline-size; // برای فعال سازی کوئری
+  @include flex-col($s-24);
+  .btn-container {
+    @include flex-space-between;
+
+    @media (max-width: 850px) {
+      @include flex-col($s-16);
+      .action-btn {
+        width: 100%;
+      }
+    }
+    .left-btns-container {
+      @include flex-gap($s-8);
+
+      @media (max-width: 850px) {
+        width: 100%;
+        @include flex-col($s-16);
+      }
+
+      @container (max-width: 140px) {
+        button span {
+          font-size: $s-8;
+          max-width: 60px;
+        }
+      }
+    }
+  }
+  @container (max-width: 140px) {
+    button span {
+      font-size: $s-7;
+    }
+    .ant-select {
+      font-size: $s-8;
+      max-width: 100px;
+    }
+  }
+}
+.food-transform-requests-drawer {
+  @include flex-col($s-40);
+  .drawer-action-btns-container {
+    @include flex-gap($s-12);
+  }
+  .drawer-body {
+    @include flex-col($s-40);
+  }
+}
+
+.food-instant-settlement-drawer {
+  @include flex-col($s-40);
+  .drawer-action-btns-container {
+    @include flex-gap($s-12);
+  }
+  .drawer-body {
+    @include flex-col($s-40);
+  }
+}

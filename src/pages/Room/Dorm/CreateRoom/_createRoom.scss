@@ -1,0 +1,33 @@
+@use "../../../../assets/styles/abstract/variables" as *;
+.create-room-main-container {
+  display: flex;
+  flex-direction: column;
+  gap: $s-32;
+  .room-container {
+    display: flex;
+    flex-direction: column;
+    gap: $s-28;
+    .bread-crumb {
+      @include body-regular;
+    }
+    .check-box {
+      border: 1px solid $border-color-90;
+      padding: $s-20;
+      border-radius: 20px;
+    }
+    .info-box {
+      border: 1px solid $border-color-90;
+      border-radius: 20px;
+      padding: $s-40;
+    }
+  }
+  .btn-container {
+    display: flex;
+    gap: $s-16;
+    .cancel-btn {
+      span {
+        @include body-regular;
+      }
+    }
+  }
+}

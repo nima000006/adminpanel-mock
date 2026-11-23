@@ -1,0 +1,47 @@
+@use "../../../../../../../assets/styles/abstract/variables" as *;
+.work-spaces-request-received-dormitory-container {
+  @include flex-col($s-24);
+  .request-received-dormitory-wrapper {
+    @include flex-col($s-40);
+    .btn-container {
+      display: flex;
+      justify-content: space-between;
+      direction: ltr;
+
+      @media (max-width: 630px) {
+        flex-direction: column;
+        gap: $s-16;
+      }
+
+      .lef-side-btn-wrapper,
+      .right-side-btn-wrapper {
+        @include flex-gap($s-16);
+        @media (max-width: 480px) {
+          flex-direction: column;
+        }
+        .disable-hover {
+          &.ant-btn-primary,
+          &.ant-btn {
+            background-color: $yellow !important;
+            border-color: $yellow !important;
+          }
+
+          &.ant-btn > span {
+            &:hover {
+              background-color: $yellow !important;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.work-spaces-returned-modal {
+  .ant-btn-primary {
+    background-color: $yellow;
+    &:hover {
+      background-color: $yellow !important;
+    }
+  }
+}

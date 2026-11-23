@@ -1,0 +1,21 @@
+@use "../../../../../../../../../../../../assets/styles/abstract/variables" as *;
+.dorm-residence-building-detail-drawer-container {
+  height: 100%;
+  .drawer-body {
+    @include flex-col($s-40);
+    height: calc(100% - 136px);
+    .date-container {
+      margin-top: auto;
+    }
+  }
+  .building-rules-container {
+    @include flex-col($s-16);
+    .ant-collapse-header-text {
+      @include footnote;
+      color: var(--app-text);
+    }
+    .building-rules-item {
+      @include body-regular;
+    }
+  }
+}

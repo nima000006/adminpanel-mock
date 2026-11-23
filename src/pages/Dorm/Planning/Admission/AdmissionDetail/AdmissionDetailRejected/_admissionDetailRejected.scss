@@ -1,0 +1,7 @@
+@use "../../../../../../assets/styles/abstract/variables" as *;
+.admission-detail-rejected-page-container {
+  @include flex-col($s-24);
+  .admission-detail-rejected-tab-container {
+    @include body-regular;
+  }
+}

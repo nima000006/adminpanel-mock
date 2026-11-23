@@ -1,0 +1,31 @@
+@use "../../../../../../../../../../assets/styles/abstract/variables" as *;
+.accounting-document-drawer-container {
+  .accounting-document-detail-drawer-container {
+    margin: 0 $s-32 !important;
+    background-color: var(--app-bg-layout);
+    padding: $s-12 !important;
+    @include flex-center;
+    div {
+      @include body-regular;
+      @include flex-center;
+      flex-direction: column;
+      gap: $s-10;
+      svg {
+        color: $primary-6;
+        width: $s-18;
+        height: $s-18;
+      }
+      p {
+        color: var(--app-text);
+      }
+      p:last-child {
+        color: var(--app-text);
+      }
+    }
+  }
+  .custom-link {
+    color: $primary-6;
+    @include flex-center;
+    gap: $s-5;
+  }
+}

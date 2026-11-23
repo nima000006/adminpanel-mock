@@ -1,0 +1,33 @@
+@use "../../../../../../../../assets/styles/abstract/variables" as *;
+
+.food-my-self-list-drawer-content-container {
+  .custom-select-container {
+    margin-bottom: 0 !important;
+  }
+  .attach-row {
+    @include flex-gap($s-8);
+    .ant-btn {
+      border-color: $danger-primary;
+      border-style: dashed;
+      background-color: var(--app-bg-layout);
+      padding: $s-32;
+    }
+
+    @media (max-width: 400px) {
+      justify-content: center;
+    }
+    .my-self-upload-text-container {
+      display: flex;
+      gap: $s-8;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+  .info-contact-divider {
+    margin-top: $s-12;
+  }
+  .my-self-map-container {
+    margin-top: $s-32;
+    width: 100%;
+  }
+}

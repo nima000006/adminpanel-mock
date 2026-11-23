@@ -1,0 +1,8 @@
+@use "../../../../../../../assets/styles/abstract/variables" as *;
+.submit-email-modal-content-container {
+  @include flex-col($s-20);
+  @include body-regular;
+  .ant-steps-item-title {
+    @include body-regular;
+  }
+}

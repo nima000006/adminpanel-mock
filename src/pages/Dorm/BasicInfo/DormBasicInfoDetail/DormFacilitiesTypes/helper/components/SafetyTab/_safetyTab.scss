@@ -1,0 +1,8 @@
+@use "../../../../../../../../assets/styles/abstract/variables" as *;
+.dorm-facilities-safety-tab-container {
+  @include flex-col($s-16);
+}
+
+.dorm-basic-info-switch-modal {
+  @include body-regular;
+}

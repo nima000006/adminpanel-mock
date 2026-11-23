@@ -1,0 +1,55 @@
+@use "../../../../../../../assets/styles/abstract/variables" as *;
+.debtors-title-wrapper-payment-status-section-container {
+  @include flex-col($s-24);
+  .title-wrapper-payment-status-section {
+    display: flex;
+    justify-content: space-between;
+
+    @media (max-width: 400px) {
+      flex-direction: column;
+      margin-bottom: $s-16;
+      align-items: flex-start;
+      .ant-btn {
+        padding: 0;
+      }
+    }
+
+    .flag-wrapper {
+      @include flex-gap($s-16);
+
+      @media (max-width: 510px) {
+        flex-direction: column;
+        margin-bottom: $s-16;
+      }
+    }
+
+    .anticon {
+      display: flex;
+    }
+  }
+}
+
+.debtors-payment-status-section-container {
+  @include flex-col($s-16);
+}
+
+.paid-root-container {
+  margin: $s-16;
+  .ant-timeline-item-tail {
+    border-inline-start: 2px solid $success-500;
+  }
+}
+
+.overdue-paid-root-container {
+  margin: $s-16;
+  .ant-timeline-item-tail {
+    border-inline-start: 2px solid $red;
+  }
+}
+
+.not-due-root-container {
+  margin: $s-16;
+  .ant-timeline-item-tail {
+    border-inline-start: 2px solid $neutral-4;
+  }
+}

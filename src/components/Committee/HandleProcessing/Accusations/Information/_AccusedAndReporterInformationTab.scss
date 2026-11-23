@@ -1,0 +1,19 @@
+@use "../../../../../assets/styles/abstract/variables" as *;
+.accusation-case-accused-and-reporter-tab-container {
+  display: flex;
+  flex-direction: column;
+  gap: $s-40;
+  .around-box {
+    padding: $s-24;
+    border-radius: 10px;
+    border: $border-1 solid $border-color-90;
+  }
+  .ant-collapse-expand-icon {
+    position: absolute;
+    left: 0;
+    border-radius: 50%;
+    .collapse-icon {
+      font-size: $s-18;
+    }
+  }
+}

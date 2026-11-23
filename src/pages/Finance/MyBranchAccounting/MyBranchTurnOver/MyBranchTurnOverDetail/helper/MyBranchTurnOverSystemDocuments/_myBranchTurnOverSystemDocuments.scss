@@ -1,0 +1,4 @@
+@use "../../../../../../../assets/styles/abstract/variables" as *;
+.financial-my-branch-turn-over-system-document-container {
+  @include flex-col($s-16);
+}

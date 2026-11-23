@@ -1,0 +1,117 @@
+@use "../../../../../assets/styles/abstract/variables" as *;
+.room-installments-container {
+  margin-bottom: $s-32;
+}
+.payment-rules-detail-content-box-container {
+  .payment-rules-detail-content-first-box {
+    margin-top: $s-28;
+    .stay-box-container {
+      .stay-text {
+        @include body-regular;
+      }
+    }
+  }
+  .stay-title {
+    @include h5-regular;
+  }
+  .stay-box-wrapper {
+    border: 1px solid $border-color-80;
+    border-radius: 10px;
+    padding: $s-10;
+    margin-top: $s-4;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .label {
+      @include body-regular;
+    }
+
+    .first-part {
+      @include flex-gap($s-8);
+      align-items: center;
+      justify-content: center;
+      .price-label {
+        margin-right: $s-16;
+      }
+      .separator {
+        margin-right: $s-36;
+      }
+    }
+    .second-part {
+      justify-content: center;
+      .ant-radio-group {
+        @include flex-gap($s-16);
+        span {
+          @include body-regular;
+        }
+      }
+    }
+    .third-part {
+      justify-content: center;
+      @include flex-gap($s-8);
+      align-items: center;
+      .stay-register-btn {
+        margin-right: $s-16;
+        @include body-regular;
+      }
+    }
+  }
+  .payment-installments-box-container {
+    margin-top: $s-20;
+    .payment-installments-text {
+      @include h5-regular;
+    }
+    .payment-installments-box-wrapper {
+      border: 1px solid $border-color-80;
+      border-radius: 10px;
+      padding: $s-10;
+      margin: $s-16 $s-8;
+      .installment-btn {
+        @include body-regular;
+        margin: $s-16;
+      }
+    }
+  }
+
+  .payment-rules-detail-content-second-box {
+    margin-top: $s-28;
+    .building-name {
+      @include flex-gap($s-16);
+      margin-bottom: $s-40;
+    }
+    .building-text {
+      @include body-regular;
+    }
+  }
+}
+
+.installment-modal-body-container {
+  display: flex;
+  flex-direction: column;
+  gap: $s-32;
+  .installment-modal-body {
+    @include flex-center;
+    align-items: flex-start;
+    gap: $s-16;
+  }
+
+  .modal-btn-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: $s-16;
+    padding-right: $s-8;
+    .modal-btn {
+      @include body-regular;
+    }
+  }
+  .ant-form-item-explain-error {
+    color: var(--error-500);
+    font-family: "DanaFaNum";
+    font-style: normal;
+    font-weight: 500;
+    font-size: $s-12;
+    text-align: right;
+  }
+}

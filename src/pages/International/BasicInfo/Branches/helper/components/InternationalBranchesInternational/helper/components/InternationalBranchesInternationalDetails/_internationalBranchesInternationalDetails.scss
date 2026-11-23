@@ -1,0 +1,11 @@
+@use "../../../../../../../../../../assets/styles/abstract/variables" as *;
+.international-branches-international-details {
+  .custom-button-container {
+    @include flex-gap($s-10);
+    .custom-button-disabled {
+      color: var(--app-text);
+      cursor: default;
+      border-color: transparent;
+    }
+  }
+}

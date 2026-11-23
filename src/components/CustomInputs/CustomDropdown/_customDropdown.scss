@@ -1,0 +1,41 @@
+@use "../../../assets/styles/abstract/variables" as *;
+.custom-dropdown-container {
+  width: 100%;
+  label {
+    @include body-regular;
+    color: $title-black;
+    height: 0 !important;
+  }
+  input {
+    @include body-regular;
+    color: $title-black;
+  }
+  .ant-form-item {
+    margin: 0;
+  }
+  .ant-form-item-control {
+    width: 100%;
+    flex: unset;
+  }
+  .ant-row {
+    flex-flow: unset;
+    align-items: center;
+  }
+  .ant-form-item-label {
+    overflow: unset;
+    label {
+      &::after {
+        content: "";
+      }
+    }
+  }
+
+  .ant-form-item-explain-error {
+    color: var(--error-500);
+    font-family: "DanaFaNum";
+    font-style: normal;
+    font-weight: 500;
+    font-size: $s-12;
+    text-align: right;
+  }
+}

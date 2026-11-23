@@ -1,0 +1,22 @@
+@use "../../../../../../../../../assets/styles/abstract/variables" as *;
+.users-requests-detail-pending-payment-requests-info-container {
+  @include flex-col($s-40);
+  .info-container {
+    @include flex-col($s-40);
+  }
+  .alert {
+    width: 100%;
+  }
+  .extra-content-divider-btn {
+    color: $blue-primary;
+    @media (max-width: 480px) {
+      span {
+        font-size: $s-12;
+      }
+    }
+  }
+  .action-btn-container {
+    @include flex-gap($s-16);
+    justify-content: flex-end;
+  }
+}

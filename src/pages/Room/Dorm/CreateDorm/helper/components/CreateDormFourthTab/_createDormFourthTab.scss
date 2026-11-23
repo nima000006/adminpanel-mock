@@ -1,0 +1,36 @@
+@use "../../../../../../../assets/styles/abstract/variables" as *;
+.dorm-create-fourth-tab-container {
+  margin: 1.5rem 0;
+  height: auto;
+  .installment-select {
+    width: 50%;
+    @media (max-width: 800px) {
+      width: 70%;
+    }
+    @media (max-width: 600px) {
+      width: 90%;
+    }
+  }
+}
+.dorm-payment-fourth-tab-container {
+  height: auto;
+  .dorm-payment-fourth-items-renderer {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    .row {
+      display: flex;
+      align-items: center;
+      .row-label {
+        @include body-regular;
+      }
+    }
+  }
+}
+.dorm-fourth-tab-action-btn-container {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}

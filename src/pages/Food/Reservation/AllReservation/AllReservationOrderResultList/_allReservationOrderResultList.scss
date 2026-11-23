@@ -1,0 +1,67 @@
+@use "../../../../../assets/styles/abstract/variables" as *;
+.all-reservation-order-result-list-container {
+  container-type: inline-size; // برای فعال سازی کوئری
+  .button-container {
+    @include flex-gap($s-5);
+    @media (max-width: 850px) {
+      flex-direction: column;
+    }
+  }
+  display: flex;
+  flex-direction: column;
+  gap: $s-24;
+  .search-box-container {
+    @include flex-space-between;
+    @media (max-width: 700px) {
+      flex-direction: column-reverse;
+      gap: $s-16;
+      align-items: flex-start;
+    }
+    .search-box {
+      min-width: 350px;
+      max-width: 500px;
+      @media (max-width: 600px) {
+        min-width: 250px;
+        max-width: 250px;
+      }
+      @media (max-width: 300px) {
+        min-width: 200px;
+        max-width: 200px;
+      }
+      .search-icon {
+        color: $black-8;
+      }
+    }
+
+    .custom-input-container .ant-row {
+      @media (max-width: 700px) {
+        flex-direction: column !important;
+        align-items: flex-start;
+        gap: $s-4;
+      }
+      @media (max-width: 575px) {
+        flex-direction: column !important;
+        align-items: flex-start;
+        gap: 0;
+      }
+    }
+  }
+  @container (max-width: 140px) {
+    button span {
+      font-size: $s-7;
+    }
+  }
+}
+
+.food-closing-registration-drawer-content {
+  .closing-registration-drawer-header-btn {
+    @include flex-gap($s-12);
+  }
+  .ant-row {
+    width: 100%;
+  }
+  .ant-form-item {
+    margin-bottom: 0;
+    padding-right: $s-20;
+  }
+}

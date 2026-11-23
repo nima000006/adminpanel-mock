@@ -1,0 +1,64 @@
+@use "../../../../../../../../assets/styles/abstract/variables" as *;
+.basic-report-detail-container {
+  .individual-report-detail {
+    display: flex;
+    flex-direction: column;
+    gap: $s-40;
+    width: 100%;
+    .individual-report-heading {
+      @include flex-space-between;
+      .edit-button {
+        font-size: $s-28;
+        color: $blue-primary;
+        cursor: pointer;
+      }
+    }
+    .divider-btn-container {
+      display: grid;
+      grid-template-columns: 4fr auto;
+      gap: $s-16;
+      margin-bottom: $s-32;
+      @media (max-width: 700px) {
+        @include flex-gap($s-8);
+        flex-direction: column;
+      }
+      .btn-container {
+        align-self: center;
+        justify-self: end;
+        .search-student-btn {
+          @include h5-regular;
+        }
+      }
+    }
+    .report-detail-inputs-container {
+      display: flex;
+      flex-direction: column;
+      gap: $s-12;
+    }
+    .upload-container {
+      display: flex;
+      flex-direction: column;
+      gap: $s-13;
+      .ant-upload-list {
+        display: flex;
+        gap: $s-8;
+      }
+    }
+    .grid-cols-3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: $s-12;
+      @media (max-width: 800px) {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      @media (max-width: 700px) {
+        grid-template-columns: repeat(1, 1fr);
+      }
+    }
+    .grid-cols-2 {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: $s-12;
+    }
+  }
+}

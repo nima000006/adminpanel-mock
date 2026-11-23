@@ -1,0 +1,43 @@
+@use "../../../assets/styles/abstract/variables" as *;
+.apartment-info-create-container {
+  border-radius: 20px;
+  background: $white;
+  display: flex;
+  padding: $s-40;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: $s-8;
+  .description-title-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .apartment-info-label {
+    @include h5-bold;
+    color: $black-60;
+  }
+  .table-container {
+    width: 100%;
+    margin: $s-16 0;
+    .create-structure-info-btn-container {
+      .create-structure-info-btn {
+        @include body-regular;
+      }
+    }
+    .new-row-btn {
+      @include body-regular;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: $s-24;
+      .new-row-btn-icon {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: $s-16;
+      }
+    }
+  }
+}

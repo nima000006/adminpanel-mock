@@ -1,0 +1,17 @@
+@use "../../../../../assets/styles/abstract/variables" as *;
+.business-invoices-and-docs-container {
+  container-type: inline-size;
+  @include body-regular;
+  .ant-tabs-tab-btn {
+    @include flex-center;
+  }
+
+  @container (max-width: 140px) {
+    button {
+      padding: $s-8;
+    }
+    button span {
+      font-size: 10px;
+    }
+  }
+}

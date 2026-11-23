@@ -1,0 +1,7 @@
+@use "../../../../../../../../assets/styles/abstract/variables" as *;
+.work-spaces-tariff-admission-program {
+  @include flex-col($s-24);
+  .time-and-creator-wrapper {
+    margin-top: $s-24;
+  }
+}

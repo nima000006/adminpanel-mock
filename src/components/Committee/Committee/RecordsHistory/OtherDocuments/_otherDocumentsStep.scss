@@ -1,0 +1,87 @@
+@use "../../../../../assets/styles/abstract/variables" as *;
+.committee-records-submit-other-documents-step-container {
+  display: flex;
+  flex-direction: column;
+  gap: $s-35;
+  .border-round-box {
+    padding: $s-24;
+    border-radius: 10px;
+    border: $border-1 solid $border-color-90;
+  }
+  .custom-btn {
+    @include h5-regular;
+  }
+  .flex-col-g32 {
+    display: flex;
+    flex-direction: column;
+    gap: $s-32;
+  }
+  .grid-cols-2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: $s-24;
+  }
+  .ant-col {
+    width: 100%;
+    text-align: right;
+  }
+  .upload-container {
+    display: flex;
+    flex-direction: column;
+    gap: $s-13;
+    .title {
+      @include body-regular;
+      color: $title-black;
+    }
+    .upload-btn {
+      @include body-regular;
+      color: $title-black;
+    }
+    .ant-upload-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: $s-8;
+    }
+  }
+  .divider-button-container {
+    display: grid;
+    grid-template-columns: 4fr auto;
+    gap: $s-16;
+    .button-container {
+      align-self: center;
+      justify-self: end;
+    }
+  }
+  .ant-form-item {
+    margin-bottom: 0;
+  }
+  .buttons-container-total {
+    @include flex-center;
+    justify-content: flex-end;
+    gap: $s-12;
+    button {
+      @include body-regular;
+    }
+    .back-btn {
+      color: $title-black;
+    }
+  }
+  .buttons-container {
+    @include flex-center;
+    justify-content: flex-end;
+    gap: $s-12;
+    margin-top: 1.4rem;
+    button {
+      @include body-regular;
+    }
+    .back-btn {
+      color: $title-black;
+    }
+  }
+}
+.confirm-text {
+  @include body-regular;
+}
+.attach-upload-container {
+  padding-bottom: 4.5rem;
+}

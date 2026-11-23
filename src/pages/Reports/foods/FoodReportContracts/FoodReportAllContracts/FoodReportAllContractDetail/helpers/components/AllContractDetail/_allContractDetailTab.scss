@@ -1,0 +1,14 @@
+@use "../../../../../../../../../assets/styles/abstract/variables" as *;
+.all-contracts-detail-tab-container {
+  @include flex-col($s-24);
+  .divider-btn-container {
+    @include flex-center;
+    gap: $s-8;
+    @media (max-width: 576px) {
+      flex-direction: column;
+    }
+    .custom-switch-container {
+      margin-bottom: 0;
+    }
+  }
+}

@@ -1,0 +1,15 @@
+@use "../../../../../assets/styles/abstract/variables" as *;
+.my-reservation-order-search-container {
+  height: auto;
+  padding: $s-48 $s-16 !important;
+  .row-container {
+    align-items: flex-start;
+  }
+  .search-btn-container {
+    margin-top: $s-16;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}

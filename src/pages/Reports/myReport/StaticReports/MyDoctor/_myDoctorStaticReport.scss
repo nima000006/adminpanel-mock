@@ -1,0 +1,31 @@
+@use "../../../../../assets/styles/abstract/variables" as *;
+.my-doctor-static-report {
+  .MuiChartsLegend-label {
+    @include body-regular;
+  }
+
+  .MuiChartsAxis-tickLabel {
+    span {
+      @include body-regular;
+      color: $neutral-7;
+    }
+  }
+
+  .custom-chart > :nth-child(1) {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  .custom-chart > :nth-child(1) > :nth-child(1) {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .ant-tabs-tab-btn {
+    @include body-regular;
+  }
+
+  .ant-segmented-item {
+    width: 100%;
+  }
+}

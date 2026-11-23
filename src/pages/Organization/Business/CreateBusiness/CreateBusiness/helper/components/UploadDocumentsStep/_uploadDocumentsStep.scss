@@ -1,0 +1,47 @@
+@use "../../../../../../../../assets/styles/abstract/variables" as *;
+.upload-document-step-container {
+  @include flex-col($s-40);
+  @include body-regular;
+
+  .alert {
+    margin-top: $s-40;
+  }
+
+  .attach-file {
+    .ant-btn {
+      border-color: $danger-primary;
+      border-style: dashed;
+      background-color: var(--app-bg-layout);
+      padding: $s-52;
+    }
+
+    .ant-upload-wrapper {
+      @include flex-col($s-8);
+      flex-wrap: wrap;
+    }
+  }
+
+  .ant-btn {
+    border-color: $danger-primary;
+    border-style: dashed;
+    background-color: var(--app-bg-layout);
+    padding: $s-24;
+  }
+  .all-self-upload-text-container {
+    @include flex-col($s-8);
+    align-items: center;
+    justify-content: center;
+  }
+
+  .uploader-wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    @media (max-width: 950px) {
+      grid-template-columns: 1fr;
+    }
+  }
+}
+.business-upload-document-btn-wrapper {
+  @include flex-gap($s-16);
+  justify-content: end;
+}

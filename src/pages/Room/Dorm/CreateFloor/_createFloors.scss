@@ -1,0 +1,36 @@
+@use "../../../../assets/styles/abstract/variables" as *;
+.create-floor-main-container {
+  display: flex;
+  flex-direction: column;
+  gap: $s-28;
+  .floor-container {
+    display: flex;
+    flex-direction: column;
+    gap: $s-28;
+    .bread-crumb {
+      @include body-regular;
+    }
+    .check-box {
+      border: 1px solid $border-color-90;
+      padding: $s-20;
+      border-radius: 20px;
+    }
+    .info-box {
+      border: 1px solid $border-color-90;
+      border-radius: 20px;
+      padding: $s-40;
+      @media (max-width: 767px) {
+        padding: $s-20;
+      }
+    }
+  }
+  .btn-container {
+    display: flex;
+    gap: $s-16;
+    .cancel-btn {
+      span {
+        @include body-regular;
+      }
+    }
+  }
+}

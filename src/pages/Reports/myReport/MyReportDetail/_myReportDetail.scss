@@ -1,0 +1,32 @@
+@use "../../../../assets/styles/abstract/variables" as *;
+.cutom-breadcrumb {
+  color: $neutral-7;
+}
+.report-info-not-found {
+  color: $red;
+}
+.report-select-container {
+  width: 100%;
+}
+.report-card-container {
+  @include body-regular;
+  .report-card {
+    border-style: dashed;
+    p,
+    span {
+      color: $neutral-8 !important;
+      @include footnote;
+    }
+    strong {
+      color: $neutral-12;
+    }
+    .report-value {
+      @include flex-gap($s-5);
+      margin-top: $s-4;
+    }
+  }
+}
+.report-select-container {
+  width: 100%;
+  margin: 0 !important;
+}

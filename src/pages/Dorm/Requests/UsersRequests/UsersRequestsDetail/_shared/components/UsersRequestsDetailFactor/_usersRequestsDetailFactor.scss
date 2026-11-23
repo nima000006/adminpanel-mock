@@ -1,0 +1,63 @@
+@use "../../../../../../../../assets/styles/abstract/variables" as *;
+.user-requests-detail-factor-container {
+  @include flex-col($s-40);
+  .payment-factor {
+    @include flex-col($s-24);
+  }
+  .payment-status {
+    @include flex-col($s-16);
+    .tag-container {
+      @include flex-gap($s-8);
+    }
+  }
+  .table-container {
+    @include flex-col($s-24);
+  }
+  .title-wrapper-payment-status-section {
+    display: flex;
+    justify-content: space-between;
+
+    @media (max-width: 400px) {
+      flex-direction: column;
+      margin-bottom: $s-16;
+      align-items: flex-start;
+      .ant-btn {
+        padding: 0;
+      }
+    }
+
+    .flag-wrapper {
+      @include flex-gap($s-16);
+      align-items: center;
+
+      @media (max-width: 510px) {
+        flex-direction: column;
+        margin-bottom: $s-16;
+      }
+    }
+  }
+  .paid-root-container {
+    .ant-timeline-item-tail {
+      border-inline-start: 2px solid $success-500;
+    }
+  }
+
+  .overdue-paid-root-container {
+    .ant-timeline-item-tail {
+      border-inline-start: 2px solid $red;
+    }
+  }
+
+  .not-due-root-container {
+    .ant-timeline-item-tail {
+      border-inline-start: 2px solid $neutral-4;
+    }
+  }
+}
+
+.user-requests-reports-more-details-drawer-container {
+  .payment-type-wrapper {
+    @include flex-gap($s-8);
+    margin-bottom: $s-24;
+  }
+}

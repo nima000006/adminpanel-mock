@@ -1,0 +1,6 @@
+@use "../../../../../../../assets/styles/abstract/variables" as *;
+.dorm-create-modal-content-container {
+  .text {
+    @include body-regular;
+  }
+}

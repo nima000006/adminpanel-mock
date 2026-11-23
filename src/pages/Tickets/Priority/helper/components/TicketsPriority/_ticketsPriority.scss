@@ -1,0 +1,9 @@
+@use "../../../../../../assets/styles/abstract/variables" as *;
+.tickets-priority-container {
+  .tickets-priority-table-container {
+    .correction-link {
+      color: $blue-primary;
+      cursor: pointer;
+    }
+  }
+}

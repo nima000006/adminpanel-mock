@@ -1,0 +1,35 @@
+@use "../../../../../../../../../assets/styles/abstract/variables" as *;
+.management-requests-all-role-request-detail-info-container {
+  container-type: inline-size;
+  @include flex-col($s-40);
+  .info-container {
+    @include flex-col($s-40);
+    .extra-content-class {
+      @include flex-center;
+    }
+    .ant-tag-container {
+      .ant-tag {
+        border-radius: 24px;
+        padding: 0 10px;
+      }
+    }
+  }
+  .request-text-container {
+    .text-container {
+      padding: $s-12;
+      border: 1px solid $primary-4;
+      background-color: $primary-1;
+      border-radius: 8px;
+      @include body-regular;
+      color: var(--app-text);
+    }
+  }
+
+  @container (max-width: 140px) {
+    .extra-content-class {
+      display: flex;
+      gap: $s-8;
+      flex-direction: column;
+    }
+  }
+}

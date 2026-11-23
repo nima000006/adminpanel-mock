@@ -1,0 +1,10 @@
+@use "../../../../../../../../../assets/styles/abstract/variables" as *;
+.wallet-request-rejected-drawer-form-container {
+  padding: 0 !important;
+}
+.wallet-request-rejected-drawer-container {
+  .ant-steps-item-container {
+    justify-content: start;
+    padding-inline-start: 0 !important;
+  }
+}

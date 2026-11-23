@@ -1,0 +1,18 @@
+@use "../../../../../assets/styles/abstract/variables" as *;
+.room-assign-edu-capsule {
+  width: 100%;
+  background-color: #e5e5e5;
+  @include body-regular;
+  margin: $s-24 0;
+  .label-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .selects-container {
+    margin-top: $s-32;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: $s-32;
+  }
+}

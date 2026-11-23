@@ -1,0 +1,22 @@
+@use "../../../../assets/styles/abstract/variables" as *;
+.dorm-create-modify-container {
+  @include flex-col($s-40);
+  .form-container {
+    @include flex-col($s-40);
+  }
+  .status-container {
+    .ant-form-item {
+      margin-bottom: 0;
+      min-width: 200px;
+    }
+  }
+  .btn-container {
+    @include flex-gap($s-8);
+    margin-top: $s-40;
+    justify-content: end;
+  }
+}
+
+.residence-update-confirm-modal-container {
+  @include body-regular;
+}

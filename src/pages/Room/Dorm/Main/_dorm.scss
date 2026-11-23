@@ -1,0 +1,27 @@
+@use "../../../../assets/styles/abstract/variables" as *;
+.add-dorm-btn {
+  margin-bottom: $s-16;
+  .add-dorm-btn-icon {
+    display: flex;
+  }
+}
+
+.dorm-table-container {
+  .gender-container {
+    display: flex;
+    gap: $s-6;
+    .gender-item {
+      background-color: #e4056d;
+      color: $white;
+      padding: $s-4;
+      border-radius: 6px;
+    }
+  }
+}
+.tables-sticky-column-left {
+  position: sticky !important;
+  left: 0;
+  box-shadow: $table-sticky-box-shadow;
+  background-color: $table-sticky-background-color;
+  overflow: hidden;
+}

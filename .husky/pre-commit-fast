@@ -1,0 +1,25 @@
+#!/usr/bin/env sh
+# Fast pre-commit hook (skips build, only type-checks)
+# To use: cp .husky/pre-commit-fast .husky/pre-commit
+
+. "$(dirname -- "$0")/_/husky.sh"
+
+echo "🔍 Running pre-commit checks (FAST MODE - no build)..."
+
+# 1. Lint and format staged files (fast ~5-10s)
+echo "📝 Linting and formatting staged files..."
+npx lint-staged || {
+  echo "❌ Linting failed. Fix errors before committing."
+  exit 1
+}
+
+# 2. Type check - catches most build errors (fast ~5-15s)
+echo "🔎 Type checking TypeScript..."
+npm run type-check || {
+  echo "❌ TypeScript errors found. Fix them before committing."
+  exit 1
+}
+
+echo "✅ Pre-commit checks passed (fast mode)!"
+echo "⚠️  WARNING: Full build was skipped. Run 'npm run build' manually before pushing."
+echo "🚀 Ready for 'git cz' or 'git push'"

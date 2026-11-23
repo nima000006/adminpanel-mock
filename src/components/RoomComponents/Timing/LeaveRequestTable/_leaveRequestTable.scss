@@ -1,0 +1,25 @@
+@use "../../../../assets/styles/abstract/variables" as *;
+.leave-request-container {
+  .leave-request-table {
+    .leave-request-btn-wrapper {
+      @include flex-gap($s-16);
+      .confirm-btn,
+      .view-btn {
+        color: $blue-primary;
+        @include body-regular;
+        cursor: pointer;
+      }
+      .reject-btn {
+        color: $danger-primary;
+        @include body-regular;
+        cursor: pointer;
+      }
+    }
+    .tables-sticky-column-left {
+      position: sticky !important;
+      left: 0;
+      box-shadow: $table-sticky-box-shadow;
+      overflow: hidden;
+    }
+  }
+}

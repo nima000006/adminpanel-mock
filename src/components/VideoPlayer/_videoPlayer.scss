@@ -1,0 +1,484 @@
+@use "../../assets/styles/abstract/variables" as *;
+
+.video-player {
+  position: relative;
+  width: 100%;
+  background: #000000;
+  border-radius: $s-12;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: $white;
+  direction: ltr;
+
+  &__media {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+  }
+
+  &__poster {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    pointer-events: none;
+    transition: opacity 0.25s ease;
+  }
+
+  &__poster:not([data-visible]) {
+    opacity: 0;
+  }
+
+  &__title {
+    position: absolute;
+    top: $s-16;
+    left: $s-16;
+    padding: $s-8 $s-12;
+    background: rgba(0, 0, 0, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 9999px;
+    font-size: $s-14;
+  }
+
+  &__placeholder {
+    padding: $s-24;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.7);
+  }
+
+  // ─── Buffering spinner ────────────────────────────────────────────────
+  &__buffering {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    pointer-events: none;
+    z-index: 10;
+  }
+
+  &__spinner {
+    width: 40px;
+    height: 40px;
+    color: $white;
+    opacity: 0.85;
+    animation: vp-spin 0.8s linear infinite;
+    filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.5));
+  }
+
+  @keyframes vp-spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+  // ─── Subtitle cues overlay ────────────────────────────────────────────
+  &__subtitles {
+    position: absolute;
+    bottom: 80px;
+    left: 5%;
+    right: 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: $s-4;
+    pointer-events: none;
+    z-index: 5;
+  }
+
+  &__subtitle-cue {
+    display: inline-block;
+    padding: $s-4 $s-12;
+    background: rgba(0, 0, 0, 0.75);
+    border-radius: $s-6;
+    font-size: clamp(13px, 2vw, 17px);
+    line-height: 1.5;
+    color: $white;
+    text-align: center;
+    white-space: pre-line;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.8);
+  }
+
+  // ─── Controls ─────────────────────────────────────────────────────────
+  &__controls {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    gap: $s-12;
+    padding: $s-16;
+    pointer-events: none;
+    background: linear-gradient(
+      to top,
+      rgba(0, 0, 0, 0.65),
+      rgba(0, 0, 0, 0.25) 45%,
+      rgba(0, 0, 0, 0)
+    );
+    transition: opacity 0.25s ease;
+  }
+
+  &__controls:not([data-visible]) {
+    opacity: 0;
+  }
+
+  &__controls-row {
+    display: flex;
+    align-items: center;
+    gap: $s-10;
+    pointer-events: auto;
+    direction: ltr;
+  }
+
+  // ─── Generic button shell ──────────────────────────────────────────────
+  &__button {
+    button,
+    &--icon {
+      padding: $s-8 $s-14;
+      border-radius: 9999px;
+      border: 1px solid rgba(255, 255, 255, 0.25);
+      background: rgba(255, 255, 255, 0.15);
+      color: $white;
+      font-size: $s-12;
+      cursor: pointer;
+      backdrop-filter: blur(10px);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 3px;
+      min-width: 40px;
+      min-height: 40px;
+      transition:
+        background 0.15s ease,
+        border-color 0.15s ease;
+
+      svg {
+        width: 18px;
+        height: 18px;
+        flex-shrink: 0;
+      }
+
+      &:hover {
+        background: rgba(255, 255, 255, 0.27);
+        border-color: rgba(255, 255, 255, 0.45);
+      }
+    }
+  }
+
+  // Skip button label (the number overlay)
+  &__skip-label {
+    font-size: 10px;
+    font-weight: 700;
+    line-height: 1;
+    letter-spacing: -0.5px;
+  }
+
+  // ─── Time ──────────────────────────────────────────────────────────────
+  &__time {
+    display: flex;
+    align-items: center;
+    gap: $s-6;
+    padding: $s-6 $s-12;
+    border-radius: 9999px;
+    background: rgba(0, 0, 0, 0.4);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    font-size: $s-12;
+    color: $white;
+  }
+
+  &__time-separator {
+    opacity: 0.7;
+  }
+
+  &__spacer {
+    flex: 1;
+  }
+
+  // ─── Seek slider ────────────────────────────────────────────────────────
+  &__seek {
+    position: relative;
+    width: 100%;
+    height: $s-20;
+    cursor: pointer;
+    pointer-events: auto;
+    direction: ltr;
+  }
+
+  &__seek-track {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 50%;
+    height: 4px;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.25);
+    border-radius: 9999px;
+    transition: height 150ms ease;
+  }
+
+  &__seek-buffer {
+    position: absolute;
+    inset: 0 auto 0 0;
+    width: var(--media-slider-buffer);
+    background: rgba(255, 255, 255, 0.35);
+    border-radius: inherit;
+  }
+
+  &__seek-fill {
+    position: absolute;
+    inset: 0 auto 0 0;
+    width: var(--media-slider-fill);
+    background: $white;
+    border-radius: inherit;
+  }
+
+  &__seek-thumb {
+    position: absolute;
+    left: var(--media-slider-fill);
+    width: 14px;
+    height: 14px;
+    background: $white;
+    border-radius: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    top: 50%;
+    transition: transform 150ms ease;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.35);
+  }
+
+  &__seek[data-interactive] &__seek-track {
+    height: 6px;
+  }
+  &__seek[data-interactive] &__seek-thumb {
+    transform: translate(-50%, -50%) scale(1);
+  }
+  &__seek[data-dragging] &__seek-thumb {
+    transform: translate(-50%, -50%) scale(1.1);
+    left: var(--media-slider-pointer);
+  }
+  &__seek[data-dragging] &__seek-fill {
+    width: var(--media-slider-pointer);
+  }
+
+  &__seek-value {
+    position: absolute;
+    left: var(--media-slider-pointer);
+    bottom: 100%;
+    transform: translateX(-50%);
+    margin-bottom: $s-8;
+    padding: $s-4 $s-8;
+    background: rgba(0, 0, 0, 0.75);
+    border-radius: $s-6;
+    font-size: $s-12;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 150ms ease;
+  }
+
+  &__seek[data-pointing] &__seek-value {
+    opacity: 1;
+  }
+
+  // ─── Volume slider ──────────────────────────────────────────────────────
+  &__volume {
+    position: relative;
+    width: 110px;
+    height: $s-18;
+    cursor: pointer;
+    pointer-events: auto;
+    direction: ltr;
+  }
+
+  &__volume-track {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 50%;
+    height: 4px;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.25);
+    border-radius: 9999px;
+    transition: height 150ms ease;
+  }
+
+  &__volume-fill {
+    position: absolute;
+    inset: 0 auto 0 0;
+    width: var(--media-slider-fill);
+    background: $white;
+    border-radius: inherit;
+  }
+
+  &__volume-thumb {
+    position: absolute;
+    left: var(--media-slider-fill);
+    width: 12px;
+    height: 12px;
+    background: $white;
+    border-radius: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    top: 50%;
+    transition: transform 150ms ease;
+  }
+
+  &__volume[data-interactive] &__volume-track {
+    height: 6px;
+  }
+  &__volume[data-interactive] &__volume-thumb {
+    transform: translate(-50%, -50%) scale(1);
+  }
+
+  &__volume-value {
+    position: absolute;
+    left: var(--media-slider-pointer);
+    bottom: 100%;
+    transform: translateX(-50%);
+    margin-bottom: $s-6;
+    padding: $s-4 $s-8;
+    background: rgba(0, 0, 0, 0.75);
+    border-radius: $s-6;
+    font-size: $s-12;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 150ms ease;
+  }
+
+  &__volume[data-pointing] &__volume-value {
+    opacity: 1;
+  }
+
+  // ─── Shared menu animation ──────────────────────────────────────────────
+  @keyframes vp-menu-in {
+    from {
+      opacity: 0;
+      transform: translateY(6px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  // ─── Subtitle track selector ────────────────────────────────────────────
+  &__subtitle-wrapper {
+    position: relative;
+  }
+
+  &__track-menu {
+    position: absolute;
+    bottom: calc(100% + 8px);
+    right: 0;
+    min-width: 130px;
+    background: rgba(15, 15, 15, 0.92);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    border-radius: $s-8;
+    backdrop-filter: blur(14px);
+    overflow: hidden;
+    z-index: 20;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+    animation: vp-menu-in 0.15s ease;
+  }
+
+  &__track-option {
+    position: relative;
+    display: block;
+    width: 100%;
+    padding: $s-8 $s-14;
+    text-align: right;
+    font-size: $s-13;
+    color: rgba(255, 255, 255, 0.8);
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    transition:
+      background 0.1s ease,
+      color 0.1s ease;
+
+    &:hover {
+      background: rgba(255, 255, 255, 0.1);
+      color: $white;
+    }
+
+    &--active {
+      color: $white;
+      font-weight: 600;
+      background: rgba(255, 255, 255, 0.08);
+
+      // Absolute checkmark keeps text centred
+      &::before {
+        content: "✓";
+        position: absolute;
+        left: $s-10;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 11px;
+        opacity: 0.75;
+      }
+    }
+  }
+
+  // ─── Playback rate selector ─────────────────────────────────────────────
+  &__rate-wrapper {
+    position: relative;
+  }
+
+  &__rate-menu {
+    position: absolute;
+    bottom: calc(100% + 8px);
+    right: 0;
+    min-width: 100px;
+    background: rgba(15, 15, 15, 0.92);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    border-radius: $s-8;
+    backdrop-filter: blur(14px);
+    overflow: hidden;
+    z-index: 20;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+    animation: vp-menu-in 0.15s ease;
+  }
+
+  &__rate-option {
+    position: relative;
+    display: block;
+    width: 100%;
+    padding: $s-8 $s-14;
+    text-align: center;
+    font-size: $s-13;
+    color: rgba(255, 255, 255, 0.8);
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    transition:
+      background 0.1s ease,
+      color 0.1s ease;
+    font-weight: 500;
+
+    &:hover {
+      background: rgba(255, 255, 255, 0.1);
+      color: $white;
+    }
+
+    &--active {
+      color: $white;
+      font-weight: 700;
+      background: rgba(255, 255, 255, 0.12);
+
+      // Absolute checkmark keeps text centred
+      &::before {
+        content: "✓";
+        position: absolute;
+        left: $s-10;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 11px;
+        opacity: 0.75;
+      }
+    }
+  }
+}

@@ -1,0 +1,97 @@
+@use "../../../../../assets/styles/abstract/variables" as *;
+.accusation-case-session-allocation-modal-container {
+  max-height: 90%;
+  border-radius: 20px;
+  .ant-modal-container {
+    margin: 0;
+    padding: 0;
+    background-color: $modal-bg-color;
+    .ant-modal-header {
+      padding: $s-16 $s-24;
+    }
+    .ant-modal-title {
+      @include h5-medium;
+      font-weight: bold;
+    }
+    .ant-modal-body {
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: $s-8;
+      .modal-body-container {
+        padding: $s-24;
+        @include flex-gap($s-40);
+        flex-direction: column;
+        .custom-card-body {
+          @include flex-gap($s-40);
+          flex-direction: column;
+        }
+        .upload-container {
+          display: flex;
+          flex-direction: column;
+          gap: $s-13;
+          .ant-upload-list {
+            display: flex;
+            gap: $s-8;
+          }
+        }
+        .other-files-session {
+          border: $border-1 solid $border-color-80;
+          border-radius: 10px;
+          background-color: $border-color-80;
+          padding: $s-24;
+          .others-file-wrapper {
+            @include flex-gap($s-18);
+            flex-direction: column;
+            .others-file-row {
+              display: grid;
+              grid-template-columns: 6fr 2fr 1fr 1fr;
+              align-items: center;
+              gap: $s-16;
+              background-color: var(--app-bg-container);
+              padding: $s-8 $s-20;
+              .box-wrapper {
+                @include flex-gap($s-12);
+                flex-direction: column;
+                .box-label {
+                  @include footnote;
+                }
+                .others-file-data {
+                  @include h5-regular;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .grid-cols-2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: $s-12;
+  }
+  .grid-cols-3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: $s-12;
+  }
+  .ant-modal-title {
+    @include h4-medium;
+  }
+  .around-box {
+    padding: $s-24;
+    border-radius: 10px;
+    border: $border-1 solid $border-color-90;
+  }
+  .custom-btn {
+    @include body-regular;
+  }
+  .submit-buttons-container {
+    @include flex-center;
+    justify-content: flex-start;
+    gap: $s-13;
+    background-color: var(--app-bg-container);
+    padding: $s-16 $s-24;
+  }
+}

@@ -1,0 +1,23 @@
+@use "../../../../../../../../../../../assets/styles/abstract/variables" as *;
+.all-selfs-detail-drawer-content-container {
+  @include flex-col($s-40);
+  .custom-select-container {
+    margin-bottom: 0 !important;
+  }
+  .self-information-container {
+    @include flex-col($s-16);
+    .uploader-container {
+      display: flex;
+      gap: $s-16;
+    }
+  }
+  .contact-information-container {
+    @include flex-col($s-24);
+  }
+  .all-self-detail-upload-text-container {
+    display: flex;
+    gap: $s-8;
+    align-items: center;
+    justify-content: center;
+  }
+}

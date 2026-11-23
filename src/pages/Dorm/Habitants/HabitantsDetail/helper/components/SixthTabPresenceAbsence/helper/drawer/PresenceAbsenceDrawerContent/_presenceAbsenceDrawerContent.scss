@@ -1,0 +1,7 @@
+@use "../../../../../../../../../../assets/styles/abstract/variables" as *;
+
+.presence-absence-drawer-container {
+  .ant-form-item-row {
+    gap: $s-16 !important;
+  }
+}

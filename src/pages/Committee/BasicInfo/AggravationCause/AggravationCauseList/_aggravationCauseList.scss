@@ -1,0 +1,26 @@
+@use "../../../../../assets/styles/abstract/variables" as *;
+.committee-aggravation-cause-list-container {
+  .btn-wrapper {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: $s-16;
+    .btn {
+      @include body-regular;
+    }
+    @media (max-width: 600px) {
+      @include flex-gap($s-8);
+      flex-direction: column;
+    }
+  }
+  .aggravation-cause-list-table-container {
+    .view-btn {
+      color: $blue-primary;
+      cursor: pointer;
+    }
+    .tables-sticky-column-left {
+      position: sticky !important;
+      left: 0;
+      overflow: hidden;
+    }
+  }
+}

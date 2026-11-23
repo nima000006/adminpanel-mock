@@ -1,0 +1,9 @@
+@use "../../../../../../../../assets/styles/abstract/variables" as *;
+.dorm-inactive-tab-container {
+  @include flex-col($s-24);
+  .btn-text {
+    @media (max-width: 450px) {
+      width: 100%;
+    }
+  }
+}

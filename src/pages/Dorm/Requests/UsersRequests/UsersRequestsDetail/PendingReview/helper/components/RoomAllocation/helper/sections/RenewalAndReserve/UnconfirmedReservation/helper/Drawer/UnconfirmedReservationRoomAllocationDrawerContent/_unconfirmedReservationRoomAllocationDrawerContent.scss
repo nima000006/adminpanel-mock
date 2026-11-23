@@ -1,0 +1,22 @@
+@use "../../../../../../../../../../../../../../../../assets/styles/abstract/variables"
+  as *;
+.unconfirmed-reservation-room-allocation-drawer-content-container {
+  @include flex-col($s-40);
+
+  .building-section-container {
+    @include flex-col($s-40);
+    .disabled-row {
+      .ant-table-cell {
+        color: $character-disabled-placeholder-25;
+        pointer-events: none;
+      }
+    }
+  }
+  .users-requests-detail-bed-list-table-model-container {
+    .disabled-row {
+      .ant-table-cell {
+        color: $character-disabled-placeholder-25;
+      }
+    }
+  }
+}

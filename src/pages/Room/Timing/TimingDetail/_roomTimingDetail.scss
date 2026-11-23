@@ -1,0 +1,51 @@
+@use "../../../../assets/styles/abstract/variables" as *;
+.room-timing-detail-container-page {
+  display: flex;
+  flex-direction: column;
+  gap: $s-20;
+  .bread-crumb-container {
+    width: fit-content;
+    .bread-crumb {
+      @include body-regular;
+      color: $character-secondary-45;
+    }
+  }
+  .table-container {
+    display: flex;
+    flex-direction: column;
+    gap: $s-13;
+    .table-title {
+      @include h5-regular;
+      color: $title-black;
+      &::before {
+        width: $s-20;
+      }
+    }
+    .new-row-btn-container {
+      padding: $s-16 $s-8;
+      .new-row-btn {
+        @include body-regular;
+      }
+    }
+  }
+  .action-container {
+    @include flex-center;
+    gap: $s-16;
+    .action-text {
+      @include body-regular;
+      cursor: pointer;
+    }
+    .action-text-danger {
+      color: $danger-primary;
+    }
+    .action-text-primary {
+      color: $blue-primary;
+    }
+  }
+  .tables-sticky-column-left {
+    position: sticky !important;
+    left: 0;
+    overflow: hidden;
+    box-shadow: $table-sticky-box-shadow;
+  }
+}

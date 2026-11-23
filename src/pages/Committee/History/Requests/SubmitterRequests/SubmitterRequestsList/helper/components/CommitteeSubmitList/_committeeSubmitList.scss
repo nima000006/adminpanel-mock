@@ -1,0 +1,8 @@
+@use "../../../../../../../../../assets/styles//abstract/variables" as *;
+.committee-history-report-container {
+  .committee-history-report-table {
+    .request-type {
+      @include body-regular;
+    }
+  }
+}

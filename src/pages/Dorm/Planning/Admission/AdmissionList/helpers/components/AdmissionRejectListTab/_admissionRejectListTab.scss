@@ -1,0 +1,21 @@
+@use "../../../../../../../../assets/styles/abstract/variables" as *;
+.dorm-admission-reject-list-tab-container {
+  @include flex-col($s-24);
+
+  .dorm-admission-list-table {
+    .waiting-time-container {
+      display: flex;
+      flex-direction: column;
+      gap: $s-8;
+    }
+    .green {
+      background-color: $green;
+    }
+    .yellow {
+      background-color: $yellow;
+    }
+    .red {
+      background-color: $red;
+    }
+  }
+}

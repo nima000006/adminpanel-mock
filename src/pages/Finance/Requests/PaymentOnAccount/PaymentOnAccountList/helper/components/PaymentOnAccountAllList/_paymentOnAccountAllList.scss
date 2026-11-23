@@ -1,0 +1,4 @@
+@use "../../../../../../../../assets/styles/abstract/variables" as *;
+.finance-payment-on-account-all-list-container {
+  @include flex-col($s-24);
+}

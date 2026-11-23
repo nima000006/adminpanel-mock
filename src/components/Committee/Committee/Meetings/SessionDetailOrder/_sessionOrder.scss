@@ -1,0 +1,87 @@
+@use "../../../../../assets/styles/abstract/variables" as *;
+.committee-session-order-container {
+  .btn-wrapper {
+    @include flex-gap($s-18);
+    .check-btn {
+      color: $blue-primary;
+      cursor: pointer;
+    }
+    .reject-btn {
+      color: $danger-primary;
+      cursor: pointer;
+    }
+  }
+  .session-order-first-box {
+    padding: $s-16;
+    border-radius: 10px;
+    border: $border-1 solid $border-color-90;
+    margin-bottom: $s-36;
+    .add-new-accusation-btn {
+      @include body-regular;
+      margin-bottom: $s-16;
+    }
+    .committee-session-accusation-table {
+      .count-report-container {
+        .count-report-wrapper {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+        }
+        .count-report-box {
+          border-radius: 5px;
+          text-align: center;
+          width: fit-content;
+          padding: $s-4;
+        }
+        .box-count-report-green {
+          border: 1px solid $success-500;
+          color: $success-500;
+        }
+        .box-count-report-orange {
+          border: 1px solid $orange;
+          color: $orange;
+        }
+        .box-count-report-red {
+          border: 1px solid $character-danger;
+          color: $character-danger;
+        }
+      }
+      .waiting-time-container {
+        display: flex;
+        flex-direction: column;
+        gap: $s-8;
+      }
+      .green {
+        background-color: $green;
+        color: $white;
+      }
+      .yellow {
+        background-color: $yellow;
+        color: $white;
+      }
+      .red {
+        background-color: $red;
+        color: $white;
+      }
+    }
+  }
+
+  .session-order-second-box {
+    padding: $s-16;
+    border-radius: 10px;
+    border: $border-1 solid $border-color-90;
+  }
+
+  .tables-sticky-column-left {
+    position: sticky !important;
+    left: 0;
+    overflow: hidden;
+  }
+}
+
+.return-to-session-modal-container {
+  .desc {
+    @include h5-regular;
+    margin-bottom: $s-20;
+  }
+}

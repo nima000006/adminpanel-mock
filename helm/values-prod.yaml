@@ -1,0 +1,151 @@
+# Default values.
+# This is a YAML-formatted file.
+# Declare variables to be passed into your templates.
+
+nameOverride: "apanel"
+fullnameOverride: "apanel"
+
+image:
+  repository: harbor.example.com/uni/apanel
+  pullPolicy: Always
+  tag: "dev-5b6bcfc3"
+
+imagePullSecrets: []
+
+serviceAccount:
+  # Specifies whether a service account should be created
+  create: false
+  # Annotations to add to the service account
+  annotations: {}
+  # The name of the service account to use.
+  # If not set and create is true, a name is generated using the fullname template
+  name: ""
+
+
+nodeSelector: {}
+
+tolerations: []
+
+affinity: {}
+
+service:
+  type: ClusterIP
+  port: 80
+  # grpcPort: 6565
+  containerPort: 80
+  # grpcContainerPort: 6565
+
+# overid run command for adding runtime args
+# command:
+#   - java
+# # set CMD runtime variables and heap memory size  
+# args:
+#   - -x
+#   - -y
+#   - -z
+
+env: {}
+
+secrets: {}
+
+existingSecrets: {}
+
+ingresses: #{}
+- name:
+    "apanel"
+  annotations:
+    kubernetes.io/ingress.class: nginx
+    cert-manager.io/cluster-issuer: letsencrypt
+    certmanager.k8s.io/acme-http01-edit-in-place: 'false'
+    kubernetes.io/tls-acme: 'true'
+    nginx.ingress.kubernetes.io/ssl-redirect: 'true'
+  hosts:
+    - host: apanel.daneshjouyar.iau.ir
+      paths:
+        - /
+  tls:
+  - hosts:
+    - apanel.daneshjouyar.iau.ir
+    secretName: apanel-tls
+
+# default replica count if autoscaling be disabled
+replicaCount: 2
+
+autoscaling:
+  enabled: true
+  minReplicas: 2
+  maxReplicas: 4
+  averageCPUUtilization: 90
+  # averageMemoryUtilization: 90
+
+resources: #{}
+    limits:
+      cpu: 4000m
+      memory: 4500Mi
+    requests:
+      cpu: 300m
+      memory: 300Mi
+
+##
+## livenessProbe options
+##   The kubelet uses liveness probes to know when to restart a container.
+##
+livenessProbe:
+  enabled: true
+  initialDelaySeconds: 25
+  periodSeconds: 20
+  timeoutSeconds: 15
+  failureThreshold: 6
+  successThreshold: 1
+  httpGet_path: /
+  #/api/actuator/health
+
+##
+## readinessProbe options
+##   The kubelet uses readiness probes to know when a container is ready to start accepting traffic.
+##
+readinessProbe:
+  enabled: true
+  initialDelaySeconds: 45
+  periodSeconds: 20
+  timeoutSeconds: 15
+  failureThreshold: 6
+  successThreshold: 1
+  httpGet_path: /
+  #/api/actuator/health
+
+podAnnotations: {}
+
+# podSecurityContext:
+#   # runAsNonRoot: false
+#   runAsNonRoot: true
+#   runAsUser: 33
+#   runAsGroup: 33
+#   fsGroup: 33
+
+# securityContext: #{}
+#   allowPrivilegeEscalation: false
+#   capabilities:
+#     drop:
+#       - ALL
+#   privileged: false
+#   # readOnlyRootFilesystem: true
+#   # runAsNonRoot: true
+#   # runAsUser: 33
+
+## Enable persistence using Persistent Volume Claims
+## ref: http://kubernetes.io/docs/user-guide/persistent-volumes/
+persistence:
+  enabled: false
+  ## wordpress data Persistent Volume Storage Class
+  ## If defined, storageClassName: <storageClass>
+  ## If set to "-", storageClassName: "", which disables dynamic provisioning
+  ## If undefined (the default) or set to null, no storageClassName spec is
+  ##   set, choosing the default provisioner.  (gp2 on AWS, standard on
+  ##   GKE, AWS & OpenStack)
+  storageClassName: ceph-filesystem
+  ## If you want to reuse an existing claim, you can pass the name of the PVC using
+  ## the existingClaim variable
+  # existingClaim: app-data
+  accessMode: ReadWriteMany
+  size: 5Gi

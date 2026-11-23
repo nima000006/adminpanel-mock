@@ -1,0 +1,4 @@
+@use "../../../../.././../../../../../../assets/styles/abstract/variables" as *;
+.dorm-facilities-religious-tab-modal-content-container {
+  @include flex-col($s-16);
+}

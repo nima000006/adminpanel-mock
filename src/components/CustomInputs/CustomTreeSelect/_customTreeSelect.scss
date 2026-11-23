@@ -1,0 +1,32 @@
+@use "../../../assets/styles/abstract/variables" as *;
+.custom-select-tree-outer-container {
+  .ant-select {
+    width: 100%;
+  }
+  .ant-form-item-control {
+    width: 100%;
+  }
+  .ant-form-item-no-colon {
+    @include body-regular;
+  }
+
+  .ant-select-selector {
+    @include body-regular;
+  }
+  .vertical-label {
+    .ant-form-item-row {
+      display: flex !important;
+      flex-direction: column !important;
+      align-items: flex-start !important;
+      gap: $s-4 !important;
+    }
+  }
+}
+.ant-form-item-explain-error {
+  color: var(--error-500);
+  font-family: "DanaFaNum";
+  font-style: normal;
+  font-weight: 500;
+  font-size: $s-12;
+  text-align: right;
+}

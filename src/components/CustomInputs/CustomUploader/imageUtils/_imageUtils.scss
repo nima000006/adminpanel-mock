@@ -1,0 +1,35 @@
+.pdf-holder {
+  display: flex;
+  flex-direction: column;
+}
+.pdf-uploaded-container {
+  opacity: 0.4;
+}
+.image-uploaded-preview {
+  opacity: 0.4;
+}
+.download-btn-container {
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: center;
+  // align-items: center;
+  // min-width: 100px;
+  // direction: ltr;
+  // width: 150px;
+  // height: 125px;
+  justify-content: flex-end;
+}
+.toolbar-wrapper {
+  span {
+    font-size: 1.2rem;
+  }
+}
+.corrupt-file-container {
+  display: flex;
+  justify-content: center;
+  max-width: 150px;
+  font-size: 10px;
+  color: rgb(222, 41, 41);
+  word-break: break-all;
+  // padding: 0 0.6rem;
+}

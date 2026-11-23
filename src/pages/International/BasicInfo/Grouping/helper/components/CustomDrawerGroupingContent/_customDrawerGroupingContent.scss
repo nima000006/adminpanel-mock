@@ -1,0 +1,24 @@
+@use "../../../../../../../assets/styles/abstract/variables" as *;
+.international-grouping-content-container {
+  .custom-divider-text {
+    @include flex-center;
+    gap: $s-5;
+  }
+  .custom-tag {
+    width: fit-content;
+    gap: $s-5;
+  }
+
+  .custom-alert-duplicate {
+    border-style: dashed;
+    margin: 0 $s-32;
+    .custom-list {
+      list-style: decimal;
+      padding: $s-16;
+      padding-top: $s-16;
+      padding-right: $s-16;
+      padding-left: $s-16;
+      padding-bottom: $s-32;
+    }
+  }
+}

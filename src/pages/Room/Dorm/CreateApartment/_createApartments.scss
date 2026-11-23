@@ -1,0 +1,53 @@
+@use "../../../../assets/styles/abstract/variables" as *;
+//todo next gen
+// .create-apartment-main-container {
+//   display: flex;
+//   flex-direction: column;
+//   gap: $s-32;
+//   .apartment-info-inputs-container {
+//     .first-row {
+//       display: flex;
+//       align-items: center;
+//       gap: $s-16;
+//     }
+//     .second-row {
+//       display: grid;
+//       grid-template-columns: repeat(3, 1fr);
+//       align-items: center;
+//       gap: $s-16;
+//       margin-top: $s-16;
+//       .apartment-checkbox {
+//         @include body-regular;
+//         .ant-form-item {
+//           margin-bottom: 0 !important;
+//         }
+//       }
+//       .ant-checkbox-wrapper-in-form-item {
+//         @include body-regular;
+//       }
+//     }
+//   }
+//   .apartment-address-inputs-container {
+//     .first-row {
+//       display: flex;
+//       gap: $s-16;
+//     }
+//   }
+//   .btn-container {
+//     display: flex;
+//     gap: $s-16;
+//     .cancel-btn {
+//       span {
+//         @include body-regular;
+//       }
+//     }
+//   }
+// }
+.stepper-container {
+  .ant-steps-item-title {
+    @include body-regular;
+  }
+  .ant-steps-icon {
+    @include body-regular;
+  }
+}

@@ -1,0 +1,4 @@
+@use "../../../../../../../../../assets/styles/abstract/variables" as *;
+.my-vendors-contract-tab-container {
+  @include flex-col($s-24);
+}

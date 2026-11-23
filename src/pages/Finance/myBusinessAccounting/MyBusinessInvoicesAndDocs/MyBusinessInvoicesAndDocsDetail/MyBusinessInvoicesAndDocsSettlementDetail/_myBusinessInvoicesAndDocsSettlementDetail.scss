@@ -1,0 +1,9 @@
+@use "../../../../../../assets/styles/abstract/variables" as *;
+.my-invoices-and-docs-detail-container {
+  .tabs-container {
+    @include body-regular;
+  }
+  .ant-tabs-tab-btn {
+    @include flex-center;
+  }
+}

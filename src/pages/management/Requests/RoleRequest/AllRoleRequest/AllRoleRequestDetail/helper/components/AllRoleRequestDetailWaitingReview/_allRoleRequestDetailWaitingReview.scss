@@ -1,0 +1,13 @@
+@use "../../../../../../../../../assets/styles/abstract/variables" as *;
+.all-role-request-detail-waiting-review {
+  @include flex-gap($s-16);
+  justify-content: flex-end;
+
+  @media (max-width: 540px) {
+    display: flex;
+    flex-direction: column;
+    button span {
+      font-size: $s-10;
+    }
+  }
+}

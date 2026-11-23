@@ -1,0 +1,113 @@
+@use "../../../../../assets/styles/abstract/variables" as *;
+.accusation-case-additional-research-tab-container {
+  display: flex;
+  flex-direction: column;
+  gap: $s-24;
+  .filter-container {
+    @include flex-center;
+    justify-content: flex-start;
+    gap: $s-8;
+    .title-text {
+      @include body-regular;
+      color: $title-black;
+    }
+    .capsule-container {
+      @include flex-center;
+      gap: $s-8;
+      .capsule {
+        @include button2;
+        color: $neutral-7;
+        padding: $s-4 $s-8;
+        border: $border-1 solid $border-color;
+        border-radius: 16px;
+        cursor: pointer;
+      }
+      .capsule-active {
+        border: $border-1 solid $blue;
+        color: $blue;
+        padding: $s-4 $s-8;
+        border-radius: 16px;
+      }
+      @media (max-width: 720px) {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+      }
+      @media (max-width: 540px) {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+      }
+    }
+  }
+  .ant-steps-icon {
+    @include ant-steps-icon-font;
+  }
+  .ant-steps-vertical {
+    gap: $s-20;
+  }
+  .ant-steps-item-title {
+    width: 100%;
+  }
+  .ant-steps-item-icon {
+    float: right !important;
+  }
+  .step-item-container {
+    .step-body {
+      padding-top: $s-12;
+    }
+    .step-title {
+      @include body-regular;
+      color: $title-black;
+    }
+    .step-subtitle {
+      display: inline-block;
+      @include body-regular;
+      color: $character-secondary-45;
+    }
+    .header-container {
+      @include flex-space-between;
+      .switch-container {
+        @include flex-center;
+        gap: $s-12;
+        .ant-switch-inner-checked {
+          margin-top: -$s-2;
+        }
+        .ant-switch-inner-unchecked {
+          margin-top: -$s-24;
+        }
+        .switch-text {
+          @include footnote;
+          color: $white;
+        }
+        .switch-title {
+          @include body-regular;
+          color: $black-0;
+        }
+      }
+    }
+    .referral-section {
+      display: flex;
+      flex-direction: column;
+      gap: $s-24;
+      .title-container {
+        @include flex-center;
+        gap: $s-2;
+        justify-content: flex-start;
+      }
+
+      .upload-container {
+        display: flex;
+        flex-direction: column;
+        gap: $s-13;
+        .ant-upload-list {
+          display: flex;
+          gap: $s-8;
+        }
+      }
+      .attachment-container {
+        display: flex;
+        flex-direction: column;
+        gap: $s-8;
+      }
+    }
+  }
+}

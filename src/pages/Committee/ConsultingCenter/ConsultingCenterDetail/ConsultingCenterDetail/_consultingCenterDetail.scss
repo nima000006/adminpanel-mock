@@ -1,0 +1,22 @@
+@use "../../../../../assets/styles/abstract/variables" as *;
+.committee-consulting-center-detail-container {
+  @include flex-gap($s-26);
+  flex-direction: column;
+  .btn-wrapper {
+    @include flex-gap($s-12);
+    flex-wrap: wrap;
+    .btn {
+      @include body-regular;
+    }
+  }
+  .input-wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: $s-12;
+    margin-bottom: $s-20;
+    .ant-col {
+      width: 100%;
+      text-align: right;
+    }
+  }
+}

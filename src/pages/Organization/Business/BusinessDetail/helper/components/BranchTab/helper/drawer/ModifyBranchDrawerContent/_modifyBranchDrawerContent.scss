@@ -1,0 +1,6 @@
+@use "../../../../../../../../../../assets/styles/abstract/variables" as *;
+.create-new-branch-drawer-container {
+  .create-new-branch-drawer-btns-wrapper {
+    @include flex-gap($s-12);
+  }
+}

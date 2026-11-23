@@ -1,0 +1,18 @@
+@use "../../../../../../../../assets/styles/abstract/variables" as *;
+.create-business-pending-review-container {
+  @include flex-col($s-24);
+  justify-content: center;
+  align-items: center;
+  min-height: calc(100vh - 38vh);
+  overflow: hidden;
+  @include body-regular;
+  text-align: center;
+
+  .text-wrapper {
+    @include flex-col($s-8);
+
+    .sub-text {
+      color: $neutral-7;
+    }
+  }
+}

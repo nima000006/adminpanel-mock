@@ -1,0 +1,23 @@
+@use "../../../../../../assets/styles/abstract/variables" as *;
+.notification-group-container {
+  display: flex;
+  flex-direction: column;
+  gap: $s-24;
+  margin-top: $s-16;
+  .filter-submit-btn {
+    margin-top: $s-8;
+    span {
+      @include body-regular;
+    }
+  }
+  .content-form {
+    display: flex;
+    flex-direction: column;
+    gap: $s-24;
+  }
+  .return-to-search-btn {
+    span {
+      @include body-regular;
+    }
+  }
+}

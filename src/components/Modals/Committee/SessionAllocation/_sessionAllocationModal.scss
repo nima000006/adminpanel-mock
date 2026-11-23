@@ -1,0 +1,79 @@
+@use "../../../../assets/styles/abstract/variables" as *;
+.modal-session-allocation {
+  .ant-modal-title {
+    @include h4-medium;
+  }
+  .modal-session-allocation-wrapper {
+    margin-top: $s-32;
+    @include flex-gap($s-40);
+    flex-direction: column;
+    .switch-row {
+      @include flex-gap($s-12);
+      .switch-title {
+        @include h5-regular;
+      }
+    }
+    .other-files-session {
+      border-radius: 10px;
+      background-color: $border-color-80;
+      .others-file-wrapper {
+        @include flex-gap($s-18);
+        flex-direction: column;
+        .others-file-row {
+          display: grid;
+          grid-template-columns: 6fr 2fr 1fr 1fr;
+          align-items: center;
+          gap: $s-16;
+          background-color: var(--app-bg-container);
+          padding: $s-8 $s-20;
+          .box-wrapper {
+            @include flex-gap($s-12);
+            flex-direction: column;
+            .box-label {
+              @include footnote;
+            }
+            .others-file-data {
+              @include h5-regular;
+            }
+          }
+          .delete-btn {
+            border: none;
+            span {
+              @include body-regular;
+            }
+          }
+        }
+      }
+    }
+
+    .session-info-wrapper {
+      border-radius: 10px;
+      .select-wrapper {
+        @include flex-gap($s-12);
+        .label {
+          @include body-regular;
+        }
+      }
+    }
+
+    .upload-box {
+      border-radius: 10px;
+      .upload-container {
+        display: flex;
+        flex-direction: column;
+        gap: $s-13;
+        .ant-upload-list {
+          display: flex;
+          gap: $s-8;
+        }
+      }
+      .custom-btn {
+        @include body-regular;
+      }
+    }
+
+    .btn-container {
+      @include flex-gap($s-8);
+    }
+  }
+}

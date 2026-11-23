@@ -1,0 +1,4 @@
+@use "../../../../../../assets/styles/abstract/variables" as *;
+.tariff-list-tab-container {
+  @include body-regular;
+}

@@ -1,0 +1,49 @@
+@use "../../../../../../../../assets/styles/abstract/variables" as *;
+.my-foods-detail-edit-drawer-content-container {
+  .right-side {
+    .right-side-title-contain {
+      @media (max-width: 470px) {
+        font-size: $s-12;
+      }
+      @media (max-width: 433px) {
+        font-size: $s-10;
+      }
+    }
+  }
+  .banner-rate-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    @media (max-width: 600px) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    @media (max-width: 490px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  .my-food-detail-list-upload-text-container {
+    display: flex;
+    gap: $s-8;
+    align-items: center;
+    justify-content: center;
+    .upload-text-main {
+      font-weight: bold;
+    }
+    .upload-logo-main {
+      font-weight: bold;
+    }
+    .upload-text-second {
+      color: #777;
+    }
+    .upload-logo-second {
+      color: #777;
+    }
+  }
+  .custom-upload-btn {
+    min-width: 155.66px;
+  }
+}
+.my-foods-detail-modal {
+  .desc {
+    @include body-regular;
+  }
+}

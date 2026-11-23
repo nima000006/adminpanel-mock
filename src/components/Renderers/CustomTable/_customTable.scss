@@ -1,0 +1,225 @@
+@use "../../../assets/styles/abstract/variables" as *;
+
+.custom-table-wrapper {
+  width: 100%;
+
+  .custom-table-container {
+    width: 100%;
+
+    // Base table styling
+    .ant-table {
+      font-family: $font-family;
+    }
+
+    // Header styling
+    .ant-table-thead {
+      > tr > th {
+        background: var(--app-bg-layout); // Replaced $black-03
+        color: var(--app-text); // Added explicit text color
+        @include body-regular;
+        font-weight: 500;
+        text-align: right;
+        white-space: nowrap;
+        border-bottom: 1px solid var(--app-border);
+
+        &::before {
+          display: none; // Remove default separator
+        }
+      }
+    }
+
+    // Cell styling
+    .ant-table-tbody {
+      > tr > td {
+        color: var(--app-text); // Fix for dark mode text
+        background: var(--app-bg-container); // Ensure bg is correct
+      }
+
+      /* Ensure row hover effect fits theme */
+      > tr:hover > td {
+        background: var(--app-bg-layout) !important;
+      }
+
+      > tr > td {
+        @include body-regular;
+        vertical-align: middle;
+      }
+
+      // Hover effect
+      > tr:hover > td {
+        background: $black-03;
+      }
+
+      // Selected row
+      > tr.ant-table-row-selected > td {
+        background: $information-100;
+      }
+    }
+
+    // Bordered table
+    &.ant-table-bordered {
+      .ant-table-container {
+        border: $s-1 solid $border-color-80;
+        border-radius: $s-8;
+        overflow: hidden;
+      }
+
+      .ant-table-thead > tr > th,
+      .ant-table-tbody > tr > td {
+        border-color: $border-color-80;
+      }
+    }
+
+    // Sticky header/column shadow
+    // .ant-table-cell-fix-left,
+    // .ant-table-cell-fix-right {
+    //   background: $table-sticky-background-color;
+    // }
+
+    .ant-table-cell-fix-left-last::after,
+    .ant-table-cell-fix-right-first::after {
+      box-shadow: $table-sticky-box-shadow;
+    }
+
+    // Pagination styling
+    .ant-pagination {
+      margin-top: $s-16;
+      gap: $s-4;
+      .ant-pagination-prev {
+        display: flex;
+        justify-content: end;
+        align-items: center;
+      }
+      .ant-pagination-item {
+        border-radius: $s-4;
+        border-color: $border-color-80;
+
+        &:hover {
+          border-color: $primary-6;
+        }
+
+        &-active {
+          border-color: $primary-6;
+
+          a {
+            color: #fff;
+          }
+        }
+      }
+
+      .ant-pagination-options {
+        .ant-select-selector {
+          border-radius: $s-4;
+          border-color: $border-color-80;
+        }
+      }
+
+      .ant-pagination-jump-prev,
+      .ant-pagination-jump-next {
+        .ant-pagination-item-ellipsis {
+          color: $black-60;
+        }
+      }
+    }
+
+    // Loading overlay
+    .ant-spin-nested-loading > div > .ant-spin {
+      max-height: unset;
+    }
+
+    // Empty state
+    .ant-table-placeholder {
+      .ant-table-cell {
+        padding: $s-48 $s-16;
+      }
+    }
+
+    // Sorter icon
+    .ant-table-column-sorter {
+      margin-inline-start: $s-8;
+    }
+
+    // Filter icon
+    .ant-table-filter-trigger {
+      margin-inline-start: $s-4;
+    }
+
+    // Selection column
+    .ant-table-selection-column {
+      padding-inline: $s-12;
+    }
+
+    // Row expand icon
+    .ant-table-row-expand-icon {
+      border-color: $border-color-80;
+
+      &:hover {
+        border-color: $primary-400;
+        color: $primary-400;
+      }
+    }
+
+    // Small size adjustments
+    &.ant-table-small {
+      .ant-table-thead > tr > th {
+        padding: $s-8 $s-12;
+      }
+
+      .ant-table-tbody > tr > td {
+        padding: $s-8 $s-12;
+      }
+    }
+
+    // Middle size adjustments
+    &.ant-table-middle {
+      .ant-table-thead > tr > th {
+        padding: $s-12 $s-16;
+      }
+
+      .ant-table-tbody > tr > td {
+        padding: $s-12 $s-16;
+      }
+    }
+  }
+
+  // Total count section
+  .custom-table-total {
+    display: flex;
+    align-items: center;
+    gap: $s-8;
+    margin-top: $s-12;
+    padding: $s-8 $s-12;
+    background: $black-03;
+    border-radius: $s-4;
+    width: fit-content;
+
+    .custom-table-total-label {
+      @include body-regular;
+      color: $black-60;
+    }
+
+    .custom-table-total-count {
+      @include body-regular;
+      font-weight: 600;
+      color: $black-3;
+    }
+  }
+}
+
+// Responsive adjustments
+@media (max-width: 575px) {
+  .custom-table-wrapper {
+    .custom-table-container {
+      .ant-table-thead > tr > th,
+      .ant-table-tbody > tr > td {
+        padding: $s-6 $s-8;
+        font-size: $s-12;
+      }
+
+      .ant-pagination {
+        flex-wrap: wrap;
+        gap: $s-8;
+      }
+    }
+  }
+}

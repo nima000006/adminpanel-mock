@@ -1,0 +1,11 @@
+@use "../../../../../../../../../../../../assets/styles/abstract/variables" as *;
+.my-wallet-details-determining-amount-step-container {
+  margin-top: ($s-40);
+  @include flex-col($s-24);
+  .wallet-detail-cards-wrapper {
+    @include flex-gap($s-16);
+  }
+  .alert-wrapper {
+    @include flex-col($s-8);
+  }
+}

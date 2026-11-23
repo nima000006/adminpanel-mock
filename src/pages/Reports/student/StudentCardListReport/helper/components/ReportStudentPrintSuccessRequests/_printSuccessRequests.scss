@@ -1,0 +1,103 @@
+@use "../../../../../../../assets/styles/abstract/variables" as *;
+.print-success-screen-container {
+  .select-type-container {
+    margin-bottom: 1.2rem;
+    .select {
+      width: 180px;
+    }
+  }
+  .action-bar-container {
+    display: flex;
+    justify-content: space-between;
+    .advanced-filter-btn {
+      @include body-regular;
+      display: flex;
+      align-items: center;
+    }
+    .action-bar-btns-left-side-container {
+      display: flex;
+      gap: $s-8;
+      .action-btn {
+        @include body-regular;
+        color: $blue-primary;
+        border-color: $blue-primary;
+        &:hover {
+          color: #fff !important;
+          background-color: $blue-primary;
+        }
+      }
+      .action-btn-disabled {
+        opacity: 0.3;
+        &:hover {
+          color: black !important;
+          background-color: inherit;
+        }
+      }
+    }
+  }
+}
+.group-deliver-modal-container {
+  max-width: 100%;
+  .input-section-container {
+    display: flex;
+    gap: $s-16;
+    justify-content: center;
+    align-items: center;
+    .inputs {
+      display: flex;
+      flex-direction: column;
+      .label {
+        @include body-regular;
+      }
+      .input {
+        @include body-regular;
+        width: 100%;
+        border: 1px solid $border-color-80;
+        border-radius: 6px;
+        padding: 6px $s-16;
+        font-size: $s-16;
+        &:focus {
+          outline: none;
+          border-color: $blue-primary;
+          box-shadow: 0px 2px 0px 0px rgba(0, 0, 0, 0.02);
+        }
+      }
+    }
+    .date-pick-container {
+      .rmdp-input {
+        @include body-regular;
+        padding: $s-16;
+        font-size: $s-16;
+      }
+    }
+  }
+  .msg-preview-container {
+    margin-top: $s-24;
+    .msg-preview {
+      @include body-regular;
+      padding: $s-16;
+      border: 1px solid $border-color-80;
+      border-radius: 6px;
+      font-size: $s-16;
+      min-height: 100px;
+      width: 100%;
+      &:focus {
+        outline: none;
+        border-color: $blue-primary;
+        box-shadow: 0px 2px 0px 0px rgba(0, 0, 0, 0.02);
+      }
+    }
+    .msg-preview-title {
+      @include body-regular;
+      font-size: $s-16;
+      margin-bottom: 0.5rem;
+    }
+  }
+  .btns-container {
+    display: flex;
+    gap: $s-16;
+    button {
+      @include body-regular;
+    }
+  }
+}

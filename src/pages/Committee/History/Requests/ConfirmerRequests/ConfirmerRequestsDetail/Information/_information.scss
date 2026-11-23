@@ -1,0 +1,27 @@
+@use "../../../../../../../assets/styles/abstract/variables" as *;
+.committee-confirmer-request-detail-information {
+  display: flex;
+  flex-direction: column;
+  gap: $s-16;
+  .ant-collapse-expand-icon {
+    position: absolute;
+    left: 0;
+    border-radius: 50%;
+    .collapse-icon {
+      font-size: $s-18;
+    }
+  }
+  .information-request {
+    display: flex;
+    flex-direction: column;
+    gap: $s-20;
+  }
+  .accused-info-items-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: $s-12;
+  }
+  .report-btn {
+    @include body-regular;
+  }
+}

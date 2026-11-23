@@ -1,0 +1,5 @@
+@use "../../../../../../../../../assets/styles/abstract/variables" as *;
+.my-role-request-detail-waiting-review {
+  @include flex-gap($s-16);
+  justify-content: flex-end;
+}

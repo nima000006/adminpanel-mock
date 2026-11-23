@@ -1,0 +1,45 @@
+@use "../../../../../../assets/styles/abstract/variables" as *;
+.my-wallet-detail-list-container {
+  @include flex-col($s-40);
+  @include body-regular;
+  .divider-container {
+    @media (max-width: 575px) {
+      margin-bottom: $s-20;
+    }
+  }
+
+  .card-btn-wrapper {
+    @include flex-col($s-16);
+
+    .card-info-wrapper {
+      @include flex-gap($s-16);
+      width: 100%;
+      flex-wrap: wrap;
+      @media (min-width: 1100px) {
+        flex-wrap: nowrap;
+      }
+    }
+    .btn-wrapper {
+      display: flex;
+      justify-content: center;
+      @media (max-width: 767px) {
+        flex-direction: column;
+      }
+      @include body-regular;
+      @include flex-gap($s-16);
+      .btn-style {
+        .ant-btn-icon {
+          display: flex;
+        }
+      }
+    }
+  }
+
+  .alert-wrapper {
+    @include flex-col($s-8);
+  }
+
+  .segmented-container {
+    margin: $s-40 0 $s-40 0;
+  }
+}

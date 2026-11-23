@@ -1,0 +1,7 @@
+@use "../../../../../../../../assets/styles/abstract/variables" as *;
+.pre-registration-edit-list-container {
+  @include flex-col($s-16);
+  .action-btns-container {
+    @include flex-space-between;
+  }
+}

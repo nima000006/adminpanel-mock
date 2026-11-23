@@ -1,0 +1,14 @@
+@use "../../../../../assets/styles/abstract/variables" as *;
+.room-request-action-btns-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: $s-12;
+  button {
+    @include body-regular;
+    font-weight: 500;
+  }
+  .ant-btn-primary {
+    background-color: rgb(5, 145, 5) !important;
+  }
+}

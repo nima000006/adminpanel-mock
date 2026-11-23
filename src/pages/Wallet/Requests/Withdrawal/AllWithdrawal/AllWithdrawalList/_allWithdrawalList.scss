@@ -1,0 +1,9 @@
+@use "../../../../../../assets/styles/abstract/variables" as *;
+.wallet-request-tabs-container {
+  .ant-tabs-tab-btn {
+    @include body-regular;
+  }
+}
+.wallet-request-breadcrumb-title {
+  color: $neutral-7 !important;
+}

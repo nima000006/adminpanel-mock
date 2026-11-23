@@ -1,0 +1,29 @@
+@use "../../../../../../../../assets/styles/abstract/variables" as *;
+.international-admission-program-modify-conditions-info-container {
+  @include flex-col($s-40);
+  .form-item-container {
+    @include flex-col($s-24);
+    .condition-item-container {
+      @include flex-col($s-16);
+      .item-text-container {
+        @include flex-space-between;
+        .item-text {
+          @include body-regular;
+          color: $neutral-12;
+          .extra-text {
+            @include footnote;
+          }
+        }
+      }
+      .ant-form-item {
+        margin-bottom: 0;
+      }
+    }
+  }
+  .action-btns-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: $s-16;
+  }
+}

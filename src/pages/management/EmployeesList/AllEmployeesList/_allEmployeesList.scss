@@ -1,0 +1,27 @@
+@use "../../../../assets/styles/abstract/variables" as *;
+.management-all-employee-list-container {
+  container-type: inline-size;
+  .management-all-employee-list-table-container {
+    margin-top: $s-16;
+  }
+
+  .left-side {
+    @media (max-width: 600px) {
+      display: flex;
+      gap: $s-8;
+      flex-direction: column;
+    }
+  }
+
+  @container (max-width: 140px) {
+    button {
+      padding: $s-2;
+    }
+    button span {
+      font-size: $s-12;
+    }
+  }
+}
+.management-breadcrumb-title {
+  color: $neutral-7;
+}

@@ -1,0 +1,13 @@
+@use "../../../../../../../../../../assets/styles/abstract/variables" as *;
+.all-canceled-days-list-drawer {
+  .drawer-body {
+    @include flex-col($s-16);
+    .collapse-data {
+      @include flex-col($s-16);
+      .ant-collapse-header-text {
+        @include footnote;
+        color: var(--app-text);
+      }
+    }
+  }
+}

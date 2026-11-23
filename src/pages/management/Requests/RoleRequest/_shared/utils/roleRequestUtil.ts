@@ -1,0 +1,3 @@
+export const ROLE_REQUEST_WAITING_REVIEW = 1;
+export const ROLE_REQUEST_CONFIRMED = 2;
+export const ROLE_REQUEST_REJECTED = 3;

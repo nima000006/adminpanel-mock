@@ -1,0 +1,28 @@
+@use "../../../assets/styles/abstract/variables" as *;
+.close-request-card-modal {
+  .close-request-btn-modal-container {
+    .modal-text-container {
+      display: flex;
+      align-items: center;
+      margin: $s-16 0;
+      text-align: right;
+      .modal-text-label {
+        @include h5-medium;
+      }
+      .modal-text-icon {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-right: $s-12;
+        font-size: 1.2rem;
+      }
+    }
+  }
+  .btn-container {
+    display: flex;
+    gap: $s-8;
+    button {
+      @include body-regular;
+    }
+  }
+}

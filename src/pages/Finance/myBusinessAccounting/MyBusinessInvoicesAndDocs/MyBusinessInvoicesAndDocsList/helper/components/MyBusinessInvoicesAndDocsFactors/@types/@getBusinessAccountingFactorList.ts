@@ -1,0 +1,52 @@
+import { IdTitleName } from "@pages/_shared/@types/@generalTypes/@generalTypes";
+
+export type GetBusinessAccountingFactorListItems = {
+  uuid: string;
+  paymentPlanId: number;
+  invoiceUuid: string;
+  createdDate: string;
+  invoiceStatus: IdTitleName;
+  isSupplier: boolean;
+  product: IdTitleName;
+  service: IdTitleName;
+  paymentType: IdTitleName;
+  trackNumber: string;
+  referenceNumber: string;
+  paymentDate: string;
+  invoiceAmount: number;
+  currency: IdTitleName;
+  moneyType: IdTitleName;
+  supplierBranchId: number;
+  supplierBusinessId: number;
+  supplierBusinessName: string;
+  supplierBranchName: string;
+  supplierBeneficiaryId: number;
+  supplierProvinceName: string;
+  supplierCityName: string;
+  supplierProvinceId: number;
+  supplierCityId: number;
+};
+export type GetBusinessAccountingFactorListResponse = {
+  content: GetBusinessAccountingFactorListItems[];
+  pageNumber: number;
+  pageSize: number;
+  first: boolean;
+  last: boolean;
+  totalElements: number;
+  totalPages: number;
+  size: number;
+};
+export type GetBusinessAccountingFactorListRequest = {
+  pageNumber: number;
+  pageSize: number;
+  from?: string;
+  to?: string;
+  samimServices?: string;
+  invoiceStatus?: string;
+  uuid?: string;
+  supplierBranchIds?: string;
+  supplierCityIds?: string;
+  supplierProvinceIds?: string;
+  sortBy?: string;
+  sortDirection?: string;
+};

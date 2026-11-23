@@ -1,0 +1,26 @@
+@use "../../../../assets/styles/abstract/variables" as *;
+.register-auth-sixth-page-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  .custom-step-container {
+    margin-top: $s-20;
+  }
+  .avatar-container {
+    width: $s-64;
+    height: $s-64;
+    border-radius: $s-32;
+    overflow: hidden;
+    margin: $s-20 auto;
+  }
+  .auth-btn-container {
+    @include flex-col($s-5);
+    margin-top: $s-20;
+    justify-content: flex-end;
+    .auth-btn-container-a {
+      @include flex-center;
+      gap: $s-5;
+    }
+  }
+}

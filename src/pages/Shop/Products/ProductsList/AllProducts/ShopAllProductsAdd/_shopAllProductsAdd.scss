@@ -1,0 +1,74 @@
+@use "../../../../../../assets/styles/abstract/variables" as *;
+
+$product-image-upload-card-size: 6.5rem; // Figma picture-card size (104px)
+$isbn-inquiry-button-offset: calc(
+  22px + #{$s-4}
+); // CustomInput label line-height + vertical-label gap
+
+.shop-all-products-add-isbn-row {
+  display: flex;
+  flex-direction: column;
+  gap: $s-12;
+
+  @media (min-width: 640px) {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  .shop-all-products-add-isbn-inquiry-btn {
+    @media (min-width: 640px) {
+      margin-top: $isbn-inquiry-button-offset;
+    }
+  }
+}
+
+.shop-all-products-add-images-uploader {
+  .upload-container,
+  .ant-upload-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: $s-8;
+  }
+
+  .ant-upload-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: $s-8;
+  }
+
+  .ant-upload-list-item,
+  .ant-upload-list-item-container,
+  .item-render-main {
+    margin-inline-end: 0 !important;
+  }
+
+  .custom-upload-btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: $product-image-upload-card-size;
+    min-width: $product-image-upload-card-size;
+    height: $product-image-upload-card-size;
+    padding: $s-8;
+    border-radius: $s-8;
+    white-space: normal;
+  }
+
+  .shop-all-products-add-upload-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: $s-8;
+    color: $black-8;
+    font-size: $s-12;
+    line-height: normal;
+
+    svg {
+      width: $s-20;
+      height: $s-20;
+    }
+  }
+}

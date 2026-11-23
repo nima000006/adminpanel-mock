@@ -1,0 +1,62 @@
+@use "../../../../../../../../assets/styles/abstract/variables" as *;
+.wallet-time-setting-scheduling-card-info-container {
+  background-color: var(--app-bg-layout);
+  border-radius: $s-16;
+  padding: $s-16;
+  @include flex-col($s-16);
+  @include body-regular;
+
+  .first-box-first-row-wrapper {
+    display: flex;
+    justify-content: space-between;
+
+    .setting-title-wrapper {
+      @include flex-gap($s-8);
+
+      .setting-icon-Wrapper {
+        width: 20px;
+        height: 20px;
+        border-radius: $s-8;
+        background-color: $blue-5;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+  }
+
+  .date-wrapper {
+    @include flex-gap($s-32);
+    @include body-regular;
+    .day {
+      color: var(--app-text);
+    }
+    .day-value {
+      color: var(--app-text-secondary);
+      font-weight: bold;
+    }
+    .date {
+      color: var(--app-text);
+    }
+
+    .date-value {
+      color: var(--app-text-secondary);
+      font-weight: bold;
+    }
+  }
+
+  .edit-icon-wrapper {
+    display: flex;
+    justify-content: flex-end;
+    cursor: pointer;
+    .edit-icon-box {
+      width: 32px;
+      height: 32px;
+      border-radius: $s-8;
+      border: 1px solid $neutral-5;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+}

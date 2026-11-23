@@ -1,0 +1,7 @@
+@use "../../../../../assets/styles/abstract/variables" as *;
+.residence-request-detail-container {
+  @include flex-col($s-24);
+  .request-received-dormitory-wrapper {
+    @include flex-col($s-40);
+  }
+}

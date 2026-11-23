@@ -1,0 +1,20 @@
+@use "../../../../../assets/styles/abstract/variables" as *;
+.committee-new-rules-and-laws-page-container {
+  background-color: var(--app-bg-container);
+  padding: $s-20;
+  .custom-card-renderer-container {
+    padding: 2rem !important;
+  }
+  .btn-wrapper {
+    @include body-regular;
+    @include flex-gap($s-12);
+    margin-top: $s-35;
+    .btn {
+      cursor: pointer;
+      @include body-regular;
+    }
+  }
+  .ant-form-item-control {
+    flex: unset;
+  }
+}

@@ -1,0 +1,27 @@
+@use "../../../../../../../assets/styles/abstract/variables" as *;
+.seventh-tab-notifications-container {
+  .seventh-tab-notifications-wrapper {
+    .ant-steps.ant-steps-rtl {
+      @include flex-col($s-24);
+    }
+    .ant-steps-item-title {
+      @include body-regular;
+      color: $title-black;
+    }
+    .ant-steps-item-container {
+      .ant-steps-item-title {
+        display: flex;
+        flex-direction: column;
+      }
+    }
+  }
+
+  .ant-steps-item-icon {
+    border-color: $primary-4 !important;
+    background: transparent !important;
+    color: $primary-4 !important;
+  }
+  .ant-steps-item-tail::after {
+    background-color: $primary-4 !important;
+  }
+}

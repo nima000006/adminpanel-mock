@@ -1,0 +1,15 @@
+@use "../../../../../assets/styles/abstract/variables" as *;
+.label-card-component-container {
+  display: flex;
+  justify-content: space-between;
+  @include body-regular;
+  .title {
+    color: $neutral-7;
+  }
+  .link {
+    color: $blue-primary !important;
+  }
+  @media (max-width: 450px) {
+    @include flex-col($s-8);
+  }
+}

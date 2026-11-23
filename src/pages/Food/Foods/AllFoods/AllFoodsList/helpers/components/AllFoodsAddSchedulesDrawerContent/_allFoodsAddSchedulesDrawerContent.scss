@@ -1,0 +1,18 @@
+@use "../../../../../../../../assets/styles/abstract/variables" as *;
+.all-foods-add-schedules-drawer-container {
+  .header-drawer-container {
+    .right-side {
+      .right-side-title-contain {
+        @media (max-width: 470px) {
+          font-size: $s-12;
+        }
+        @media (max-width: 415px) {
+          font-size: $s-10;
+        }
+      }
+    }
+  }
+  .percentage {
+    color: $neutral-12;
+  }
+}

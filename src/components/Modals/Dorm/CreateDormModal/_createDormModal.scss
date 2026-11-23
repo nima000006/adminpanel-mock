@@ -1,0 +1,263 @@
+@use "../../../../assets/styles/abstract/variables" as *;
+.create-dorm-modal-container {
+  width: 80vw !important;
+  max-height: 90%;
+  // overflow: scroll;
+  border-radius: 20px;
+  // overflow-x: hidden;
+
+  .ant-modal-container {
+    margin: 0;
+    padding: 0;
+    background-color: $modal-bg-color;
+    .ant-modal-header {
+      padding: $s-16;
+    }
+    .ant-modal-title {
+      @include h5-regular;
+      font-size: $s-19;
+      font-weight: bold;
+    }
+    .form-body {
+      padding: $s-24;
+      display: flex;
+      flex-direction: column;
+      gap: $s-24;
+    }
+  }
+  .label {
+    @include h5-bold;
+    color: $black-60;
+  }
+  .active-and-role-section-container {
+    display: flex;
+    align-items: center;
+    gap: $s-32;
+    .active-section {
+      border-radius: 20px;
+      background: #fff;
+      display: flex;
+      padding: $s-20;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: $s-8;
+    }
+    .role-section {
+      border-radius: 20px;
+      background: #fff;
+      display: flex;
+      padding: $s-20;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: $s-8;
+    }
+  }
+  .rules-text-container {
+    display: flex;
+    flex-direction: column;
+    gap: $s-16;
+    .title {
+      @include h5-regular;
+      color: $black-3;
+    }
+    .sub-title {
+      @include body-regular;
+      color: $black-8;
+    }
+    .rules-section-tabs-container {
+      margin: $s-35 0 $s-16 0;
+      .ant-tabs-nav-list {
+        display: flex;
+        gap: $s-7;
+        .ant-tabs-tab-btn {
+          @include body-regular;
+        }
+        .ant-tabs-tab-with-remove {
+          .ant-tabs-tab-remove {
+            display: none !important;
+          }
+        }
+        .rules-section-btn {
+          display: flex;
+          align-items: center;
+          gap: $s-8;
+          .rules-section-btn-label {
+            color: $blue-primary;
+            @include body-regular-bold;
+          }
+        }
+      }
+    }
+  }
+  .upload-image-section-container-main {
+    .upload-image-section-container {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      .upload-image-section-label {
+        @include h5-bold;
+        color: $black-60;
+      }
+    }
+    .uploaded-images-container {
+      margin: $s-32 0;
+    }
+  }
+  .apartment-info-create-container {
+    border-radius: 20px;
+    background: #fff;
+    display: flex;
+    padding: $s-40;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: $s-8;
+    .description-title-container {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .apartment-info-label {
+      @include h5-bold;
+      color: $black-60;
+    }
+    .table-container {
+      width: 100%;
+      margin: $s-16 0;
+      .create-structure-info-btn-container {
+        .create-structure-info-btn {
+          @include body-regular;
+        }
+      }
+      .new-row-btn {
+        @include body-regular;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: $s-24;
+        .new-row-btn-icon {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          font-size: $s-16;
+        }
+      }
+    }
+  }
+  .hidden {
+    display: none;
+  }
+  .dorm-info-container {
+    border-radius: 20px;
+    background: $white;
+    display: flex;
+    padding: $s-40;
+    flex-direction: column;
+    align-items: flex-start;
+
+    gap: $s-8;
+    .dorm-info-label {
+      @include h5-bold;
+      color: $black-60;
+    }
+    .dorm-info-top-section {
+      margin: $s-16 0;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: $s-32;
+    }
+    .dorm-info-bottom-section {
+      width: 100%;
+      display: flex;
+      gap: $s-32;
+    }
+  }
+  .base-info-container {
+    border-radius: 20px;
+    background: $white;
+    display: flex;
+    padding: $s-40;
+    flex-direction: column;
+    align-items: flex-start;
+
+    gap: $s-8;
+    .base-info-label {
+      @include h5-bold;
+      color: $black-60;
+    }
+    .base-info-top-section {
+      margin: $s-16 0;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      gap: $s-32;
+    }
+    .base-info-bottom-section {
+      width: 100%;
+    }
+  }
+
+  .confirm-btn-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: $s-24;
+    padding-right: $s-8;
+    .confirm-btn {
+      @include body-regular;
+    }
+  }
+
+  .ant-form-item {
+    margin-bottom: 0;
+    width: 100%;
+  }
+  .ant-form-item-explain-error {
+    color: var(--error-500);
+    font-family: "DanaFaNum";
+    font-style: normal;
+    font-weight: 500;
+    font-size: $s-12;
+    text-align: right;
+  }
+}
+
+.create-new-apartment-modal-body-container {
+  display: flex;
+  flex-direction: column;
+  gap: $s-32;
+  .create-new-apartment-modal-body {
+    @include flex-center;
+    align-items: flex-start;
+    gap: $s-16;
+    .form-item {
+      width: 100%;
+    }
+  }
+
+  .modal-btn-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: $s-16;
+    padding-right: $s-8;
+    .modal-btn {
+      @include body-regular;
+    }
+  }
+  .ant-form-item-explain-error {
+    color: var(--error-500);
+    font-family: "DanaFaNum";
+    font-style: normal;
+    font-weight: 500;
+    font-size: $s-12;
+    text-align: right;
+  }
+}
+.ant-modal-wrap {
+  margin-bottom: $s-16;
+}

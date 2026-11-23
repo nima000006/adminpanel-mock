@@ -1,0 +1,11 @@
+@use "../../../../assets/styles/abstract/variables" as *;
+.status-history-modal-container {
+  .ant-modal-title {
+    @include h5-medium;
+    padding-bottom: $s-16;
+  }
+  .spin-container {
+    @include flex-center;
+    padding: $s-24;
+  }
+}

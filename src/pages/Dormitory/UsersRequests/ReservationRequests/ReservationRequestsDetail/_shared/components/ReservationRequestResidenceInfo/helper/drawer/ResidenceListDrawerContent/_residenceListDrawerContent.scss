@@ -1,0 +1,29 @@
+@use "../../../../../../../../../../../assets/styles/abstract/variables" as *;
+
+.residence-list-drawer-collapse {
+  .ant-collapse-item {
+    margin-bottom: $s-16;
+    border-color: var(--neutral-5) !important;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    &.ant-collapse-item-active {
+      border-color: var(--neutral-5) !important;
+      box-shadow: none;
+    }
+  }
+
+  .ant-collapse-header {
+    background-color: var(--neutral-2) !important;
+
+    .ant-collapse-header-text {
+      color: var(--neutral-11) !important;
+    }
+  }
+
+  .ant-collapse-item-active > .ant-collapse-header .ant-collapse-header-text {
+    color: var(--neutral-11) !important;
+  }
+}

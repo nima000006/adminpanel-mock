@@ -1,0 +1,27 @@
+@use "../../../../../../../../assets/styles/abstract/variables" as *;
+.committee-session-creation-session-members-step-container {
+  display: flex;
+  flex-direction: column;
+  gap: $s-35;
+  .border-round-box {
+    padding: $s-24;
+    border-radius: 10px;
+    border: $border-1 solid $border-color-90;
+  }
+  .session-member-item-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: $s-32;
+  }
+  .switch-text {
+    @include footnote;
+    color: $white;
+  }
+  .ant-form-item {
+    margin-bottom: 0 !important;
+  }
+  .notification-inputs-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

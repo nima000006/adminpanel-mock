@@ -1,0 +1,16 @@
+@use "../../../../../assets/styles/abstract/variables" as *;
+.dorm-basic-info-payment-type-container {
+  @include flex-col($s-16);
+  .dorm-payment-table-container {
+    .ant-form-item {
+      margin-bottom: 0 !important;
+    }
+    .btn-container {
+      display: flex;
+    }
+  }
+}
+
+.dorm-basic-info-switch-modal {
+  @include body-regular;
+}

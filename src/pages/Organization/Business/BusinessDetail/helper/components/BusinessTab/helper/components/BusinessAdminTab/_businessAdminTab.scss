@@ -1,0 +1,7 @@
+@use "../../../../../../../../../../assets/styles/abstract/variables" as *;
+.business-admin-tab-container {
+  @include flex-col($s-40);
+  .business-admin-tab-image-wrapper {
+    padding-top: $s-40;
+  }
+}

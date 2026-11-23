@@ -1,0 +1,31 @@
+@use "../../../../../assets/styles/abstract/variables" as *;
+.committee-new-supplementary-punishment-page-container {
+  background-color: var(--app-bg-container);
+  padding: $s-20;
+  border-radius: 10px;
+  .new-supplementary-punishment-content {
+    border: 1px solid $border-color-90;
+    border-radius: 10px;
+    padding: $s-16;
+    display: flex;
+    flex-direction: column;
+    gap: $s-16;
+    .grid-cols-3 {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: ($s-12);
+      .ant-col {
+        width: 100%;
+        text-align: right;
+      }
+    }
+  }
+  .btn-wrapper {
+    @include flex-gap($s-12);
+    margin-top: $s-35;
+    .btn {
+      cursor: pointer;
+      @include body-regular;
+    }
+  }
+}

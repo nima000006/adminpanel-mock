@@ -1,0 +1,20 @@
+@use "../../../../assets/styles/abstract/variables" as *;
+.ticketing-smart-answers-list-container {
+  container-type: inline-size;
+  @container (max-width:140px) {
+    button {
+      padding: $s-2;
+    }
+    button span {
+      font-size: $s-12;
+    }
+    .ant-tag {
+      font-size: $s-8;
+      padding: $s-2;
+    }
+
+    .card-container {
+      padding: 0px;
+    }
+  }
+}

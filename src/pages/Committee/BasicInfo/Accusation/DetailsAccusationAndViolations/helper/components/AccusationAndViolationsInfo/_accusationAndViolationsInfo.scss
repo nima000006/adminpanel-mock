@@ -1,0 +1,32 @@
+@use "../../../../../../../../assets/styles/abstract/variables" as *;
+.committee-accusation-violation-info-container {
+  .grid-cols-3 {
+    display: flex;
+    flex-direction: column;
+    // grid-template-columns: repeat(1fr);
+    gap: $s-12;
+  }
+  .make-change-btn {
+    @include body-regular;
+    margin-bottom: $s-35;
+  }
+  .accusation-violation-form {
+    border: 1px solid $border-color-90;
+    border-radius: 10px;
+    padding: $s-16;
+    display: flex;
+    flex-direction: column;
+    grid-gap: $s-12;
+
+    .ant-col {
+      width: 100%;
+      text-align: right;
+    }
+  }
+
+  .custom-supplementary-container {
+    padding: 0.2rem 1rem;
+    margin: 0.5rem 0;
+    word-break: break-all;
+  }
+}

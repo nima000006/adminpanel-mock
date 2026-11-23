@@ -1,0 +1,14 @@
+@use "../../../../../../../../../assets/styles/abstract/variables" as *;
+.accusation-request-container {
+  margin-top: $s-32;
+  .custom-btns-container {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: $s-16;
+    button {
+      span {
+        @include body-regular;
+      }
+    }
+  }
+}

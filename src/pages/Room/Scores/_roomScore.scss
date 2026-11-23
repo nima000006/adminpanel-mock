@@ -1,0 +1,42 @@
+@use "../../../assets/styles/abstract/variables" as *;
+.room-score-rules-text-container {
+  .title {
+    @include h5-regular;
+    color: $black-3;
+  }
+  .sub-title {
+    @include body-regular;
+    color: $black-8;
+    margin-top: $s-4;
+  }
+  .rules-section-tabs-container {
+    margin-top: $s-32;
+  }
+  .mini-tab-container {
+    .ant-tabs-tab {
+      margin-left: $s-32;
+    }
+  }
+  .ant-tabs-nav-list {
+    display: flex;
+    gap: 0.4rem;
+
+    .ant-tabs-tab-btn {
+      @include body-regular;
+    }
+    .ant-tabs-tab-with-remove {
+      .ant-tabs-tab-remove {
+        display: none !important;
+      }
+    }
+    .rules-section-btn {
+      display: flex;
+      align-items: center;
+      gap: $s-8;
+      .rules-section-btn-label {
+        color: $blue-primary;
+        @include body-regular-bold;
+      }
+    }
+  }
+}

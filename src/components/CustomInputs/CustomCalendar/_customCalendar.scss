@@ -1,0 +1,59 @@
+@use "../../../assets/styles/abstract/variables" as *;
+.custom-calendar-root {
+  position: relative;
+  z-index: 0;
+  .custom-calendar-container {
+    @include body-regular;
+    .ant-picker-content {
+      border-collapse: separate;
+      border-spacing: 8px;
+      tr {
+        td {
+          .ant-picker-cell-inner {
+            margin: 0;
+            border: 1px solid $border-color-80;
+            border-radius: 6px;
+          }
+        }
+      }
+    }
+    .ant-picker-calendar-header {
+      @include body-regular;
+      .ant-select {
+        @media (max-width: 575px) {
+          @include flex-col($s-10);
+          margin-inline-start: 0 !important;
+          min-width: 150px;
+        }
+      }
+      .ant-select-selector {
+        min-width: 150px;
+      }
+      .ant-radio-group {
+        @include body-regular;
+      }
+      @media (max-width: 575px) {
+        @include flex-col($s-10);
+      }
+    }
+  }
+  .hide-year {
+    .ant-picker-calendar-mode-switch {
+      display: none;
+    }
+  }
+  .is-calendar-loading {
+    opacity: 0.2 !important;
+  }
+  .is-calendar-empty {
+    .ant-picker-panel {
+      opacity: 0.2 !important;
+    }
+  }
+  .custom-calendar-loader {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}

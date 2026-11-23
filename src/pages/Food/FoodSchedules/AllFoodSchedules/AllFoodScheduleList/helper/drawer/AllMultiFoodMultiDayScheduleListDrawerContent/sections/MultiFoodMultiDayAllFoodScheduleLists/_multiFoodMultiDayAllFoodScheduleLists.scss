@@ -1,0 +1,29 @@
+@use "../../../../../../../../../../assets/styles/abstract/variables" as *;
+.multi-food-multi-day-all-food-schedule-lists {
+  @include flex-col($s-16);
+  .ant-collapse {
+    border: none !important;
+    .ant-collapse-item {
+      border-bottom: none !important;
+    }
+    .ant-collapse-content {
+      border-top: none !important;
+    }
+    .collapse-label-container {
+      @include flex-space-between;
+      .collapse-label {
+        @include flex-gap($s-8);
+      }
+    }
+  }
+}
+
+.multi-food-multi-day-all-food-schedule-list-add-food-table {
+  .action-btn-container {
+    @include flex-gap($s-8);
+  }
+}
+
+.multi-food-multi-day-all-food-schedule-list-delete-food-table {
+  @include body-regular;
+}

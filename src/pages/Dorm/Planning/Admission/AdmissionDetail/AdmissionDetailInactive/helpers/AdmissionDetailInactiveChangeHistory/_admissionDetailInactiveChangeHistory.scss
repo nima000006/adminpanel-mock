@@ -1,0 +1,27 @@
+@use "../../../../../../../../assets/styles/abstract/variables" as *;
+.admission-detail-inactive-change-history-container {
+  @include flex-col($s-40);
+  .ant-steps.ant-steps-rtl {
+    @include flex-col($s-24);
+  }
+  .ant-steps-item-title {
+    @include body-regular;
+    color: $title-black;
+  }
+  .subtitle-text {
+    @include body-regular;
+    color: $character-secondary-45;
+  }
+  .description {
+    border: 1px solid $border-color-90;
+    padding: $s-24;
+    border-radius: 10px;
+    margin-top: $s-12;
+  }
+  .ant-steps-item-container {
+    .ant-steps-item-title {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+}

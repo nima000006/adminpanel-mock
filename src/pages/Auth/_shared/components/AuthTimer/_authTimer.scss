@@ -1,0 +1,24 @@
+@use "../../../../../assets/styles/abstract/variables" as *;
+.auth-countdown-timer {
+  @include body-regular;
+  @include h5-medium;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: $orange-6;
+  .ant-statistic-content {
+    @include flex-center;
+    .ant-statistic-content-value {
+      color: $orange-6;
+      @include body-regular;
+    }
+  }
+
+  .icon {
+    font-size: 24px;
+  }
+
+  .time {
+    letter-spacing: 1px;
+  }
+}

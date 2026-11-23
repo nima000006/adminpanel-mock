@@ -1,0 +1,42 @@
+@use "../../../../../assets/styles/abstract/variables" as *;
+.international-pre-registration-list-container {
+  container-type: inline-size;
+  @include flex-col($s-40);
+
+  .pre-registration-card-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: $s-16;
+
+    @media (max-width: 600px) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .pre-registration-table-container {
+    @include flex-col($s-16);
+    .international-pre-registration-tabs-container {
+      @include body-regular;
+    }
+  }
+
+  @container (max-width: 140px) {
+    button {
+      padding: $s-2;
+    }
+    button span {
+      font-size: $s-12;
+    }
+    .ant-select {
+      max-width: 90px;
+    }
+    .action-btns-container {
+      display: flex;
+      flex-direction: column;
+      gap: $s-4;
+    }
+    .divider-container .divider-main span {
+      font-size: $s-12;
+    }
+  }
+}

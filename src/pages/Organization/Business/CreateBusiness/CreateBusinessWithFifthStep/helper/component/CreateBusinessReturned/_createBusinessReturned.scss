@@ -1,0 +1,43 @@
+@use "../../../../../../../../assets/styles/abstract/variables" as *;
+.create-business-returned-container {
+  @include flex-col($s-24);
+  justify-content: center;
+  align-items: center;
+  min-height: calc(100vh - 38vh);
+  overflow: hidden;
+  @include body-regular;
+  text-align: center;
+
+  .text-wrapper {
+    @include flex-col($s-8);
+
+    .sub-text {
+      color: $neutral-7;
+    }
+  }
+
+  .alert-box {
+    background-color: $neutral-3;
+    padding: $s-24 $s-40 $s-24 $s-40;
+    border-radius: 5px;
+    text-align: right;
+  }
+
+  .btn-wrapper {
+    @include flex-gap($s-16);
+
+    gap: 1rem;
+    .edit-btn {
+      direction: ltr;
+      .ant-btn-icon {
+        display: flex;
+      }
+    }
+    @media (max-width: 1010px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @media (max-width: 590px) {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+}

@@ -1,0 +1,4 @@
+@use "../../../../../../../assets/styles/abstract/variables" as *;
+.creators-payment-factor-section-container {
+  @include flex-col($s-24);
+}

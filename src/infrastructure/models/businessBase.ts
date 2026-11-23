@@ -1,0 +1,10 @@
+export const DENOMINATION = "DENOMINATION";
+export const COLLEGE = "COLLEGE";
+export const TRAINING_COURSE = "TRAINING_COURSE";
+export const FIELD = "FIELD";
+export const ETHNICITY = "ETHNICITY";
+export const RELIGION = "RELIGION";
+export const DEGREE = "DEGREE";
+export const NATIONALITY = "NATIONALITY";
+export const SEMESTER = "SEMESTER";
+export const EDUCATIONAL_GROUP = "EDUCATIONAL_GROUP";

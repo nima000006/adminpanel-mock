@@ -1,0 +1,16 @@
+@use "../../../../../../../../assets/styles/abstract/variables" as *;
+.pre-registration-pending-list-container {
+  @include flex-col($s-16);
+  .action-btns-container {
+    @include flex-space-between;
+  }
+}
+
+.pre-registration-pending-table-container {
+  .request-type {
+    width: fit-content;
+  }
+  .request-degree {
+    width: fit-content;
+  }
+}

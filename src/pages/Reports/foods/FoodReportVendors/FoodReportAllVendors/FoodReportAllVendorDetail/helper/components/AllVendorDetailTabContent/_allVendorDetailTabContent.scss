@@ -1,0 +1,69 @@
+@use "../../../../../../../../../assets/styles/abstract/variables" as *;
+.all-vendors-detail-drawer {
+  .all-vendors-detail-drawer-action-btns-container {
+    @include flex-center;
+    gap: $s-16;
+    .ant-form-item {
+      margin-bottom: 0 !important;
+    }
+    @media (max-width: 576px) {
+      gap: $s-8;
+      .drawer-action-btn {
+        padding: $s-4 $s-6;
+        font-size: $s-12;
+      }
+    }
+  }
+  @media (max-width: 576px) {
+    .ant-drawer-title {
+      font-size: $s-14 !important;
+    }
+  }
+}
+
+.all-vendors-detail-modal-container {
+  .desc {
+    @include body-regular;
+  }
+}
+
+.all-vendors-detail-tab-container {
+  @include flex-col($s-40);
+  .vendor-information-container {
+    @include flex-col($s-24);
+    .ant-divider-inner-text {
+      @media (max-width: 415px) {
+        font-size: $s-12;
+      }
+    }
+    .divider-btn-container {
+      @include flex-center;
+      gap: $s-8;
+      .edit-btn {
+        @media (max-width: 415px) {
+          padding: 0 $s-4;
+        }
+      }
+      @media (max-width: 576px) {
+        flex-direction: column;
+      }
+    }
+    .banner-rate-container {
+      @include flex-space-between;
+      .img-container {
+        @include flex-center;
+        gap: $s-24;
+        @media (max-width: 400px) {
+          @include flex-col($s-12);
+        }
+      }
+      @media (max-width: 768px) {
+        flex-direction: column;
+        gap: $s-24;
+      }
+    }
+  }
+  .contact-information-container {
+    @include flex-col($s-24);
+  }
+}

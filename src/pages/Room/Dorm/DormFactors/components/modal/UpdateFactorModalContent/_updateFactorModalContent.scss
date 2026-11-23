@@ -1,0 +1,6 @@
+@use "../../../../../../../assets/styles/abstract/variables" as *;
+.update-modal-content-container {
+  display: flex;
+  flex-direction: column;
+  gap: $s-8;
+}

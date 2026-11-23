@@ -1,0 +1,22 @@
+@use "../../../../../../../../../assets/styles/abstract/variables" as *;
+.all-foreign-nationals-registration-detail-info-wrapper {
+  .upload-wrapper {
+    .ant-statistic-content {
+      height: $s-24;
+      @include flex-center;
+      background-color: $black-03 !important;
+      padding: 0 $s-8;
+      border-radius: $s-6;
+      .ant-statistic-content-value {
+        height: $s-24;
+        @include flex-center;
+        justify-content: end;
+      }
+      .value-container {
+        span {
+          color: $blue-primary !important;
+        }
+      }
+    }
+  }
+}

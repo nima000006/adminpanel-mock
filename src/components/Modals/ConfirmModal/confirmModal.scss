@@ -1,0 +1,19 @@
+@use "../../../assets/styles/abstract/variables" as *;
+.confirm-main-text-container {
+  display: flex;
+  gap: $s-8;
+  margin-top: $s-19;
+  .confirm-main-text {
+    @include h5-medium;
+  }
+}
+.confirm-btns-container {
+  padding: 0 $s-16;
+  margin-top: $s-32;
+
+  display: flex;
+  gap: $s-16;
+  button {
+    width: 80px;
+  }
+}

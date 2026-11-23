@@ -1,0 +1,7 @@
+@use "../../../../../../../../../assets/styles/abstract/variables" as *;
+.my-food-schedule-contracts-detail-tab-container {
+  @include flex-col($s-24);
+  .custom-switch-container {
+    margin-bottom: 0;
+  }
+}

@@ -1,0 +1,13 @@
+@use "../../../../../../../../../../assets/styles/abstract/variables" as *;
+.remove-history-infringement-info-step-container {
+  .remove-history-infringement-info-step-wrapper {
+    padding: $s-24;
+    border-radius: 10px;
+    border: $border-1 solid $border-color-90;
+  }
+  .btn-wrapper {
+    @include flex-gap($s-12);
+    margin-top: $s-35;
+    justify-content: flex-end;
+  }
+}

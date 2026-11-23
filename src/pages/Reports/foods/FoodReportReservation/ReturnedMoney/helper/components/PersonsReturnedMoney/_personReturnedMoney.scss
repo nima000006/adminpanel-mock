@@ -1,0 +1,25 @@
+@use "../../../../../../../../assets/styles/abstract/variables" as *;
+.food-returned-money-tab-container {
+  @include flex-col($s-24);
+  .btn-container {
+    @include flex-space-between;
+  }
+}
+
+.food-returned-money-drawer-container {
+  @include flex-col($s-40);
+  .total-price-card-container {
+    @include flex-col($s-8);
+    align-items: center;
+    background-color: var(--app-bg-layout);
+    padding: $s-12;
+    .title {
+      @include body-regular;
+      color: var(--app-text);
+    }
+    .price-text {
+      @include h5-medium;
+      color: var(--app-text);
+    }
+  }
+}

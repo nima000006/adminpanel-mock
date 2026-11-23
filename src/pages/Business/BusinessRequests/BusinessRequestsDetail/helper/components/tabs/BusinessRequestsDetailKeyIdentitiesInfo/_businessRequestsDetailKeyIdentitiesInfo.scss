@@ -1,0 +1,21 @@
+@use "../../../../../../../../assets/styles/abstract/variables" as *;
+.business-requests-detail-key-identity-container {
+  .custom-alert {
+    .ant-alert-message {
+      @include subtitle2;
+    }
+  }
+  .custom-divider {
+    span {
+      @include h4-medium;
+    }
+  }
+  .custom-tabs {
+    @include body-medium;
+    margin-top: $s-40;
+    margin-bottom: $s-40;
+    .ant-tabs-tab {
+      background-color: transparent !important;
+    }
+  }
+}

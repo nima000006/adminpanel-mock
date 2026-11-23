@@ -1,0 +1,86 @@
+@use "../../../../../assets//styles/abstract/variables" as *;
+.education-chancellor-record-report-container {
+  @include flex-gap($s-40);
+  flex-direction: column;
+  .btn-container {
+    align-self: center;
+    justify-self: end;
+    @include flex-center;
+    gap: $s-32;
+    .search-student-btn {
+      @include h5-regular;
+      @media (max-width: 800px) {
+        font-size: $s-14;
+      }
+      @media (max-width: 670px) {
+        font-size: $s-12;
+      }
+    }
+  }
+  .divider-btn-container {
+    display: grid;
+    grid-template-columns: 4fr auto;
+    gap: $s-16;
+    align-items: center;
+    .btn-container {
+      align-self: center;
+      justify-self: end;
+      @include flex-center;
+      gap: $s-32;
+    }
+  }
+  .search-student-btn {
+    @include h5-regular;
+    @media (max-width: 800px) {
+      font-size: $s-14;
+    }
+    @media (max-width: 670px) {
+      font-size: $s-12;
+    }
+  }
+  .grid-cols-5 {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(330px, 1fr));
+    gap: $s-12;
+  }
+  .report-detail-inputs-container {
+    display: flex;
+    flex-direction: column;
+    gap: $s-12;
+  }
+  .grid-cols-2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: $s-12;
+  }
+  .footer-btn-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .btn-wrapper {
+      @include flex-gap($s-8);
+    }
+    .footer-btn {
+      @include h5-regular;
+    }
+  }
+  .attach-upload-container {
+    padding-bottom: 4.5rem;
+  }
+  .upload-container {
+    .uploader-btn-text .upload-traffic-limitation {
+      @include body-regular;
+      color: $title-black;
+    }
+    .ant-upload-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: $s-8;
+    }
+  }
+  .page-closer-container {
+    span {
+      @include body-regular;
+    }
+  }
+}

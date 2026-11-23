@@ -1,0 +1,5 @@
+export const BUSINESS_GRAPH = "business-graph";
+export const BUSINESS_STRUCTURE = "BUSINESS_STRUCTURE";
+export const BUSINESS_POSITION = "BUSINESS_POSITION";
+export const BUSINESS_ROLE = "BUSINESS_ROLE";
+export const BUSINESS_STAFF = "BUSINESS_STAFF";

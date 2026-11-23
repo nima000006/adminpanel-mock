@@ -1,0 +1,14 @@
+@use "../../../../../../../../../assets/styles/abstract/variables" as *;
+.food-all-foods-advance-filter-container {
+  .apply-btn {
+    margin-top: 2rem;
+    .ant-btn {
+      width: 100%;
+    }
+  }
+}
+.ant-modal-title {
+  span {
+    @include h5-regular;
+  }
+}

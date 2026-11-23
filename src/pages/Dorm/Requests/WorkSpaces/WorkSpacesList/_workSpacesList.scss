@@ -1,0 +1,11 @@
+@use "../../../../../assets/styles/abstract/variables" as *;
+
+.work-spaces-list-tab-page-container {
+  .work-spaces-list-tab-container {
+    @include body-regular;
+  }
+
+  .work-space-tab-container {
+    @include flex-col($s-24);
+  }
+}

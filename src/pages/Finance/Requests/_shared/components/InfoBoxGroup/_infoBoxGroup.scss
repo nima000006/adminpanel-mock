@@ -1,0 +1,22 @@
+@use "../../../../../../assets/styles/abstract/variables" as *;
+.request-info-box-group {
+  @include body-regular;
+  border-radius: 12px;
+  background-color: var(--app-bg-layout);
+
+  padding: $s-12;
+  @include flex-col($s-8);
+  align-items: center;
+
+  .title {
+    font-size: $s-14;
+    color: var(--app-text);
+  }
+
+  .value {
+    font-size: $s-13;
+    font-weight: 600;
+    color: var(--app-text-secondary);
+    margin-top: $s-4;
+  }
+}

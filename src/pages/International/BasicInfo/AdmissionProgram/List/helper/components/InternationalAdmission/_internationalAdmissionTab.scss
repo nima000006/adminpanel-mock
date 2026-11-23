@@ -1,0 +1,39 @@
+@use "../../../../../../../../assets/styles/abstract/variables" as *;
+.international-admission-tab-container {
+  @include flex-col($s-40);
+  .switch-container {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .table-container {
+    @include flex-col($s-16);
+    .extra-content-container {
+      @include flex-gap($s-8);
+    }
+    .filter-excel-btn-container {
+      @include flex-space-between;
+    }
+    .international-admission-table {
+      .action-btns-container {
+        @include flex-center;
+        gap: $s-10;
+      }
+    }
+    .ant-form-item {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.interNational-admission-list-inactive-modal-container {
+  @include flex-col($s-24);
+  .desc {
+    @include body-regular;
+  }
+}
+.interNational-admission-list-active-modal-container {
+  .desc {
+    @include body-regular;
+  }
+}

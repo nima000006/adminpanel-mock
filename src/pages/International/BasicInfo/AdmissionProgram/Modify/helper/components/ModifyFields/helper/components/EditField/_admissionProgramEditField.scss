@@ -1,0 +1,50 @@
+@use "../../../../../../../../../../../assets/styles/abstract/variables" as *;
+.admission-program-edit-field-container {
+  @include flex-col($s-8);
+  .divider-extra-content {
+    display: flex;
+    gap: $s-8;
+    @media (max-width: 960px) {
+      flex-direction: column;
+    }
+  }
+}
+
+.admission-edit-fields-add-drawer-container {
+  .action-btns-container {
+    @include flex-center;
+    gap: $s-12;
+  }
+  .search-btn {
+    width: 100%;
+  }
+}
+
+.admission-edit-fields-delete-drawer-container {
+  .action-btns-container {
+    @include flex-center;
+    gap: $s-12;
+  }
+  .ant-steps-item:first-child {
+    padding-right: 0 !important ;
+  }
+  .custom-steps-container {
+    justify-content: start !important;
+
+    .ant-steps-item-container {
+      justify-content: start !important;
+    }
+
+    @media (max-width: 1200px) {
+      align-items: start !important;
+
+      .ant-steps-item {
+        padding-right: 0 !important;
+      }
+
+      .ant-steps-item-container {
+        justify-content: center !important;
+      }
+    }
+  }
+}

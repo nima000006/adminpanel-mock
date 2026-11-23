@@ -1,0 +1,35 @@
+@use "../../assets/styles/abstract/variables" as *;
+.page-title-container {
+  @include h3-medium;
+  padding: $s-20 $s-24;
+  display: flex;
+  align-items: flex-end;
+  @media (max-width: 900px) {
+    font-size: $s-20;
+  }
+  @media (max-width: 750px) {
+    font-size: $s-18;
+  }
+  @media (max-width: 680px) {
+    font-size: $s-16;
+  }
+  .ant-breadcrumb {
+    @include h5-medium;
+  }
+}
+
+.page-content-container {
+  margin: 0 $s-20 $s-20 $s-20 !important;
+  padding: $s-24 !important;
+  flex: 1 !important;
+  border-radius: 10px !important;
+  display: flex !important;
+  flex-direction: column !important;
+}
+
+.custom-page-content-container {
+  padding: 0 $s-20 $s-20 $s-20;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}

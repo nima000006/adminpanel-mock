@@ -1,0 +1,19 @@
+@use "../../../../../../../../assets/styles/abstract/variables" as *;
+.international-demand-detail-page-container {
+  container-type: inline-size;
+  .action-btns-container {
+    @media (max-width: 640px) {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  @container (max-width: 140px) {
+    button {
+      padding: $s-2;
+    }
+    button span {
+      font-size: $s-10;
+    }
+  }
+}

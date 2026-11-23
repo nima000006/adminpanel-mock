@@ -1,0 +1,22 @@
+@use "../../assets/styles/abstract/variables" as *;
+.custom-upload-button {
+  @include flex-center;
+  width: $s-24;
+  height: $s-24;
+  z-index: 400;
+  cursor: pointer;
+  gap: $s-4;
+  background-color: inherit;
+  width: fit-content;
+  .attachment-icon {
+    width: $s-24;
+    height: $s-24;
+  }
+  .file-input {
+    display: none;
+  }
+  .label-text {
+    @include button2;
+    color: $black;
+  }
+}

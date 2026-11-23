@@ -1,0 +1,61 @@
+@use "../../../../../../../../assets/styles/abstract/variables" as *;
+.accusation-violation-details-change-records-container {
+  .ant-steps-vertical {
+    gap: $s-20;
+  }
+  .ant-steps-item-title {
+    width: 100%;
+  }
+  .ant-steps-item-icon {
+    float: right !important;
+  }
+  .ant-steps-item-content {
+    display: flex !important;
+    overflow: unset !important;
+  }
+  .ant-steps-icon {
+    @include ant-steps-icon-font;
+  }
+  .steps-title {
+    @include body-regular;
+    margin-bottom: $s-12;
+  }
+  .step-item-container {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid $border-color-90;
+    border-radius: 10px;
+    padding: $s-16;
+    display: flex;
+    flex-direction: column;
+    gap: $s-16;
+  }
+  .grid-cols-3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: ($s-12);
+    .ant-col {
+      width: 100%;
+      text-align: right;
+    }
+  }
+  .attachment-container {
+    .step-title {
+      @include h5-regular;
+      color: $title-black;
+    }
+    .upload-container {
+      display: flex;
+      flex-direction: column;
+      gap: $s-13;
+      .ant-upload-list {
+        display: flex;
+        gap: $s-8;
+        flex-wrap: wrap;
+      }
+      .custom-btn {
+        @include h5-regular;
+      }
+    }
+  }
+}

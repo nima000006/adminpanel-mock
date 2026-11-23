@@ -1,0 +1,22 @@
+@use "../../../assets/styles/abstract/variables" as *;
+.custom-drawer-root-class {
+  z-index: 1149;
+  .ant-drawer-header {
+    display: flex;
+    display: none;
+  }
+  .ant-drawer-body {
+    padding: 0;
+    position: relative;
+    overflow-x: hidden;
+    > :first-child {
+      padding-bottom: 2rem;
+      > *:not(.header-drawer-container) {
+        padding: 2rem 2rem 0 2rem;
+      }
+    }
+  }
+}
+.custom-drawer-container {
+  @include body-regular;
+}

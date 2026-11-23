@@ -1,0 +1,4 @@
+@use "../../../../../../../../assets/styles/abstract/variables" as *;
+.admission-detail-active-levels-of-action-container {
+  @include flex-col($s-40);
+}

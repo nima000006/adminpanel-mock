@@ -1,0 +1,25 @@
+@use "../../../../../../../assets/styles/abstract/variables" as *;
+.business-request-statistic-card-container {
+  @include body-regular;
+  padding: $s-20 !important;
+  @include flex-col($s-8);
+  padding: $s-16;
+  border-radius: 8px;
+  background-color: var(--app-bg-layout);
+  .business-request-statistic-card-title-container {
+    @include flex-space-between;
+  }
+  h5 {
+    @include h5-regular;
+  }
+  span {
+    @include headline-3;
+    font-size: $s-20 !important;
+  }
+  .icon-container {
+    color: $neutral-6;
+    svg {
+      font-size: $s-16;
+    }
+  }
+}

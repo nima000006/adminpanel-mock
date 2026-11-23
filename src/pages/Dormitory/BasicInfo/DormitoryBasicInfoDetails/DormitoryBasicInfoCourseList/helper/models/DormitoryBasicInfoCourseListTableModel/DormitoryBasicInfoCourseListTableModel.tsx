@@ -1,0 +1,108 @@
+import { CustomButton } from "@components/CustomInputs";
+import { CustomColumnType } from "@components/Renderers/CustomTable/CustomTable";
+import CustomTag from "@components/Renderers/CustomTag/CustomTag";
+import { GetServerColumnSearchProps } from "@infra/helpers/TableHelpers/TableServerSideSearchable/TableServerSideSearchable";
+import { dataPlaceHolder } from "@infra/helpers/utils";
+import { FixedType } from "@infra/models/modules/GeneralTypes/GeneralTypes";
+import { displayStatusMap } from "@pages/Dormitory/BasicInfo/DormitoryBasicInfoDetails/_shared/utils";
+import { DormitoryCourseListItemType } from "@pages/Dormitory/BasicInfo/DormitoryBasicInfoDetails/DormitoryBasicInfoCourseList/@types/@dormitoryBasicInfoCourseList";
+
+const DormitoryBasicInfoCourseListTableModel = ({
+  onEditHandler,
+}: {
+  onEditHandler: (record: DormitoryCourseListItemType) => void;
+}): CustomColumnType<DormitoryCourseListItemType>[] => {
+  return [
+    {
+      title: "عنوان ترم (دوره)",
+      dataIndex: "title",
+      key: "title",
+      width: 250,
+      ...GetServerColumnSearchProps({
+        dataIndex: "title",
+        label: "عنوان ترم (دوره)",
+        type: "text",
+      }),
+      render: (value: string) => dataPlaceHolder({ data: value }),
+    },
+    {
+      title: "وضعیت نمایش",
+      dataIndex: "visible",
+      key: "visible",
+      width: 150,
+      render: (value: boolean) => {
+        const status = displayStatusMap[String(value) as "true" | "false"];
+
+        return (
+          <CustomTag className="w-fit" color={status.color}>
+            {status.title}
+          </CustomTag>
+        );
+      },
+    },
+    {
+      title: "ایجاد کننده",
+      dataIndex: "createdBy",
+      key: "createdBy",
+      width: 100,
+      render: (value: string) => dataPlaceHolder({ data: value }),
+    },
+    {
+      title: "تاریخ ایجاد",
+      dataIndex: "createdDate",
+      key: "createdDate",
+      width: 140,
+      ...GetServerColumnSearchProps({
+        dataIndex: "createdDate",
+        label: "تاریخ ایجاد",
+        type: "sort",
+      }),
+      render: (value: string) =>
+        dataPlaceHolder({
+          data: value,
+          isDate: true,
+          customDateFormat: "HH:mm، YYYY-MM-DD",
+        }),
+    },
+    {
+      title: "آخرین اقدام کننده",
+      dataIndex: "modifiedBy",
+      key: "modifiedBy",
+      width: 150,
+      render: (value: string) => dataPlaceHolder({ data: value }),
+    },
+    {
+      title: "تاریخ آخرین اقدام",
+      dataIndex: "modifiedDate",
+      key: "modifiedDate",
+      width: 150,
+      ...GetServerColumnSearchProps({
+        dataIndex: "modifiedDate",
+        label: "تاریخ آخرین اقدام",
+        type: "sort",
+      }),
+      render: (value: string) =>
+        dataPlaceHolder({
+          data: value,
+          isDate: true,
+          customDateFormat: "HH:mm، YYYY-MM-DD",
+        }),
+    },
+    {
+      title: "",
+      dataIndex: "uuid",
+      key: "uuid",
+      fixed: "right" as FixedType,
+      width: 100,
+      className: "tables-sticky-column-left",
+      render: (_: unknown, record: DormitoryCourseListItemType) => (
+        <div>
+          <CustomButton type="link" onClick={() => onEditHandler(record)}>
+            ویرایش
+          </CustomButton>
+        </div>
+      ),
+    },
+  ];
+};
+export default DormitoryBasicInfoCourseListTableModel;

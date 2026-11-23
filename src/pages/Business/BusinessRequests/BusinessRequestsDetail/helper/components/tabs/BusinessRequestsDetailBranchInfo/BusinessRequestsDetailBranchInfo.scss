@@ -1,0 +1,25 @@
+@use "../../../../../../../../assets/styles/abstract/variables" as *;
+.business-requests-detail-branch-info-container {
+  .custom-alert {
+    .ant-alert-message {
+      @include subtitle2;
+    }
+  }
+  .custom-divider {
+    margin-top: $s-40 !important;
+    span {
+      @include h4-medium;
+    }
+  }
+  .custom-desc {
+    margin-top: $s-16;
+  }
+  .map-main-content {
+    &.custom-map {
+      margin-top: $s-5;
+    }
+  }
+  b {
+    color: $dustred-5 !important;
+  }
+}

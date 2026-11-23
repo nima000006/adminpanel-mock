@@ -1,0 +1,128 @@
+@use "../../../../../../../../../../../../../../../../assets/styles/abstract/variables"
+  as *;
+
+.generic-participant-attachment-modal-content-container {
+  .modal-body-container {
+    height: $s-286 !important;
+  }
+  .generic-participant-attachment-modal-content {
+    // استایل‌های uploader container
+    .main-uploader-container {
+      .ant-form-item {
+        width: 100%;
+        @include flex-col($s-4);
+        .ant-form-item-row {
+          @include flex-col($s-4);
+          .ant-form-item-label {
+            text-align: start !important;
+          }
+          // حالت قبل از آپلود - button width 100%
+
+          .ant-upload-select {
+            width: 100% !important;
+            // display در بخش شرطی تنظیم می‌شود
+            button,
+            .custom-upload-btn,
+            .ant-btn,
+            button.custom-upload-btn,
+            .ant-upload-select button {
+              width: 100% !important;
+              height: $s-100 !important;
+              background-color: var(--neutral-1) !important;
+              @include flex-center;
+            }
+          }
+          // استایل برای نمایش تصویر بعد از آپلود
+          .ant-upload-list {
+            width: 100% !important;
+            // display در بخش شرطی تنظیم می‌شود
+            .ant-upload-list-item {
+              width: 100% !important;
+              margin-top: 0;
+              .item-render-main {
+                width: 100% !important;
+                @include flex-center;
+                background-color: $white !important;
+                // Parent box با width full و background سفید
+                .download-btn-container {
+                  width: 100% !important;
+                  height: $s-100 !important;
+                  background-color: $white !important;
+                  @include flex-center;
+                  position: relative;
+                  // تصویر در مرکز قرار می‌گیرد
+                  span {
+                    width: auto;
+                    max-width: 100%;
+                    height: 100%;
+                    @include flex-center;
+                    img,
+                    .image-uploaded-preview {
+                      max-width: 100%;
+                      max-height: 100%;
+                      width: auto;
+                      height: auto;
+                      object-fit: contain;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    // استایل‌های شرطی برای نمایش/مخفی کردن
+    // وقتی فایل آپلود نشده
+    &.no-file {
+      .main-uploader-container {
+        .ant-form-item {
+          .ant-form-item-row {
+            .ant-upload.ant-upload-select {
+              display: block !important;
+            }
+            .ant-upload-list.ant-upload-list-picture {
+              display: none !important;
+            }
+          }
+        }
+      }
+    }
+    // وقتی فایل آپلود شده
+    &.has-file {
+      .main-uploader-container {
+        .ant-form-item {
+          .ant-form-item-row {
+            .ant-upload.ant-upload-select {
+              display: none !important;
+            }
+            .ant-upload-list.ant-upload-list-picture {
+              display: flex !important;
+              justify-content: center !important;
+              align-items: center !important;
+              background: var(--neutral-1) !important;
+              padding: $s-8 !important;
+              border-radius: $s-8 !important;
+              border: 1px solid $neutral-5 !important;
+            }
+          }
+        }
+      }
+    }
+
+    // استایل‌های upload text container
+
+    .generic-participant-template-upload-text-container {
+      @include flex-col($s-8);
+      align-items: center;
+      justify-content: center;
+      .generic-participant-template-upload-text {
+        color: $black-8;
+      }
+      .generic-participant-template-upload-logo {
+        color: $black-8;
+        font-size: $s-24;
+      }
+    }
+  }
+}

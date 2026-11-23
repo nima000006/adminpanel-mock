@@ -1,0 +1,16 @@
+@use "../../../../../../../assets/styles/abstract/variables" as *;
+
+.change-to-paid-modal-container {
+  display: flex;
+  flex-direction: column;
+  gap: $s-16;
+  .ant-row {
+    align-items: unset;
+  }
+
+  .date-pick-container {
+    .ant-form-item-row {
+      gap: $s-4 !important;
+    }
+  }
+}

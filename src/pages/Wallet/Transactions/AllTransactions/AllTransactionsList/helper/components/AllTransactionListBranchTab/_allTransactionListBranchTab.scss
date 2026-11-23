@@ -1,0 +1,20 @@
+@use "../../../../../../../../assets/styles/abstract/variables" as *;
+.all-transaction-list-branch-tab-container {
+  @include flex-col($s-16);
+  .no-color-tag {
+    .samim-service-tag-container {
+      background-color: $neutral-2 !important;
+      border-color: $neutral-5 !important;
+      color: $neutral-11 !important;
+    }
+
+    .icon-wrapper {
+      background-color: $neutral-2 !important;
+    }
+
+    svg {
+      fill: currentColor !important;
+      color: $neutral-11 !important;
+    }
+  }
+}

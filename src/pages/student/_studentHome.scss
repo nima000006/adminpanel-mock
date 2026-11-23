@@ -1,0 +1,72 @@
+@use "../../assets/styles/abstract/variables" as *;
+.home-main-container {
+  .ant-tabs-nav-list {
+    width: 100%;
+    .ant-tabs-tab {
+      margin-left: $s-32;
+      @media (max-width: 1500px) {
+        margin-left: $s-24;
+      }
+      @media (max-width: 1400px) {
+        margin-left: $s-14;
+      }
+    }
+    .tabs-label {
+      @include h5-regular;
+      font-size: $s-14;
+      @media (max-width: 1295px) {
+        font-size: $s-13;
+      }
+      @media (max-width: 1200px) {
+        font-size: $s-12;
+      }
+    }
+    .ant-tabs-tab-active {
+      @include h5-regular;
+      color: $blue-primary !important;
+    }
+  }
+  .student-top-bar-container {
+    .ant-tabs-nav-wrap-ping-left {
+      justify-content: flex-end;
+    }
+  }
+  .search-boxes-container {
+    display: flex;
+    gap: $s-16;
+    margin: $s-32 0 0 auto;
+    text-align: right;
+    width: 50%;
+    @media (max-width: 1000px) {
+      width: 60%;
+    }
+    @media (max-width: 900px) {
+      width: 70%;
+    }
+    @media (max-width: 750px) {
+      width: 95%;
+    }
+    @media (max-width: 600px) {
+      width: 100%;
+    }
+  }
+  .request-type-container {
+    display: flex;
+    justify-content: baseline;
+    align-items: center;
+    gap: $s-8;
+  }
+  .checkout-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .checkout-modal-container {
+    cursor: pointer;
+    color: $blue-primary;
+  }
+}
+.tabs-label {
+  @include body-regular;
+  font-size: $s-14;
+}

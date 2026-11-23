@@ -1,0 +1,50 @@
+@use "../../../../../../assets/styles/abstract/variables" as *;
+.profile-info-bux-container {
+  border: 1px solid $border-color-80;
+  border-radius: 16px;
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+  transition: linear all 0.3s;
+
+  .profile-info-bux-wrapper {
+    margin: $s-40 $s-24;
+    @include flex-col($s-16);
+    align-items: center;
+    cursor: pointer;
+    width: fit-content;
+  }
+
+  .icon-wrapper {
+    padding: $s-8;
+    border-radius: 10px;
+    border-style: dashed;
+    border-color: $border-color-90;
+    border-width: 3px;
+    width: 53px;
+    height: 53px;
+    transition: linear all 0.3s;
+  }
+
+  .title {
+    @include body-regular;
+  }
+
+  &:hover,
+  &.active {
+    transition: linear all 0.3s;
+    border-color: var(--color-primary-6);
+    background-color: var(--primary-1);
+
+    .icon-wrapper {
+      border-color: var(--color-primary-6);
+      color: var(--color-primary-6);
+      transition: linear all 0.3s;
+    }
+
+    .title {
+      color: var(--color-primary-6);
+      transition: linear all 0.3s;
+    }
+  }
+}

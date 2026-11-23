@@ -1,0 +1,4 @@
+@use "../../../../../../../../../../../../assets/styles/abstract/variables" as *;
+.all-wallet-transaction-segment-table-container {
+  @include flex-col($s-16);
+}

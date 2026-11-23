@@ -1,0 +1,20 @@
+@use "../../../../assets/styles/abstract/variables" as *;
+.register-auth-second-page-container {
+  height: 100%;
+  .register-auth-second-page-form-container {
+    height: 100%;
+    @include flex-col($s-10);
+    justify-content: space-between;
+    > div:first-child {
+      @include flex-col($s-20);
+    }
+    .auth-btn-container {
+      @include flex-col($s-5);
+      justify-content: flex-end;
+      .auth-btn-container-a {
+        @include flex-center;
+        gap: $s-5;
+      }
+    }
+  }
+}

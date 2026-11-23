@@ -1,0 +1,4 @@
+@use "../../../../../../../../assets/styles/abstract/variables" as *;
+.admission-program-detail-timing-container {
+  @include flex-col($s-24);
+}

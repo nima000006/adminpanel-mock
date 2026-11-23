@@ -1,0 +1,5 @@
+@use "../../../assets/styles/abstract/variables" as *;
+
+.ant-tooltip {
+  @include body-regular;
+}

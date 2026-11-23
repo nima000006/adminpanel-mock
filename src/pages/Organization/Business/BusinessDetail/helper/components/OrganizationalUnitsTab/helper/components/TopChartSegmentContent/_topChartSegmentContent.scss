@@ -1,0 +1,9 @@
+@use "../../../../../../../../../../assets/styles/abstract/variables" as *;
+.top-chart-segment-content-container {
+  @include flex-col($s-16);
+  .top-chart-segment-content-list-table {
+    .checkout-container {
+      @include flex-gap($s-4);
+    }
+  }
+}

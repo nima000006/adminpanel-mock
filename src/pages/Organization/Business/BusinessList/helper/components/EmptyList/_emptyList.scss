@@ -1,0 +1,11 @@
+@use "../../../../../../../assets//styles/abstract/variables" as *;
+
+.empty-list-container {
+  padding: $s-5;
+  @include flex-col($s-8);
+  align-items: center;
+
+  .empty-text {
+    @include body-regular;
+  }
+}

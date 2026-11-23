@@ -1,0 +1,7 @@
+@use "../../../../../../../../assets/styles/abstract/variables" as *;
+.unconfirmed-reservation-this-room-allocation-modal-content-container {
+  @include flex-col($s-8);
+  .text {
+    @include body-regular;
+  }
+}

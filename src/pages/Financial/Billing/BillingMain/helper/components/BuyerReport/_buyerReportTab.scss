@@ -1,0 +1,39 @@
+@use "../../../../../../../assets/styles/abstract/variables" as *;
+.buyer-report-tab-container {
+  display: flex;
+  flex-direction: column;
+  gap: $s-20;
+  .top-bar-container {
+    @include flex-space-between;
+    gap: $s-16;
+    .table-info {
+      @include body-regular;
+      color: $title-black;
+      padding: $s-8 $s-16;
+      border-radius: 2px;
+      background-color: $polar-Green-1;
+      border: $border-1 solid $polar-Green-3;
+    }
+    .search-box-container {
+      @include flex-center;
+      justify-content: flex-start;
+      gap: $s-20;
+      width: fit-content;
+      .advance-filter-btn {
+        @include body-regular;
+      }
+    }
+  }
+  .buyer-reports-table-container {
+    .action-btn {
+      color: $blue-primary;
+      cursor: pointer;
+    }
+    .tables-sticky-column-left {
+      position: sticky !important;
+      left: 0;
+      overflow: hidden;
+      box-shadow: $table-sticky-box-shadow;
+    }
+  }
+}

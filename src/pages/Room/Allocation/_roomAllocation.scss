@@ -1,0 +1,251 @@
+@use "../../../assets/styles/abstract/variables" as *;
+.room-allocation-page-container {
+  display: flex;
+  flex-direction: column;
+  gap: $s-25;
+  .bread-crumb-container {
+    @include flex-space-between;
+    .room-allocation-button {
+      @include body-regular;
+      color: $blue-primary;
+      border: $border-1 solid $blue-primary;
+    }
+    .bread-crumb {
+      @include body-regular;
+      color: $character-secondary-45;
+    }
+  }
+  .room-allocation__inputs {
+    @include flex-center;
+    justify-content: flex-start;
+    gap: $s-12;
+    flex-wrap: wrap;
+  }
+  .divider {
+    @include h5-regular;
+  }
+  .quality-grade-container {
+    width: 50%;
+    .quality-grade-select {
+      padding-right: $s-24;
+      @include flex-center;
+      justify-content: flex-start;
+      gap: $s-20;
+    }
+  }
+  .switch {
+    @include footnote;
+    padding: $s-2 0;
+    direction: ltr;
+  }
+  .payment-rule-tabs-label {
+    @include body-regular;
+    .tab-card-btn {
+      @include body-regular;
+      color: $blue-primary;
+    }
+  }
+  .rules-based-on-the-time-container {
+    background-color: #fafafa;
+    padding: $s-12;
+    display: flex;
+    flex-direction: column;
+    gap: $s-8;
+    .title {
+      @include h5-regular;
+      color: $title-black;
+    }
+    .description {
+      @include body-regular;
+      color: $character-secondary-45;
+    }
+    .start-date-container {
+      @include flex-center;
+      justify-content: flex-start;
+      gap: $s-2;
+      .start-date {
+        @include body-regular;
+        color: $neutral-12;
+      }
+    }
+  }
+  .reservation-time-container {
+    width: 90%;
+    display: flex;
+    justify-content: flex-start;
+    gap: $s-26;
+    .independent-room {
+      width: 70%;
+    }
+    .dependent-room {
+      width: 30%;
+    }
+    .reservation-time-main-container {
+      border: $border-1 solid $border-color-80;
+      border-radius: 10px;
+      padding: $s-10;
+      @include flex-center;
+      justify-content: flex-start;
+      width: fit-content;
+      .select-room-container {
+        @include flex-center;
+        gap: $s-12;
+        .select-room-select-field-container {
+          min-width: $s-132;
+        }
+        .select-room-title {
+          @include body-regular;
+          color: $title-black;
+        }
+      }
+    }
+  }
+  .reservation-bed-and-price-container {
+    width: 80%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: $s-25;
+    .accept-reservation {
+      width: fit-content;
+      min-width: $s-132;
+    }
+    .bed-count-container {
+      @include flex-center;
+      justify-content: flex-start;
+      gap: $s-6;
+      .bed-count-title {
+        @include body-regular;
+        color: $title-black;
+      }
+    }
+    .single-booking {
+      @include flex-center;
+      width: 100%;
+    }
+  }
+  .reservation-time-body {
+    display: flex;
+    flex-direction: column;
+    gap: $s-12;
+  }
+  .card-header-container {
+    @include flex-space-between;
+    .header-title {
+      @include h5-regular;
+      color: $character-secondary-45;
+      font-weight: 700;
+    }
+  }
+  .select-room-btn {
+    @include body-regular;
+    color: $white;
+  }
+  .radio-group {
+    span {
+      @include body-regular;
+      color: $title-black;
+    }
+  }
+  .payment-rule-container {
+    display: flex;
+    flex-direction: column;
+    gap: $s-24;
+    .payment-rule-tabs-labe {
+      @include body-regular;
+      color: $blue-primary;
+    }
+    .payment-rule-body-container {
+      display: flex;
+      flex-direction: column;
+      gap: $s-60;
+      .mortgage-container {
+        .mortgage-body {
+          @include flex-center;
+          justify-content: flex-start;
+          .price-container {
+            @include flex-center;
+            justify-content: flex-start;
+            gap: $s-6;
+            .price-title {
+              @include body-regular;
+              color: $title-black;
+            }
+          }
+          .time-container {
+            @include flex-center;
+            justify-content: flex-start;
+            gap: $s-6;
+            .day-container {
+              @include flex-center;
+              justify-content: flex-start;
+              gap: $s-6;
+              .day-title {
+                @include body-regular;
+                color: $title-black;
+              }
+              .register-mortgage-btn {
+                @include body-regular;
+                color: $white;
+              }
+            }
+          }
+        }
+      }
+      .installment-container {
+        display: flex;
+        flex-direction: column;
+        gap: $s-16;
+        .add-new-row-btn {
+          @include flex-center;
+          flex-direction: row-reverse;
+          margin-right: $s-8;
+        }
+      }
+    }
+  }
+  .allocation-container {
+    width: 70%;
+    .allocation-body {
+      display: flex;
+      flex-direction: column;
+      gap: $s-40;
+      .training-items-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: $s-40;
+        row-gap: $s-20;
+      }
+    }
+  }
+  .payment-tabs-container {
+    .ant-tabs-nav-list {
+      display: flex;
+      gap: $s-16;
+      .ant-tabs-tab {
+        margin: 0;
+      }
+    }
+  }
+  .rule-tabs-container {
+    .ant-tabs-nav-list {
+      display: flex;
+      gap: $s-4;
+      .ant-tabs-tab {
+        margin: 0;
+        &:nth-child(4) {
+          background-color: transparent;
+          border: none;
+        }
+      }
+    }
+  }
+  .tables-sticky-column-left {
+    position: sticky !important;
+    left: 0;
+    overflow: hidden;
+    box-shadow: $table-sticky-box-shadow;
+  }
+}
+.room-allocate-select {
+  width: 50%;
+}

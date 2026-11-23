@@ -1,0 +1,16 @@
+@use "../../../../../../../assets/styles/abstract/variables" as *;
+.dorm-basic-info-section-container {
+  .divider-btn-container {
+    .custom-switch-container {
+      margin-bottom: 0;
+    }
+  }
+}
+.dorm-basic-info-section-modal-title {
+  .dorm-inactive-modal-content-container {
+    @include body-regular;
+    .modal-content-text {
+      margin-bottom: $s-16;
+    }
+  }
+}

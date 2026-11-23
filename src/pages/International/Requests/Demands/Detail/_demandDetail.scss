@@ -1,0 +1,51 @@
+@use "../../../../../assets/styles/abstract/variables" as *;
+.international-demand-requests-detail-tab-container {
+  @include body-regular;
+  // tab 1
+  .international-demand-detail-page-container {
+    @include flex-col($s-80);
+    .detail-container {
+      @include flex-col($s-40);
+      .tag-container {
+        @include flex-center;
+        gap: $s-4;
+      }
+    }
+    .action-btns-container {
+      @include flex-center;
+      width: 100%;
+      gap: ($s-16);
+      .action-btn {
+        width: 100%;
+      }
+      .edit-btn {
+        background-color: $orange-6;
+        &:hover {
+          background-color: $orange-5;
+        }
+      }
+    }
+  }
+  // tab 2
+  .international-demand-request-history-page-container {
+    .clock-icon {
+      font-size: $s-16;
+    }
+    .ant-steps-item-tail {
+      inset-inline-start: $s-8 !important;
+    }
+    .ant-steps-item-content {
+      display: flex !important;
+      flex-direction: column;
+      gap: $s-10;
+      .ant-steps-item-title {
+        @include body-regular;
+        color: $neutral-10;
+      }
+      .step-item-description-container {
+        @include footnote;
+        color: var(--app-text);
+      }
+    }
+  }
+}

@@ -1,0 +1,28 @@
+@use "../../../../../assets/styles/abstract/variables" as *;
+.room-features-capsule {
+  width: 100%;
+  background-color: rgb(229, 229, 229);
+  @include body-regular;
+  margin: $s-24 0;
+  display: flex;
+  flex-direction: column;
+  gap: $s-12;
+  .switch-text {
+    @include footnote;
+    color: $white;
+  }
+  .label-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .inputs-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: $s-16 $s-12;
+    .check-box-group-wrapper {
+      grid-column: 2/4;
+    }
+  }
+}

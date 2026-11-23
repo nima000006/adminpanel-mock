@@ -1,0 +1,30 @@
+@use "../../../../../../../../assets/styles/abstract/variables" as *;
+
+.food-my-vendor-list-drawer-content-container {
+  .right-side .right-side-title-contain {
+    @media (max-width: 468px) {
+      font-size: $s-12;
+    }
+  }
+  .attach-row {
+    @include flex-gap($s-8);
+    .ant-btn {
+      border-color: $danger-primary;
+      border-style: dashed;
+      background-color: var(--app-bg-layout);
+      padding: $s-32;
+    }
+    .my-vendor-upload-text-container {
+      display: flex;
+      gap: $s-8;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+  .info-contact-divider {
+    margin-top: $s-12;
+  }
+  .map {
+    margin-top: $s-32;
+  }
+}

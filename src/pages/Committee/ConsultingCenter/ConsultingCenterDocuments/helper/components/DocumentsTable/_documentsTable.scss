@@ -1,0 +1,41 @@
+@use "../../../../../../../assets/styles/abstract/variables" as *;
+.committee-consulting-center-documents-table-container {
+  .advance-filter-btn {
+    @include body-regular;
+    margin-bottom: $s-16;
+  }
+  .committee-consulting-center-documents-table {
+    .check-btn {
+      color: $blue-primary;
+      cursor: pointer;
+    }
+    .cancel-session-btn,
+    .change-time-btn {
+      color: $danger-primary;
+      cursor: pointer;
+    }
+    .btn-wrapper {
+      @include flex-gap($s-16);
+    }
+
+    .tables-sticky-column-left {
+      position: sticky !important;
+      left: 0;
+      overflow: hidden;
+    }
+    .waiting-time-container {
+      display: flex;
+      flex-direction: column;
+      gap: $s-8;
+    }
+    .green {
+      background-color: $green;
+    }
+    .yellow {
+      background-color: $yellow;
+    }
+    .red {
+      background-color: $red;
+    }
+  }
+}

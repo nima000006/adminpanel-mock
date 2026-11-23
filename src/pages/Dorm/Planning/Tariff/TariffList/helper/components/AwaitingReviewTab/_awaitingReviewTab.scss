@@ -1,0 +1,16 @@
+@use "../../../../../../../../assets/styles/abstract/variables" as *;
+.dorm-awaiting-review-tab-container {
+  @include flex-col($s-24);
+  .btn-text {
+    @media (max-width: 450px) {
+      width: 100%;
+    }
+  }
+
+  .dorm-awaiting-review-list-table {
+    .waiting-time-container {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+}

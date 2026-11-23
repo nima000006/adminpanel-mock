@@ -1,0 +1,50 @@
+@use "../../../../../assets/styles/abstract/variables" as *;
+$step-count: 10;
+.custom-step-container {
+  @include flex-center;
+  width: 100%;
+  .ant-steps-item {
+    flex: 0 0 auto;
+    .ant-steps-item-tail {
+      margin-inline-start: 0 !important;
+      margin: 0 !important;
+      width: 80%;
+      &:after {
+        width: 70%;
+        margin-inline-start: $s-12 !important;
+        margin-inline-end: $s-10 !important;
+      }
+    }
+    .ant-steps-item-icon {
+      margin-inline-start: 0 !important;
+      margin: 0 !important;
+      width: $s-8 !important;
+      height: $s-8 !important;
+    }
+    @for $i from 1 through $step-count {
+      &:nth-child(#{$i}) {
+        width: $s-40;
+      }
+    }
+    &.ant-steps-item-active {
+      .ant-steps-icon-dot {
+        background: var(--ant-color-text-disabled) !important;
+      }
+    }
+    &.ant-steps-item-finish {
+      .ant-steps-item-tail {
+        &:after {
+          background-color: $primary-6 !important;
+        }
+      }
+      .ant-steps-item-icon {
+        width: $s-10 !important;
+        height: $s-10 !important;
+      }
+      .ant-steps-icon-dot {
+        top: -$s-1;
+        background: $primary-6 !important;
+      }
+    }
+  }
+}

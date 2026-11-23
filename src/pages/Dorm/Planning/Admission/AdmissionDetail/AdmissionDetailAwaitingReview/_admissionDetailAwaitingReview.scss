@@ -1,0 +1,7 @@
+@use "../../../../../../assets/styles/abstract/variables" as *;
+.admission-detail-awaiting-review-page-container {
+  @include flex-col($s-24);
+  .admission-detail-awaiting-review-tab-container {
+    @include body-regular;
+  }
+}

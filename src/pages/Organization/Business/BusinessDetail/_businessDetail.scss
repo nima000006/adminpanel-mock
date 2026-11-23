@@ -1,0 +1,4 @@
+@use "../../../../assets/styles/abstract/variables" as *;
+.modify-business-detail-container {
+  @include body-regular;
+}

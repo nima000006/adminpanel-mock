@@ -1,0 +1,8 @@
+@use "../../../../../../../../assets/styles/abstract/variables" as *;
+.admission-detail-active-basic-info-container {
+  @include flex-col($s-40);
+  .copy-btn-container {
+    display: flex;
+    justify-content: flex-end;
+  }
+}

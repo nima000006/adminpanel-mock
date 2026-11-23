@@ -1,0 +1,13 @@
+@use "../../../../assets/styles/abstract/variables" as *;
+.room-student-info-container {
+  @include flex-gap($s-32);
+  flex-direction: column;
+  .send-notification-btn {
+    @include body-regular;
+  }
+  .contact-info-and-desc-wrapper {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr 2fr);
+    gap: $s-32;
+  }
+}

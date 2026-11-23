@@ -1,0 +1,7 @@
+@use "../../assets/styles/abstract/variables" as *;
+.custom-card-renderer-container {
+  @include card-shadow-2;
+  border-radius: 20px;
+  background-color: var(--app-bg-container);
+  width: 100%;
+}

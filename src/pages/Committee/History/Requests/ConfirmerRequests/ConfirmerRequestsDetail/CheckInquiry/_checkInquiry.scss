@@ -1,0 +1,75 @@
+@use "../../../../../../../assets/styles/abstract/variables" as *;
+.committee-confirmer-request-detail-check-inquiry {
+  display: flex;
+  flex-direction: column;
+  gap: $s-16;
+  .information-container {
+    display: flex;
+    flex-direction: column;
+    gap: $s-16;
+  }
+  .information-request {
+    display: flex;
+    flex-direction: column;
+    gap: $s-20;
+  }
+  .student-table {
+    display: flex;
+    flex-direction: column;
+    gap: $s-20;
+  }
+  .table-btn {
+    @include body-regular;
+  }
+  .container {
+    border-radius: 10px;
+    background-color: $neutral-3;
+    padding: $s-70;
+    .form-wrapper {
+      background-color: var(--app-bg-container);
+      text-align: center;
+      padding: $s-24;
+      .text {
+        @include body-regular;
+      }
+      .black-text {
+        color: $title-black;
+      }
+      .gray-text {
+        color: $character-secondary-45;
+      }
+      .form-body {
+        border: $border-1 solid $border-color-90;
+        border-radius: 10px;
+        padding: $s-20;
+        .btn-container {
+          display: flex;
+          justify-content: flex-start;
+          gap: 10px;
+          .form-btn {
+            @include body-regular;
+            margin-top: $s-24;
+          }
+        }
+      }
+    }
+  }
+  .hidden {
+    display: none;
+  }
+  .check-btn {
+    color: $blue-primary;
+    cursor: pointer;
+  }
+}
+
+.committee-confirmer-request-detail-check-inquiry-modal-container {
+  .inputs-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: $s-12;
+    @media (max-width: 1200px) {
+      grid-template-columns: 1fr;
+    }
+  }
+}

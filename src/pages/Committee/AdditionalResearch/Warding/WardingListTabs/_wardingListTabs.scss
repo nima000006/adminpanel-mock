@@ -1,0 +1,19 @@
+@use "../../../../../assets//styles/abstract/variables" as *;
+.committee-additional-research-warding-list-tabs-container {
+  .ant-tabs-nav-wrap-ping-left {
+    justify-content: flex-end;
+  }
+  .ant-tabs-nav-list {
+    @include body-regular;
+    .ant-tabs-tab {
+      @include body-regular;
+      margin-left: $s-32;
+      @media (max-width: 1500px) {
+        margin-left: $s-24;
+      }
+      @media (max-width: 1400px) {
+        margin-left: $s-14;
+      }
+    }
+  }
+}

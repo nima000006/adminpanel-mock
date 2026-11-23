@@ -1,0 +1,8 @@
+@use "../../../../../../../../../../assets/styles/abstract/variables" as *;
+.my-branch-turn-over-service-documents-drawer-content {
+  .custom-link {
+    color: $primary-6;
+    @include flex-center;
+    gap: $s-5;
+  }
+}

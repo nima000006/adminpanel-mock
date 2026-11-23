@@ -1,0 +1,13 @@
+@use "../../../../../../../../../../../../../assets/styles/abstract/variables" as *;
+.management-my-detail-education-estelam-modal {
+  @include body-regular;
+  .custom-alert {
+    margin: $s-16 0;
+    .ant-alert-message {
+      @include subtitle2;
+    }
+    .ant-modal-footer {
+      margin: $s-16 0;
+    }
+  }
+}

@@ -1,0 +1,23 @@
+@use "../../../../../../../../assets/styles/abstract/variables" as *;
+.committee-session-creation-session-info-step-container {
+  display: flex;
+  flex-direction: column;
+  gap: $s-35;
+  .border-round-box {
+    padding: $s-24;
+    border-radius: 10px;
+    border: $border-1 solid $border-color-90;
+  }
+  .grid-cols-2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: $s-35 $s-12;
+  }
+  .ant-col {
+    width: 100%;
+    text-align: right;
+  }
+  .desc-wrapper {
+    grid-column: 1/3;
+  }
+}

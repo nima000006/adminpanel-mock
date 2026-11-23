@@ -1,0 +1,15 @@
+@use "../../../../../../../../../../assets/styles/abstract/variables" as *;
+.international-pre-registration-request-history-page-container {
+  .ant-steps-item-tail {
+    inset-inline-start: $s-8 !important;
+  }
+  .ant-steps-item-content {
+    display: flex !important;
+    flex-direction: column;
+    gap: $s-10;
+  }
+  .ant-steps-item-title {
+    @include body-regular;
+    color: $neutral-10;
+  }
+}

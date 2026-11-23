@@ -1,0 +1,25 @@
+@use "../../../../assets/styles/abstract/variables" as *;
+.general-report-container {
+  .general-report-card-container {
+    @include body-regular;
+    border-style: dashed;
+    border-color: $neutral-5;
+    @include flex-col($s-16);
+    text-align: center;
+    h3 {
+      color: $neutral-10;
+    }
+    strong {
+      color: $neutral-12;
+      font-weight: bolder;
+      border-color: $neutral-5;
+    }
+    p {
+      color: $neutral-7;
+    }
+    button {
+      width: 100%;
+      border-style: dashed;
+    }
+  }
+}

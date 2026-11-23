@@ -1,0 +1,8 @@
+@use "../../../../../../../../assets/styles/abstract/variables" as *;
+.food-documents-return-money-container {
+  @include flex-col($s-24);
+  .food-documents-return-money-btn-wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+}

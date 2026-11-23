@@ -1,0 +1,14 @@
+@use "../../../../../../../../../../../assets/styles/abstract/variables" as *;
+.condition-item-container {
+  .ant-radio-group {
+    .ant-radio-button-wrapper {
+      display: flex;
+      .ant-radio-button-label {
+        display: flex !important;
+        align-items: center;
+      }
+    }
+    display: flex;
+    flex-wrap: nowrap;
+  }
+}

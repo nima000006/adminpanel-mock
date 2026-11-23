@@ -1,0 +1,55 @@
+@use "../../../../../../../../../assets/styles/abstract/variables" as *;
+.dorm-room-single-card-container {
+  @include flex-col($s-24);
+  padding: $s-16;
+  border: 1px solid $neutral-4;
+  border-radius: 8px;
+  height: 100%;
+
+  .dorm-single-card-title-container {
+    @include flex-col($s-24);
+    word-break: break-all;
+  }
+  .header {
+    @include flex-col($s-16);
+    .icon-container {
+      padding: $s-4;
+      background-color: var(--app-bg-layout);
+      border-radius: 4px;
+      text-align: center;
+    }
+    .card-tag {
+      width: fit-content;
+      margin: auto;
+    }
+  }
+  .title {
+    @include h4-medium;
+    color: $neutral-12;
+    text-align: center;
+    word-break: normal;
+    overflow-wrap: break-word;
+  }
+  .dorm-single-card-subtitle-container {
+    @include flex-col($s-8);
+    margin-top: auto;
+    .count-item {
+      @include flex-space-between;
+    }
+    .text {
+      @include footnote;
+    }
+    .bed-count {
+      @include body-regular;
+    }
+    .ant-tag {
+      margin-inline-end: 0;
+    }
+  }
+  .dorm-single-card-actions-container {
+    @include flex-col($s-8);
+    .view-btn {
+      color: $blue-primary;
+    }
+  }
+}

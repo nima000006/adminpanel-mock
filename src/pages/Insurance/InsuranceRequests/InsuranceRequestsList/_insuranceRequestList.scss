@@ -1,0 +1,40 @@
+@use "../../../../assets/styles/abstract/variables" as *;
+.insurance-request-list-container {
+  display: flex;
+  flex-direction: column;
+  gap: $s-16;
+  .insurance-request-bottom-section-container {
+    display: flex;
+    flex-direction: column;
+    gap: $s-16;
+    background-color: var(--app-bg-container);
+    padding: $s-16;
+    border-radius: 8px;
+    .table-action-bar-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      .inner-action-filter-container {
+        display: flex;
+        gap: $s-16;
+        align-items: center;
+      }
+    }
+    .insurance-request-tabs-container {
+      @include body-regular;
+    }
+    .date-range-pick-container {
+      margin-left: 5px;
+      width: calc(50% - 10px);
+      // @media (max-width: 1020px) {
+      //   width: 55%;
+      // }
+      @media (max-width: 1020px) {
+        width: calc(40% - 10px);
+      }
+      // @media (max-width: 911px) {
+      //   width: calc(30% - 10px);
+      // }
+    }
+  }
+}

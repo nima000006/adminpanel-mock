@@ -1,0 +1,15 @@
+@use "../../../../../../../../assets/styles/abstract/variables" as *;
+.active-admission-schedule-drawer-container {
+  .apply-levels {
+    margin-top: $s-32;
+  }
+  .table {
+    margin-top: $s-32;
+    .ant-statistic-content-value {
+      min-width: unset;
+    }
+  }
+  .submit-time-wrapper {
+    margin-top: $s-32;
+  }
+}

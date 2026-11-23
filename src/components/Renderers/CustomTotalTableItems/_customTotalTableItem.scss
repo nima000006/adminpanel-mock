@@ -1,0 +1,18 @@
+@use "../../../assets/styles/abstract/variables" as *;
+.custom-total-table-items-container {
+  background-color: var(--app-bg-layout);
+  border-radius: 8px;
+  display: flex;
+  padding: 16px;
+  flex-direction: row;
+  justify-content: flex-start;
+  gap: 8px;
+  align-items: center;
+  width: fit-content;
+  .custom-total-table-items-label {
+    @include body-regular;
+  }
+  .custom-total-table-items-count {
+    @include body-regular-bold;
+  }
+}

@@ -1,0 +1,27 @@
+@use "../../../../../../../../assets/styles/abstract/variables" as *;
+
+.all-test-detail-questions-container {
+  .test-detail-questions-tabs {
+    .ant-tabs-ink-bar {
+      right: 0;
+    }
+
+    .ant-tabs-nav {
+      border-right: 1px solid $border-color-80;
+    }
+
+    .ant-tabs-body-holder {
+      border: none;
+    }
+
+    .ant-tabs-tab-btn {
+      @include body-regular;
+    }
+  }
+  .ant-tabs {
+    @media (max-width: 600px) {
+      gap: 3rem;
+      flex-direction: column;
+    }
+  }
+}

@@ -1,0 +1,39 @@
+@use "../../../../../../../../assets/styles/abstract/variables" as *;
+.primary-committee-change-records-container {
+  .ant-steps-vertical {
+    gap: $s-20;
+  }
+  .ant-steps-item-title {
+    width: 100%;
+  }
+  .ant-steps-item-icon {
+    float: right !important;
+  }
+  .steps-title {
+    @include body-regular;
+    margin-bottom: $s-12;
+  }
+
+  .committee-members-box-wrapper {
+    border: 1px solid $border-color-90;
+    border-radius: 10px;
+    padding: $s-16;
+    margin-bottom: $s-35;
+    .committee-members-box {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(330px, 1fr));
+      gap: $s-24;
+      @media (max-width: 720px) {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      }
+      @media (max-width: 600px) {
+        grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+      }
+    }
+  }
+  .second-box-wrapper {
+    border: 1px solid $border-color-90;
+    border-radius: 10px;
+    padding: $s-16;
+  }
+}

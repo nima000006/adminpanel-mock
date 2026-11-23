@@ -1,0 +1,64 @@
+@use "../../../../../assets/styles/abstract/variables" as *;
+.accusation-case-infringement-info-tab-container {
+  @include flex-gap($s-40);
+  flex-direction: column;
+  .around-box {
+    padding: $s-24;
+    border-radius: 10px;
+    border: $border-1 solid $border-color-90;
+  }
+  .ant-collapse-expand-icon {
+    position: absolute;
+    left: 0;
+    border-radius: 50%;
+    .collapse-icon {
+      font-size: $s-18;
+    }
+  }
+  .specific-divider {
+    @include h5-regular;
+    color: $title-black;
+  }
+  .violation-information-container {
+    .text-area-wrapper {
+      margin-top: $s-12;
+    }
+  }
+  .upload-btn {
+    @include body-regular;
+  }
+  .initial-referral {
+    .css-dev-only-do-not-override-pr0fja {
+      @include body-regular;
+    }
+  }
+  .submit-buttons-container {
+    @include flex-gap($s-13);
+    .custom-btn {
+      @include body-regular;
+    }
+  }
+  .upload-container {
+    display: flex;
+    flex-direction: column;
+    gap: $s-13;
+    .ant-upload-list {
+      display: flex;
+      gap: $s-8;
+    }
+  }
+  .ant-radio-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: $s-32;
+  }
+  .check-box {
+    label {
+      display: flex;
+      align-items: center;
+      height: $s-30;
+      @include body-regular;
+      width: auto;
+    }
+  }
+}

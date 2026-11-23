@@ -1,0 +1,138 @@
+@use "../../../assets/styles/abstract/variables" as *;
+// width="335"
+// height="212"
+.student-cart-container {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+
+  .front-side {
+    margin: 0;
+    padding: 0;
+    color: #fff;
+    // width: 56.7mm;
+    // height: 89.1mm;
+    size: 56mm 87.7mm;
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    // width: 58mm;
+    // height: 89.9mm;
+    overflow: hidden;
+    svg {
+      width: 100%;
+      height: 100vh;
+      position: absolute;
+    }
+    .front-side-branch {
+      position: absolute;
+      right: 42px;
+      top: 41px;
+      @include print-format-sub-text;
+    }
+    .data-container {
+      position: absolute;
+      right: 12px;
+      top: 160px;
+      height: 100%;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      // justify-content: flex-start;
+      .student-bar-code {
+        height: 60px;
+        width: 60px;
+        .qr-code {
+          height: 60px;
+          width: 60px;
+        }
+      }
+      .student-number-container {
+        display: flex;
+        gap: 2px;
+      }
+      .national-number-container {
+        display: flex;
+        gap: 2px;
+      }
+    }
+
+    .name {
+      // position: absolute;
+      // right: 12px;
+      // top: 210px;
+      @include print-format-text;
+    }
+    .field-name {
+      // position: absolute;
+      // right: 12px;
+      // top: 240px;
+      max-width: 182px;
+      @include print-format-text;
+    }
+    .student-number-label {
+      // position: absolute;
+      // right: 12px;
+      // top: 275px;
+      @include print-format-text;
+    }
+    .student-number {
+      // position: absolute;
+      // right: 85px;
+      // top: 275px;
+      @include print-format-text;
+    }
+    .national-number-label {
+      // position: absolute;
+      // right: 12px;
+      // top: 300px;
+      @include print-format-text;
+    }
+    .national-number {
+      // position: absolute;
+      // right: 60px;
+      // top: 300px;
+      @include print-format-text;
+    }
+  }
+  .back-side {
+    margin: 0;
+    padding: 0;
+    position: relative;
+    size: 56mm 87.7mm;
+    width: 100%;
+    height: 100vh;
+    background-color: blue;
+    svg {
+      width: 100%;
+      height: 100vh;
+      position: absolute;
+    }
+    .back-side-branch {
+      position: absolute;
+      right: 42px;
+      top: 41px;
+      @include print-format-sub-text;
+    }
+    .list-data {
+      position: absolute;
+      top: 230px;
+      left: 30px;
+      @include print-format-sub-text;
+      font-size: 8px;
+      ul {
+        direction: rtl;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        padding: 0 20px;
+        li::marker {
+          content: "• ";
+          font-size: 1.2em;
+        }
+      }
+    }
+  }
+}

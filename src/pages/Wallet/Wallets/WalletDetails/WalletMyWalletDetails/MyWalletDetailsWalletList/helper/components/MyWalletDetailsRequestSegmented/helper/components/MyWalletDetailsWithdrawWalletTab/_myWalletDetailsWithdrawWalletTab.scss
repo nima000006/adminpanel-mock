@@ -1,0 +1,4 @@
+@use "../../../../../../../../../../../../assets/styles/abstract/variables" as *;
+.my-detail-wallet-withdraw-wallet-tab-container {
+  @include flex-col($s-16);
+}

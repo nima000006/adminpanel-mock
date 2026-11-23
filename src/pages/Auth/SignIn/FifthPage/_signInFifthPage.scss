@@ -1,0 +1,47 @@
+@use "../../../../assets/styles/abstract/variables" as *;
+.signin-auth-fifth-page-container {
+  background-color: var(--app-bg-container);
+  min-height: 88vh;
+  padding: $s-40;
+  border-radius: 24px;
+  display: flex;
+  flex-direction: column;
+  .img-alert-segment-container {
+    @include flex-col($s-40);
+    .img-container {
+      @include flex-center;
+
+      gap: $s-16;
+      .banner-img {
+        max-width: 102px;
+        max-height: 115px;
+      }
+      .banner-title {
+        @include h2-medium;
+        padding-bottom: $s-20;
+      }
+    }
+
+    .alert-items {
+      @include body-regular;
+      list-style-type: disc;
+    }
+  }
+  .segmented-container {
+    width: 100%;
+
+    .ant-segmented-item {
+      width: 100%;
+    }
+  }
+  .segment-items-container {
+    padding: $s-16 0;
+  }
+  .sign-in-button {
+    width: 100%;
+    margin-top: auto;
+    .ant-btn-icon {
+      padding-top: $s-5;
+    }
+  }
+}

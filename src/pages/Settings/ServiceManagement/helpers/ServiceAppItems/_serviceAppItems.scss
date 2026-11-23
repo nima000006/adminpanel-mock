@@ -1,0 +1,21 @@
+@use "../../../../../assets/styles/abstract/variables" as *;
+.service-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 8px;
+  align-items: center;
+  border: 1px solid #d9d9d9;
+  border-radius: 16px;
+  // padding: 26px 32px;
+  width: 120px;
+  height: 112px;
+  cursor: pointer;
+  .name {
+    @include body-regular;
+  }
+}
+.active-item {
+  background-color: #188fff1d;
+  border: 1px solid $blue-primary;
+}

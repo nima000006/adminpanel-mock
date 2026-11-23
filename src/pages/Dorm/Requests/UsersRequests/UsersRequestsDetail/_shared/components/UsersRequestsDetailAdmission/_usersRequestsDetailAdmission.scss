@@ -1,0 +1,36 @@
+@use "../../../../../../../../assets/styles/abstract/variables" as *;
+.ant-tooltip-inner {
+  text-align: center !important;
+}
+.user-requests-detail-admission-container {
+  @include flex-col($s-40);
+  .users-requests-detail-admission-time-type-container {
+    margin-top: $s-40;
+    .users-requests-detail-admission-time-type-field {
+      @include flex-gap($s-10);
+      .users-requests-detail-admission-time-type-icon {
+        color: $character-disabled-placeholder-25;
+      }
+    }
+  }
+  .divider-content-container {
+    display: flex;
+    .more-detail-btn {
+      @media (max-width: 540px) {
+        padding: 0;
+        span {
+          font-size: 10px !important;
+        }
+      }
+    }
+    @media (max-width: 540px) {
+      flex-direction: column;
+    }
+  }
+
+  .users-requests-detail-admission-list-table {
+    .ant-statistic-content-value {
+      min-width: unset;
+    }
+  }
+}

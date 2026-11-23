@@ -1,0 +1,10 @@
+@use "../../../../../../../assets//styles/abstract/variables" as *;
+.billing-product-content-container {
+  .billing-product-table-container {
+    .product-svg-container {
+      @include flex-center;
+      justify-content: flex-start;
+      gap: $s-8;
+    }
+  }
+}

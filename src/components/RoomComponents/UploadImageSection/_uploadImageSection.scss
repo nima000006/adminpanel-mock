@@ -1,0 +1,16 @@
+@use "../../../assets/styles/abstract/variables" as *;
+.upload-image-section-container-main {
+  .upload-image-section-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .upload-image-section-label {
+      @include h5-bold;
+      color: $black-60;
+    }
+  }
+  .uploaded-images-container {
+    margin: $s-32 0;
+  }
+}

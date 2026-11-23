@@ -1,0 +1,38 @@
+<svg width="210" height="109" viewBox="0 0 210 109" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_17905_189345)">
+<rect width="35.9869" height="35.9869" fill="#FAFAFA" stroke="black" stroke-opacity="0.04" stroke-width="0.719739"/>
+<rect x="35.9863" y="0.000192642" width="35.9869" height="35.9869" stroke="black" stroke-opacity="0.04" stroke-width="0.719739"/>
+<rect x="71.9746" y="0.000192642" width="35.9869" height="35.9869" stroke="black" stroke-opacity="0.04" stroke-width="0.719739"/>
+<rect x="107.961" y="0.000192642" width="35.9869" height="35.9869" stroke="black" stroke-opacity="0.04" stroke-width="0.719739"/>
+<rect x="143.947" y="0.000192642" width="35.9869" height="35.9869" stroke="black" stroke-opacity="0.04" stroke-width="0.719739"/>
+<rect x="179.936" y="0.000192642" width="35.9869" height="35.9869" stroke="black" stroke-opacity="0.04" stroke-width="0.719739"/>
+<rect y="36" width="35.9869" height="35.9869" stroke="black" stroke-opacity="0.04" stroke-width="0.719739"/>
+<rect x="35.9863" y="36" width="35.9869" height="35.9869" stroke="black" stroke-opacity="0.04" stroke-width="0.719739"/>
+<rect x="71.9746" y="36" width="35.9869" height="35.9869" fill="#FAFAFA" stroke="black" stroke-opacity="0.04" stroke-width="0.719739"/>
+<rect x="107.961" y="36" width="35.9869" height="35.9869" stroke="black" stroke-opacity="0.04" stroke-width="0.719739"/>
+<rect x="143.947" y="36" width="35.9869" height="35.9869" stroke="black" stroke-opacity="0.04" stroke-width="0.719739"/>
+<rect x="179.936" y="36" width="35.9869" height="35.9869" fill="#FAFAFA" stroke="black" stroke-opacity="0.04" stroke-width="0.719739"/>
+<rect y="72" width="35.9869" height="35.9869" stroke="black" stroke-opacity="0.04" stroke-width="0.719739"/>
+<rect x="35.9863" y="72.0001" width="35.9869" height="35.9869" stroke="black" stroke-opacity="0.04" stroke-width="0.719739"/>
+<rect x="71.9746" y="72.0001" width="35.9869" height="35.9869" stroke="black" stroke-opacity="0.04" stroke-width="0.719739"/>
+<rect x="107.961" y="72.0001" width="35.9869" height="35.9869" fill="#FAFAFA" stroke="black" stroke-opacity="0.04" stroke-width="0.719739"/>
+<rect x="143.947" y="72.0001" width="35.9869" height="35.9869" stroke="black" stroke-opacity="0.04" stroke-width="0.719739"/>
+<rect x="179.936" y="72.0001" width="35.9869" height="35.9869" stroke="black" stroke-opacity="0.04" stroke-width="0.719739"/>
+<rect y="108" width="35.9869" height="35.9869" stroke="black" stroke-opacity="0.04" stroke-width="0.719739"/>
+<rect x="35.9863" y="108" width="35.9869" height="35.9869" stroke="black" stroke-opacity="0.04" stroke-width="0.719739"/>
+<rect x="71.9746" y="108" width="35.9869" height="35.9869" stroke="black" stroke-opacity="0.04" stroke-width="0.719739"/>
+<rect x="107.961" y="108" width="35.9869" height="35.9869" stroke="black" stroke-opacity="0.04" stroke-width="0.719739"/>
+<rect x="143.947" y="108" width="35.9869" height="35.9869" stroke="black" stroke-opacity="0.04" stroke-width="0.719739"/>
+<rect x="179.936" y="108" width="35.9869" height="35.9869" stroke="black" stroke-opacity="0.04" stroke-width="0.719739"/>
+<rect width="209.206" height="109" fill="url(#paint0_radial_17905_189345)"/>
+</g>
+<defs>
+<radialGradient id="paint0_radial_17905_189345" cx="0" cy="0" r="1" gradientTransform="matrix(53.9887 38.6774 -47.0571 26.1178 104.603 54.5)" gradientUnits="userSpaceOnUse">
+<stop stop-color="white" stop-opacity="0"/>
+<stop offset="1" stop-color="white"/>
+</radialGradient>
+<clipPath id="clip0_17905_189345">
+<rect width="209.206" height="109" rx="54.5" fill="white"/>
+</clipPath>
+</defs>
+</svg>

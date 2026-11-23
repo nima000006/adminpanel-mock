@@ -1,0 +1,28 @@
+@use "../../../../../assets/styles/abstract/variables" as *;
+.primary-committee-create-change-container {
+  .committee-members-box-wrapper {
+    border: 1px solid $border-color-90;
+    border-radius: 10px;
+    padding: $s-16;
+    margin-bottom: $s-35;
+
+    .committee-members-box {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+      gap: $s-24;
+    }
+  }
+  .voting-type-box-wrapper {
+    border: 1px solid $border-color-90;
+    border-radius: 10px;
+    padding: $s-16;
+  }
+  .btn-wrapper {
+    @include flex-gap($s-12);
+    margin-top: $s-35;
+    .btn {
+      cursor: pointer;
+      @include body-regular;
+    }
+  }
+}

@@ -1,0 +1,11 @@
+@use "../../../../../assets/styles/abstract/variables" as *;
+.daily-discount-modal {
+  .daily-discount-modal-container {
+    margin-top: $s-28;
+    @include flex-gap($s-16);
+  }
+  .btn-container {
+    @include flex-gap($s-12);
+    margin-top: $s-16;
+  }
+}

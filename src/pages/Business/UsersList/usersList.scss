@@ -1,0 +1,20 @@
+@use "../../../assets/styles/abstract/variables" as *;
+.business-users-list-container {
+  display: flex;
+  flex-direction: column;
+  gap: $s-16;
+
+  .advance-filter-btn {
+    @include body-regular;
+  }
+  .table-container {
+    display: flex;
+    flex-direction: column;
+    gap: $s-16;
+  }
+  .view-user-list {
+    @include body-regular;
+    color: $blue-primary;
+    cursor: pointer;
+  }
+}

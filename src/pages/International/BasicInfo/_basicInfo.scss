@@ -1,0 +1,7 @@
+@use "../../../assets/styles/abstract/variables" as *;
+.international-base-info {
+  .custom-tag {
+    width: fit-content;
+    gap: $s-5;
+  }
+}

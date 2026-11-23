@@ -1,0 +1,23 @@
+@use "../../../../../../../../../../assets/styles/abstract/variables" as *;
+.remove-history-request-detail-container {
+  .text-area {
+    margin-top: $s-34;
+  }
+  .wrapper-message-confirm-box {
+    border: 1px solid $polar-Green-3;
+    background-color: $polar-Green-1;
+    margin-bottom: $s-32;
+    padding: $s-8;
+    border-radius: 5px;
+  }
+  .wrapper-message-reject-box {
+    border: 1px solid $dust-red-2;
+    background-color: $dust-red-1;
+    margin-bottom: $s-32;
+    padding: $s-8;
+    border-radius: 5px;
+  }
+  .message {
+    @include body-regular;
+  }
+}

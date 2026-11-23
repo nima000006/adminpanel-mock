@@ -1,0 +1,19 @@
+@use "../../../../assets/styles/abstract/variables" as *;
+.room-student-info-container {
+  .divider-text {
+    @include h5-regular;
+  }
+}
+.student-info-ticket-container {
+  .student-info-ticket-table {
+    .view-text-ticket {
+      color: $blue-primary;
+    }
+  }
+  .tables-sticky-column-left {
+    position: sticky !important;
+    left: 0;
+    box-shadow: $table-sticky-box-shadow;
+    overflow: hidden;
+  }
+}

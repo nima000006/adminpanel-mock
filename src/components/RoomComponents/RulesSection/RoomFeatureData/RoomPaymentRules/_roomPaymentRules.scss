@@ -1,0 +1,75 @@
+@use "../../../../../assets/styles/abstract/variables" as *;
+.room-payment-rules-container {
+  width: 100%;
+  background-color: rgb(229, 229, 229);
+  @include body-regular;
+  margin: $s-24 0;
+  .tabs-container {
+    margin-top: $s-16;
+    .ant-tabs-tab {
+      margin-left: $s-16;
+    }
+    .data-tab-container {
+      margin: $s-16;
+      .renting-data {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        gap: $s-16;
+
+        .renting-data-item {
+          display: flex;
+          width: 100%;
+          align-items: center;
+          gap: $s-32;
+        }
+        .input-price {
+          width: 50%;
+        }
+        .input-day {
+          width: 50%;
+        }
+      }
+      .installment-data {
+        .new-row-btn {
+          margin: $s-16 0;
+        }
+      }
+    }
+  }
+  .payment-rule-table-header {
+    @include body-regular;
+    color: $title-black;
+  }
+}
+
+.installment-modal-body-container {
+  display: flex;
+  flex-direction: column;
+  gap: $s-32;
+  .installment-modal-body {
+    @include flex-center;
+    align-items: flex-start;
+    gap: $s-16;
+  }
+
+  .modal-btn-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: $s-16;
+    padding-right: $s-8;
+    .modal-btn {
+      @include body-regular;
+    }
+  }
+  .ant-form-item-explain-error {
+    color: var(--error-500);
+    font-family: "DanaFaNum";
+    font-style: normal;
+    font-weight: 500;
+    font-size: $s-12;
+    text-align: right;
+  }
+}

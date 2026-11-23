@@ -1,0 +1,24 @@
+@use "../../../../../assets/styles/abstract/variables" as *;
+.pricing-base-detail-container {
+  .pricing-base-detail-action-bar-container {
+    margin: 0 $s-4 $s-24;
+  }
+  .pricing-basic-detail-table-container {
+    .operation-business-structure-wrapper {
+      @include flex-gap($s-16);
+      justify-content: center;
+      .change-btn {
+        color: $blue-primary;
+        cursor: pointer;
+      }
+      .delete-btn {
+        color: $danger-primary;
+        cursor: pointer;
+      }
+    }
+    .view-graph-business-structure {
+      color: $blue-primary;
+      cursor: pointer;
+    }
+  }
+}

@@ -1,0 +1,200 @@
+@use "../../../../../../assets/styles/abstract/variables" as *;
+.business-main-form-container {
+  .btn-wrapper {
+    @include flex-gap($s-13);
+  }
+  .business-main-form-btn {
+    color: $blue-primary;
+    border-color: $blue-primary;
+    @media (max-width: 1060px) {
+      font-size: $s-12;
+    }
+  }
+
+  .business-owner-info-wrapper {
+    margin-top: $s-28;
+    .business-owner-info-inputs-wrapper {
+      @include flex-gap($s-12);
+      @media (max-width: 1000px) {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: $s-12;
+      }
+      @media (max-width: 850px) {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: $s-12;
+      }
+    }
+  }
+  .business-owner-info {
+    @include flex-gap($s-16);
+    margin-bottom: $s-32;
+    .business-owner-info-text {
+      @include h3-medium;
+      @media (max-width: 1000px) {
+        font-size: $s-20;
+      }
+    }
+  }
+
+  .business-contacts-wrapper {
+    margin-top: $s-28;
+    .phone-and-postal-code-wrapper {
+      width: 100%;
+      @include flex-gap($s-12);
+      margin-bottom: $s-20;
+      @media (max-width: 850px) {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: $s-12;
+      }
+    }
+
+    .business-contacts-text-area-wrapper {
+      @include flex-gap($s-20);
+      flex-direction: column;
+    }
+  }
+
+  .business-basic-information-wrapper {
+    margin-top: $s-28;
+    .services-select {
+      @include flex-gap($s-8);
+      flex-direction: column;
+      margin-bottom: $s-32;
+    }
+    .label {
+      @include body1;
+    }
+
+    .business-type-wrapper {
+      .business-type-label {
+        margin-bottom: $s-8;
+      }
+      .business-type-content {
+        @include flex-gap($s-20);
+        flex-direction: column;
+        border: 1px solid $border-color-80;
+        border-radius: 20px;
+        padding: $s-20;
+        max-width: 60%;
+        @media (max-width: 1020px) {
+          max-width: 70%;
+        }
+        @media (max-width: 950px) {
+          max-width: 100%;
+        }
+        .business-type-row-wrapper {
+          display: flex;
+          justify-content: space-between;
+          .business-type-row-left-side {
+            @include flex-gap($s-14);
+            .title {
+              @include h5-bold;
+              color: rgba(0, 0, 0, 0.45);
+              @media (max-width: 1060px) {
+                font-size: $s-14;
+              }
+              @media (max-width: 820px) {
+                font-size: $s-12;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .business-information-wrapper {
+    margin-top: $s-28;
+    .legal-wrapper {
+      margin-bottom: $s-20;
+      .legal-label {
+        @include body-regular;
+        margin-bottom: $s-4;
+      }
+      .legal-box {
+        border: 1px solid $border-color-80;
+        border-radius: 8px;
+        padding: $s-10;
+        max-width: 45%;
+        @include flex-gap($s-20);
+        .legal-box-left-side {
+          @include flex-gap($s-8);
+          @include body-regular;
+          .register-code-input {
+            padding: $s-4;
+            border: 1px solid $border-color-80;
+            border-radius: 4px;
+            outline: none;
+            @media (max-width: 890px) {
+              max-width: 60%;
+            }
+          }
+        }
+        @media (max-width: 1310px) {
+          max-width: 50%;
+        }
+        @media (max-width: 1250px) {
+          max-width: 60%;
+        }
+        @media (max-width: 1120px) {
+          max-width: 70%;
+        }
+        @media (max-width: 1050px) {
+          max-width: 80%;
+        }
+        @media (max-width: 970px) {
+          max-width: 100%;
+        }
+      }
+    }
+
+    .personality-group {
+      @include flex-gap($s-20);
+      flex-direction: column;
+      .personality-group-row {
+        @include flex-gap($s-8);
+      }
+      .personality-group-row-one {
+        max-width: 50%;
+      }
+    }
+
+    .document-image-wrapper {
+      margin-top: $s-20;
+      @include flex-gap($s-8);
+      flex-direction: column;
+      .document-image-label {
+        @include body-regular;
+        margin-bottom: $s-4;
+      }
+      .row {
+        display: flex;
+        justify-content: space-between;
+        border: 1px solid $border-color-80;
+        border-radius: 10px;
+        padding: $s-10;
+        .upload-img-text {
+          @include body-regular;
+        }
+      }
+    }
+  }
+  .map-container {
+    margin-top: $s-20;
+    @include body-regular;
+    font-weight: #666;
+    font-weight: 500;
+    font-size: $s-16;
+
+    .map-main-content {
+      margin-top: $s-20;
+      .map-container-style {
+        height: 220px;
+        border-radius: 10px;
+      }
+    }
+  }
+}

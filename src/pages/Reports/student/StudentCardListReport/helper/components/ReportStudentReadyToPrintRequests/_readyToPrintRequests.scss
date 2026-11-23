@@ -1,0 +1,38 @@
+@use "../../../../../../../assets/styles/abstract/variables" as *;
+.ready-to-print-actions-container {
+  .select-type-container {
+    margin-bottom: 1.2rem;
+    .select {
+      width: 180px;
+    }
+  }
+  .action-bar-container {
+    display: flex;
+    justify-content: space-between;
+    .advanced-filter-btn {
+      @include body-regular;
+      display: flex;
+      align-items: center;
+    }
+    .action-bar-btns-left-side-container {
+      display: flex;
+      gap: $s-8;
+      .action-btn {
+        @include body-regular;
+        color: $blue-primary;
+        border-color: $blue-primary;
+        &:hover {
+          color: $white !important;
+          background-color: $blue-primary;
+        }
+      }
+      .action-btn-disabled {
+        opacity: 0.3;
+        &:hover {
+          color: black !important;
+          background-color: inherit;
+        }
+      }
+    }
+  }
+}

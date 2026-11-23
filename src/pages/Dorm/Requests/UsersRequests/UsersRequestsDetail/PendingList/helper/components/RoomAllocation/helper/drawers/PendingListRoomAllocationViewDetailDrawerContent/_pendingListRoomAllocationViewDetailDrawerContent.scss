@@ -1,0 +1,10 @@
+@use "../../../../../../../../../../../../assets/styles/abstract/variables" as *;
+.pending-list-room-allocation-view-detail-drawer-content-container {
+  @include flex-col($s-24);
+  .room-residents {
+    @include flex-col($s-16);
+  }
+  .dorm {
+    @include flex-col($s-16);
+  }
+}

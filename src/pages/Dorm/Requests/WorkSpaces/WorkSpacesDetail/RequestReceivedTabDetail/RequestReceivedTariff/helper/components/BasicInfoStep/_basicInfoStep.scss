@@ -1,0 +1,24 @@
+@use "../../../../../../../../../../assets/styles/abstract/variables" as *;
+.work-spaces-basic-info-step-container {
+  margin-top: $s-40;
+  @include flex-col($s-20);
+  .btn-wrapper {
+    margin-top: $s-32;
+    @include flex-gap($s-8);
+    direction: ltr;
+  }
+  .ant-form-item-control {
+    width: 100% !important;
+  }
+  .ant-form-item-label {
+    label {
+      height: 0;
+    }
+  }
+  .scheduling {
+    .ant-form-item-row {
+      gap: $s-4 !important;
+      margin-bottom: $s-20;
+    }
+  }
+}

@@ -1,0 +1,53 @@
+/** Auto-generated mock data from API/page types. Adjust values as needed for local UI work. */
+
+import type {
+  GetPendingPaymentDetailResponse,
+} from "../../@types/@foodPendingPaymentDetail";
+
+export const GET_PENDING_PAYMENT_DETAIL_RESPONSE_MOCK: GetPendingPaymentDetailResponse = {
+  status: null,
+  msg: "نمونه msg",
+  data: {
+  id: 1,
+  title: "نمونه title",
+  amount: 10,
+  createdDate: "2026-05-02T10:20:27.741127",
+  modifiedDate: "2026-05-02T10:20:27.741127",
+  description: "نمونه description",
+  referenceNo: 1,
+  trackNo: 1,
+  documentFile: null,
+  documentUrl: "https://example.com",
+  createdByUserName: "2026-05-02T10:20:27.741127",
+  createdByFirstName: "2026-05-02T10:20:27.741127",
+  createdByLastName: "2026-05-02T10:20:27.741127",
+  createdByPhone: null,
+  modifiedByUserName: "نمونه modifiedByUserName",
+  modifiedByFirstName: "نمونه modifiedByFirstName",
+  modifiedByLastName: "نمونه modifiedByLastName",
+  modifiedByPhone: null,
+  documentStatus: "ACTIVE",
+  requestsCount: 10,
+  totalAmount: 10,
+  requestDtos: [{
+  id: 1,
+  basketUserName: "نمونه basketUserName",
+  basketFirstName: "نمونه basketFirstName",
+  basketLastName: "نمونه basketLastName",
+  basketStudentNumber: "basketStudentNumber-mock",
+  status: 1,
+  cardNumber: "cardNumber-mock",
+  bankName: "نمونه bankName",
+  bankAccountOwner: null,
+  basketPlansQuantity: 10,
+  basketPlansPlanBasePrice: 10,
+  basketPlansPlanTotalAmount: null,
+  basketPlansPlanReserveDate: "2026-05-02T10:20:27.741127",
+  iban: "iban-mock",
+}],
+  paymentDate: "2026-05-02T10:20:27.741127",
+  fromIBAN: "fromIBAN-mock",
+  fromBankPersianName: "نمونه fromBankPersianName",
+},
+  errors: null,
+};

@@ -1,0 +1,6 @@
+@use "../../../../assets/styles/abstract/variables" as *;
+.dorm-main-list-container {
+  .dorm-main-list-tab-container {
+    @include body-regular;
+  }
+}

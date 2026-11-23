@@ -1,0 +1,61 @@
+@use "../../../../../../../../assets/styles/abstract/variables" as *;
+.business-requests-details-answer-request-container {
+  .custom-alert {
+    &.ant-alert-info {
+      .ant-alert-icon {
+        font-size: $s-14;
+        margin-top: $s-5;
+      }
+    }
+    .ant-alert-message {
+      @include subtitle2;
+    }
+    &.custom-alert-duplicate {
+      margin-top: $s-16;
+    }
+  }
+  .custom-list {
+    list-style: disc;
+    margin-right: $s-20;
+  }
+  .custom-actions-container {
+    margin-top: $s-40;
+    .btn-container {
+      @include flex-gap($s-10);
+      .danger-button {
+        background-color: $dustred-6;
+        border-color: $dustred-6;
+        color: $white;
+      }
+    }
+    .custom-button {
+      width: $s-240;
+    }
+  }
+}
+.disable-hover {
+  &.ant-btn-primary,
+  &.ant-btn {
+    background-color: $yellow !important;
+    border-color: $yellow !important;
+  }
+
+  &.ant-btn > span {
+    &:hover {
+      background-color: $yellow !important;
+    }
+  }
+}
+.business-requests-details-answer-request-modal-container {
+  max-width: $s-880;
+  .custom-text-area {
+    .ant-input-textarea-show-count {
+      @include body-regular;
+    }
+  }
+  .btn-modal-actions {
+    margin-top: $s-40;
+    @include flex-gap($s-10);
+    justify-content: flex-end;
+  }
+}

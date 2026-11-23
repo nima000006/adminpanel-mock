@@ -1,0 +1,33 @@
+@use "../../../assets/styles/abstract/variables" as *;
+.custom-switch-container {
+  .ant-form-item {
+    margin: 0;
+  }
+  .ant-form-item-control {
+    width: 100%;
+    flex: unset;
+  }
+  .ant-row {
+    flex-flow: unset;
+    align-items: center;
+  }
+  label {
+    @include body-regular;
+    color: $title-black;
+    height: 0 !important;
+  }
+  .ant-form-item-label {
+    overflow: unset;
+    label {
+      &::after {
+        content: "";
+      }
+    }
+  }
+  .ant-switch-inner-checked {
+    @include body-regular;
+  }
+  .ant-switch-inner-unchecked {
+    @include body-regular;
+  }
+}

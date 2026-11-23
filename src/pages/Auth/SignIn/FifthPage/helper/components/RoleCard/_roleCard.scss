@@ -1,0 +1,51 @@
+@use "../../../../../../../assets/styles/abstract/variables" as *;
+.login-role-card-container {
+  padding: $s-16;
+  border-radius: 16px;
+  cursor: pointer;
+  position: relative;
+  background-color: var(--app-bg-container); /* Replaced $neutral-2 */
+  border: 1px solid var(--app-border); /* Replaced $neutral-5 */
+  @include flex-col($s-28);
+
+  .role-radio {
+    position: absolute;
+    top: $s-44;
+    right: $s-12;
+  }
+  .card-title {
+    @include flex-space-between;
+    .title {
+      @include h5-medium;
+      color: var(--app-text); /* Ensure title adapts */
+    }
+  }
+  .card-info {
+    display: flex;
+    gap: $s-8;
+    align-items: center;
+    .personal-no-title {
+      @include body-regular;
+      color: var(--app-text-secondary); /* Replaced $neutral-7 */
+    }
+    .personal-no {
+      @include body-medium;
+      color: var(--app-text); /* Replaced $neutral-11 */
+    }
+    .icon-class {
+      color: var(--app-text); /* Replaced $neutral-11 */
+    }
+  }
+  .card-action {
+    @include flex-center;
+    @include body-regular;
+    color: var(--app-primary); /* Replaced $primary-6 */
+    width: fit-content;
+    margin: 0 auto;
+  }
+}
+.active-login-role-card-container {
+  /* Use alpha-blended primary or a specific var */
+  background-color: var(--app-bg-layout); /* Fallback/Alternative */
+  border: 1px solid var(--app-primary);
+}

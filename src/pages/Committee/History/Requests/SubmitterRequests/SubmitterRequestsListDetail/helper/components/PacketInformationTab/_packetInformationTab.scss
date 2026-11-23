@@ -1,0 +1,13 @@
+@use "../../../../../../../../../assets/styles/abstract/variables" as *;
+.packet-info-container {
+  display: flex;
+  flex-direction: column;
+  gap: $s-20;
+  .custom-upload-packet {
+    .ant-row {
+      display: flex;
+      flex-direction: column;
+      align-items: baseline;
+    }
+  }
+}

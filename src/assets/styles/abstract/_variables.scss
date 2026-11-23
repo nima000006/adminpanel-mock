@@ -1,0 +1,561 @@
+$font-family: "DanaFaNum";
+
+// THEME INTEGRATION
+$border-color: var(--app-border);
+$page-main-background-color: var(--app-bg-layout);
+
+$black-0: var(--app-text); // Main text
+$black-03: var(--app-bg-layout); // Light gray bg
+$black-3: #333;
+$black-8: #888;
+$black-60: var(--app-text-secondary);
+$title-black: var(--app-text);
+
+$border-color-80: var(--app-border);
+$border-color-90: var(--app-border-secondary);
+
+$table-sticky-background-color: var(--app-bg-container);
+$table-sticky-box-shadow: 10px 0 8px -8px rgba(5, 5, 5, 0.08) !important;
+
+//! Sizes
+$s-1: 0.0625rem;
+$s-2: 0.125rem;
+// $s-3: 0.1875rem;
+$s-4: 0.25rem;
+$s-5: 0.3125rem;
+$s-6: 0.375rem;
+$s-7: 0.4375rem;
+$s-8: 0.5rem;
+$s-10: 0.625rem;
+$s-11: 0.6875rem;
+$s-12: 0.75rem;
+$s-13: 0.8125rem;
+$s-14: 0.875rem;
+$s-16: 1rem;
+$s-18: 1.125rem;
+$s-19: 1.2rem;
+$s-20: 1.25rem;
+$s-22: 1.375rem;
+$s-24: 1.5rem;
+$s-25: 1.5625rem;
+$s-26: 1.625rem;
+$s-28: 1.75rem;
+$s-30: 1.875rem;
+$s-32: 2rem;
+$s-34: 2.125rem;
+$s-35: 2.1875rem;
+$s-36: 2.25rem;
+$s-38: 2.375rem;
+$s-40: 2.5rem;
+$s-44: 2.75rem;
+$s-46: 2.875rem;
+$s-48: 3rem;
+$s-52: 3.25rem;
+$s-54: 3.375rem;
+$s-56: 3.5rem;
+$s-60: 3.75rem;
+// $s-63: 3.9375rem;
+$s-64: 4rem;
+$s-65: 4.063rem;
+$s-70: 4.375rem;
+$s-72: 4.5rem;
+$s-80: 5rem;
+$s-85: 5.3125rem;
+// $s-88: 5.5rem;
+// $s-92: 5.75rem;
+$s-100: 6.25rem;
+// $s-106: 6.625rem;
+$s-108: 6.75rem;
+// $s-117: 7.3125rem;
+$s-120: 7.7rem;
+$s-124: 7.75rem;
+$s-132: 8.25rem;
+$s-135: 8.438rem;
+$s-137: 8.563rem;
+$s-148: 9.25rem;
+$s-150: 9.375rem;
+$s-160: 10rem;
+$s-169: 10.562rem;
+$s-178: 11.125rem;
+$s-240: 15rem;
+$s-254: 15.875rem;
+$s-260: 16.25rem;
+$s-264: 16.5rem;
+$s-286: 17.875rem;
+$s-300: 18.75rem;
+$s-320: 20rem;
+$s-355: 22.188rem;
+$s-400: 25rem;
+$s-416: 26rem;
+$s-480: 30rem;
+$s-880: 55rem;
+
+//!primary
+$primary-400: #0500ff;
+$blue-link: #1677ff;
+
+//!information
+$information-100: #d7e7ff;
+
+//!success
+// $success-100: #bff0be;
+$success-500: #1a9e17;
+// $success-700: #035101;
+
+//!error
+$error-400: #dc2e2e;
+$error-500: #bc0000;
+
+//! CUSTOM VARIABLES
+$white: #ffffff;
+$black: #222222;
+$blue: #1673ff;
+$blue-100: #6dc0ef;
+
+$blue-primary: #1890ff;
+$danger-primary: #ff4d4f;
+
+// $light-gray: #f0f3fa;
+$light-gray-back: #fafafa;
+
+$modal-bg-color: #f5fcff;
+
+$character-secondary-45: #00000073; // rgba(0, 0, 0, 0.45)
+$character-disabled-placeholder-25: #00000040;
+
+$dust-red-1: #fff1f0;
+$dust-red-2: #ffccc7;
+$dust-red-7: #cf1322;
+
+$character-danger: #ff4d4f;
+
+$orange: #fa8c16;
+
+$card-alt-bg: #e5e5e5;
+
+$green: #389e0d;
+$yellow: #faad14;
+$yellow-100: #ffc069;
+
+$red: #a8071a;
+$polar-Green-1: #f6ffed;
+$polar-Green-3: #b7eb8f;
+
+$background-danger: #fff1f0;
+
+$background-light-blue: #e6f7ff;
+$background-light-lime: #fcffe6;
+$background-dust-red: #fff1f0;
+$background-golden-purple: #f9f0ff;
+
+//! Envelop
+$envelope-blue: #e4f2ff;
+
+// ! BORDER WIDTH
+$border-1: 1px;
+
+@mixin overline {
+  text-align: right;
+  font-family: $font-family;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 16px;
+}
+//! Figma's
+@mixin footnote {
+  color: $neutral-7;
+  text-align: right;
+  font-variant-numeric: lining-nums tabular-nums;
+  /* Footnote/system-monospace */
+  font-family: $font-family;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+}
+@mixin h5-regular {
+  /* H5/regular */
+  font-family: $font-family;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px; /* 150% */
+}
+@mixin h5-bold {
+  font-family: DanaFaNum;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 24px;
+  color: var(--app-text-placeholder);
+}
+@mixin subtitle2 {
+  font-family: $font-family;
+  font-style: normal;
+  font-weight: 400;
+  font-size: $s-16;
+  line-height: $s-24;
+  color: var(--app-text);
+}
+@mixin subtitle3 {
+  font-family: $font-family;
+  font-style: normal;
+  font-weight: 400;
+  font-size: $s-12;
+  line-height: $s-16;
+  color: var(--app-text);
+}
+@mixin body-regular {
+  font-family: DanaFaNum;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 22px;
+}
+@mixin body-regular-bold {
+  font-family: DanaFaNum;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: bold;
+  line-height: 22px;
+}
+@mixin body1 {
+  font-family: $font-family;
+  font-style: normal;
+  font-weight: 300;
+  font-size: $s-16;
+  line-height: $s-24;
+  color: var(--app-text);
+}
+@mixin body2 {
+  font-family: $font-family;
+  font-style: normal;
+  font-weight: 400;
+  font-size: $s-14;
+  line-height: $s-20;
+  color: var(--app-text);
+}
+@mixin body3 {
+  font-family: $font-family;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 24px;
+  color: var(--app-text);
+}
+@mixin body-medium {
+  font-family: DanaFaNum;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 22px;
+}
+@mixin button2 {
+  font-family: $font-family;
+  font-style: normal;
+  font-weight: 500;
+  font-size: $s-14;
+  line-height: $s-20;
+  color: var(--app-text);
+}
+@mixin caption {
+  font-family: $font-family;
+  text-align: right;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 18px;
+}
+@mixin h1-medium {
+  font-family: DanaFaNum;
+  font-size: 38px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 46px;
+}
+@mixin h2-medium {
+  font-family: DanaFaNum;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 40px;
+}
+@mixin h3-medium {
+  font-family: $font-family;
+  color: $title-black;
+  /* H3/medium */
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 32px;
+}
+@mixin headline-3 {
+  font-family: DanaFaNum;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 36px;
+}
+@mixin h4-medium {
+  font-family: DanaFaNum;
+  font-size: 1.25rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 22px;
+  color: var(--app-text);
+}
+
+@mixin h5-medium {
+  font-family: $font-family;
+  color: $title-black;
+  /* H3/medium */
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px;
+}
+@mixin h5-bold {
+  font-family: DanaFaNum;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 24px;
+}
+@mixin print-format-text {
+  text-align: right;
+  font-family: $font-family;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  color: $white;
+}
+@mixin print-format-sub-text {
+  text-align: right;
+  font-family: $font-family;
+  font-size: 7px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  color: $white;
+}
+@mixin ant-steps-icon-font {
+  color: $character-disabled-placeholder-25;
+  font-family: DanaFaNum;
+  font-size: $s-16;
+  font-style: normal;
+  font-weight: 400;
+  line-height: $s-24;
+}
+//! CUSTOM MIXINS
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@mixin flex-gap($gap) {
+  display: flex;
+  gap: $gap;
+}
+@mixin flex-space-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+@mixin card-shadow-1 {
+  box-shadow:
+    0 1px 3px rgba(0, 0, 0, 0.12),
+    0 1px 2px rgba(0, 0, 0, 0.103);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+@mixin card-shadow-2 {
+  border: 0.5px solid #d6d6d65d;
+  // box-shadow:
+  //   1px 1px 7px rgba(0, 0, 0, 0.08),
+  //   1px 1px 5px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+@mixin table-action-shadow {
+  box-shadow: 10px 0 8px -8px rgba(5, 5, 5, 0.08) !important;
+}
+// @mixin cardStyle($borderRadius, $padding, $margin-top, $box-shadow) {
+//   border-radius: $borderRadius;
+//   padding: $padding;
+//   margin-top: $margin-top;
+//   box-shadow: $box-shadow;
+// }
+// @mixin columnSeparator() {
+//   border-left: 2px solid #cecece !important;
+// }
+
+@mixin flex-col($gap) {
+  display: flex;
+  flex-direction: column;
+  gap: $gap;
+}
+
+// antd color pallet
+
+// PRIMARY — Use CSS custom properties for runtime dark mode switching
+$primary-1: var(--primary-1);
+$primary-2: #bae7ff;
+$primary-3: #91d5ff;
+$primary-4: var(--primary-4);
+$primary-5: var(--primary-5);
+$primary-6: var(--primary-6);
+$primary-7: var(--primary-7);
+$primary-8: var(--primary-8);
+$primary-9: var(--primary-9);
+$primary-10: #002766;
+
+// NEUTRAL — Use CSS custom properties for runtime dark mode switching
+$neutral-1: var(--neutral-1);
+$neutral-2: var(--neutral-2);
+$neutral-3: var(--neutral-3);
+$neutral-4: var(--neutral-4);
+$neutral-5: var(--neutral-5);
+$neutral-6: var(--neutral-6);
+$neutral-7: var(--neutral-7);
+$neutral-8: var(--neutral-8);
+$neutral-9: var(--neutral-9);
+$neutral-10: var(--neutral-10);
+$neutral-11: var(--neutral-11);
+$neutral-12: var(--neutral-12);
+$neutral-13: var(--neutral-13);
+
+// DUSTRED — Use CSS custom properties for runtime dark mode switching
+$dustred-1: var(--dustred-1);
+$dustred-2: var(--dustred-2);
+$dustred-3: #ffa39e;
+$dustred-4: var(--dustred-4);
+$dustred-5: var(--dustred-5);
+$dustred-6: var(--dustred-6);
+$dustred-7: #cf1322;
+$dustred-8: #a8071a;
+$dustred-9: #820014;
+$dustred-10: #5c0011;
+
+// VOLCANO — Use CSS custom properties for runtime dark mode switching
+$volcano-1: var(--volcano-1);
+$volcano-2: #ffd8bf;
+$volcano-3: #ffbb96;
+$volcano-4: #ff9c6e;
+$volcano-5: #ff7a45;
+$volcano-6: var(--volcano-6);
+$volcano-7: #d4380d;
+$volcano-8: #ad2102;
+$volcano-9: #871400;
+$volcano-10: #610b00;
+
+// sunset orange — Use CSS custom properties for key tokens
+$orange-1: #fff7e6;
+$orange-2: #ffe7ba;
+$orange-3: #ffd591;
+$orange-4: #ffc069;
+$orange-5: #ffa940;
+$orange-6: var(--orange-6);
+$orange-7: #d46b08;
+$orange-8: #ad4e00;
+$orange-9: #873800;
+$orange-10: #612500;
+
+// Calendula gold
+$gold-1: #fffbe6;
+$gold-2: #fff1b8;
+$gold-3: #ffe58f;
+$gold-4: #ffd666;
+$gold-5: #ffc53d;
+$gold-6: #faad14;
+$gold-7: #d48806;
+$gold-8: #ad6800;
+$gold-9: #874d00;
+$gold-10: #613400;
+
+// Yellow — Use CSS custom properties for key tokens
+$yellow-1: var(--yellow-1);
+$yellow-2: #ffffb8;
+$yellow-3: var(--yellow-3);
+$yellow-4: var(--yellow-4);
+$yellow-5: #ffec3d;
+$yellow-6: #fadb14;
+$yellow-7: #d4b106;
+$yellow-8: #ad8b00;
+$yellow-9: #876800;
+$yellow-10: #614700;
+
+// Lime
+$lime-1: #fcffe6;
+$lime-2: #f4ffb8;
+$lime-3: #eaff8f;
+$lime-4: #d3f261;
+$lime-5: #bae637;
+$lime-6: #a0d911;
+$lime-7: #7cb305;
+$lime-8: #5b8c00;
+$lime-9: #3f6600;
+$lime-10: #254000;
+
+// Polar Green — Use CSS custom properties for key tokens
+$green-1: var(--green-1);
+$green-2: #d9f7be;
+$green-3: var(--green-3);
+$green-4: var(--green-4);
+$green-5: #73d13d;
+$green-6: #52c41a;
+$green-7: #389e0d;
+$green-8: #237804;
+$green-9: #135200;
+$green-10: #092b00;
+
+// Cyan — Use CSS custom properties for key tokens
+$cyan-1: var(--cyan-1);
+$cyan-2: #b5f5ec;
+$cyan-3: #87e8de;
+$cyan-4: #5cdbd3;
+$cyan-5: #36cfc9;
+$cyan-6: var(--cyan-6);
+$cyan-7: #08979c;
+$cyan-8: #006d75;
+$cyan-9: #00474f;
+$cyan-10: #00474f;
+
+// Teal — Use CSS custom properties for runtime dark mode switching
+$teal-6: var(--teal-6);
+$teal-8: var(--teal-8);
+
+// Geek Blue
+$blue-1: #f0f5ff;
+$blue-2: #d6e4ff;
+$blue-3: #adc6ff;
+$blue-4: #85a5ff;
+$blue-5: #597ef7;
+$blue-6: #2f54eb;
+$blue-7: #1d39c4;
+$blue-8: #10239e;
+$blue-9: #061178;
+$blue-10: #030852;
+
+// Purple
+$purple-1: #f9f0ff;
+$purple-2: #efdbff;
+$purple-3: #d3adf7;
+$purple-4: #b37feb;
+$purple-5: #9254de;
+$purple-6: #722ed1;
+$purple-7: #531dab;
+$purple-8: #391085;
+$purple-9: #22075e;
+$purple-10: #120338;
+
+// Magenta — Use CSS custom properties for key tokens
+$magenta-1: var(--magenta-1);
+$magenta-2: #ffd6e7;
+$magenta-3: #ffadd2;
+$magenta-4: #ff85c0;
+$magenta-5: #f759ab;
+$magenta-6: #eb2f96;
+$magenta-7: #c41d7f;
+$magenta-8: #9e1068;
+$magenta-9: #780650;
+$magenta-10: #520339;

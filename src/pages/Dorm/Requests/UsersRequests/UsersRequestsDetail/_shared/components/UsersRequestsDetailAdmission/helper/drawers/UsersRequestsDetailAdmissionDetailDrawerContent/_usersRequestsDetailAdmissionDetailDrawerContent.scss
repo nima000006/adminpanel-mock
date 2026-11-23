@@ -1,0 +1,10 @@
+@use "../../../../../../../../../../../assets/styles/abstract/variables" as *;
+.users-requests-detail-admission-drawer-content-container {
+  @include flex-col($s-40);
+  .ant-statistic-content-value {
+    min-width: unset;
+  }
+  .admission-detail-level-of-action-tree {
+    @include body-regular;
+  }
+}

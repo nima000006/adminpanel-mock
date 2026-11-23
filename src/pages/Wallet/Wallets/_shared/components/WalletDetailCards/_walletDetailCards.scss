@@ -1,0 +1,26 @@
+@use "../../../../../../assets/styles/abstract/variables" as *;
+.wallet-detail-cards-container {
+  @include flex-col($s-8);
+  background-color: $black-03;
+  padding: $s-16;
+  border-radius: $s-16;
+  .title-container {
+    @include flex-gap($s-8);
+    align-items: center;
+    @include body-regular;
+    .icon-container {
+      max-width: $s-16;
+      max-height: $s-16;
+    }
+  }
+  .price-text {
+    @include h4-medium;
+  }
+  &.centered {
+    align-items: center;
+    text-align: center;
+    .title-container {
+      justify-content: center;
+    }
+  }
+}

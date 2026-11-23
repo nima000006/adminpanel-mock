@@ -1,0 +1,11 @@
+@use "../../../../../../../../assets/styles/abstract/variables" as *;
+.dorm-divider-extra-content-wrapper {
+  @include flex-gap($s-8);
+  @media (max-width: 700px) {
+    @include flex-col($s-12);
+  }
+  .divider-tag {
+    display: flex;
+    align-items: center;
+  }
+}

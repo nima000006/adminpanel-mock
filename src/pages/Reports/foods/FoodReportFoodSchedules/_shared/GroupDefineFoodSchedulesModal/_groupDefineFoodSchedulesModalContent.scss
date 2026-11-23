@@ -1,0 +1,17 @@
+@use "../../../../../assets/styles/abstract/variables" as *;
+.all-food-schedule-multi-select-modal-container {
+  @include flex-col($s-8);
+  .ant-radio-group-block {
+    @include flex-col($s-8);
+  }
+  .ant-radio-wrapper-rtl {
+    border-radius: 8px;
+    border: 1px solid $border-color-80;
+    background-color: var(--app-bg-layout);
+    padding: $s-16;
+  }
+  .ant-radio-wrapper-block {
+    @include body-regular;
+    justify-content: right;
+  }
+}

@@ -1,0 +1,7 @@
+@use "../../../../../../../../assets/styles/abstract/variables" as *;
+.tariff-inactive-pricing-tab-container {
+  @include flex-col($s-40);
+  .alert {
+    margin-top: $s-20;
+  }
+}

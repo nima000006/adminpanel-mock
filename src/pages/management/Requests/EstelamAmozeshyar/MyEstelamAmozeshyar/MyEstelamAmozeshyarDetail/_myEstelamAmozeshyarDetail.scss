@@ -1,0 +1,4 @@
+@use "../../../../../../assets/styles/abstract/variables" as *;
+.management-requests-my-estelam-amozeshyar-detail-container {
+  @include flex-col($s-40);
+}

@@ -1,0 +1,5 @@
+@use "../../../../../../../../../../../../../../../../assets/styles/abstract/variables"
+  as *;
+.unconfirmed-reservation-this-room-allocation-drawer-content-container {
+  @include flex-col($s-40);
+}

@@ -1,0 +1,20 @@
+@use "../../../../../../../assets/styles/abstract/variables" as *;
+.contracts-detail-description-container {
+  .tabs-container {
+    margin-top: $s-30;
+    .ant-tabs-nav-list {
+      .ant-tabs-tab {
+        @include body-regular;
+        background-color: transparent !important;
+        padding: $s-10 !important;
+        border: none !important;
+        margin: 0 !important;
+        border-bottom: 1px solid transparent !important;
+        &.ant-tabs-tab-active {
+          border: none !important;
+          border-bottom: 1px solid $primary-400 !important;
+        }
+      }
+    }
+  }
+}

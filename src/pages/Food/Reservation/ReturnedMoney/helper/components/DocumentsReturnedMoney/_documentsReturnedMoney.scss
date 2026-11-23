@@ -1,0 +1,16 @@
+@use "../../../../../../../assets/styles/abstract/variables" as *;
+.food-documents-return-money-container {
+  container-type: inline-size; // برای فعال سازی کوئری
+
+  @include flex-col($s-24);
+  .food-documents-return-money-btn-wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  @container (max-width: 140px) {
+    button span {
+      font-size: $s-8;
+    }
+  }
+}

@@ -1,0 +1,43 @@
+@use "../../../assets/styles/abstract/variables" as *;
+.range-time-pick-container {
+  .ant-form-item-label {
+    overflow: unset;
+    label {
+      &::after {
+        content: "";
+      }
+    }
+  }
+  label {
+    @include body-regular;
+    height: $s-22 !important;
+  }
+
+  .ant-form-item {
+    margin: 0;
+  }
+  .ant-form-item-explain-error {
+    color: var(--error-500);
+    font-family: "DanaFaNum";
+    font-style: normal;
+    font-weight: 500;
+    font-size: $s-12;
+    text-align: right;
+  }
+  .ant-form-item-has-error {
+    input {
+      border: 1px solid $danger-primary;
+    }
+  }
+  .ant-picker-input {
+    @include body-regular;
+  }
+}
+.ant-picker {
+  width: 100%;
+}
+
+.ant-picker-panel-layout {
+  @include body-regular;
+  border-radius: 6px;
+}

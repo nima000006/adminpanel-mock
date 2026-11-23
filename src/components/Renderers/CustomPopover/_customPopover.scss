@@ -1,0 +1,80 @@
+.custom-popover-overlay {
+  .ant-popover-inner {
+    padding: 0; // Reset padding to handle custom headers/footers
+    border-radius: 8px;
+    box-shadow:
+      0 3px 6px -4px rgba(0, 0, 0, 0.12),
+      0 6px 16px 0 rgba(0, 0, 0, 0.08),
+      0 9px 28px 8px rgba(0, 0, 0, 0.05);
+
+    .ant-popover-title {
+      padding: 12px 16px;
+      border-bottom: 1px solid #f0f0f0;
+      min-height: 48px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      .popover-header-title {
+        font-weight: 600;
+        font-size: 14px;
+        color: rgba(0, 0, 0, 0.88);
+      }
+
+      .popover-close-icon {
+        cursor: pointer;
+        color: rgba(0, 0, 0, 0.45);
+        transition: color 0.2s;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 4px;
+        border-radius: 4px;
+
+        &:hover {
+          color: rgba(0, 0, 0, 0.88);
+          background-color: rgba(0, 0, 0, 0.06);
+        }
+      }
+    }
+
+    .ant-popover-inner-content {
+      padding: 12px 16px;
+      color: rgba(0, 0, 0, 0.88);
+    }
+
+    // Custom Footer
+    .custom-popover-footer {
+      padding: 10px 16px;
+      border-top: 1px solid #f0f0f0;
+      text-align: right; // Standard for LTR/RTL actions? Usually actions are at the end.
+
+      // In RTL context (Samim), buttons usually go to the left or right depending on design system.
+      // Antd Modal footer aligns right by default in LTR.
+      // I'll assume standard flex-end behavior.
+      display: flex;
+      justify-content: flex-end;
+      gap: 8px;
+    }
+  }
+
+  // If no title is provided but close icon is requested
+  &.has-close-no-title {
+    .ant-popover-inner-content {
+      padding-top: 24px; // Make room for absolute positioned close icon
+    }
+
+    .popover-close-btn-absolute {
+      position: absolute;
+      top: 8px;
+      left: 8px; // RTL support might need checking
+      cursor: pointer;
+      z-index: 10;
+      color: rgba(0, 0, 0, 0.45);
+
+      &:hover {
+        color: rgba(0, 0, 0, 0.88);
+      }
+    }
+  }
+}

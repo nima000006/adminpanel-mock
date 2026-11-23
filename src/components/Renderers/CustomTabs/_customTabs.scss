@@ -1,0 +1,277 @@
+@use "../../../assets/styles/abstract/variables" as *;
+
+.custom-tabs-container {
+  width: 100%;
+
+  // Label with icon styling
+  .custom-tabs-label-with-icon {
+    display: inline-flex;
+    align-items: center;
+    gap: $s-8;
+  }
+
+  .custom-tabs-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: $s-16;
+  }
+
+  .custom-tabs-label-text {
+    @include body-regular;
+  }
+
+  .custom-tabs-badge-label {
+    display: inline-flex;
+    align-items: center;
+  }
+
+  // Badge styling
+  .custom-tabs-badge {
+    .ant-badge-count {
+      font-size: $s-10;
+      min-width: $s-16;
+      height: $s-16;
+      line-height: $s-16;
+    }
+  }
+
+  // Base tab styling
+  .ant-tabs-tab {
+    padding: $s-12 $s-16 !important;
+    margin: 0 !important;
+    transition: all 0.2s ease;
+
+    .ant-tabs-tab-btn {
+      @include body-regular;
+      color: $black-60;
+      transition: color 0.2s ease;
+    }
+
+    &:hover .ant-tabs-tab-btn {
+      color: $primary-400;
+    }
+
+    &.ant-tabs-tab-active .ant-tabs-tab-btn {
+      color: $primary-400;
+      font-weight: 500;
+    }
+
+    &.ant-tabs-tab-disabled .ant-tabs-tab-btn {
+      color: $border-color !important;
+      cursor: not-allowed;
+    }
+  }
+
+  // Tab bar styling
+  .ant-tabs-nav {
+    margin-bottom: $s-16;
+
+    &::before {
+      border-bottom-color: $border-color-80;
+    }
+  }
+
+  .ant-tabs-ink-bar {
+    background: $primary-400;
+    height: $s-2 !important;
+    border-radius: $s-2;
+  }
+
+  // ============================================
+  // VARIANT: Default (line)
+  // ============================================
+  &.custom-tabs-variant-default {
+    .ant-tabs-tab {
+      border-bottom: $s-2 solid transparent;
+    }
+  }
+
+  // ============================================
+  // VARIANT: Card
+  // ============================================
+  &.custom-tabs-variant-card {
+    .ant-tabs-tab {
+      background: $black-03;
+      border: $s-1 solid $border-color-80;
+      border-radius: $s-8 $s-8 0 0;
+      margin-inline-end: $s-4 !important;
+
+      &.ant-tabs-tab-active {
+        background: #fff;
+        border-bottom-color: #fff;
+      }
+    }
+
+    .ant-tabs-nav {
+      &::before {
+        border-bottom: $s-1 solid $border-color-80;
+      }
+    }
+
+    .ant-tabs-ink-bar {
+      display: none;
+    }
+  }
+
+  // ============================================
+  // VARIANT: Pills
+  // ============================================
+  &.custom-tabs-variant-pills {
+    .ant-tabs-nav {
+      &::before {
+        display: none;
+      }
+    }
+
+    .ant-tabs-tab {
+      background: $black-03;
+      border: $s-1 solid transparent;
+      border-radius: $s-24;
+      margin-inline-end: $s-8 !important;
+      padding: $s-8 $s-20 !important;
+
+      &:hover {
+        background: $information-100;
+        border-color: $primary-400;
+      }
+
+      &.ant-tabs-tab-active {
+        background: $primary-400;
+        border-color: $primary-400;
+
+        .ant-tabs-tab-btn {
+          color: #fff;
+        }
+      }
+    }
+
+    .ant-tabs-ink-bar {
+      display: none;
+    }
+  }
+
+  // ============================================
+  // VARIANT: Underline (minimal)
+  // ============================================
+  &.custom-tabs-variant-underline {
+    .ant-tabs-tab {
+      padding: $s-8 $s-4 !important;
+      margin-inline-end: $s-24 !important;
+      border-bottom: $s-2 solid transparent;
+
+      &.ant-tabs-tab-active {
+        border-bottom-color: $primary-400;
+      }
+    }
+
+    .ant-tabs-ink-bar {
+      display: none;
+    }
+  }
+
+  // ============================================
+  // SIZE VARIANTS
+  // ============================================
+  &.custom-tabs-size-small {
+    .ant-tabs-tab {
+      padding: $s-8 $s-12 !important;
+
+      .ant-tabs-tab-btn {
+        font-size: $s-12;
+      }
+    }
+
+    .custom-tabs-icon {
+      font-size: $s-14;
+    }
+  }
+
+  &.custom-tabs-size-large {
+    .ant-tabs-tab {
+      padding: $s-16 $s-24 !important;
+
+      .ant-tabs-tab-btn {
+        font-size: $s-16;
+      }
+    }
+
+    .custom-tabs-icon {
+      font-size: $s-18;
+    }
+  }
+
+  // ============================================
+  // FULL WIDTH
+  // ============================================
+  &.custom-tabs-full-width {
+    .ant-tabs-nav-list {
+      width: 100%;
+      display: flex;
+    }
+
+    .ant-tabs-tab {
+      flex: 1;
+      justify-content: center;
+    }
+  }
+
+  // ============================================
+  // RESPONSIVE
+  // ============================================
+  @media (max-width: 575px) {
+    .ant-tabs-tab {
+      padding: $s-8 $s-12 !important;
+    }
+
+    &.custom-tabs-variant-pills .ant-tabs-tab {
+      padding: $s-6 $s-14 !important;
+    }
+
+    .custom-tabs-label-with-icon {
+      gap: $s-4;
+    }
+  }
+
+  // ============================================
+  // TAB POSITIONS (vertical support)
+  // ============================================
+  &.ant-tabs-left,
+  &.ant-tabs-right {
+    .ant-tabs-tab {
+      margin-bottom: $s-8 !important;
+    }
+
+    &.custom-tabs-variant-pills .ant-tabs-tab {
+      border-radius: $s-8;
+    }
+  }
+
+  // ============================================
+  // EDITABLE CARD (closable tabs)
+  // ============================================
+  .ant-tabs-tab-remove {
+    margin-inline-start: $s-8;
+    color: $black-60;
+    font-size: $s-12;
+    transition: color 0.2s ease;
+
+    &:hover {
+      color: #ff4d4f;
+    }
+  }
+
+  // Add button styling
+  .ant-tabs-nav-add {
+    padding: $s-8 $s-12 !important;
+    border: $s-1 dashed $border-color-80;
+    border-radius: $s-8;
+    color: $black-60;
+    transition: all 0.2s ease;
+
+    &:hover {
+      color: $primary-400;
+      border-color: $primary-400;
+    }
+  }
+}

@@ -1,0 +1,21 @@
+export const ALL = "همه";
+export const REGISTERED = "ثبت شده";
+export const ADDITIONAL_RESEARCH = "تحقیقات تکمیلی (اتهام)";
+export const UNDERSTANDING = "تفهیم";
+export const READY_MEETING = "آماده جلسه";
+export const PRIMARY_COMMITTEE = "کمیته بدوی";
+export const APPEALS_COMMITTEE = "کمیته تجدید نظر";
+export const CENTRAL_COMMITTEE = "کمیته مرکزی";
+export const DEFINITIVE_VOTES = "آرای قطعی";
+export const PERFORMED = "اجرا شده";
+
+export const ALL_CODE = "ALL";
+export const REGISTERED_CODE = "REGISTERED";
+export const ADDITIONAL_RESEARCH_CODE = 12;
+export const UNDERSTANDING_CODE = 9;
+export const READY_MEETING_CODE = 10;
+export const PRIMARY_COMMITTEE_CODE = "PRIMARY-COMMITTEE";
+export const APPEALS_COMMITTEE_CODE = "APPEALS-COMMITTEE";
+export const CENTRAL_COMMITTEE_CODE = 13;
+export const DEFINITIVE_VOTES_CODE = "DEFINITIVE-VOTES";
+export const PERFORMED_CODE = "PERFORMED";

@@ -1,0 +1,6 @@
+@use "../../../../../../../../../assets/styles/abstract/variables" as *;
+.insured-bank-info-container {
+  display: flex;
+  flex-direction: column;
+  gap: $s-24;
+}

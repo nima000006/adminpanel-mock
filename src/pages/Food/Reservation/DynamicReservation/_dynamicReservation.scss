@@ -1,0 +1,115 @@
+@use "../../../../assets/styles/abstract/variables" as *;
+.fall-back-text {
+  @include body-regular;
+}
+.food-scan-delivery-detail-container {
+  font-family: DanaFaNum !important;
+  .header-drawer-container {
+    padding: 2rem 0;
+  }
+  .right-side {
+    width: 100%;
+    padding: 0 !important;
+    .ant-breadcrumb {
+      font-family: DanaFaNum;
+      font-size: 12px;
+    }
+  }
+  .deliver-detail-page-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem !important;
+  }
+  .badge-ribbon-food-delivered {
+    @include body-regular;
+  }
+  .custom-food-detail-card {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    @include body-regular;
+    border: 1px solid var(--app-bg-layout);
+    border-radius: 12px;
+    .top-bar-info {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      background-color: var(--app-bg-container);
+      //   border-radius: 12px;
+      border-top-right-radius: 12px;
+      border-top-left-radius: 12px;
+      border-bottom: 1px solid var(--app-bg-layout);
+
+      padding: 1rem;
+      .date {
+        color: var(--app-text);
+      }
+      .self-name {
+        color: var(--app-text);
+        font-weight: bold;
+      }
+      .count-container {
+        display: flex;
+        gap: 8px;
+        .title {
+          color: var(--app-text);
+        }
+        .count {
+          font-weight: bold;
+        }
+      }
+      .tags {
+        display: flex;
+        margin-top: 8px;
+        gap: 2px;
+      }
+    }
+    .bottom-bar-info {
+      padding: 1rem;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      .name-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .label {
+          color: var(--app-text);
+        }
+        .value-direction {
+          direction: ltr;
+        }
+      }
+      .dismiss-btn {
+        margin-top: 1.2rem;
+      }
+      .bottom-bar-divider {
+        margin: 10px !important;
+      }
+    }
+  }
+  .order-number {
+    @include body-regular;
+    color: var(--app-text);
+    text-align: center;
+  }
+  .ant-btn-icon {
+    height: 100%;
+  }
+  .text-info {
+    display: flex;
+    flex-direction: column;
+    gap: $s-8;
+    text-align: center;
+    @include body-regular;
+  }
+  .image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .empty-image {
+    width: 12rem;
+  }
+}

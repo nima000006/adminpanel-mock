@@ -1,0 +1,10 @@
+@use "../../../../../../../../../../assets/styles/abstract/variables" as *;
+.dorm-habitant-content-resident-info-drawer-container {
+  .image-container {
+    @include flex-center;
+    gap: $s-16;
+    img {
+      max-width: 100%;
+    }
+  }
+}

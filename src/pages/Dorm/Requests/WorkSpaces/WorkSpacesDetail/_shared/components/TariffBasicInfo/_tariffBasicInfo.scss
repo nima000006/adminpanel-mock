@@ -1,0 +1,7 @@
+@use "../../../../../../.././../assets/styles/abstract/variables" as *;
+.work-spaces-tariff-basic-info-container {
+  @include flex-col($s-24);
+  .divider-main span {
+    font-size: $s-20;
+  }
+}

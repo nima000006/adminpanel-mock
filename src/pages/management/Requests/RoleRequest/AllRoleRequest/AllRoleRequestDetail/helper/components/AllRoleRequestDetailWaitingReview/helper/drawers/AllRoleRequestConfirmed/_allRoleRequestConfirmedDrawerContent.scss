@@ -1,0 +1,9 @@
+@use "../../../../../../../../../../../../assets/styles/abstract/variables" as *;
+.all-role-request-confirmed-drawer-content-container {
+  .action-btn-container {
+    @include flex-gap($s-12);
+  }
+  .body-container {
+    @include flex-col($s-24);
+  }
+}

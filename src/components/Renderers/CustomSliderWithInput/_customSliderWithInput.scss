@@ -1,0 +1,9 @@
+.custom-slider-with-input-container {
+  .ant-row {
+    align-items: flex-end;
+  }
+  .custom-slider {
+    margin: 0 $s-16;
+    @include body-regular;
+  }
+}

@@ -1,0 +1,4 @@
+@use "../../../../../../../assets/styles/abstract/variables" as *;
+.dorm-pricing-tab-container {
+  @include flex-col($s-16);
+}

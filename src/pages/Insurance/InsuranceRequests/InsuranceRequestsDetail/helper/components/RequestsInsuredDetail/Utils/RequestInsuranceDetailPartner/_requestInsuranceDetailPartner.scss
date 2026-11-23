@@ -1,0 +1,7 @@
+@use "../../../../../../../../../assets/styles/abstract/variables" as *;
+.request-insurance-detail-partner-container {
+  padding: $s-16;
+  display: flex;
+  flex-direction: column;
+  gap: $s-40;
+}

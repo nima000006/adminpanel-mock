@@ -1,0 +1,12 @@
+@use "../../../../../../assets/styles/abstract/variables" as *;
+.business-base-content-container {
+  padding-top: $s-28;
+  .business-base-action-bar-container {
+    padding: $s-16 $s-8;
+    button {
+      @include flex-center;
+      flex-direction: row-reverse;
+      gap: $s-8;
+    }
+  }
+}

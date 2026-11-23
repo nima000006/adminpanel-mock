@@ -1,0 +1,356 @@
+// ABSTRACTS
+@forward "./abstract/_variables";
+@use "./abstract/_typography" as *;
+@use "./abstract/_variables" as *;
+@use "./abstract/_reset" as *;
+@use "./abstract/_base" as *;
+@use "./abstract/_generalClasses" as *;
+
+// ============================================================================
+// ANT DESIGN V6 GLOBAL FIXES (THEME AWARE)
+// ============================================================================
+// Critical CSS to ensure Ant Design v6 components display correctly.
+// Modified to use CSS Variables for Dark Mode compatibility.
+
+// Remove background from sticky of table
+.tables-sticky-column-left {
+  background: var(--app-bg-container) !important;
+}
+
+.ant-table-thead {
+  th {
+    background: var(--app-bg-layout) !important;
+    color: var(--app-text) !important;
+    border-bottom: 1px solid var(--app-border) !important;
+  }
+}
+
+// Force proper button text colors in v6
+.ant-btn-primary {
+  color: #ffffff !important; // White text on primary button
+  span {
+    color: #ffffff !important;
+  }
+  &:disabled {
+    color: var(--app-text-placeholder) !important;
+    span {
+      color: var(--app-text-placeholder) !important;
+    }
+  }
+}
+
+.ant-btn-default:not(.ant-btn-dangerous) {
+  color: var(--app-text) !important; // Dark text on default button
+  border-color: var(--app-border) !important;
+  background-color: var(--app-bg-container) !important;
+
+  span {
+    color: var(--app-text) !important;
+  }
+  &:hover {
+    color: var(--app-primary) !important;
+    border-color: var(--app-primary) !important;
+    span {
+      color: var(--app-primary) !important;
+    }
+  }
+  &:disabled {
+    color: var(--app-text-disabled) !important;
+    border-color: var(--app-border-disabled) !important;
+    background-color: var(--app-bg-disabled) !important;
+    span {
+      color: var(--app-text-disabled) !important;
+    }
+  }
+}
+
+.ant-btn-link {
+  color: var(--app-primary) !important; // Blue text for link buttons
+  span {
+    color: var(--app-primary) !important;
+  }
+  &.ant-btn-dangerous {
+    color: var(--app-error) !important;
+    span {
+      color: var(--app-error) !important;
+    }
+  }
+  &:disabled {
+    color: var(--app-text-disabled) !important;
+    span {
+      color: var(--app-text-disabled) !important;
+    }
+  }
+}
+
+// Fix ghost button text visibility - v6 uses ant-btn-background-ghost
+.ant-btn-background-ghost:not(:disabled),
+.ant-btn-ghost:not(:disabled) {
+  color: var(--app-primary) !important; // Primary color for ghost button text
+  border-color: var(--app-primary) !important;
+  background: transparent !important;
+  span {
+    color: var(--app-primary) !important;
+  }
+
+  &:hover,
+  &:focus {
+    color: var(--app-primary-hover) !important;
+    border-color: var(--app-primary-hover) !important;
+    span {
+      color: var(--app-primary-hover) !important;
+    }
+  }
+
+  &.ant-btn-dangerous {
+    color: var(--app-error) !important;
+    border-color: var(--app-error) !important;
+    span {
+      color: var(--app-error) !important;
+    }
+  }
+}
+
+// Also handle primary ghost buttons specifically
+.ant-btn-primary.ant-btn-background-ghost:not(:disabled) {
+  color: var(--app-primary) !important;
+  span {
+    color: var(--app-primary) !important;
+  }
+}
+
+// Force proper input text colors in v6
+.ant-input,
+.ant-input:focus,
+.ant-input:hover,
+.ant-input-affix-wrapper input,
+.ant-input-number-input,
+.ant-select-selection-search-input,
+.ant-picker-input > input,
+textarea.ant-input {
+  color: var(--app-text) !important; // Dark text for all states
+  -webkit-text-fill-color: var(--app-text) !important; // Override autofill
+  // background-color: var(--app-bg-container);
+
+  &::placeholder {
+    color: var(--app-text-placeholder) !important; // Faded gray placeholder
+    opacity: 0.6 !important; // Make it more subtle
+  }
+}
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+select:-webkit-autofill {
+  -webkit-text-fill-color: var(--app-text) !important;
+  -webkit-box-shadow: 0 0 0 1000px var(--app-bg-container) inset !important;
+  box-shadow: 0 0 0 1000px var(--app-bg-container) inset !important;
+  transition: background-color 9999s ease-in-out 0s;
+}
+
+// Ensure typed text in affix wrapper inputs is visible
+.ant-input-affix-wrapper {
+  background-color: var(--app-bg-container);
+  border-color: var(--app-border);
+  input {
+    color: var(--app-text) !important;
+    -webkit-text-fill-color: var(--app-text) !important;
+    background-color: transparent !important;
+  }
+}
+
+// Ensure Select dropdown text is visible
+.ant-select-item-option-content {
+  color: var(--app-text) !important;
+}
+
+.ant-select-selection-item {
+  color: var(--app-text) !important;
+}
+
+.ant-select-selector {
+  background-color: var(--app-bg-container) !important;
+  border-color: var(--app-border) !important;
+  color: var(--app-text) !important;
+}
+
+// Ensure form labels are visible
+.ant-form-item-label > label {
+  color: var(--app-text) !important;
+}
+
+// Add spacing between table and pagination
+.ant-table-pagination {
+  margin-top: 16px !important;
+  margin-bottom: 8px !important;
+}
+
+.MuiPopper-root {
+  .MuiTypography-root {
+    font-family: "DanaFaNum" !important;
+  }
+}
+.ant-table-cell {
+  @include subtitle3;
+  font-size: $s-14;
+}
+.ant-pagination-item {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  background-color: var(--app-bg-container) !important;
+  border-color: var(--app-border) !important;
+
+  a {
+    @include subtitle3;
+    color: var(--app-text) !important;
+  }
+
+  &-active {
+    background-color: var(--app-bg-container) !important;
+    border-color: var(--app-primary) !important;
+    a {
+      color: var(--app-primary) !important;
+    }
+  }
+}
+
+.ant-select-selection-item {
+  @include subtitle3;
+}
+.ant-select-item-option-content {
+  @include subtitle2;
+}
+
+.ant-table-cell {
+  .waiting-time-container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: row;
+    gap: $s-8;
+    .waiting-time {
+      width: 2.25rem;
+      height: 1.125rem;
+      border-radius: 10px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+  // Colors kept explicit for status badges (usually white text is correct)
+  .green {
+    background-color: var(--app-success);
+    color: #fff;
+  }
+  .yellow {
+    background-color: var(--app-warning);
+    color: #fff;
+  }
+  .red {
+    background-color: var(--app-error);
+    color: #fff;
+  }
+}
+.ant-menu-title-content {
+  @include body-regular;
+}
+.ant-layout {
+  background-color: var(--app-bg-layout) !important;
+}
+.ant-modal-scrollbar-vertical {
+  z-index: 99999999999; /* Adjust this value as needed */
+}
+.ant-table-container::after {
+  box-shadow: none !important;
+}
+.ant-table-container::before {
+  box-shadow: none !important;
+}
+.Toastify {
+  font-weight: 400;
+  direction: rtl;
+}
+.Toastify__toast {
+  border-radius: 6px;
+}
+// Keeping Toast colors explicit as they are alert statuses
+.Toastify__toast--error {
+  background-color: #fff2f0;
+  color: #000;
+  border: 1px solid #ffccc7;
+}
+.Toastify__toast--success {
+  background-color: #f6ffed;
+  border: 1px solid #b7eb8f;
+}
+.Toastify__toast--warning {
+  background-color: #fffbe6;
+  border: 1px solid #ffe58f;
+}
+.Toastify__toast--info {
+  background-color: #e6f4ff;
+  border: 1px solid #91caff;
+}
+
+.Toastify__toast {
+  @include body-regular;
+  @media (max-width: 480px) {
+    margin: 1rem;
+  }
+}
+
+.action-bar-container {
+  margin: 1rem 0;
+}
+
+.ant-menu-submenu-vertical {
+  .ant-menu-submenu-arrow {
+    &:before {
+      transform: rotate(-45deg) translateY(-2.5px) !important;
+    }
+    &:after {
+      transform: rotate(45deg) translateY(2.5px) !important;
+    }
+  }
+}
+.ant-btn {
+  @include body-regular;
+}
+
+.ant-table-tbody {
+  .ant-table-placeholder {
+    position: relative;
+    height: 392px;
+  }
+}
+.ant-table-expanded-row-fixed::after {
+  display: none;
+}
+
+.ant-pagination-next {
+  display: flex !important;
+  align-items: center !important;
+  button {
+    color: var(--app-text) !important;
+  }
+}
+.ant-pagination-prev {
+  display: flex !important;
+  align-items: center !important;
+  button {
+    color: var(--app-text) !important;
+  }
+}
+.ant-menu-submenu {
+  z-index: 999;
+}
+.ant-table-cell {
+  color: var(--app-text);
+}
+.ant-tooltip-container {
+  z-index: 1000;
+}
+.ant-select-dropdown {
+  z-index: 1051;
+}

@@ -1,0 +1,39 @@
+@use "../../../../assets/styles/abstract/variables" as *;
+
+.overview-breadcrumb-title {
+  color: var(--app-text);
+}
+.overview-information-container {
+  container-type: inline-size;
+
+  .tabs-container {
+    margin-top: $s-30;
+    .ant-tabs-nav-list {
+      .ant-tabs-tab {
+        @include body-regular;
+        background-color: transparent !important;
+        padding: $s-10;
+        margin: 0 !important;
+      }
+    }
+  }
+
+  @container (max-width: 140px) {
+    .custom-card {
+      font-size: $s-8;
+    }
+
+    .custom-card-body {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .custom-button span {
+      font-size: $s-8;
+    }
+
+    .ant-select {
+      max-width: 90px;
+    }
+  }
+}

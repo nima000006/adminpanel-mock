@@ -1,0 +1,29 @@
+@use "../../../assets/styles/abstract/variables" as *;
+
+.dorm-info-container {
+  border-radius: 20px;
+  background: $white;
+  display: flex;
+  padding: $s-40;
+  flex-direction: column;
+  align-items: flex-start;
+
+  gap: $s-8;
+  .dorm-info-label {
+    @include h5-bold;
+    color: $black-60;
+  }
+  .dorm-info-top-section {
+    margin: $s-16 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: $s-32;
+  }
+  .dorm-info-bottom-section {
+    width: 100%;
+    display: flex;
+    gap: $s-32;
+  }
+}

@@ -1,0 +1,145 @@
+{
+	"Print to console with key": {
+		"prefix": "klog",
+		"body": [
+			"console.log('$1',$2);",
+			"$3"
+		],
+		"description": "Log output to console with key"
+	},
+	"Print object to console": {
+		"prefix": "olog",
+		"body": [
+			"console.log({$1});",
+			"$2"
+		],
+		"description": "Log object output to console"
+	},
+	"initial Request Comment": {
+		"prefix": "apicallcm",
+		"body": [
+			"//? ================================ ${1:} Api Calls ================================"
+		],
+		"description": "Insert Api calls comment"
+	},
+	"on success request Comment": {
+		"prefix": "successcm",
+		"body": [
+			"//* ================================ ${1:On Request Success} ================================"
+		],
+		"description": "on success request Comment"
+	},
+	"Effects Comment": {
+		"prefix": "effectcm",
+		"body": [
+			"//? ================================ ${1:Effects} ================================"
+		],
+		"description": "effect Comment"
+	},
+	"function comment": {
+		"prefix": "utilcm",
+		"body": [
+			"//* ================================ ${1:Util Functions} ================================"
+		],
+		"description": "util Comment"
+	},
+	"Js div Comment": {
+		"prefix": "jsdivcm",
+		"body": [
+			"/* ---------------------------------- ${1:SECTION TITLE} ---------------------------------- */"
+		],
+		"description": "Insert a section comment"
+	},
+	"Section Comment": {
+		"prefix": "divcm",
+		"body": [
+			"{/* ---------------------------------- ${1:SECTION TITLE} ---------------------------------- */}"
+		],
+		"description": "Insert a section comment"
+	},
+	"Star Block Comment": {
+		"prefix": "starcm",
+		"body": [
+			"{/* *******************************************",
+			" *             ${1:SECTION TITLE}                 *",
+			" ******************************************* */}"
+		],
+		"description": "Insert a star comment with stars"
+	},
+	"Double Line Divider": {
+		"prefix": "doubledivcm",
+		"body": [
+			"{/* ================================ ${1:SECTION TITLE} ================================ */}",
+		],
+		"description": "Insert a double line divider comment"
+	},
+	"Error handling comment": {
+		"prefix": "errorcm",
+		"body": [
+			"//! ============================ Error Handling ============================",
+		],
+		"description": "Insert Error comment"
+	},
+	"Main Section Comment": {
+		"prefix": "maincm",
+		"body": [
+			"{/* //* ▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲ Main TSX ▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲ */}"
+		],
+		"description": "Insert Main section comment"
+	},
+	"Boxed Section Comment": {
+		"prefix": "boxedcm",
+		"body": [
+			"{/*╔═══════════════════════════════════════════════════════════════════════════╗",
+			"   ║                          ${1:SECTION TITLE}                             ",
+			"   ╚═══════════════════════════════════════════════════════════════════════════╝ */}"
+		],
+		"description": "Insert a boxed section comment"
+	},
+	"Hashtag Divider": {
+		"prefix": "hashtagcm",
+		"body": [
+			"{/* #################################################################################### ",
+			" ###                                    ${1:SECTION TITLE}                                ### ",
+			" ####################################################################################### */}"
+		],
+		"description": "Insert a hashtag divider comment"
+	},
+	"Tilde Arrow Combo": {
+		"prefix": "fancycm",
+		"body": [
+			"{/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~>>>> ${1:SECTION TITLE} <<<<~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */}"
+		],
+		"description": "Insert a tilde and arrow combination"
+	},
+	"Triangle Marker": {
+		"prefix": "triangcm",
+		"body": [
+			"{/* ▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲",
+			" ▲                     ${1:SECTION TITLE}                     ▲ ",
+			" ▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲ */}"
+		],
+		"description": "Insert a triangle marker comment"
+	},
+	"Html comment inline": {
+		"prefix": "htmlinlinecm",
+		"body": [
+			"<!-- ---------------------------------- ${1:SECTION TITLE} ---------------------------------- -->"
+		],
+		"description": "Inserthtml inline comment"
+	},
+	"Boxed html Section Comment": {
+		"prefix": "htmlboxedcm",
+		"body": [
+			"<!-- ╔═══════════════════════════════════════════════════════════════════════════╗",
+			"<!-- ║                          ${1:SECTION TITLE}                             ║",
+			"<!-- ╚═══════════════════════════════════════════════════════════════════════════╝ -->"
+		],
+		"description": "Insert a boxed section comment"
+	},
+	"Todo": {
+		"prefix": "todocm",
+		"body": "// Todo[${1:SECTION TITLE}]: ${2:MAIN TITLE}",
+		"description": "our todo commenting style comment"
+	},
+}

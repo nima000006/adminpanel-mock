@@ -1,0 +1,40 @@
+@use "../../../../../assets/styles/abstract/variables" as *;
+.committee-new-general-punishment-page-container {
+  background-color: var(--app-bg-container);
+  padding: $s-20;
+  border-radius: 10px;
+  .new-general-punishment-content {
+    border: 1px solid $border-color-90;
+    border-radius: 10px;
+    padding: $s-16;
+    display: flex;
+    flex-direction: column;
+    gap: $s-16;
+    .grid-cols-3 {
+      display: flex;
+      flex-direction: column;
+      gap: $s-12;
+      // grid-template-columns: repeat(3, 1fr);
+      // .ant-col {
+      //   width: 100%;
+      //   text-align: right;
+      // }
+    }
+  }
+  .btn-wrapper {
+    @include flex-gap($s-12);
+    margin-top: $s-24;
+    .btn {
+      cursor: pointer;
+      @include body-regular;
+    }
+  }
+  .ant-form-item-row {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .text-area-container {
+    margin-top: $s-24;
+  }
+}

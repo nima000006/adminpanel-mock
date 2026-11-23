@@ -1,0 +1,4 @@
+@use "../../../../../../../../../../../../assets/styles/abstract/variables" as *;
+.pending-review-relocation-requests-container {
+  @include flex-col($s-40);
+}

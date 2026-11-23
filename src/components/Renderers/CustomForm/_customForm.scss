@@ -1,0 +1,413 @@
+@use "../../../assets/styles/abstract/variables" as *;
+
+// ─────────────────────────────────────────────────────────────────────────────
+// Variables
+// ─────────────────────────────────────────────────────────────────────────────
+
+$form-gap-small: 12px;
+$form-gap-medium: 16px;
+$form-gap-large: 24px;
+
+$form-label-color: var(--color-text-primary, #333);
+$form-help-color: var(--color-text-secondary, #666);
+$form-error-color: var(--color-error, #ff4d4f);
+$form-warning-color: var(--color-warning, #faad14);
+$form-success-color: var(--color-success, #52c41a);
+
+$form-disabled-opacity: 0.65;
+$form-loading-overlay-bg: rgba(255, 255, 255, 0.6);
+
+// ─────────────────────────────────────────────────────────────────────────────
+// Mixins
+// ─────────────────────────────────────────────────────────────────────────────
+
+@mixin form-size($margin-bottom, $font-size) {
+  .ant-form-item {
+    margin-bottom: $margin-bottom;
+
+    .ant-form-item-label {
+      label {
+        font-size: $font-size;
+      }
+    }
+  }
+}
+
+// ─────────────────────────────────────────────────────────────────────────────
+// Base Styles
+// ─────────────────────────────────────────────────────────────────────────────
+
+.custom-form {
+  position: relative;
+  width: 100%;
+
+  // Reset antd form item bottom margin for last item
+  .ant-form-item:last-child {
+    margin-bottom: 0;
+  }
+
+  // Label styling
+  .ant-form-item-label {
+    > label {
+      color: $form-label-color;
+      font-weight: 500;
+
+      &.ant-form-item-required {
+        &::before {
+          color: $form-error-color !important;
+        }
+      }
+    }
+  }
+
+  // Help text
+  .ant-form-item-explain {
+    font-size: 12px;
+    color: $form-help-color;
+    min-height: 22px;
+
+    &-error {
+      color: $form-error-color;
+    }
+
+    &-warning {
+      color: $form-warning-color;
+    }
+
+    &-success {
+      color: $form-success-color;
+    }
+  }
+
+  // Extra text styling
+  .ant-form-item-extra {
+    font-size: 12px;
+    color: $form-help-color;
+    margin-top: 4px;
+  }
+}
+
+// ─────────────────────────────────────────────────────────────────────────────
+// Layout Presets
+// ─────────────────────────────────────────────────────────────────────────────
+
+.custom-form--layout-horizontal {
+  .ant-form-item {
+    margin-bottom: $form-gap-medium;
+  }
+
+  // RTL support for horizontal layout
+  [dir="rtl"] &,
+  &[dir="rtl"] {
+    .ant-form-item-label {
+      text-align: right;
+    }
+  }
+}
+
+.custom-form--layout-vertical {
+  .ant-form-item {
+    margin-bottom: $form-gap-medium;
+  }
+
+  .ant-form-item-label {
+    padding-bottom: 4px;
+
+    > label {
+      height: auto;
+    }
+  }
+}
+
+.custom-form--layout-inline {
+  display: flex;
+  flex-wrap: wrap;
+  gap: $form-gap-small;
+
+  .ant-form-item {
+    margin-bottom: 0;
+    margin-inline-end: 0;
+  }
+}
+
+.custom-form--layout-compact {
+  .ant-form-item {
+    margin-bottom: 0;
+  }
+
+  // Use Row/Col gap instead of margin
+  .ant-row {
+    > .ant-col {
+      .ant-form-item {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+// ─────────────────────────────────────────────────────────────────────────────
+// Size Variants
+// ─────────────────────────────────────────────────────────────────────────────
+
+.custom-form--size-small {
+  @include form-size($form-gap-small, 12px);
+
+  .ant-form-item-label {
+    padding-bottom: 2px;
+  }
+}
+
+.custom-form--size-middle {
+  @include form-size($form-gap-medium, 14px);
+
+  .ant-form-item-label {
+    padding-bottom: 4px;
+  }
+}
+
+.custom-form--size-large {
+  @include form-size($form-gap-large, 16px);
+
+  .ant-form-item-label {
+    padding-bottom: 6px;
+  }
+}
+
+// ─────────────────────────────────────────────────────────────────────────────
+// Variant Styles
+// ─────────────────────────────────────────────────────────────────────────────
+
+.custom-form--variant-outlined {
+  // Default antd styling - uses standard outlined inputs
+  .ant-input,
+  .ant-select-selector,
+  .ant-picker,
+  .ant-input-number {
+    border-style: solid;
+  }
+}
+
+.custom-form--variant-borderless {
+  .ant-input,
+  .ant-select-selector,
+  .ant-picker,
+  .ant-input-number {
+    border-color: transparent !important;
+    background-color: transparent !important;
+
+    &:hover,
+    &:focus {
+      border-color: transparent !important;
+      background-color: var(--color-bg-hover, #f5f5f5) !important;
+    }
+  }
+}
+
+.custom-form--variant-filled {
+  .ant-input,
+  .ant-select-selector,
+  .ant-picker,
+  .ant-input-number {
+    background-color: var(--color-bg-filled, #f5f5f5) !important;
+    border-color: transparent !important;
+
+    &:hover {
+      background-color: var(--color-bg-hover, #e6e6e6) !important;
+    }
+
+    &:focus,
+    &:focus-within {
+      background-color: var(--color-bg-filled, #f5f5f5) !important;
+      border-color: var(--color-primary, #1890ff) !important;
+    }
+  }
+}
+
+.custom-form--variant-underlined {
+  .ant-input,
+  .ant-select-selector,
+  .ant-picker,
+  .ant-input-number {
+    border-radius: 0 !important;
+    border-top: none !important;
+    border-left: none !important;
+    border-right: none !important;
+    border-bottom: 1px solid var(--color-border, #d9d9d9) !important;
+    background-color: transparent !important;
+
+    &:hover {
+      border-bottom-color: var(--color-primary, #1890ff) !important;
+    }
+
+    &:focus,
+    &:focus-within {
+      border-bottom-color: var(--color-primary, #1890ff) !important;
+      box-shadow: 0 1px 0 0 var(--color-primary, #1890ff) !important;
+    }
+  }
+}
+
+// ─────────────────────────────────────────────────────────────────────────────
+// State Styles
+// ─────────────────────────────────────────────────────────────────────────────
+
+.custom-form--disabled {
+  opacity: $form-disabled-opacity;
+  pointer-events: none;
+
+  .ant-form-item-label > label {
+    cursor: not-allowed;
+  }
+}
+
+.custom-form--loading {
+  pointer-events: none;
+
+  > *:not(.custom-form__loading-overlay) {
+    opacity: $form-disabled-opacity;
+  }
+}
+
+// ─────────────────────────────────────────────────────────────────────────────
+// Loading Overlay
+// ─────────────────────────────────────────────────────────────────────────────
+
+.custom-form__loading-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: $form-loading-overlay-bg;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+  border-radius: 4px;
+}
+
+.custom-form__loading-spinner {
+  width: 32px;
+  height: 32px;
+  border: 3px solid var(--color-primary-light, #e6f7ff);
+  border-top-color: var(--color-primary, #1890ff);
+  border-radius: 50%;
+  animation: form-spin 0.8s linear infinite;
+}
+
+@keyframes form-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+// ─────────────────────────────────────────────────────────────────────────────
+// Form Item Styles
+// ─────────────────────────────────────────────────────────────────────────────
+
+.custom-form-item {
+  &--no-label {
+    .ant-form-item-label {
+      display: none;
+    }
+  }
+}
+
+// ─────────────────────────────────────────────────────────────────────────────
+// RTL Support
+// ─────────────────────────────────────────────────────────────────────────────
+
+[dir="rtl"] {
+  .custom-form {
+    // Required mark position for RTL
+    .ant-form-item-label {
+      > label {
+        &.ant-form-item-required {
+          &::before {
+            margin-inline-start: 0;
+            margin-inline-end: 4px;
+          }
+        }
+      }
+    }
+
+    // Error message alignment
+    .ant-form-item-explain {
+      text-align: right;
+    }
+
+    // Inline layout RTL gap
+    &--layout-inline {
+      .ant-form-item {
+        margin-inline-start: 0;
+      }
+    }
+  }
+}
+
+// ─────────────────────────────────────────────────────────────────────────────
+// Responsive Adjustments
+// ─────────────────────────────────────────────────────────────────────────────
+
+@media (max-width: 576px) {
+  .custom-form--layout-horizontal {
+    // Convert to vertical on mobile
+    .ant-form-item {
+      flex-direction: column;
+
+      .ant-form-item-label {
+        text-align: start;
+        flex: none;
+        width: 100%;
+      }
+
+      .ant-form-item-control {
+        flex: none;
+        width: 100%;
+      }
+    }
+  }
+
+  .custom-form--layout-inline {
+    flex-direction: column;
+
+    .ant-form-item {
+      width: 100%;
+    }
+  }
+}
+
+// ─────────────────────────────────────────────────────────────────────────────
+// Animation for validation feedback
+// ─────────────────────────────────────────────────────────────────────────────
+
+.custom-form {
+  .ant-form-item-explain {
+    animation: form-error-appear 0.2s ease-out;
+  }
+}
+
+@keyframes form-error-appear {
+  from {
+    opacity: 0;
+    transform: translateY(-4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+// ─────────────────────────────────────────────────────────────────────────────
+// Integration with existing custom inputs
+// ─────────────────────────────────────────────────────────────────────────────
+
+.custom-form {
+  // Reset nested custom input containers margin
+  .custom-input-container,
+  .custom-select-container {
+    .ant-form-item {
+      margin-bottom: 0;
+    }
+  }
+}

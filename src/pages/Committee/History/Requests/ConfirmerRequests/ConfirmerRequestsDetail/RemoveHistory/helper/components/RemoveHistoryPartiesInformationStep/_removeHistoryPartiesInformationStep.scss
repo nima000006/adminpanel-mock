@@ -1,0 +1,38 @@
+@use "../../../../../../../../../../assets/styles/abstract/variables" as *;
+.remove-history-parties-info-step-container {
+  @include flex-gap($s-35);
+  flex-direction: column;
+  .around-box {
+    padding: $s-24;
+    border-radius: 10px;
+    border: $border-1 solid $border-color-90;
+  }
+  .plaintiff-item-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: $s-32;
+    .ant-collapse-expand-icon {
+      position: absolute;
+      left: 0;
+      border-radius: 50%;
+      .collapse-icon {
+        font-size: $s-18;
+      }
+    }
+    .reporter-info-items-container {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: $s-12;
+      @media (max-width: 1200px) {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      @media (max-width: 600px) {
+        grid-template-columns: repeat(1, 1fr);
+      }
+    }
+  }
+  .button-wrapper {
+    display: flex;
+    justify-content: flex-end;
+  }
+}

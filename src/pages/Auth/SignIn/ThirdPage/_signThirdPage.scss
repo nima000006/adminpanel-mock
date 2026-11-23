@@ -1,0 +1,27 @@
+@use "../../../../assets/styles/abstract/variables" as *;
+.signin-auth-third-page-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+
+  .signin-auth-title-wrapper {
+    margin-bottom: $s-24;
+  }
+
+  .auth-signin-form-content-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+
+    .btn-wrapper {
+      @include flex-col($s-8);
+      .ant-btn-background-ghost {
+        border: none;
+      }
+      .ant-btn-icon {
+        display: flex;
+      }
+    }
+  }
+}

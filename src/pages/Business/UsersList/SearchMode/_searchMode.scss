@@ -1,0 +1,59 @@
+@use "../../../../assets/styles/abstract/variables" as *;
+.advanced-filter-container {
+  width: 100%;
+  padding: $s-24;
+  display: flex;
+  flex-direction: column;
+  gap: $s-25;
+  max-width: 75%;
+  margin: 0 auto;
+  @media (max-width: 850px) {
+    max-width: 80%;
+  }
+  @media (max-width: 750px) {
+    max-width: 90%;
+  }
+  @media (max-width: 700px) {
+    max-width: 95%;
+  }
+  .title {
+    @include body-regular;
+    color: $title-black;
+    text-align: center;
+  }
+  .gary-title {
+    color: $character-secondary-45;
+  }
+  .filter-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: $s-12;
+    width: 100%;
+    @media (max-width: 550px) {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    .select-container {
+      //Todo[atefeh]:change to 100%
+      //   max-width: 50%;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: $s-4;
+      label {
+        @include body-regular;
+        color: $title-black;
+      }
+    }
+  }
+}
+.user-info-container {
+  display: flex;
+  flex-direction: column;
+  gap: $s-12;
+  .advance-filter-btn {
+    margin-top: $s-16;
+  }
+}

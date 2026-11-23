@@ -1,0 +1,7 @@
+@use "../../../../../../../../../../../assets/styles/abstract/variables" as *;
+.dorm-user-request-admission-table-field {
+  @include flex-gap($s-10);
+  .question-mark {
+    color: $character-disabled-placeholder-25;
+  }
+}

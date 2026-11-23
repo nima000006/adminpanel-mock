@@ -1,0 +1,4 @@
+@use "../../../../../../../../../../../assets/styles/abstract/variables" as *;
+.delete-modal-content {
+  @include body-regular;
+}

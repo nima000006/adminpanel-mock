@@ -1,0 +1,9 @@
+@use "../../../../../../assets/styles/abstract/variables" as *;
+.overview-business-container {
+  .custom-select {
+    min-width: $s-260;
+    @media (max-width: 575px) {
+      min-width: unset;
+    }
+  }
+}

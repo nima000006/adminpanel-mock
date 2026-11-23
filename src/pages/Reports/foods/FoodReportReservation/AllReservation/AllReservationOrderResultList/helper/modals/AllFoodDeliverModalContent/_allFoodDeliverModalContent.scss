@@ -1,0 +1,14 @@
+@use "../../../../../../../../../assets/styles/abstract/variables" as *;
+.all-reservation-order-result-list-deliver-modal-container {
+  @include body-regular;
+  display: flex;
+  flex-direction: column;
+  gap: $s-16;
+  .food-deliver-modal-title {
+    display: flex;
+    gap: $s-8;
+    .title-icon {
+      color: $yellow;
+    }
+  }
+}

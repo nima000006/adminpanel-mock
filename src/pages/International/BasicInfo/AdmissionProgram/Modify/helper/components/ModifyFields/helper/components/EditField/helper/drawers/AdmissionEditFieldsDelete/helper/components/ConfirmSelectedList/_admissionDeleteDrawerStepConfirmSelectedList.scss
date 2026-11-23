@@ -1,0 +1,5 @@
+@use "../../../../../../../../../../../../../../../../../assets/styles/abstract/variables"
+  as *;
+.admission-delete-drawer-step-confirm-selected-list-container {
+  @include flex-col($s-40);
+}

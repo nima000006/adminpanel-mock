@@ -1,0 +1,51 @@
+@use "../../../assets/styles/abstract/variables" as *;
+.custom-cascader-container {
+  width: 100%;
+  min-width: 120px;
+  label {
+    @include body-regular;
+    color: $title-black;
+    height: 0 !important;
+  }
+
+  .ant-form-item {
+    margin: 0;
+  }
+  .ant-form-item-control {
+    flex: unset;
+    width: 100%;
+  }
+  .ant-form-item-label {
+    label {
+      &::after {
+        content: ""; // Removes the colon after label
+      }
+    }
+  }
+  .ant-form-item-explain-error {
+    color: var(--error-500);
+    font-family: "DanaFaNum";
+    font-style: normal;
+    font-weight: 500;
+    font-size: $s-12;
+    text-align: right;
+  }
+
+  .ant-select-selection-placeholder {
+    @include body-regular;
+  }
+}
+.cascader-root-class-name {
+  .ant-cascader-menu-item-content {
+    @include body-regular;
+  }
+}
+
+.vertical-label {
+  .ant-form-item-row {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: $s-4 !important;
+  }
+}

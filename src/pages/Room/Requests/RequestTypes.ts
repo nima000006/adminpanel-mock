@@ -1,0 +1,9 @@
+export const ALL_REQUESTS = 9;
+export const ACTIVE_REQUESTS = 1;
+export const REJECTED_REQUESTS = 2;
+export const PENDING_REQUESTS = 3;
+export const CONFIRMED_REQUESTS = 4;
+export const DELIVERED_REQUESTS = 5;
+export const MOVING_REQUESTS = 6;
+export const TRANSFER_REQUESTS = 7;
+export const RETURNED_REQUESTS = 8;

@@ -1,0 +1,26 @@
+@use "../../../../../assets/styles/abstract/variables" as *;
+.committee-session-cancel-modal {
+  .box-wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: $s-12;
+    margin-bottom: $s-20;
+  }
+
+  .desc {
+    @include h5-bold;
+    color: $danger-primary;
+    background-color: $background-danger;
+    padding: $s-20;
+    text-align: center;
+    border-radius: 10px;
+    margin-bottom: $s-20;
+  }
+  .btn-wrapper {
+    @include flex-gap($s-12);
+    margin-top: $s-20;
+    .btn-modal {
+      @include body-regular;
+    }
+  }
+}

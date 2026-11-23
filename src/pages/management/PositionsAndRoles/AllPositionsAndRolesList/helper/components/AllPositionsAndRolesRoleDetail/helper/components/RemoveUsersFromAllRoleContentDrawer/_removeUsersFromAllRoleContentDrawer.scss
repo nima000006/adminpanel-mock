@@ -1,0 +1,12 @@
+@use "../../../../../../../../../../assets/styles/abstract/variables" as *;
+.all-management-selected-roles-remove-content-container {
+  .drawer-header-btn {
+    @include flex-gap($s-10);
+  }
+  .custom-alert {
+    margin-left: $s-32;
+    margin-right: $s-32;
+    margin-top: $s-60;
+    padding: $s-16 $s-20 !important;
+  }
+}

@@ -1,0 +1,15 @@
+@use "../../../../assets/styles/abstract/variables" as *;
+.international-base-info-grouping {
+  .custom-tag {
+    width: fit-content;
+    gap: $s-5;
+  }
+  .custom-icon {
+    text-align: center;
+    svg {
+      width: $s-16;
+      height: $s-16;
+      font-weight: bold;
+    }
+  }
+}

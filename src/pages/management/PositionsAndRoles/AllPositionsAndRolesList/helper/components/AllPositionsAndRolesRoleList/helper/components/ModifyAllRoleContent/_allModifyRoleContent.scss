@@ -1,0 +1,6 @@
+@use "../../../../../../../../../../assets/styles/abstract/variables" as *;
+.all-management-modify-roles-content-container {
+  .drawer-header-btn {
+    @include flex-gap($s-10);
+  }
+}

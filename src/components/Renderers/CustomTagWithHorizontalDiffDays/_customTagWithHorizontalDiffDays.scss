@@ -1,0 +1,25 @@
+@use "../../../assets/styles/abstract/variables" as *;
+.custom-tag-with-horizontal-diff-days-container {
+  color: $white;
+
+  .waiting-time {
+    width: $s-48;
+    height: $s-20;
+    border-radius: 10px;
+    padding: $s-2 $s-4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: $s-4;
+  }
+
+  .green {
+    background-color: $green-6;
+  }
+  .yellow {
+    background-color: $yellow;
+  }
+  .red {
+    background-color: $red;
+  }
+}

@@ -1,0 +1,11 @@
+@use "../../../../../../assets/styles/abstract/variables" as *;
+.submit-request-add-container {
+  .ant-steps-item-container {
+    .ant-steps-icon {
+      @include body-regular;
+    }
+  }
+  .ant-steps-item-title {
+    @include body-regular;
+  }
+}

@@ -1,0 +1,41 @@
+@use "../../../../assets/styles/abstract/variables" as *;
+.finance-buyers-list-body {
+  container-type: inline-size;
+  .container-buyers-list-table {
+    margin-top: $s-20;
+  }
+  .custom-input-container {
+    min-width: $s-286;
+    .ant-input-suffix {
+      position: absolute;
+      left: 0;
+      padding: $s-5 $s-16;
+      background-color: $neutral-3;
+      border-radius: $s-6;
+      border-right: $s-1 solid $neutral-5;
+      top: 50%;
+      transform: translateY(-50%);
+      height: calc(100% - $s-2);
+    }
+  }
+
+  @media (max-width: 380px) {
+    button {
+      max-width: 200px;
+    }
+    .ant-form-item-control-input-content {
+      max-width: 200px;
+    }
+  }
+  @container (max-width: 140px) {
+    button {
+      max-width: 90px;
+    }
+    button span {
+      font-size: 10px;
+    }
+    .ant-form-item-control-input-content {
+      max-width: 90px;
+    }
+  }
+}

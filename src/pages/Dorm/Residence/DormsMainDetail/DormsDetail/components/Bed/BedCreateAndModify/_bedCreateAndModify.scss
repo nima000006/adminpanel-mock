@@ -1,0 +1,17 @@
+@use "../../../../../../../../assets/styles/abstract/variables" as *;
+.bed-create-and-modify-page-container {
+  @include flex-col($s-40);
+  .status-container {
+    .ant-form-item {
+      margin-bottom: 0;
+      min-width: 200px;
+    }
+  }
+  .bed-info-container {
+    @include flex-col($s-24);
+  }
+  .action-btns-container {
+    @include flex-gap($s-16);
+    justify-content: end;
+  }
+}

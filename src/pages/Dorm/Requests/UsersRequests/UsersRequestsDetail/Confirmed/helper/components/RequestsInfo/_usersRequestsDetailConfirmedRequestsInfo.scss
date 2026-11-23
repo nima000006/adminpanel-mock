@@ -1,0 +1,22 @@
+@use "../../../../../../../../../assets/styles/abstract/variables" as *;
+.users-requests-detail-confirmed-requests-info-container {
+  @include flex-col($s-40);
+  .request-info {
+    @include flex-col($s-40);
+  }
+  .alert {
+    width: 100%;
+  }
+  .action-btn-container {
+    display: flex;
+    justify-content: flex-end;
+  }
+  .extra-content-divider-btn {
+    color: $blue-primary;
+    @media (max-width: 480px) {
+      span {
+        font-size: $s-12;
+      }
+    }
+  }
+}

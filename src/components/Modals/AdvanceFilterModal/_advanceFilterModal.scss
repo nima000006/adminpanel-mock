@@ -1,0 +1,41 @@
+@use "../../../assets/styles/abstract/variables" as *;
+.advance-filter-modal-content-container {
+  .ant-modal-container {
+    margin: 0;
+    padding: 0;
+    background-color: var(--app-bg-container);
+    .ant-modal-header {
+      padding: $s-16 $s-24;
+      box-shadow: 0px -1px 0px 0px var(--app-border-secondary) inset;
+      margin-bottom: 0px;
+      background-color: var(--app-bg-container);
+    }
+    .ant-modal-title {
+      @include h5-medium;
+      color: var(--app-text);
+    }
+    .modal-body-container {
+      padding: $s-32;
+      margin-left: 0 !important;
+      margin-right: 0 !important;
+    }
+    .action-btns-container {
+      padding: $s-16 $s-24;
+      @include flex-space-between;
+      @media (max-width: 575px) {
+        @include flex-gap($s-10);
+        flex-wrap: wrap;
+      }
+      .left-btns {
+        @include flex-gap($s-8);
+      }
+    }
+
+    .ant-form-item-control-input-content {
+      display: flex;
+    }
+  }
+  .ant-input-number-input {
+    @include body-regular;
+  }
+}

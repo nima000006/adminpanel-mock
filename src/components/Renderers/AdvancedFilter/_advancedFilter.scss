@@ -1,0 +1,43 @@
+@use "../../../assets/styles/abstract/variables" as *;
+.advanced-filter-modal-content-container {
+  .ant-modal-container {
+    margin: 0;
+    padding: 0;
+    background-color: var(--app-bg-container);
+    .ant-modal-header {
+      padding: $s-16 $s-24;
+    }
+    .ant-modal-title {
+      @include h5-medium;
+      font-weight: bold;
+    }
+    .ant-modal-body {
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: $s-8;
+      .modal-body-container {
+        padding: $s-24;
+      }
+    }
+  }
+
+  .title-with-icon {
+    display: flex;
+    align-items: center;
+    gap: $s-16;
+  }
+
+  .modal-btn-container {
+    @include flex-center;
+    justify-content: flex-start;
+    gap: $s-13;
+    background-color: var(--app-bg-container);
+    padding: $s-16 $s-24;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    .modal-btn {
+      @include body-regular;
+    }
+  }
+}

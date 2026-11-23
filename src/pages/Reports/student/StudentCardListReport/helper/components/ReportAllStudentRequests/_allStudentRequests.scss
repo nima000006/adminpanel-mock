@@ -1,0 +1,9 @@
+@use "../../../../../../../assets/styles/abstract/variables" as *;
+.student-all-table-container {
+  .tables-sticky-column-left {
+    position: sticky !important;
+    left: 0;
+    overflow: hidden;
+    box-shadow: $table-sticky-box-shadow;
+  }
+}

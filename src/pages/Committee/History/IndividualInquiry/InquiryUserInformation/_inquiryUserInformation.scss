@@ -1,0 +1,40 @@
+@use "../../../../../assets/styles/abstract/variables" as *;
+.inquiry-user-information-page-container {
+  display: flex;
+  flex-direction: column;
+  gap: $s-20;
+  .ant-collapse-expand-icon {
+    position: absolute;
+    left: 0;
+    border-radius: 50%;
+    .collapse-icon {
+      font-size: $s-18;
+    }
+  }
+  .accused-info-items-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: $s-12;
+  }
+  .return-to-report-btn {
+    @include body-regular;
+  }
+  .list-container {
+    display: flex;
+    flex-direction: column;
+    gap: $s-20;
+  }
+  .table-btns-container {
+    text-align: center;
+    .action-btn {
+      color: $blue-primary;
+      cursor: pointer;
+    }
+  }
+  .tables-sticky-column-left {
+    position: sticky !important;
+    left: 0;
+    overflow: hidden;
+    box-shadow: $table-sticky-box-shadow;
+  }
+}

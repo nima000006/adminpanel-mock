@@ -1,0 +1,22 @@
+@use "../../../../assets/styles/abstract/variables" as *;
+.excel-modal-main-container {
+  .ant-modal-title {
+    @include h5-bold;
+  }
+  .main-content {
+    display: flex;
+    flex-direction: column;
+    // gap: 1rem;
+    justify-content: center;
+    .custom-excel-checkbox {
+      margin-bottom: 0;
+      margin-top: 20px;
+    }
+    .submit-btn {
+      margin-top: 40px;
+    }
+    .custom-input-excel {
+      margin-top: 1rem;
+    }
+  }
+}

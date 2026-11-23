@@ -1,0 +1,32 @@
+@use "../../../../assets/styles/abstract/variables" as *;
+.auth-change-number-first-page-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  .label-card-component-container {
+    margin-bottom: $s-10;
+  }
+  .auth-change-number-title-wrapper {
+    margin-bottom: $s-24;
+    @include flex-col($s-8);
+  }
+  .change-number-form-content-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+
+    .content-wrapper {
+      @include flex-col($s-32);
+
+      .label-card {
+        gap: $s-10;
+        .link {
+          @include flex-gap($s-8);
+          align-items: center;
+          white-space: nowrap;
+        }
+      }
+    }
+  }
+}

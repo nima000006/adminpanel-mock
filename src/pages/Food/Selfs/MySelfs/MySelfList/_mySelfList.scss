@@ -1,0 +1,49 @@
+@use "../../../../../assets/styles/abstract/variables" as *;
+.food-all-self-list-container {
+  container-type: inline-size; // برای فعال سازی کوئری
+
+  display: flex;
+  flex-direction: column;
+  gap: $s-32;
+
+  .btn-wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+  .food-self-list-table {
+    .gender,
+    .status {
+      @include body-regular;
+    }
+  }
+
+  @container (max-width: 140px) {
+    button span {
+      font-size: 8px;
+    }
+  }
+}
+.food-my-self-drawer {
+  .drawer-header-btn {
+    @include flex-gap($s-12);
+    .ant-form-item {
+      margin-bottom: 0 !important;
+    }
+    @media (max-width: 576px) {
+      gap: $s-4;
+      .drawer-action-btn {
+        padding: $s-4 $s-6;
+        font-size: $s-12;
+      }
+    }
+  }
+
+  .right-side-title-contain {
+    @media (max-width: 470px) {
+      font-size: $s-12 !important;
+    }
+    @media (max-width: 415px) {
+      font-size: $s-10 !important;
+    }
+  }
+}

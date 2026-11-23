@@ -1,0 +1,19 @@
+@use "../../../../../../../../assets/styles/abstract/variables" as *;
+.business-identities-step {
+  .alert {
+    margin-top: $s-40;
+  }
+  .business-identities-tab-items {
+    margin-top: $s-40;
+    @include body-regular;
+  }
+}
+.btn-wrapper {
+  @include flex-gap($s-12);
+  justify-content: end;
+  margin-top: $s-16;
+}
+
+.modal-text {
+  @include body-regular;
+}

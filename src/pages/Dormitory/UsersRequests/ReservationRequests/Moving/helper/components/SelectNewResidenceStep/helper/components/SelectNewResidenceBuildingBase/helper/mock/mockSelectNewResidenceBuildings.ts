@@ -1,0 +1,56 @@
+export const MOCK_SELECT_NEW_RESIDENCE_BUILDINGS = [
+  {
+    id: 1,
+    buildingTitle: "شهید بهشتی",
+    capacity: "۹ ظرفیت",
+    floorTitle: "۵ طبقه",
+    unitTitle: "۴۰ واحد",
+    depositAmount: 12_000_000,
+    accommodationAmount: 2_000_000,
+  },
+  {
+    id: 2,
+    buildingTitle: "آیت‌الله طالقانی",
+    capacity: "۹ ظرفیت",
+    floorTitle: "۴ طبقه",
+    unitTitle: "۳۰ واحد",
+    depositAmount: 10_000_000,
+    accommodationAmount: 1_800_000,
+  },
+  {
+    id: 3,
+    buildingTitle: "آپارتمان نسترن",
+    capacity: "۱۲ ظرفیت",
+    floorTitle: "۶ طبقه",
+    unitTitle: "۵۰ واحد",
+    depositAmount: 15_000_000,
+    accommodationAmount: 2_200_000,
+  },
+  {
+    id: 4,
+    buildingTitle: "ساختمان دانش",
+    capacity: "۸ ظرفیت",
+    floorTitle: "۳ طبقه",
+    unitTitle: "۲۰ واحد",
+    accommodationAmount: 1_500_000,
+  },
+  {
+    id: 5,
+    buildingTitle: "مجتمع گلستان",
+    capacity: "۱۰ ظرفیت",
+    floorTitle: "۵ طبقه",
+    unitTitle: "۳۵ واحد",
+    depositAmount: 11_000_000,
+    accommodationAmount: 1_900_000,
+  },
+  {
+    id: 6,
+    buildingTitle: "خوابگاه امید",
+    capacity: "۱۵ ظرفیت",
+    floorTitle: "۷ طبقه",
+    unitTitle: "۶۰ واحد",
+    accommodationAmount: 2_500_000,
+  },
+];
+
+export const MOCK_SELECT_NEW_RESIDENCE_BUILDINGS_TOTAL = 90;

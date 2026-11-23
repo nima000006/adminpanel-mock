@@ -1,0 +1,77 @@
+@use "../../assets/styles/abstract/variables" as *;
+.student-card-container {
+  position: relative;
+  .uni-location {
+    position: absolute;
+    top: 68px;
+    right: 68px;
+    @include overline;
+    color: $white;
+  }
+
+  // .front-side-student-image {
+  //   position: absolute;
+  //   top: 90px;
+  //   right: 24px;
+  //   border-radius: 6px;
+  // }
+  .card-data {
+    display: flex;
+    flex-direction: column;
+    gap: $s-4;
+    position: absolute;
+    top: 275px;
+    right: 38px;
+    .student-number-container {
+      display: flex;
+      gap: $s-8;
+    }
+    .student-national-number-container {
+      display: flex;
+      gap: $s-8;
+    }
+    .student-name {
+      // position: absolute;
+      // top: 410px;
+      // right: 38px;
+      @include body3;
+      color: #fff;
+    }
+    .student-field-name {
+      // position: absolute;
+      // top: 440px;
+      // right: 38px;
+      @include body3;
+      color: #fff;
+      max-width: 310px;
+    }
+    .student-number-label {
+      // position: absolute;
+      // top: 470px;
+      // right: 38px;
+      @include body3;
+      color: #fff; /* 137.5% */
+    }
+    .student-number {
+      // position: absolute;
+      // top: 470px;
+      // right: 160px;
+      @include body3;
+      color: #fff;
+    }
+    .national-number-label {
+      // position: absolute;
+      // top: 500px;
+      // right: 38px;
+      @include body3;
+      color: #fff;
+    }
+    .national-number {
+      // position: absolute;
+      // top: 500px;
+      // right: 120px;
+      @include body3;
+      color: #fff;
+    }
+  }
+}

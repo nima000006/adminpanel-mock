@@ -1,0 +1,24 @@
+@use "../../../../../../../../assets/styles/abstract/variables" as *;
+.my-branch-turn-over-balance-amount-card {
+  padding: $s-24;
+  border: 1px solid $neutral-5;
+  border-radius: 8px;
+
+  @include flex-col($s-4);
+  @include body-regular;
+
+  .title-wrapper {
+    @include flex-gap($s-8);
+    // @media (max-width: 1130px) {
+    //   @include flex-col($s-8);
+    //   align-items: center;
+    // }
+
+    .custom-tag {
+      width: fit-content;
+    }
+  }
+  .amount {
+    // text-align: center;
+  }
+}

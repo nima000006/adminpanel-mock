@@ -1,0 +1,15 @@
+@use "../../../../../../assets/styles/abstract/variables" as *;
+.overview-services-container {
+  .custom-right-side {
+    @include flex-gap($s-16);
+    @media (max-width: 575px) {
+      flex-direction: column;
+    }
+  }
+  .custom-select {
+    min-width: $s-260;
+    @media (max-width: 1100px) {
+      min-width: $s-160;
+    }
+  }
+}

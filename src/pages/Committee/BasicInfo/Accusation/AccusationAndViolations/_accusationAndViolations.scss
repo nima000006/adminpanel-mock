@@ -1,0 +1,27 @@
+@use "../../../../../assets/styles/abstract/variables" as *;
+.committee-accusation-violations-container {
+  .btn-wrapper {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: $s-16;
+    .btn {
+      @include body-regular;
+    }
+    @media (max-width: 600px) {
+      @include flex-gap($s-8);
+      flex-direction: column;
+    }
+  }
+  .accusation-violations-table-container {
+    .view-accusation-violations-btn {
+      color: $blue-primary;
+      cursor: pointer;
+    }
+  }
+  .tables-sticky-column-left {
+    position: sticky !important;
+    left: 0;
+    box-shadow: $table-sticky-box-shadow;
+    overflow: hidden;
+  }
+}

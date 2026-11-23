@@ -1,0 +1,4 @@
+@use "../../../../assets/styles/abstract/variables" as *;
+.insurance-requests-detail-tab-container {
+  @include body-regular;
+}

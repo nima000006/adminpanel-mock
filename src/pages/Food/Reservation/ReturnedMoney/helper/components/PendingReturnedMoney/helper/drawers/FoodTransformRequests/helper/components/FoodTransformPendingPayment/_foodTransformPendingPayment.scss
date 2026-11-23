@@ -1,0 +1,8 @@
+@use "../../../../../../../../../../../../../assets/styles/abstract/variables" as *;
+.food-transform-pending-payment-tab-container {
+  @include flex-col($s-24);
+  .example-text {
+    @include footnote;
+    color: $neutral-7;
+  }
+}

@@ -1,0 +1,17 @@
+@use "../../../../../../../../assets/styles/abstract/variables" as *;
+.committee-supplementary-punishment-info-container {
+  .make-change-btn {
+    @include body-regular;
+    margin-bottom: $s-35;
+  }
+  .inputs-wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: $s-12;
+    margin-bottom: $s-16;
+    .ant-col {
+      width: 100%;
+      text-align: right;
+    }
+  }
+}

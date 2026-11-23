@@ -1,0 +1,17 @@
+@use "../../../assets/styles/abstract/variables" as *;
+.custom-select-field-container {
+  display: flex;
+  flex-direction: column;
+  gap: $s-4;
+  @include body-regular;
+  width: 100%;
+  .label {
+    @include h5-bold;
+    color: $black-60;
+  }
+  .label-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}

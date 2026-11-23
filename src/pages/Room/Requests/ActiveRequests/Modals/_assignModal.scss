@@ -1,0 +1,73 @@
+@use "../../../../../assets/styles/abstract/variables" as *;
+.room-assign-modal-container {
+  width: 80vw !important;
+  max-height: 90%;
+  border-radius: 20px;
+  // overflow-x: hidden;
+
+  .ant-modal-container {
+    margin: 0;
+    padding: 0;
+    background-color: var(--app-bg-layout);
+    .ant-modal-header {
+      padding: $s-16 $s-40;
+    }
+    .ant-modal-title {
+      @include h5-regular;
+      font-size: 1.2rem;
+      font-weight: bold;
+    }
+
+    .ant-modal-body {
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: $s-16;
+      margin: 0 $s-16;
+      padding-bottom: $s-24;
+      .room-assign-modal-content {
+        display: flex;
+        flex-direction: column;
+        gap: $s-16;
+        .tabs-container {
+          padding: $s-24;
+          background-color: var(--app-bg-container);
+          border-radius: 20px;
+          @include card-shadow-1;
+          .ant-tabs-tab-btn {
+            @include h5-regular;
+          }
+          .ant-tabs-tab {
+            margin-left: $s-16;
+          }
+          .table-container {
+            margin-top: $s-16;
+          }
+        }
+
+        .room-assign-action-container {
+          display: flex;
+          align-items: center;
+          gap: $s-16;
+          padding: 0 $s-16;
+          button {
+            @include h5-regular;
+          }
+        }
+        .row-container {
+          align-items: end;
+        }
+      }
+    }
+  }
+  .user-profile-container {
+    display: flex;
+    flex-direction: row;
+    gap: $s-40;
+    margin-top: $s-16;
+    flex-wrap: wrap;
+  }
+}
+.ant-modal-wrap {
+  margin-bottom: $s-16;
+}

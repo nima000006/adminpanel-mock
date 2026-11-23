@@ -1,0 +1,12 @@
+@use "../../../../assets/styles/abstract/variables" as *;
+
+.dynamic-form-rows {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: $s-6;
+
+  &__add-btn {
+    margin-top: $s-4;
+  }
+}

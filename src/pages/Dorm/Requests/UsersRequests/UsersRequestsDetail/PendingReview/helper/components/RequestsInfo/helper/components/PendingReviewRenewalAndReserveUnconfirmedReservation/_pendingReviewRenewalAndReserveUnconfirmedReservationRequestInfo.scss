@@ -1,0 +1,13 @@
+@use "../../../../../../../../../../../../assets/styles/abstract/variables" as *;
+.users-requests-detail-pending-review-requests-info-container {
+  .action-btn-container {
+    display: flex;
+    justify-content: space-between;
+  }
+  .allocation-btn-container {
+    @include flex-gap($s-8);
+  }
+  .extra-content-divider-btn {
+    color: $blue-primary;
+  }
+}

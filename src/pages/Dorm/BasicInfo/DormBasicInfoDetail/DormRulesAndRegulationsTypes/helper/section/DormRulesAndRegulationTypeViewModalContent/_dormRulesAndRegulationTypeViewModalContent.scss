@@ -1,0 +1,4 @@
+@use "../../../../../../../../assets/styles/abstract/variables" as *;
+.dorm-rules-regulations-view-content-modal {
+  @include flex-col($s-16);
+}

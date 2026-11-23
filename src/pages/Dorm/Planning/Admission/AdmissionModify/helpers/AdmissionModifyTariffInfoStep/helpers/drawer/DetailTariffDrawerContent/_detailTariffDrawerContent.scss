@@ -1,0 +1,6 @@
+@use "../../../../../../../../../../assets/styles/abstract/variables" as *;
+.residents-general-info-tariff-drawer-content-container {
+  .residents-general-info-tariff-drawer-content-wrapper {
+    @include flex-col($s-40);
+  }
+}

@@ -1,0 +1,54 @@
+@use "../../../assets/styles/abstract/variables" as *;
+.my-users__container {
+  display: flex;
+  flex-direction: column;
+  gap: $s-24;
+  .my-users__inputs-container {
+    .ant-row {
+      text-align: center;
+      align-items: center;
+    }
+    .my-users__search-btn-container {
+      width: 100%;
+      margin-top: $s-24;
+      .ant-btn {
+        width: 100%;
+      }
+    }
+  }
+  .inputs {
+    display: flex;
+    gap: $s-8;
+  }
+
+  .my-users__or {
+    @include body-regular;
+    width: 100%;
+    height: 100%;
+    color: $neutral-7;
+    padding-top: 1.5rem;
+  }
+}
+.my-users__main-info-container {
+  .my-users__empty-container {
+    display: flex;
+    flex-direction: column;
+    gap: $s-8;
+    text-align: center;
+    @include body-regular;
+  }
+
+  .my-users__right-side {
+    display: flex;
+    gap: $s-8;
+    .my-users__header-label {
+      @include body-medium;
+    }
+  }
+  .my-users__editable-section-container {
+    margin-top: $s-40;
+  }
+  .divider-container {
+    align-items: baseline;
+  }
+}

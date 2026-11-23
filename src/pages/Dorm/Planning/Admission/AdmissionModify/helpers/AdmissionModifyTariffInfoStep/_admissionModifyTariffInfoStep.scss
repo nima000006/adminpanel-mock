@@ -1,0 +1,10 @@
+@use "../../../../../../../assets/styles/abstract/variables" as *;
+.admission-modify-tariff-info-step {
+  @include flex-col($s-40);
+  .btn-container {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: $s-16;
+  }
+}

@@ -1,0 +1,13 @@
+@use "../../../../../../../../assets/styles/abstract/variables" as *;
+.collapse-container {
+  display: flex;
+  gap: 8px;
+  padding: 1rem;
+  .text {
+    @include footnote;
+  }
+  .icon {
+    color: #8c8c8c;
+    font-size: 12px;
+  }
+}

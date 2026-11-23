@@ -1,0 +1,4 @@
+@use "../../../../../../../assets/styles/abstract/variables" as *;
+.admission-detail-active-tariff-list-table-container {
+  @include flex-col($s-24);
+}

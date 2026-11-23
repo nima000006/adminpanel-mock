@@ -1,0 +1,29 @@
+{
+  "name": "پنل مدیریت جامع دانشجویار",
+  "short_name": "مدیریت دانشجویار",
+  "description": "پنل مدیریت جامع دانشجویار - مدیریت و کنترل سامانه دانشجویار با امکانات پیشرفته مدیریتی",
+  "theme_color": "#317EFB",
+  "background_color": "#ffffff",
+  "display": "standalone",
+  "lang": "fa-IR",
+  "dir": "rtl",
+  "start_url": "/",
+  "scope": "/",
+  "icons": [
+    {
+      "src": "/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    }
+  ]
+}

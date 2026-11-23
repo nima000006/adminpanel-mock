@@ -1,0 +1,4 @@
+@use "../../../../../assets/styles/abstract/variables" as *;
+.wallet-financial-setting-container {
+  @include flex-col($s-16);
+}

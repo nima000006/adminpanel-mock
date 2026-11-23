@@ -1,0 +1,27 @@
+@use "../../../../../.././../../assets/styles/abstract/variables" as *;
+.committee-records-detail-read-only-infringement-information-step-container {
+  display: flex;
+  flex-direction: column;
+  gap: $s-35;
+  .delete-request-status-container {
+    border-radius: 2px;
+    border: 1px solid $dust-red-2;
+    background-color: $dust-red-1;
+    padding: $s-10 $s-16;
+    .status-text {
+      @include body-regular;
+      color: $title-black;
+    }
+  }
+  .buttons-container {
+    @include flex-center;
+    justify-content: flex-end !important;
+    gap: $s-12;
+    button {
+      @include body-regular;
+    }
+    .back-btn {
+      color: $title-black;
+    }
+  }
+}

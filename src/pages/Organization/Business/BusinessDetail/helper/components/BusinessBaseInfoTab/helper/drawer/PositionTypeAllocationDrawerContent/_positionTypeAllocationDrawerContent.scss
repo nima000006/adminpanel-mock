@@ -1,0 +1,13 @@
+@use "../../../../../../../../../../assets/styles/abstract/variables" as *;
+.position-type-allocation-drawer-content-container {
+  .drawer-btns-wrapper {
+    @include flex-gap($s-12);
+  }
+
+  .position-type-allocation-drawer-content-wrapper {
+    @include flex-col($s-40);
+    .alert-desc {
+      @include flex-col($s-24);
+    }
+  }
+}

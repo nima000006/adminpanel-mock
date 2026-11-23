@@ -1,0 +1,24 @@
+@use "../../../../../../../../assets/styles/abstract/variables" as *;
+.committee-session-creation-session-rules-step-container {
+  display: flex;
+  flex-direction: column;
+  gap: $s-35;
+  .add-new-rule-table-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: $s-35;
+    .session-rule-btn {
+      @include body-regular;
+    }
+  }
+  .border-round-box {
+    padding: $s-24;
+    border-radius: 10px;
+    border: $border-1 solid $border-color-90;
+  }
+}
+.committee-session-creation-delete-session-rule-modal-container {
+  .confirm-text {
+    @include body-regular;
+  }
+}

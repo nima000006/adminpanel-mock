@@ -1,0 +1,10 @@
+@use "../../../../../../../../assets/styles/abstract/variables" as *;
+.finance-payment-on-account-pending-list-container {
+  container-type: inline-size;
+  @include flex-col($s-24);
+  .custom-divider {
+    @media (max-width: 767px) {
+      white-space: pre-wrap;
+    }
+  }
+}

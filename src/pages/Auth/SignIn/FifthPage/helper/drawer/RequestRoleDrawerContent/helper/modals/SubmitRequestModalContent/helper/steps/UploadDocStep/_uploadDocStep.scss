@@ -1,0 +1,16 @@
+@use "../../../../../../../../../../../../../assets/styles/abstract/variables" as *;
+
+.uploader-wrapper {
+  display: flex;
+  align-items: baseline;
+
+  .ant-btn {
+    padding: $s-32;
+  }
+
+  .image-attachment-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}

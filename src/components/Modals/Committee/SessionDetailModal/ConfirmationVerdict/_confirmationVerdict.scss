@@ -1,0 +1,13 @@
+@use "../../../../../assets/styles/abstract/variables" as *;
+.session-confirm-verdict-modal {
+  .box-wrapper {
+    @include flex-gap($s-12);
+    margin-bottom: $s-20;
+  }
+  .btn-wrapper {
+    @include flex-gap($s-12);
+  }
+  .btn-modal {
+    @include body-regular;
+  }
+}

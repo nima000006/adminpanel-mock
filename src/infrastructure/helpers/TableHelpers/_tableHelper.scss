@@ -1,0 +1,21 @@
+@use "../../../assets/styles/abstract/variables" as *;
+.table-search-container {
+  .search-input {
+    @include body-regular;
+  }
+  .search-btn {
+    @include body-regular;
+  }
+  .reset-btn {
+    @include body-regular;
+  }
+  .filter-btn {
+    @include body-regular;
+  }
+  .close-btn {
+    @include body-regular;
+  }
+  .ant-space-gap-col-small {
+    column-gap: 4px;
+  }
+}

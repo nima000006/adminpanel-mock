@@ -1,0 +1,12 @@
+@use "../../../../../assets/styles/abstract/variables" as *;
+.ticketing-super-agent-container {
+  container-type: inline-size;
+  @container (max-width:140px) {
+    button {
+      padding: $s-2;
+    }
+    button span {
+      font-size: $s-12;
+    }
+  }
+}

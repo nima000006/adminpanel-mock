@@ -1,0 +1,22 @@
+@use "../../../../../../../../assets/styles/abstract/variables" as *;
+.international-admission-program-modify-timing-info-container {
+  @include flex-col($s-40);
+  .timing-info-container {
+    @include flex-col($s-24);
+
+    .ant-form-item-label {
+      label {
+        height: 0;
+      }
+    }
+    .ant-form-item-control {
+      width: 100% !important;
+    }
+  }
+  .action-btn-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: $s-16;
+  }
+}

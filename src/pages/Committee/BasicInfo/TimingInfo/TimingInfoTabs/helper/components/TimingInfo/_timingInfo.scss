@@ -1,0 +1,26 @@
+@use "../../../../../../../../assets/styles/abstract/variables" as *;
+.committee-timing-info-container {
+  display: flex;
+  flex-direction: column;
+  gap: $s-35;
+  .make-change-btn {
+    @include body-regular;
+  }
+  .timing-info-form {
+    border: 1px solid $border-color-90;
+    border-radius: 10px;
+    padding: $s-16;
+    display: flex;
+    flex-direction: column;
+    gap: $s-16;
+    .inputs-container {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: $s-12;
+      .ant-col {
+        width: 100%;
+        text-align: right;
+      }
+    }
+  }
+}

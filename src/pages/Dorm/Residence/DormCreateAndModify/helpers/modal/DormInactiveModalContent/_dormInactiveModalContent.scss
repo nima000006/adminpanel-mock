@@ -1,0 +1,6 @@
+@use "../../../../../../../assets/styles/abstract/variables" as *;
+.residence-inactive-modal-container {
+  .text {
+    @include body-regular;
+  }
+}

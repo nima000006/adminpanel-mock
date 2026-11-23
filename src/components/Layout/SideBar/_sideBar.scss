@@ -1,0 +1,79 @@
+@use "../../../assets/styles/abstract/variables" as *;
+.menu-error-container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  @include body-regular;
+  color: var(--error-400);
+  padding: 0 $s-8;
+  text-align: center;
+}
+.side-bar-container {
+  box-shadow:
+    0 0 4px 0 rgba(0, 0, 0, 0.055),
+    0 2px 4px 0 rgba(0, 0, 0, 0.065);
+
+  :root:where(.dark) & {
+    box-shadow:
+      0 0 4px 0 rgba(0, 0, 0, 0.3),
+      0 2px 4px 0 rgba(0, 0, 0, 0.4);
+  }
+  .ant-menu {
+    @media (max-width: 767px) {
+      padding-top: 1rem;
+    }
+  }
+  .ant-menu-title-content {
+    overflow: unset !important;
+  }
+  .fold-button-container {
+    margin: 1rem 8px 0;
+    padding-right: 8px;
+    // @media (max-width: 767px) {
+    //   display: none !important;
+    // }
+  }
+  .fold-center {
+    display: flex;
+    justify-content: center;
+  }
+  .fold-end {
+    display: flex;
+    justify-content: flex-end;
+  }
+  .fold-button {
+    .fold-icon {
+      transition: transform 0.6s ease-in-out;
+      fill: rgb(103, 102, 102);
+      border-radius: 50%;
+      font-size: 0.9rem;
+      &.collapsed {
+        transform: rotate(180deg);
+      }
+
+      &.expanded {
+        transform: rotate(0deg);
+      }
+    }
+  }
+}
+.ant-menu-submenu {
+  .ant-menu-item {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+    gap: $s-8;
+    .ant-menu-title-content {
+      margin: 0 !important;
+    }
+  }
+  .ant-menu-submenu-title {
+    display: flex;
+    align-items: center;
+    img {
+      min-width: 32px;
+    }
+  }
+}

@@ -1,0 +1,24 @@
+@use "../../../../../assets/styles/abstract/variables" as *;
+.room-assign-confirm-modal-container {
+  .content-text {
+    @include h5-regular;
+  }
+  .btn-container {
+    display: flex;
+    // align-items: center;
+    gap: $s-8;
+    margin-top: $s-24;
+    .primary-danger {
+      @include h5-medium;
+      color: #fff;
+      width: 100px;
+    }
+    .primary-cancel {
+      @include h5-medium;
+      width: 100px;
+    }
+  }
+  .ant-modal-title {
+    @include h4-medium;
+  }
+}

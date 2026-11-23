@@ -1,0 +1,7 @@
+@use "../../../../../../../assets/styles/abstract/variables" as *;
+.role-popOverContent {
+  @include body-regular;
+  .title {
+    color: $neutral-7;
+  }
+}

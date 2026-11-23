@@ -1,0 +1,27 @@
+@use "../../../../../../../../assets/styles/abstract/variables" as *;
+.requests-pre-registration-card-container {
+  .card-container {
+    @include flex-col($s-8);
+    align-items: center;
+    border-radius: 8px;
+    padding: $s-12;
+    cursor: pointer;
+  }
+
+  .inactive-card-container {
+    border: 1px solid $neutral-4;
+    background-color: $neutral-1;
+    .title {
+      @include h5-medium;
+      color: $neutral-7;
+    }
+  }
+  .active-card-container {
+    border: 1px solid $primary-7;
+    background-color: $primary-1;
+    .title {
+      @include h5-medium;
+      color: $primary-7;
+    }
+  }
+}

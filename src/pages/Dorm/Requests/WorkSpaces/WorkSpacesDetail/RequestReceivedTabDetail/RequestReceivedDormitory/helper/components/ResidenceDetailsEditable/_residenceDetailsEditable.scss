@@ -1,0 +1,9 @@
+@use "../../../../../../../../../../assets/styles/abstract/variables" as *;
+
+.residence-details-editable-container {
+  @include flex-col($s-40);
+  .btn-container {
+    @include flex-gap($s-16);
+    direction: ltr;
+  }
+}

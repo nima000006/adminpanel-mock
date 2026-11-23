@@ -1,0 +1,53 @@
+@use "../../../../../assets/styles/abstract/variables" as *;
+.committee-session-allocation-modal-container {
+  .session-info-wrapper,
+  .attachment-container,
+  .family-info-wrapper,
+  .notices-wrapper {
+    border: 1px solid $border-color-90;
+    border-radius: 10px;
+    padding: $s-24;
+    margin-bottom: $s-40;
+  }
+  .session-info-wrapper {
+    .select-wrapper {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: $s-12;
+      margin-bottom: $s-20;
+      .ant-col {
+        width: 100%;
+        text-align: right;
+      }
+    }
+  }
+  .attachment-container {
+    .upload-container {
+      display: flex;
+      flex-direction: column;
+      gap: $s-13;
+      .ant-upload-list {
+        display: flex;
+        gap: $s-8;
+        flex-wrap: wrap;
+      }
+      .custom-btn {
+        @include h5-regular;
+      }
+    }
+  }
+  .family-info-wrapper {
+    .family-info-inputs-wrapper {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: $s-12;
+    }
+  }
+  .notices-wrapper {
+    .notices-content-wrapper {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: $s-12;
+    }
+  }
+}

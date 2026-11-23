@@ -1,0 +1,22 @@
+.view-branch-drawer-content-container {
+  .segmented-container {
+    display: block;
+    ؟ .ant-segmented {
+      display: block;
+      width: 100%;
+    }
+
+    .ant-segmented-group {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+    }
+
+    .ant-segmented-item-label {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+    }
+  }
+}

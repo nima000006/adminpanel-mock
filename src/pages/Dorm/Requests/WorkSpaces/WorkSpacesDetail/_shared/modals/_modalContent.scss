@@ -1,0 +1,7 @@
+@use "../../../../../../../assets/styles/abstract/variables" as *;
+.work-spaces-modal-content-container {
+  @include body-regular;
+  .modal-content-text {
+    margin-bottom: $s-8;
+  }
+}

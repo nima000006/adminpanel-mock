@@ -1,0 +1,19 @@
+@use "../../../../../../../../assets/styles/abstract/variables" as *;
+.my-doctor-test-list-all-action-status-tab-container {
+  @include flex-col($s-40);
+  .test-card-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: $s-16;
+    @media (max-width: 780px) {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+
+  .test-list-container {
+    @include flex-col($s-16);
+    .action-btns-container {
+      @include flex-space-between;
+    }
+  }
+}

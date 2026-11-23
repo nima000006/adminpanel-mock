@@ -1,0 +1,33 @@
+@use "../../../../../../../../../../assets/styles/abstract/variables" as *;
+.accounting-factor-details {
+  @include body-regular;
+  h1 {
+    @include h2-medium;
+  }
+
+  .supplier-info-container {
+    .supplier-info-box {
+      @include body-regular;
+      @include flex-gap($s-8);
+      flex-direction: column;
+      p {
+        color: $neutral-12;
+        font-weight: 600;
+      }
+      .accounting-factor-details-title {
+        color: var(--app-text);
+        font-weight: 400;
+      }
+    }
+    .phone-text {
+      text-align: end;
+      direction: ltr;
+    }
+  }
+  .ant-table-summary {
+    background-color: var(--app-bg-layout);
+    td {
+      font-weight: 600;
+    }
+  }
+}

@@ -1,0 +1,9 @@
+@use "../../../../../../../../../../assets/styles/abstract/variables" as *;
+.organization-unit-segment-content-list-container {
+  @include flex-col($s-16);
+  .organization-unit-segment-content-list-table {
+    .checkout-container {
+      @include flex-gap($s-4);
+    }
+  }
+}

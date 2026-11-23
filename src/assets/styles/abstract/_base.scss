@@ -1,0 +1,49 @@
+@use "./variables" as *;
+@forward "./variables";
+
+#root {
+  position: relative;
+  width: 100%;
+  background-color: var(--app-bg-container);
+  font-family: "DanaFaNum";
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+}
+// * {
+//   scrollbar-width: thin; /* "auto" or "thin" */
+//   scrollbar-color: #1677ff #f1f1f1; /* scroll thumb and track */
+//   // scroll-margin: 1rem;
+// }
+*::selection {
+  color: #600606;
+  background-color: yellow;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #1677ff;
+  border-radius: 3px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #1677ff;
+}
+
+::-webkit-scrollbar-thumb:active {
+  background: #0958d9;
+}

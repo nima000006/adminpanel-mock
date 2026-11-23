@@ -1,0 +1,36 @@
+@use "../../../../../assets/styles/abstract/variables" as *;
+.student-packet-getting-ready-container {
+  .action-bar-container {
+    display: flex;
+    justify-content: space-between;
+    .advanced-filter-btn {
+      @include body-regular;
+      display: flex;
+      align-items: center;
+    }
+    .action-bar-btns-left-side-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: $s-8;
+      .action-btn {
+        @include body-regular;
+        color: $blue-primary;
+        border-color: $blue-primary;
+        &:hover {
+          color: #fff !important;
+          background-color: $blue-primary;
+        }
+      }
+      .action-btn-disabled {
+        opacity: 0.3;
+        &:hover {
+          color: black !important;
+          background-color: inherit;
+        }
+      }
+      @media (max-width: 1050px) {
+        margin: 0 $s-8;
+      }
+    }
+  }
+}

@@ -1,0 +1,6 @@
+@use "../../../../../../../../../assets/styles/abstract/variables" as *;
+.modify-organization-position-structure-drawer-content-container {
+  .drawer-btns-wrapper {
+    @include flex-gap($s-12);
+  }
+}

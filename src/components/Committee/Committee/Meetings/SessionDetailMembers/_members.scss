@@ -1,0 +1,13 @@
+@use "../../../../../assets/styles/abstract/variables" as *;
+.session-details-members-container {
+  padding: $s-24;
+  border-radius: 10px;
+  border: $border-1 solid $border-color-90;
+  .committee-members-table {
+    .ant-switch-inner-unchecked,
+    .ant-switch-inner-checked {
+      @include footnote;
+      color: $white;
+    }
+  }
+}

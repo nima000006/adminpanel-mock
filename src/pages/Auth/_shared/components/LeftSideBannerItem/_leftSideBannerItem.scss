@@ -1,0 +1,12 @@
+@use "../../../../../assets/styles/abstract/variables" as *;
+.left-side-banner-item-container {
+  @include flex-gap($s-8);
+  align-items: center;
+  .left-side-banner-item_icon {
+    color: $blue-primary;
+  }
+  .link {
+    @include body-regular;
+    color: $blue-primary !important;
+  }
+}

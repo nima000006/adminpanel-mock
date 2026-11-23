@@ -1,0 +1,72 @@
+@use "../../../../../../assets/styles/abstract/variables" as *;
+.wallet-request-users-detail-container {
+  .custom-info-box {
+    margin-top: $s-40;
+    @include body-regular;
+    background: $neutral-2;
+    padding: $s-16;
+    @include flex-col($s-10);
+    border-radius: $s-8;
+    span {
+      @include flex-gap($s-10);
+      @include flex-center;
+    }
+    > span:last-child {
+      @include h3-medium;
+      font-weight: bold;
+    }
+  }
+  .custom-tag-info-box {
+    @include flex-gap($s-5);
+  }
+  .wallet-request-bank-info-box {
+    padding: $s-16;
+    background: $neutral-2;
+    border-radius: $s-16;
+    > div {
+      align-items: center;
+    }
+    .wallet-request-bank-info-img-container {
+      @include flex-center;
+    }
+    .wallet-request-bank-info {
+      @include body-regular;
+      @include flex-col($s-10);
+      margin-bottom: $s-10;
+      span:first-child {
+        color: var(--app-text);
+      }
+      span:last-child {
+        color: var(--app-text);
+        font-weight: bold;
+      }
+    }
+  }
+  .custom-button-container {
+    @include flex-gap($s-16);
+    justify-content: flex-end;
+    margin-top: $s-48;
+  }
+  .wallet-request-attachment-card {
+    display: flex;
+    flex-direction: column;
+    gap: $s-12;
+    padding: $s-16;
+    background: $neutral-2;
+    border: 1px solid $neutral-5;
+    border-radius: $s-8;
+  }
+}
+.withdrawal-accept-modal-uploader {
+  .ant-btn {
+    background-color: var(--app-bg-layout);
+    padding: $s-32;
+  }
+}
+.wallet-request-breadcrumb-title {
+  color: var(--app-text);
+}
+.modal-body-container {
+  padding: 0;
+  background-color: transparent !important;
+}

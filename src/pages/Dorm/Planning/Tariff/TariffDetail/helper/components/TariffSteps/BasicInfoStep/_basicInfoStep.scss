@@ -1,0 +1,21 @@
+@use "../../../../../../../../../assets/styles/abstract/variables" as *;
+.dorm-basic-info-step-container {
+  @include flex-col($s-20);
+  margin-top: $s-18;
+  .tariff-copy-btn-wrapper {
+    margin-top: $s-32;
+    @include flex-gap($s-8);
+    direction: ltr;
+  }
+  .ant-form-item-row {
+    gap: $s-4 !important;
+  }
+  .ant-form-item-label {
+    label {
+      height: 0;
+    }
+  }
+  .ant-form-item-control {
+    width: 100% !important;
+  }
+}

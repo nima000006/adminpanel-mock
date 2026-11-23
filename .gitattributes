@@ -1,0 +1,6 @@
+# Enforce LF for shell scripts and husky hooks
+*.sh text eol=lf
+.husky/* text eol=lf
+
+# Keep Windows files as-is if needed
+*.bat text eol=crlf

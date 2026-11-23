@@ -1,0 +1,31 @@
+@use "../../../../../../../../assets/styles/abstract/variables" as *;
+.residence-detail-main-card-container {
+  width: 100%;
+  .card {
+    @include flex-col($s-12);
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    padding: $s-12;
+    cursor: pointer;
+    .title {
+      @include h4-medium;
+    }
+  }
+
+  .active-mode {
+    border: 1px solid $primary-7;
+    background-color: $background-light-blue;
+    .title {
+      color: $primary-7;
+    }
+  }
+
+  .inactive-mode {
+    border: 1px solid $neutral-4;
+    background-color: var(--app-bg-layout);
+    .title {
+      color: $border-color-90;
+    }
+  }
+}

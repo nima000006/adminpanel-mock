@@ -1,0 +1,4 @@
+@use "../../../../../../../../assets/styles/abstract/variables" as *;
+.my-cancelled-food-schedule-list-container {
+  @include flex-col($s-24);
+}

@@ -1,0 +1,32 @@
+@use "../../../../../../../../../../../../../assets/styles/abstract/variables" as *;
+.pending-review-renewal-and-reserve-dorm-reservation-container {
+  @include flex-col($s-40);
+  .building-tabs-container {
+    @include flex-col($s-40);
+    @include body-regular;
+  }
+  .building-section-container {
+    @include flex-col($s-40);
+    .disabled-row {
+      .ant-table-cell {
+        color: $character-disabled-placeholder-25;
+        pointer-events: none;
+      }
+    }
+  }
+  .floors-tab-table-model-container {
+    .rooms-list-btn-container {
+      @include flex-gap($s-8);
+    }
+  }
+  .room-tabs-container {
+    @include flex-col($s-40);
+    @include body-regular;
+  }
+  .floor-table-container {
+    @include flex-col($s-24);
+  }
+  .action-btns-container {
+    @include flex-space-between;
+  }
+}

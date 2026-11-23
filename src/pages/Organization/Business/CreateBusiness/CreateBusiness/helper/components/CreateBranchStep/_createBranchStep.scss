@@ -1,0 +1,8 @@
+@use "../../../../../../../../assets/styles/abstract/variables" as *;
+.business-create-branch-step-container {
+  @include flex-col($s-40);
+  .btn-wrapper {
+    @include flex-gap($s-16);
+    justify-content: end;
+  }
+}

@@ -1,0 +1,15 @@
+@use "../../../assets/styles/abstract/variables" as *;
+.custom-slider-container {
+  @include body-regular;
+  .ant-row {
+    margin-bottom: $s-10;
+  }
+  .ant-slider {
+    margin: $s-10 $s-32;
+    margin-top: $s-30;
+    width: 50%;
+  }
+  .ant-slider-track {
+    background-color: $primary-4;
+  }
+}

@@ -1,0 +1,32 @@
+@use "../../assets/styles/abstract/variables" as *;
+.room-allocation-training-item {
+  padding: $s-10;
+  border: $border-1 solid $border-color-80;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: $s-16;
+  width: 100%;
+  .training-item-title {
+    @include h5-regular;
+    font-weight: 700;
+    color: $character-secondary-45;
+  }
+  .switch {
+    @include footnote;
+    padding: $s-2 0;
+    direction: ltr;
+  }
+  .select-field-container {
+    max-width: 50%;
+  }
+  .tags-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: $s-6;
+    .allocation-tag {
+      @include footnote;
+      color: $title-black;
+    }
+  }
+}

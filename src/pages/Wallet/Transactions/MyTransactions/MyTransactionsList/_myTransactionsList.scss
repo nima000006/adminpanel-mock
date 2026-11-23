@@ -1,0 +1,4 @@
+@use "../../../../../assets/styles/abstract/variables" as *;
+.my-transaction-list-tabs-container {
+  @include body-regular;
+}

@@ -1,0 +1,28 @@
+@use "../../../../../../../../../assets/styles/abstract/variables" as *;
+.my-wallet-details-your-account-drawer-content-container {
+  .drawer-action-btn {
+    @include flex-gap($s-12);
+  }
+
+  .account-segment-wrapper {
+    margin-bottom: $s-16;
+  }
+
+  .empty-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .empty-image {
+      margin-bottom: $s-16;
+    }
+    p {
+      margin-top: $s-8;
+      margin-bottom: $s-16;
+      @include body-regular;
+    }
+  }
+
+  .wallet-account-info-wrapper {
+    @include flex-col($s-16);
+  }
+}

@@ -1,0 +1,52 @@
+@use "./variables" as *;
+@forward "./variables";
+
+// Utility class for flexbox centering
+.d-flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.input-error {
+  border: $border-1 solid var(--error-500);
+}
+
+.select-error {
+  border: $border-1 solid var(--error-500);
+}
+
+.select-success {
+  border: $border-1 solid $blue-100;
+}
+
+.help-disabled {
+  .ant-form-item-explain-error {
+    display: none !important;
+  }
+}
+
+.mt-1 {
+  margin-top: $s-16; // Use variable instead of hardcoded value
+}
+
+.ant-pagination-options-quick-jumper {
+  @include body-regular;
+}
+
+.tables-sticky-column-left {
+  position: sticky !important;
+  left: 0;
+  overflow: hidden;
+  box-shadow: $table-sticky-box-shadow;
+}
+
+.table-column-center-content {
+  @include flex-center;
+}
+
+//! v2
+.text-link {
+  @include body-regular;
+  color: #1677ff !important;
+}

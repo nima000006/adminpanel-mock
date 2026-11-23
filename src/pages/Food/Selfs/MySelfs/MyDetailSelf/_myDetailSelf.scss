@@ -1,0 +1,4 @@
+@use "../../../../../assets/styles/abstract/variables" as *;
+.my-detail-self-page-container {
+  @include body-regular;
+}

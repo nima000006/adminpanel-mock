@@ -1,0 +1,35 @@
+@use "../../../../../../../../../../../assets/styles/abstract/variables" as *;
+.dorm-residence-facilities-info-container {
+  @include flex-col($s-16);
+  .dorm-facilities-tabs {
+    .ant-tabs-ink-bar {
+      right: 0;
+    }
+    .ant-tabs-nav {
+      border-right: 1px solid $border-color-80;
+    }
+    .ant-tabs-body-holder {
+      border: none;
+    }
+  }
+  .dorm-residence-facilities-table-container {
+    .tag-text {
+      width: fit-content;
+    }
+    .action-btn-container {
+      @include flex-gap($s-8);
+      justify-content: center;
+    }
+  }
+}
+
+.dorm-residence-delete-facility-modal-text {
+  @include body-regular;
+}
+
+.delete-dorm-facilities-modal-container {
+  .icon-title {
+    font-size: $s-22;
+    color: $danger-primary;
+  }
+}

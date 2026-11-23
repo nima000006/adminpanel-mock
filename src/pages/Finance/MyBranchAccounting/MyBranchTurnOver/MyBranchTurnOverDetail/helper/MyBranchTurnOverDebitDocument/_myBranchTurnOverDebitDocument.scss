@@ -1,0 +1,42 @@
+@use "../../../../../../../assets/styles/abstract/variables" as *;
+.financial-my-branch-turn-over-credit-document-container {
+  @include flex-col($s-40);
+
+  .financial-my-branch-turn-over-credit-document-table {
+    @include flex-col($s-16);
+    .icon-wrapper {
+      width: 20px;
+      height: 20px;
+      border-radius: 5px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .dorm-color {
+      background-color: $purple-6;
+    }
+    .my-doctor-color {
+      background-color: $cyan-6;
+    }
+    .food-color {
+      background-color: $lime-6;
+    }
+    .insurance-color {
+      background-color: $green-6;
+    }
+    .card-color {
+      background-color: $primary-6;
+    }
+
+    .service-tag {
+      @include flex-gap($s-4);
+      padding: $s-4;
+      width: fit-content;
+    }
+
+    .custom-tag {
+      @include flex-gap($s-4);
+    }
+  }
+}

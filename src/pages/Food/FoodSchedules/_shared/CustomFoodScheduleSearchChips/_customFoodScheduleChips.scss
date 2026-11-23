@@ -1,0 +1,12 @@
+@use "../../../../../assets/styles/abstract/variables" as *;
+.collapse-container {
+  @include flex-gap($s-8);
+  padding: $s-16;
+  .text {
+    @include footnote;
+  }
+  .icon {
+    color: $neutral-7;
+    font-size: $s-12;
+  }
+}

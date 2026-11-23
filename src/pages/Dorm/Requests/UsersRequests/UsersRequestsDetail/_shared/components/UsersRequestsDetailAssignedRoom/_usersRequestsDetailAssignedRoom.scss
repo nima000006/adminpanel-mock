@@ -1,0 +1,11 @@
+@use "../../../../../../../../assets/styles/abstract/variables" as *;
+.users-requests-detail-assigned-room-container {
+  .more-detail-btn {
+    @include body-regular;
+    @media (max-width: 480px) {
+      span {
+        font-size: $s-12;
+      }
+    }
+  }
+}

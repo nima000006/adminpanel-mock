@@ -1,0 +1,57 @@
+@use "../../../../../../../../assets/styles/abstract/variables" as *;
+.committee-records-detail-read-only-other-documents-step-container {
+  display: flex;
+  flex-direction: column;
+  gap: $s-35;
+  .documents-container {
+    display: flex;
+    flex-direction: column;
+    gap: $s-35;
+    .file-wrapper {
+      display: flex;
+      flex-direction: column;
+      gap: $s-35;
+
+      .attachments-file-container {
+        display: flex;
+        flex-direction: column;
+        gap: $s-8;
+        .attachments-title {
+          @include body-regular;
+          color: $title-black;
+        }
+      }
+    }
+  }
+  .delete-request-status-container {
+    border-radius: 2px;
+    border: 1px solid $dust-red-2;
+    background-color: $dust-red-1;
+    padding: $s-10 $s-16;
+    .status-text {
+      @include body-regular;
+      color: $title-black;
+    }
+  }
+  .buttons-container {
+    @include flex-center;
+    justify-content: flex-end !important;
+    gap: $s-12;
+    button {
+      @include body-regular;
+    }
+    .back-btn {
+      color: $title-black;
+    }
+  }
+}
+
+.register-remove-request-modal-container {
+  display: flex;
+  flex-direction: column;
+  gap: $s-12;
+  .modal-text {
+    @include body-regular;
+    color: $title-black;
+  }
+}

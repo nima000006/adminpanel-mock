@@ -1,0 +1,10 @@
+@use "../../../../../../../../assets/styles/abstract/_variables.scss" as *;
+.management-my-details-roles-user-info-table-model-container {
+  margin-top: $s-16;
+  .custom-tag {
+    width: fit-content;
+  }
+  .custom-switch-container {
+    margin: 0 !important;
+  }
+}

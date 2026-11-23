@@ -1,0 +1,11 @@
+@use "../../assets/styles/abstract/variables" as *;
+.input-error-message {
+  color: var(--error-500);
+  padding-top: $s-6;
+  padding-bottom: $s-16;
+  font-family: "DanaFaNum";
+  font-style: normal;
+  font-weight: 500;
+  font-size: $s-12;
+  text-align: right;
+}

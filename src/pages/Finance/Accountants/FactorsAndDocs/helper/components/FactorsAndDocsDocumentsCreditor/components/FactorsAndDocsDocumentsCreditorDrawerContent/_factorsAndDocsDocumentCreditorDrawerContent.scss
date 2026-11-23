@@ -1,0 +1,11 @@
+@use "../../../../../../../../../assets/styles/abstract/variables" as *;
+.accounting-document-creditor-container {
+  .custom-link {
+    color: $primary-6;
+    @include flex-center;
+    gap: $s-5;
+  }
+  .custom-description {
+    @include body-regular;
+  }
+}

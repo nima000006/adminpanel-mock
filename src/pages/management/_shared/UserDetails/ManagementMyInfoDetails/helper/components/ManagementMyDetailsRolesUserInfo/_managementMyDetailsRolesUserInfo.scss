@@ -1,0 +1,13 @@
+@use "../../../../../../../../assets/styles/abstract/_variables.scss" as *;
+.management-user-my-management-details-info-table-model-container {
+  margin-top: $s-16;
+  .custom-tag {
+    width: fit-content;
+  }
+  .custom-switch-container {
+    margin: 0 !important;
+  }
+  .custom-button-container {
+    @include flex-center;
+  }
+}

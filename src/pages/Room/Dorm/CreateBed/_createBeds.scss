@@ -1,0 +1,24 @@
+@use "../../../../assets/styles/abstract/variables" as *;
+.create-bed-main-container {
+  display: flex;
+  flex-direction: column;
+  gap: $s-32;
+  .btn-container {
+    display: flex;
+    gap: $s-16;
+    .cancel-btn {
+      span {
+        @include body-regular;
+      }
+    }
+  }
+  .bed-info-inputs-container {
+    display: flex;
+    flex-direction: column;
+    gap: $s-8;
+    .first-row {
+      display: flex;
+      gap: $s-16;
+    }
+  }
+}

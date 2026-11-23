@@ -1,0 +1,15 @@
+@use "../../../../../../../../../../../../assets/styles/abstract/variables" as *;
+.all-wallet-details-determining-amount-step-container {
+  margin-top: ($s-40);
+  @include flex-col($s-24);
+  .alert-wrapper {
+    @include flex-col($s-8);
+  }
+  .input-subtitle-container {
+    margin-top: $s-4;
+    @include body-regular;
+  }
+  .ant-input-number-affix-wrapper {
+    @include body-regular;
+  }
+}

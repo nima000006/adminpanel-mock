@@ -1,0 +1,56 @@
+@use "../../../../../../../assets/styles/abstract/variables" as *;
+.work-spaces-request-received-admission-program-container {
+  @include flex-col($s-20);
+  .request-received-admission-program-wrapper {
+    @include flex-col($s-20);
+  }
+  .btn-container {
+    display: flex;
+    justify-content: space-between;
+    direction: ltr;
+    @media (max-width: 630px) {
+      flex-direction: column;
+      gap: $s-16;
+    }
+
+    .lef-side-btn-wrapper,
+    .right-side-btn-wrapper {
+      @include flex-gap($s-16);
+      @media (max-width: 480px) {
+        flex-direction: column;
+      }
+    }
+
+    .disable-hover {
+      &.ant-btn-primary,
+      &.ant-btn {
+        background-color: $yellow !important;
+        border-color: $yellow !important;
+      }
+
+      &.ant-btn > span {
+        &:hover {
+          background-color: $yellow !important;
+        }
+      }
+    }
+  }
+  .request-received-admission-program-tab {
+    @include body-regular;
+  }
+  .site-navigation-steps-container {
+    @include body-regular;
+    .ant-steps-icon {
+      @include body-regular;
+    }
+  }
+}
+
+.work-spaces-returned-modal {
+  .ant-btn-primary {
+    background-color: $yellow;
+    &:hover {
+      background-color: $yellow !important;
+    }
+  }
+}

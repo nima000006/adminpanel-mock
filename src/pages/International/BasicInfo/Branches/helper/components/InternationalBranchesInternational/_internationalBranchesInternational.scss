@@ -1,0 +1,13 @@
+@use "../../../../../../../assets/styles/abstract/variables" as *;
+.international-branches-international-container {
+  .custom-button-container {
+    @include flex-center;
+  }
+  .international-branches-international-table-container {
+    margin-top: $s-24;
+  }
+  .custom-alert {
+    border-style: dashed;
+    margin-top: $s-24;
+  }
+}

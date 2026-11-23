@@ -1,0 +1,12 @@
+@use "../../../../../../../assets/styles/abstract/variables" as *;
+.residence-dorm-list-container {
+  @include flex-col(1.2);
+
+  .actions-button-container {
+    margin-bottom: 1.2rem;
+    @include flex-gap($s-10);
+    @media (max-width: 575px) {
+      flex-direction: column;
+    }
+  }
+}

@@ -1,0 +1,68 @@
+@use "../../../assets/styles/abstract/variables" as *;
+.custom-input-number-container {
+  input:-webkit-autofill,
+  input:-webkit-autofill:hover,
+  input:-webkit-autofill:focus {
+    -webkit-box-shadow: 0 0 0 30px $white inset !important;
+    -webkit-text-fill-color: $neutral-11 !important;
+  }
+  width: 100%;
+  .ant-input-number {
+    width: 100%;
+  }
+  .ant-input-number-input {
+    @include body-regular;
+    color: $title-black;
+  }
+  label {
+    @include body-regular;
+    color: $title-black;
+    height: 0 !important;
+  }
+
+  .ant-form-item {
+    margin: 0;
+  }
+  .ant-form-item-control {
+    width: 100%;
+    flex: unset;
+  }
+  .ant-row {
+    flex-flow: unset;
+    align-items: center;
+  }
+  .ant-form-item-label {
+    overflow: unset;
+    label {
+      &::after {
+        content: "";
+        margin-inline-end: 0;
+      }
+    }
+  }
+
+  .ant-form-item-explain-error {
+    color: var(--error-500);
+    font-family: "DanaFaNum";
+    font-style: normal;
+    font-weight: 500;
+    font-size: $s-12;
+    text-align: right;
+  }
+  .ant-input-number-affix-wrapper {
+    width: 100%;
+  }
+
+  .vertical-label {
+    .ant-form-item-row {
+      display: flex !important;
+      flex-direction: column !important;
+      align-items: flex-start !important;
+      gap: $s-4 !important;
+    }
+  }
+  .ant-input-number-group-addon:last-child {
+    @include footnote;
+    color: $neutral-7;
+  }
+}

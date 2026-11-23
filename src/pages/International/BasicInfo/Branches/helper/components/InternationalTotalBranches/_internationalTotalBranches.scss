@@ -1,0 +1,9 @@
+@use "../../../../../../../assets/styles/abstract/variables" as *;
+.international-total-branches-container {
+  .custom-alert-duplicate {
+    border-style: dashed;
+  }
+  .international-total-branches-table-container {
+    margin-top: $s-24;
+  }
+}

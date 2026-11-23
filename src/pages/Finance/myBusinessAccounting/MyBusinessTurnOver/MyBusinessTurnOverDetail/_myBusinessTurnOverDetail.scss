@@ -1,0 +1,12 @@
+@use "../../../../../assets/styles/abstract/variables" as *;
+.financial-my-business-turn-over-detail-container {
+  .custom-tabs {
+    @include body-regular;
+    .ant-tabs-tab-btn {
+      @include flex-center;
+    }
+  }
+}
+.custom-bread-crumb {
+  color: $neutral-7 !important;
+}

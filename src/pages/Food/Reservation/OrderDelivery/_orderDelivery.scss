@@ -1,0 +1,52 @@
+@use "../../../../assets/styles/abstract/variables" as *;
+.food-order-delivery-toolbox-right-side-container {
+  width: 100%;
+  display: flex;
+  gap: 8px;
+  margin-bottom: 1rem;
+  .date-pick-container {
+    min-width: 200px;
+  }
+
+  .ant-picker {
+    @media (max-width: 480px) {
+      max-width: 100px;
+    }
+  }
+  .ant-input-affix-wrapper {
+    @media (max-width: 480px) {
+      max-width: 100px;
+    }
+  }
+
+  .ant-row {
+    @media (max-width: 480px) {
+      max-width: 100px;
+    }
+  }
+}
+.national-code-input {
+  min-width: 240px;
+  @media (max-width: 575px) {
+    min-width: unset !important;
+  }
+
+  input:-webkit-autofill,
+  input:-webkit-autofill:focus {
+    transition:
+      background-color 600000s 0s,
+      color 600000s 0s;
+  }
+  input[data-autocompleted] {
+    background-color: transparent !important;
+  }
+}
+.cross-icon {
+  color: $danger-primary;
+}
+
+.deliver-modal-container {
+  .deliver-alert-modal {
+    margin-top: 2rem;
+  }
+}

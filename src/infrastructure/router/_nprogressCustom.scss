@@ -1,0 +1,5 @@
+/* Position NProgress spinner on the top-left for RTL layout */
+.nprogress .spinner {
+  right: auto !important;
+  left: 15px !important;
+}

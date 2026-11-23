@@ -1,0 +1,9 @@
+@use "../../../../../assets/styles/abstract/variables" as *;
+.admission-program-detail-page-container {
+  @include flex-col($s-40);
+  .tabs-container {
+    @include flex-center;
+    width: 100%;
+    gap: $s-16;
+  }
+}

@@ -1,0 +1,42 @@
+@use "../../../assets/styles/abstract/variables" as *;
+.main-notification-container {
+  background-color: var(--app-bg-container);
+  padding: $s-40;
+  max-width: 50%;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: $s-16;
+  @media (max-width: 1120px) {
+    max-width: 70%;
+  }
+  @media (max-width: 950px) {
+    max-width: 100%;
+  }
+  .main-notif-text {
+    @include h5-regular;
+  }
+  .product-box-wrapper {
+    background-color: var(--app-bg-container);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: $s-12;
+    @media (max-width: 750px) {
+      max-width: 100%;
+      grid-template-columns: 1fr;
+    }
+    .product-box {
+      box-shadow: rgba(230, 237, 243, 0.6) 0px 8px 24px;
+      border-radius: 10px;
+      padding: $s-12;
+      @include flex-gap($s-12);
+      max-width: 100%;
+      align-items: center;
+      @include body2;
+      cursor: pointer;
+      @media (max-width: 620px) {
+        padding: $s-6;
+      }
+    }
+  }
+}

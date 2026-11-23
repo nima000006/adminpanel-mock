@@ -1,0 +1,14 @@
+@use "../../../../../../../../../assets/styles/abstract/variables" as *;
+.contracts-template-detail-attachments-container {
+  .ant-statistic-content {
+    @include flex-center;
+    background-color: $black-03 !important;
+    padding: 0 $s-8;
+    border-radius: $s-6;
+    .value-container {
+      span {
+        color: $blue-primary !important;
+      }
+    }
+  }
+}

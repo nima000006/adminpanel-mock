@@ -1,0 +1,15 @@
+@use "../../../../../assets/styles/abstract/variables" as *;
+.all-wallets-list-tabs-container {
+  @include body-regular;
+
+  .all-wallets-list-users-tab-container {
+    @include flex-col($s-16);
+  }
+
+  .all-wallets-list-business-and-branches-tab-container {
+    @include flex-col($s-16);
+    .service-container {
+      @include flex-gap($s-4);
+    }
+  }
+}

@@ -1,0 +1,30 @@
+@use "../../../../../../../../../../../../../assets/styles/abstract/variables" as *;
+.food-return-transaction-info-tab-container {
+  @include flex-col($s-40);
+  .total-price-card-container {
+    @include flex-col($s-8);
+    align-items: center;
+    background-color: var(--app-bg-layout);
+    padding: $s-12;
+    .title {
+      @include body-regular;
+      color: var(--app-text);
+    }
+    .price-text {
+      @include h5-medium;
+      color: var(--app-text);
+    }
+  }
+  .upload-text-container {
+    display: flex;
+    gap: $s-8;
+    align-items: center;
+    justify-content: center;
+    .upload-text {
+      color: #777;
+    }
+    .upload-logo {
+      color: #777;
+    }
+  }
+}

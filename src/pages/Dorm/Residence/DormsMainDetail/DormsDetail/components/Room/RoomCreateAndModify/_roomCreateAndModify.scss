@@ -1,0 +1,26 @@
+@use "../../../../../../../../assets/styles/abstract/variables" as *;
+.room-create-and-modify-page-container {
+  @include flex-col($s-40);
+  .status-container {
+    .ant-form-item {
+      margin-bottom: 0;
+      min-width: 200px;
+    }
+  }
+  .action-btns-container {
+    @include flex-gap($s-16);
+    justify-content: end;
+  }
+  .room-image-attachment-container {
+    display: flex;
+    gap: $s-8;
+    align-items: center;
+    justify-content: center;
+    .upload-text-second {
+      color: #777;
+    }
+    .upload-logo-second {
+      color: #777;
+    }
+  }
+}

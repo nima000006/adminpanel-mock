@@ -1,0 +1,17 @@
+@use "../../assets/styles/abstract/variables" as *;
+.not-found-container {
+  .ant-result-title {
+    margin-top: 4rem;
+    @include body-regular;
+    font-size: $s-24;
+    color: red;
+  }
+  .ant-result-subtitle {
+    @include body-regular;
+    margin-top: $s-16;
+    font-size: 1.1rem;
+  }
+  button {
+    @include body-regular;
+  }
+}

@@ -1,0 +1,39 @@
+@use "../../../assets/styles/abstract/variables" as *;
+.custom-transfer-container {
+  .ant-transfer {
+    @media (max-width: 575px) {
+      @include flex-center;
+      flex-direction: column;
+      gap: $s-10;
+      .ant-transfer-list {
+        width: 100%;
+      }
+    }
+  }
+  width: 100%;
+  @include body-regular;
+  .ant-transfer-list-header-title {
+    @include body-regular;
+  }
+  .ant-transfer-list-header-selected {
+    @include body-regular;
+  }
+  .ant-transfer-list {
+    width: 320px;
+    @media (max-width: 650px) {
+      width: 240px;
+    }
+  }
+  .ant-transfer-list-content-item {
+    @include body-regular;
+  }
+  .ant-pagination-simple-pager {
+    @include body-regular;
+    input {
+      @include body-regular;
+    }
+  }
+  .ant-input {
+    @include body-regular;
+  }
+}

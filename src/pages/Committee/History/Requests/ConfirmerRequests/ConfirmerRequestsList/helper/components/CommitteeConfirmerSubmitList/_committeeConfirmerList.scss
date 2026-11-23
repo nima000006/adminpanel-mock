@@ -1,0 +1,27 @@
+@use "../../../../../../../../../assets/styles/abstract/variables" as *;
+.committee-confirmer-submit-list-container {
+  .committee-confirmer-submit-list-table {
+    .request-type {
+      @include body-regular;
+    }
+    .ant-table-cell {
+      .waiting-time-container {
+        display: flex;
+        flex-direction: column;
+        gap: $s-8;
+      }
+      .green {
+        background-color: $green;
+        color: $white;
+      }
+      .yellow {
+        background-color: $yellow;
+        color: $white;
+      }
+      .red {
+        background-color: $red;
+        color: $white;
+      }
+    }
+  }
+}

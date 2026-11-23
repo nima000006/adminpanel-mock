@@ -1,0 +1,21 @@
+@use "../../../../../assets/styles/abstract/variables" as *;
+.interview-list-container {
+  container-type: inline-size;
+
+  @container (max-width: 140px) {
+    button {
+      padding: $s-2;
+    }
+    button span {
+      font-size: $s-12;
+    }
+
+    .ant-select {
+      max-width: 90px;
+    }
+
+    .divider-container .divider-main span {
+      font-size: $s-12;
+    }
+  }
+}

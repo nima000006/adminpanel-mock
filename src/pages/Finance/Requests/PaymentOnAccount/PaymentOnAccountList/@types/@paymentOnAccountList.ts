@@ -1,0 +1,21 @@
+export type PaymentOnAccountListDataType = {
+  id: number;
+  requestId: string;
+  amount: number;
+  service: string;
+  userGroup: number;
+  firstName: string;
+  lastName: string;
+  nationalId: string;
+  birthCertNo: string;
+  mobile: string;
+  business: string;
+  university: string;
+  province: string;
+  job: string;
+  requestDate: string;
+  rejectDate: string;
+  responsibleRequest: string;
+  statusId: number;
+  email?: string;
+};

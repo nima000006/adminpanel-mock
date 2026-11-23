@@ -1,0 +1,10 @@
+@use "../../../../../../../../assets/styles/abstract/variables" as *;
+.work-spaces-admission-program-level-of-action-container {
+  @include flex-col($s-20);
+  .admission-program-level-of-action-tree {
+    @include body-regular;
+  }
+  .admission-levels-action-tree-wrapper {
+    @include flex-col($s-16);
+  }
+}

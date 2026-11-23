@@ -1,0 +1,9 @@
+@use "../../../../../../assets/styles/abstract/variables" as *;
+.overview-branches-container {
+  .custom-select {
+    min-width: $s-260;
+    @media (max-width: 900px) {
+      min-width: $s-160;
+    }
+  }
+}

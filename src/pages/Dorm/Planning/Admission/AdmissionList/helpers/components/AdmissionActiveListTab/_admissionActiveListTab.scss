@@ -1,0 +1,33 @@
+@use "../../../../../../../../assets/styles/abstract/variables" as *;
+.dorm-admission-active-list-tab-container {
+  @include flex-col($s-24);
+
+  .btn-wrapper {
+    @include flex-gap($s-16);
+    @media (max-width: 600px) {
+      flex-direction: column;
+      gap: $s-16;
+    }
+    .btn-text {
+      @media (max-width: 450px) {
+        width: 100%;
+      }
+    }
+  }
+  .dorm-admission-list-table {
+    .waiting-time-container {
+      display: flex;
+      flex-direction: column;
+      gap: $s-8;
+    }
+    .green {
+      background-color: $green;
+    }
+    .yellow {
+      background-color: $yellow;
+    }
+    .red {
+      background-color: $red;
+    }
+  }
+}

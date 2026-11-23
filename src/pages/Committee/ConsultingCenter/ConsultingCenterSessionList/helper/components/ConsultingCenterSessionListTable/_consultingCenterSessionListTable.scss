@@ -1,0 +1,18 @@
+@use "../../../../../../../assets/styles/abstract/variables" as *;
+.committee-consulting-center-session-list-table-container {
+  .consulting-center-session-list-table {
+    .cancel-session-btn {
+      cursor: pointer;
+      color: $danger-primary;
+      @include body-regular;
+    }
+    .tables-sticky-column-left {
+      position: sticky !important;
+      left: 0;
+      overflow: hidden;
+    }
+    .time-wrapper {
+      @include flex-gap($s-4);
+    }
+  }
+}

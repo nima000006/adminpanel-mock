@@ -1,0 +1,44 @@
+@use "../../../../../assets/styles/abstract/variables" as *;
+.finance-payment-on-account-list-container {
+  container-type: inline-size;
+  @include flex-col($s-40);
+
+  @container (max-width: 140px) {
+    button {
+      padding: $s-4;
+    }
+    button span {
+      font-size: $s-12;
+    }
+
+    .divider-container .divider-main span {
+      font-size: $s-12;
+    }
+  }
+
+  .demand-wrapper {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    // در لپ‌تاپ‌ها (تا 1200px)
+    @media (max-width: 1200px) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    // در تبلت‌ها (تا 768px)
+    @media (max-width: 768px) {
+      grid-template-columns: repeat(2, 1fr);
+      gap: $s-12;
+    }
+
+    // در موبایل‌ها (تا 575px)
+    @media (max-width: 575px) {
+      grid-template-columns: 1fr;
+      gap: $s-8;
+    }
+    gap: $s-16;
+    .ant-badge-status-text {
+      color: $neutral-7 !important;
+      margin: 0 !important;
+    }
+  }
+}

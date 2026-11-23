@@ -1,0 +1,11 @@
+@use "../../../../../../../../../../../../assets/styles/abstract/variables" as *;
+.pending-list-room-allocation-bed-allocation-drawer-content-container {
+  @include flex-col($s-40);
+  .users-requests-detail-bed-list-table-model-container {
+    .disabled-row {
+      .ant-table-cell {
+        color: $character-disabled-placeholder-25;
+      }
+    }
+  }
+}

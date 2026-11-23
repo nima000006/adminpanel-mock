@@ -1,0 +1,26 @@
+@use "../../../../../assets/styles/abstract/variables" as *;
+.my-doctor-test-list-page-container {
+  @include flex-col($s-24);
+
+  .test-list-segment {
+    .ant-segmented-item {
+      width: 100%;
+    }
+  }
+}
+
+.my-doctor-test-list-form-container {
+  ol {
+    list-style: decimal !important;
+    padding-right: $s-8;
+  }
+
+  ul {
+    list-style: disc !important;
+    padding-right: $s-8;
+  }
+
+  li {
+    list-style-position: inside !important;
+  }
+}

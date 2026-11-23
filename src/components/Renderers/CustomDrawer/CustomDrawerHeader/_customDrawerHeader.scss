@@ -1,0 +1,55 @@
+@use "../../../../assets/styles/abstract/variables" as *;
+.header-drawer-container {
+  background-color: var(--app-bg-container);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  @media (max-width: 575px) {
+    flex-wrap: wrap;
+  }
+  .right-side {
+    display: flex;
+    align-items: center;
+    gap: $s-16;
+    .right-side-title-contain {
+      @include h5-medium;
+      color: var(--app-text);
+    }
+    .close-icon-container {
+      cursor: pointer;
+
+      padding: 4px 6px;
+      border-radius: 6px;
+      &:hover {
+        background-color: var(--app-bg-layout);
+      }
+      /* Ensure icon color adapts */
+      svg {
+        fill: var(--app-text-secondary) !important;
+        color: var(--app-text-secondary) !important;
+      }
+    }
+  }
+  .left-side {
+    display: flex;
+    align-items: center;
+    gap: $s-8;
+    .ant-form-item {
+      margin-bottom: 0;
+    }
+  }
+}
+.drawer-header-sticky-top {
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  box-shadow:
+    0 0 4px 0 rgba(0, 0, 0, 0.06),
+    0 2px 4px 0 rgba(0, 0, 0, 0.08);
+  height: 60px;
+  padding: 2rem;
+  @media (max-width: 575px) {
+    height: fit-content;
+    padding: 1rem;
+  }
+}

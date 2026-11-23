@@ -1,0 +1,147 @@
+import { useEffect, useState } from "react";
+
+import { FormInstance } from "antd";
+import { useWatch } from "antd/es/form/Form";
+
+import { AdvanceFilterItemsListType } from "@components/Modals/AdvanceFilterModal/@types/@advanceFilterModal";
+import useQueryParams from "@infra/hooks/useQueryParams";
+import {
+  useLazyGetBasicInfoCityBasedMultipleProvinceQuery,
+  useLazyGetBasicInfoProvinceAndCityQuery,
+} from "@infra/states/redux/Apis/basicInformation/basicInformationApis";
+import { IdTitle } from "@pages/_shared/@types/@generalTypes/@generalTypes";
+import { selectNotFoundContent } from "@pages/_shared/utils";
+import { CateringAllVendorListAdvanceFilterFormType } from "@pages/Catering/Vendors/AllVendors/CateringAllVendorList/@types/@cateringAllVendorList";
+
+const useCateringAllVendorListAdvanceFilter = ({
+  advanceModalOpen,
+  form,
+}: {
+  advanceModalOpen: boolean;
+  form: FormInstance<CateringAllVendorListAdvanceFilterFormType>;
+}) => {
+  const [provinceData, setProvinceData] = useState<IdTitle[]>([]);
+  const [cityData, setCityData] = useState<IdTitle[]>([]);
+
+  const { params } = useQueryParams();
+
+  const selectedProvince = useWatch("province", form);
+
+  //? ================================ Api Calls ================================
+  const [
+    getProvinceData,
+    { isLoading: isProvinceDataLoading, isSuccess: isProvinceSuccess },
+  ] = useLazyGetBasicInfoProvinceAndCityQuery();
+
+  const [getCityData, { isLoading: isCityDataLoading, isSuccess: isCityDataSuccess }] =
+    useLazyGetBasicInfoCityBasedMultipleProvinceQuery();
+
+  //? ================================ Effects ================================
+  useEffect(() => {
+    if (advanceModalOpen && params?.provinceId) {
+      getProvinceHandler();
+    }
+  }, [advanceModalOpen]);
+
+  // Restore city options after reload when province is already selected
+  useEffect(() => {
+    if (!advanceModalOpen) return;
+
+    if (selectedProvince && selectedProvince.length > 0) {
+      getCityData({
+        ids: selectedProvince.map((value) => value?.code)?.join(","),
+      })
+        .unwrap()
+        .then((value) => {
+          const cityList = value?.map((item) => {
+            return {
+              id: item?.id,
+              title: item?.name,
+            };
+          });
+
+          setCityData(cityList);
+        });
+    } else if (params?.provinceId) {
+      getCityData({ ids: params.provinceId })
+        .unwrap()
+        .then((value) => {
+          const cityList = value?.map((item) => {
+            return {
+              id: item?.id,
+              title: item?.name,
+            };
+          });
+
+          setCityData(cityList);
+        });
+    } else {
+      setCityData([]);
+    }
+  }, [advanceModalOpen, selectedProvince]);
+
+  //* ▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲ Main TSX ▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲ */
+  const getProvinceHandler = () => {
+    if (!isProvinceSuccess) {
+      getProvinceData(103) // 103 Iran code
+        .unwrap()
+        .then((value) => {
+          const provinceList = value?.map((item) => {
+            return {
+              id: item?.id,
+              title: item?.name,
+            };
+          });
+          setProvinceData(provinceList);
+        });
+    }
+  };
+
+  const onProvinceChangeHandler = (event: number[] | undefined) => {
+    if (event?.length) {
+      setCityData([]);
+      getCityData({ ids: event?.map((value) => value)?.join(",") })
+        .unwrap()
+        .then((value) => {
+          const cityList = value?.map((item) => {
+            return {
+              id: item?.id,
+              title: item?.name,
+            };
+          });
+
+          setCityData(cityList);
+        });
+    }
+    form.setFieldsValue({ city: undefined });
+  };
+
+  // ================================ Filter Items ================================
+  const filterItemsList: AdvanceFilterItemsListType[] = [
+    {
+      label: "استان",
+      name: "province",
+      type: "select",
+      options: provinceData,
+      loading: isProvinceDataLoading,
+      mode: "multiple",
+      onClick: getProvinceHandler,
+      onChange: (value) => onProvinceChangeHandler(value as number[]),
+      notFoundContent: !isProvinceSuccess ? selectNotFoundContent : undefined,
+    },
+    {
+      label: "شهر",
+      name: "city",
+      type: "select",
+      options: cityData,
+      loading: isCityDataLoading,
+      mode: "multiple",
+      disabled: !selectedProvince?.length,
+      notFoundContent: !isCityDataSuccess ? selectNotFoundContent : undefined,
+    },
+  ];
+
+  return { filterItemsList };
+};
+
+export default useCateringAllVendorListAdvanceFilter;

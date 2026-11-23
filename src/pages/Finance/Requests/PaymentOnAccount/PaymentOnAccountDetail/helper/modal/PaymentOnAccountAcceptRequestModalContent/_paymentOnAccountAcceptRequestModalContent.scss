@@ -1,0 +1,4 @@
+@use "../../../../../../../../assets/styles/abstract/variables" as *;
+.payment-on-account-accept-request-modal-content {
+  @include flex-col($s-24);
+}

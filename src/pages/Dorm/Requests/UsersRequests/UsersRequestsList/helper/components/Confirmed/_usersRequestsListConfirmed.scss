@@ -1,0 +1,5 @@
+.users-requests-confirmed-table-model-container {
+  .btn-container {
+    @include flex-gap($s-16);
+  }
+}

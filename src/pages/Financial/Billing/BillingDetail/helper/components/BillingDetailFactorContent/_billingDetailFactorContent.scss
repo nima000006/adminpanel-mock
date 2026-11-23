@@ -1,0 +1,112 @@
+@use "../../../../../../../assets/styles/abstract/variables" as *;
+
+//product component style
+.billing-true-servant-product {
+  .label {
+    @include footnote;
+  }
+  .product-container {
+    @include flex-gap($s-8);
+    .product-wrapper {
+      padding: $s-6;
+      border-radius: 5px;
+      @include flex-gap($s-8);
+      cursor: pointer;
+      .title {
+        @include body-regular;
+      }
+    }
+    .job-search-back {
+      background-color: $background-light-blue;
+    }
+    .self-back {
+      background-color: $background-light-lime;
+    }
+    .game-back {
+      background-color: $background-dust-red;
+    }
+    .room-back {
+      background-color: $background-golden-purple;
+    }
+  }
+}
+
+//billing detail factor content style
+.billing-detail-factor-content-container {
+  @include flex-gap($s-20);
+  flex-direction: column;
+  .btn-wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+  .overdue-btn-wrapper {
+    .overdue-btn {
+      @include body2;
+      color: $white;
+      border: none;
+    }
+    .ant-btn-primary {
+      background: linear-gradient(
+        90deg,
+        rgba(232, 167, 0, 1) 0%,
+        rgba(240, 115, 0, 1) 90%
+      );
+    }
+  }
+  .waiting-payment-btn-wrapper {
+    .waiting-payment-btn {
+      @include body2;
+      color: $white;
+      border: none;
+    }
+    .ant-btn-primary {
+      background: linear-gradient(
+        90deg,
+        rgba(20, 155, 185, 1) 0%,
+        rgba(0, 19, 85, 1) 100%
+      );
+    }
+  }
+
+  .paying-installments-btn-wrapper {
+    .paying-installments-btn {
+      @include body2;
+      color: $white;
+      border: none;
+    }
+    .ant-btn-primary {
+      background: linear-gradient(
+        90deg,
+        rgba(0, 179, 218, 1) 0%,
+        rgba(0, 100, 218, 1) 100%
+      );
+    }
+  }
+
+  .settled-btn-wrapper {
+    .settled-btn {
+      @include body2;
+      color: $white;
+      border: none;
+    }
+    .ant-btn-primary {
+      background: linear-gradient(
+        90deg,
+        rgba(181, 205, 32, 1) 0%,
+        rgba(32, 205, 70, 1) 100%
+      );
+    }
+  }
+  .grid-cols-3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: $s-24;
+    margin: $s-24 0;
+  }
+
+  .postal-code-address-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: $s-24;
+  }
+}

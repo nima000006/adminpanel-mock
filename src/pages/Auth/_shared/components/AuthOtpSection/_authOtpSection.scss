@@ -1,0 +1,41 @@
+@use "../../../../../assets/styles/abstract/variables" as *;
+
+.auth-otp-container {
+  @include flex-center;
+  flex-direction: column;
+  // @include flex-col($s-40);
+
+  .auth-otp-title {
+    @include h5-medium;
+  }
+
+  .auth-otp-sub-title {
+    @include h5-medium;
+    color: $primary-6;
+    direction: ltr;
+  }
+  .custom-otp {
+    margin-top: $s-20;
+  }
+
+  .custom-hours {
+    margin-top: $s-20;
+  }
+
+  .auth-otp-wrong-number-warn {
+    @include h5-medium;
+    @include flex-center;
+    color: $neutral-7;
+    margin-top: $s-20;
+  }
+
+  .auth-otp-change-number-link {
+    @include h5-medium;
+    color: $primary-6 !important;
+    margin-top: $s-5;
+    @include flex-center;
+    margin-bottom: $s-20;
+    cursor: pointer;
+    width: 100%;
+  }
+}

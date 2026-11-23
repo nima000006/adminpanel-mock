@@ -1,0 +1,13 @@
+@use "../../../../../assets/styles/abstract/variables" as *;
+.bank-account-list-container {
+  @include flex-col($s-40);
+  .demand-wrapper {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: $s-16;
+    .ant-badge-status-text {
+      color: $neutral-7 !important;
+      margin: 0 !important;
+    }
+  }
+}

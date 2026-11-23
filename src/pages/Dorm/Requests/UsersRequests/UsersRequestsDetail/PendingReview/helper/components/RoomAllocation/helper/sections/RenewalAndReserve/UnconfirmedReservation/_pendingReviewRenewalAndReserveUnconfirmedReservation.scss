@@ -1,0 +1,10 @@
+@use "../../../../../../../../../../../../../assets/styles/abstract/variables" as *;
+.pending-review-renewal-and-reserve-unconfirmed-reservation-container {
+  @include flex-col($s-40);
+
+  .unconfirmed-reservation-table-model-container {
+    .table-action-btn-container {
+      @include flex-gap($s-8);
+    }
+  }
+}

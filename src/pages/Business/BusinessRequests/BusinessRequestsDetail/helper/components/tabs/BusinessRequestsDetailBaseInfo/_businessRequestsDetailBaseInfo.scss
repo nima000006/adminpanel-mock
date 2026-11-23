@@ -1,0 +1,92 @@
+@use "../../../../../../../../assets/styles/abstract/variables" as *;
+.business-requests-detail-base-container {
+  .custom-alert {
+    .ant-alert-message {
+      @include subtitle2;
+    }
+    &.custom-alert-duplicate {
+      margin-top: $s-16;
+    }
+  }
+  .custom-divider {
+    margin-top: $s-40;
+    span {
+      @include h4-medium;
+    }
+  }
+  .custom-statistic {
+    .ant-statistic-content-prefix {
+      @include flex-gap(0);
+      margin: 0;
+      @media (max-width: 1200px) and (min-width: 760px) {
+        display: none;
+      }
+    }
+
+    .ant-statistic-content {
+      border-radius: $s-8;
+      background-color: $black-03;
+      @include flex-center;
+      padding: 0 $s-8;
+      .value-container {
+        @include body-medium;
+        background-color: $black-03;
+        @include flex-center;
+        padding: 0 $s-8;
+        span {
+          color: $primary-6;
+          margin: 0;
+        }
+      }
+      .custom-suffix {
+        font-size: $s-16;
+        @include flex-center;
+        cursor: pointer;
+        margin: 0;
+        @media (max-width: 1200px) and (min-width: 576px) {
+          display: none;
+        }
+      }
+    }
+  }
+  .file-download-container {
+    margin-top: $s-40;
+    @include flex-col($s-5);
+    span {
+      @include subtitle2;
+      margin-bottom: $s-5;
+    }
+  }
+  .custom-button {
+    flex-direction: row-reverse;
+  }
+  .empty-container {
+    .empty-image {
+      margin-bottom: 16;
+    }
+    p {
+      margin-top: $s-8;
+      margin-bottom: $s-16;
+    }
+  }
+  .custom-button-add-row {
+    width: 100%;
+    border-radius: 0 0 $s-8 $s-8;
+    border-color: $neutral-5 !important;
+  }
+  .custom-switch-container {
+    margin: 0 auto !important;
+  }
+}
+.business-requests-detail-custom-modal {
+  @include body-regular;
+  max-width: $s-416;
+  .business-requests-detail-form-container {
+    margin-top: $s-20;
+    .btn-container {
+      @include flex-gap($s-8);
+      justify-content: flex-end;
+      margin-top: $s-20;
+    }
+  }
+}

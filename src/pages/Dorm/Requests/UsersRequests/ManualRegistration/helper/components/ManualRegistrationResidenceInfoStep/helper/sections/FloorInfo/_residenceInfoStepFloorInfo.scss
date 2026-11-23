@@ -1,0 +1,8 @@
+@use "../../../../../../../../../../../assets/styles/abstract/variables" as *;
+.residence-info-step-floor-info-container {
+  .residence-info-step-floor-info-table-model-container {
+    .rooms-list-btn-container {
+      @include flex-gap($s-8);
+    }
+  }
+}

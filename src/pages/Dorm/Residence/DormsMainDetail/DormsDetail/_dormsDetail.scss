@@ -1,0 +1,18 @@
+@use "../../../../../assets/styles/abstract/variables" as *;
+.dorm-main-detail-container {
+  @include flex-col($s-80);
+
+  .residence-info-container {
+    @include flex-col($s-16);
+  }
+  .residence-items-info-container {
+    @include flex-col($s-40);
+    .card-container {
+      @include flex-gap($s-24);
+
+      @media (max-width: 575px) {
+        flex-direction: column;
+      }
+    }
+  }
+}

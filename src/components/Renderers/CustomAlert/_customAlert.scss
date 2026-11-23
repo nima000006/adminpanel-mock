@@ -1,0 +1,10 @@
+@use "../../../assets/styles/abstract/variables" as *;
+.custom-alert-container {
+  .ant-alert-message {
+    @include h5-bold;
+  }
+  .ant-alert-description {
+    @include body-regular;
+  }
+  border-radius: 8px;
+}

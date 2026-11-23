@@ -1,0 +1,6 @@
+@use "../../../../../../../../../../../../assets/styles/abstract/variables" as *;
+.estelam-amozeshyar-reject-drawer-container {
+  .action-btn-container {
+    @include flex-gap($s-12);
+  }
+}

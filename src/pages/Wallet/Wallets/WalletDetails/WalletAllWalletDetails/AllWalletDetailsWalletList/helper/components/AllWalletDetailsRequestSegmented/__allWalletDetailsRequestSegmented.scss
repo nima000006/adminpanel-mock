@@ -1,0 +1,7 @@
+@use "../../../../../../../../../assets/styles/abstract/variables" as *;
+.all-wallet-request-segmented-container {
+  @include body-regular;
+  .all-wallets-transaction-list-table-container {
+    margin-top: $s-16;
+  }
+}

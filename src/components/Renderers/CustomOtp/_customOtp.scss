@@ -1,0 +1,14 @@
+@use "../../../assets/styles/abstract/variables" as *;
+.custom-otp {
+  .ant-otp {
+    gap: $s-16 !important;
+  }
+  .ant-form-item-control-input-content {
+    text-align: center;
+    input {
+      width: $s-56;
+      height: $s-56;
+      border-radius: $s-16;
+    }
+  }
+}

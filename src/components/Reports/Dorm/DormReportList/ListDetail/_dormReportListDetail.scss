@@ -1,0 +1,133 @@
+@use "../../../../../assets/styles/abstract/variables" as *;
+.dorm-detail-container {
+  .room-stat-container {
+    // width: 100%;
+    // display: flex;
+    // gap: $s-16;
+    .user-item {
+      width: 100%;
+    }
+  }
+  .title-dorm {
+    .ant-divider-inner-text {
+      @media (max-width: 620px) {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+    }
+  }
+  .apartment-stat-container {
+    width: 100%;
+    display: flex;
+    gap: $s-16;
+    .user-item {
+      width: 100%;
+    }
+  }
+  .apartment-tabs-container {
+    overflow-x: auto; // Enable horizontal scrolling
+    max-width: 100%;
+    margin: 2.2rem 0 $s-16 0;
+    .ant-tabs-nav-list {
+      display: flex;
+      gap: 0.4rem;
+      .ant-tabs-tab {
+        padding: 0px;
+        // @media (max-width: 900px) {
+        //   padding: 4px;
+        // }
+      }
+      .ant-tabs-tab-btn {
+        @include body-regular;
+      }
+      // .ant-tabs-tab-with-remove {
+      //   .ant-tabs-tab-remove {
+      //     display: none !important;
+      //   }
+      // }
+    }
+  }
+
+  .ant-tabs-nav-add {
+    width: 125px;
+  }
+  .add-apartment-btn {
+    display: flex;
+    align-items: center;
+    gap: $s-4;
+    .add-apartment-btn-label {
+      color: $blue-primary;
+      @include body-regular;
+      font-weight: bold;
+    }
+  }
+  .apartment-icon-label {
+    padding: 6px 8px;
+  }
+  // .ant-tabs-dropdown-menu-item {
+  //   display: flex;
+  // }
+}
+.apartment-detail-container {
+  margin-top: $s-32;
+  .ant-tabs-tab-btn {
+    @include body-regular;
+  }
+  .new-room-btn {
+    margin: $s-16;
+    color: $blue-primary;
+    border: 1px solid $blue-primary;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    span {
+      @include body-regular;
+    }
+    // .anticon-plus-square {
+    //   display: flex;
+    //   justify-content: center;
+    //   align-items: center;
+    //   margin-right: 1rem;
+    // }
+  }
+}
+.tables-sticky-column-left {
+  position: sticky !important;
+  left: 0;
+  box-shadow: $table-sticky-box-shadow;
+  background-color: #fff;
+  overflow: hidden;
+}
+.table-btns-container {
+  display: flex;
+  span {
+    @include body-regular;
+  }
+}
+.apartment-icon-holder {
+  display: flex;
+  flex-direction: row;
+  // gap: $s-8;
+  align-items: center;
+  .apartment-icon {
+    margin-right: $s-4;
+  }
+}
+// .ant-tabs-dropdown-menu-item-remove {
+//   display: none;
+// }
+.ant-tabs-nav-wrap {
+  overflow: auto !important;
+}
+.ant-tabs-nav-more {
+  display: none;
+}
+.ant-divider-inner-text {
+  display: flex;
+  flex-wrap: wrap;
+}
+.ant-tabs-nav-list {
+  width: 100%;
+}

@@ -1,0 +1,9 @@
+@use "../../../../../assets/styles/abstract/variables" as *;
+.accounting-settlement-document-details-tabs-container {
+  .tabs-container {
+    @include body-regular;
+  }
+  .ant-tabs-tab-btn {
+    @include flex-center;
+  }
+}

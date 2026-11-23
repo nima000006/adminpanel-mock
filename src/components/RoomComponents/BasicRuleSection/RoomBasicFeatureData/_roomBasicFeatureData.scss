@@ -1,0 +1,60 @@
+@use "../../../../assets/styles/abstract/variables" as *;
+.room-basic-feature-data-container {
+  .start-date-container {
+    @include flex-center;
+    justify-content: flex-start;
+    gap: $s-2;
+    .start-date {
+      @include body-regular;
+      color: $neutral-12;
+    }
+  }
+  .room-basic-feature-data-main-container {
+    display: flex;
+    justify-content: flex-start;
+    padding: $s-40;
+    gap: $s-28;
+    @media (max-width: 1600px) {
+      flex-direction: column;
+    }
+    .bg-gray {
+      background-color: $card-alt-bg;
+      max-width: fit-content;
+      @media (max-width: 1200px) {
+        max-width: unset;
+      }
+    }
+    .room-basic-feature-card-container {
+      display: flex;
+      flex-direction: column;
+      gap: $s-40;
+      max-width: fit-content;
+      .card-title {
+        @include h5-medium;
+        color: $black-0;
+      }
+      .card-item {
+        display: flex;
+        flex-direction: column;
+        gap: $s-4;
+        .card-item-header {
+          @include body-regular;
+          color: $title-black;
+        }
+        .card-item-inputs {
+          @include flex-center;
+          justify-content: flex-start;
+          gap: $s-4;
+        }
+      }
+      .cards-container {
+        @include flex-space-between;
+        gap: $s-5;
+        @media (max-width: 1200px) {
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+    }
+  }
+}

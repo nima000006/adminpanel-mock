@@ -1,0 +1,36 @@
+@use "../../../../assets/styles/abstract/variables" as *;
+.pricing-basic-container {
+  .pricing-basic-table-container {
+    .remaining-capacity-wrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .box-remaining-capacity {
+      border-radius: 20px;
+      text-align: center;
+      color: $white;
+      width: $s-44;
+    }
+    .box-remaining-capacity-green {
+      background-color: $success-500;
+    }
+    .box-remaining-capacity-orange {
+      background-color: $orange;
+    }
+    .box-remaining-capacity-red {
+      background-color: $character-danger;
+    }
+  }
+
+  .view-text-pricing-basic {
+    color: $blue-primary;
+    cursor: pointer;
+  }
+  .tables-sticky-column-left {
+    position: sticky !important;
+    left: 0;
+    overflow: hidden;
+    box-shadow: $table-sticky-box-shadow;
+  }
+}

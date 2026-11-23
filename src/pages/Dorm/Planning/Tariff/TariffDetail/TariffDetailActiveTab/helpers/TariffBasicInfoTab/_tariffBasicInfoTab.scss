@@ -1,0 +1,8 @@
+@use "../../../../../../../../assets/styles/abstract/variables" as *;
+.tariff-basic-info-tab-container {
+  @include flex-col($s-20);
+  .tariff-copy-btn {
+    direction: ltr;
+    margin-top: $s-16;
+  }
+}

@@ -1,0 +1,4 @@
+@use "../../../../../../../../assets/styles/abstract/variables" as *;
+.all-canceled-days-list-container {
+  @include flex-col($s-4);
+}

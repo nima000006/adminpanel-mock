@@ -1,0 +1,63 @@
+@use "../../../../../assets/styles/abstract/variables" as *;
+.realization-detail-session-allocation-modal-content-container {
+  @include flex-gap($s-40);
+  flex-direction: column;
+  .custom-card-body {
+    @include flex-gap($s-40);
+    flex-direction: column;
+  }
+  .switch-row {
+    @include flex-gap($s-12);
+    .switch-title {
+      @include h5-regular;
+    }
+  }
+  .upload-container {
+    display: flex;
+    flex-direction: column;
+    gap: $s-13;
+    .ant-upload-list {
+      display: flex;
+      gap: $s-8;
+    }
+  }
+  .other-files-session {
+    border: $border-1 solid $border-color-80;
+    border-radius: 10px;
+    background-color: $border-color-80;
+    padding: $s-24;
+    .others-file-wrapper {
+      @include flex-gap($s-18);
+      flex-direction: column;
+      .others-file-row {
+        @include flex-gap($s-60);
+        background-color: var(--app-bg-container);
+        padding: $s-8 $s-20;
+        .box-wrapper {
+          @include flex-gap($s-12);
+          flex-direction: column;
+          .box-label {
+            @include footnote;
+          }
+          .others-file-data {
+            @include h5-regular;
+          }
+        }
+      }
+    }
+  }
+  .grid-cols-3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: $s-12;
+  }
+  .around-box {
+    padding: $s-24;
+    border-radius: 10px;
+    border: $border-1 solid $border-color-90;
+  }
+  .notification-inputs-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

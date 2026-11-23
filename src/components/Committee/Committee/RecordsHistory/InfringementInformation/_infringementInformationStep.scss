@@ -1,0 +1,47 @@
+@use "../../../../../assets/styles/abstract/variables" as *;
+.committee-records-submit-infringement-information-step-container {
+  display: flex;
+  flex-direction: column;
+  gap: $s-35;
+  .border-round-box {
+    padding: $s-24;
+    border-radius: 10px;
+    border: $border-1 solid $border-color-90;
+  }
+  .flex-col-g32 {
+    display: flex;
+    flex-direction: column;
+    gap: $s-32;
+  }
+  .ant-collapse-expand-icon {
+    position: absolute;
+    left: 0;
+    border-radius: 50%;
+    .collapse-icon {
+      font-size: $s-18;
+    }
+  }
+  .upload-btn {
+    @include body-regular;
+  }
+  .upload-container {
+    display: flex;
+    flex-direction: column;
+    gap: $s-13;
+    .ant-upload-list {
+      display: flex;
+      gap: $s-8;
+    }
+  }
+  .buttons-container {
+    @include flex-center;
+    justify-content: flex-end !important;
+    gap: $s-12;
+    button {
+      @include body-regular;
+    }
+    .back-btn {
+      color: $title-black;
+    }
+  }
+}

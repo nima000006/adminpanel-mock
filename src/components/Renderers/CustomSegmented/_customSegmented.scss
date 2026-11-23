@@ -1,0 +1,7 @@
+@use "../../../assets/styles/abstract/variables" as *;
+.custom-segmented-main-container {
+  .ant-segmented-item-label {
+    @include body-regular;
+    @include flex-center;
+  }
+}

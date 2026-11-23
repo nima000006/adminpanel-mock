@@ -1,0 +1,18 @@
+.contract-connect-list-table-container {
+  .ant-table-container {
+    border-start-start-radius: 0 !important;
+    border-start-end-radius: 0 !important;
+  }
+  .ant-table-header {
+    border-start-start-radius: 0 !important;
+    border-start-end-radius: 0 !important;
+    table {
+      th,
+      tr,
+      thead {
+        border-start-start-radius: 0 !important;
+        border-start-end-radius: 0 !important;
+      }
+    }
+  }
+}

@@ -1,0 +1,12 @@
+@use "../../../../../assets/styles/abstract/variables" as *;
+.dorm-basic-info-near-place-type-container {
+  .dorm-near-places-table-container {
+    .ant-form-item {
+      margin-bottom: 0 !important;
+    }
+  }
+}
+
+.dorm-basic-info-switch-modal {
+  @include body-regular;
+}

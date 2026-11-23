@@ -1,0 +1,13 @@
+@use "../../../../../assets/styles/abstract/variables" as *;
+
+.create-business-container {
+  .step-content {
+    @include body-regular;
+  }
+  .ant-steps-horizontal {
+    @include body-regular;
+    @media (max-width: 900px) {
+      @include flex-col($s-24);
+    }
+  }
+}

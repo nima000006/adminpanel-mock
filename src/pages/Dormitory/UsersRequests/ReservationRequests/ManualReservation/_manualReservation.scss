@@ -1,0 +1,13 @@
+@use "../../../../../assets/styles/abstract/variables" as *;
+
+.manual-reservation-page-container {
+  .ant-steps-icon {
+    @media (max-width: 1024px) {
+      font-size: $s-14;
+      line-height: $s-12;
+    }
+    @media (max-width: 950px) {
+      font-size: $s-12;
+    }
+  }
+}

@@ -1,0 +1,9 @@
+@use "../../../../../../../../../../../../assets/styles/abstract/variables" as *;
+.wallet-request-waiting-toolbox-container {
+  .actions-button-container {
+    @include flex-gap($s-10);
+    @media (max-width: 575px) {
+      flex-direction: column;
+    }
+  }
+}

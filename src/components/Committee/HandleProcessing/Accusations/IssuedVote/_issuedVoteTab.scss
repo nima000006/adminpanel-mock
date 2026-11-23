@@ -1,0 +1,173 @@
+@use "../../../../../assets/styles/abstract/variables" as *;
+.accusation-case-issued-vote-tab-container {
+  display: flex;
+  flex-direction: column;
+  gap: $s-24;
+  .filter-container {
+    @include flex-center;
+    justify-content: flex-start;
+    gap: $s-8;
+    .title-text {
+      @include body-regular;
+      color: $title-black;
+    }
+    .capsule-container {
+      @include flex-center;
+      gap: $s-16;
+      .capsule {
+        @include button2;
+        color: $neutral-7;
+        padding: $s-4 $s-8;
+        border: $border-1 solid $border-color;
+        border-radius: 16px;
+      }
+    }
+  }
+  .ant-steps-icon {
+    @include ant-steps-icon-font;
+  }
+  .ant-steps-vertical {
+    gap: $s-20;
+  }
+  .ant-steps-item-title {
+    width: 100%;
+  }
+  .ant-steps-item-icon {
+    float: right !important;
+  }
+  .step-item-container {
+    .step-body {
+      padding-top: $s-12;
+    }
+    .step-title {
+      @include body-regular;
+      color: $title-black;
+    }
+    .step-subtitle {
+      display: inline-block;
+      @include body-regular;
+      color: $character-secondary-45;
+    }
+    .header-container {
+      @include flex-space-between;
+      .print-button {
+        @include body-regular;
+        color: $blue-primary;
+        border: $border-1 solid $blue-primary;
+      }
+    }
+    .referral-section {
+      display: flex;
+      flex-direction: column;
+      gap: $s-24;
+      .value {
+        font-size: $s-14;
+      }
+      .message-text {
+        @include body-regular;
+        color: $black-0;
+        padding: $s-12;
+        background-color: $neutral-4;
+        border-radius: 10px;
+      }
+      .vote-info-container {
+        @include flex-center;
+        justify-content: flex-start;
+        gap: $s-40;
+        .vote-info-item-container {
+          @include flex-center;
+          gap: $s-4;
+          .question-mark {
+            color: $white;
+            background-color: $character-disabled-placeholder-25;
+            border-radius: 50%;
+            font-size: $s-18;
+            cursor: pointer;
+          }
+        }
+        @media (max-width: 770px) {
+          display: grid;
+          grid-template-columns: repeat(1, 1fr);
+          gap: $s-8;
+        }
+      }
+      .vote-info-item {
+        @include body-regular;
+      }
+      .black-text {
+        color: $black-0;
+      }
+      .gray-text {
+        color: $character-secondary-45;
+      }
+      .red-text {
+        color: $dust-red-7;
+      }
+      .green-text {
+        color: $green;
+      }
+      .punishment-container {
+        display: flex;
+        flex-direction: column;
+        gap: $s-24;
+        padding: $s-24;
+        border: $border-1 solid $border-color;
+        border-radius: 16px;
+      }
+      .grid-cols-2 {
+        .value {
+          font-size: $s-14;
+        }
+      }
+      .divider-container {
+        display: grid;
+        grid-template-columns: 4fr auto;
+        gap: $s-16;
+        margin-bottom: $s-24;
+        .specific-divider {
+          @include h5-regular;
+          color: $title-black;
+        }
+        .intensification-sentence-switch {
+          align-self: center;
+          justify-self: end;
+        }
+      }
+      .intensification-sentence-desc {
+        grid-column: 1/3;
+        .value {
+          font-size: $s-14;
+        }
+      }
+      .title-container {
+        @include flex-center;
+        gap: $s-2;
+        justify-content: flex-start;
+      }
+      .upload-container {
+        display: flex;
+        flex-direction: column;
+        gap: $s-13;
+        .ant-upload-list {
+          display: flex;
+          gap: $s-8;
+        }
+      }
+      .attachment-container {
+        display: flex;
+        flex-direction: column;
+        gap: $s-8;
+      }
+    }
+  }
+}
+
+.tooltip-body {
+  padding: $s-6 $s-8;
+  display: flex;
+  flex-direction: column;
+  p {
+    @include body-regular;
+    color: $white;
+  }
+}

@@ -1,0 +1,10 @@
+@use "../../../../../../../../assets/styles/abstract/variables" as *;
+.international-admission-program-modify-fields-info-container {
+  @include flex-col($s-40);
+  .action-btns-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: $s-16;
+  }
+}

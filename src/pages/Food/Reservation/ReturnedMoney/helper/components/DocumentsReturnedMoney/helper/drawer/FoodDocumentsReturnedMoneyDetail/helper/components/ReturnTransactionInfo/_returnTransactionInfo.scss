@@ -1,0 +1,9 @@
+@use "../../../../../../../../../../../../../assets/styles/abstract/variables" as *;
+.food-return-transaction-info-container {
+  .total-price-card-container {
+    @include flex-col($s-8);
+    align-items: center;
+    background-color: var(--app-bg-layout);
+    padding: $s-12;
+  }
+}

@@ -1,0 +1,8 @@
+@use "../../../../../assets/styles/abstract/variables" as *;
+.auth-title {
+  @include flex-col($s-8);
+  align-items: center;
+  .auth-title_label {
+    @include h2-medium;
+  }
+}

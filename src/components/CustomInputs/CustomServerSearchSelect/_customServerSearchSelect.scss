@@ -1,0 +1,19 @@
+@use "../../../assets/styles/abstract/variables" as *;
+
+.custom-server-search-select__loading-more {
+  display: flex;
+  justify-content: center;
+  padding: 8px 0;
+}
+
+.custom-server-search-select__error {
+  @include body-regular;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: $s-4;
+  padding: 8px;
+  color: var(--error-500);
+  text-align: center;
+}

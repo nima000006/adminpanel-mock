@@ -1,0 +1,21 @@
+@use "../../../../../../../../../assets/styles/abstract/variables" as *;
+.dorm-pricing-step-container {
+  margin-top: $s-18;
+  .tariff-copy-btn-wrapper {
+    margin-top: $s-16;
+    @include flex-gap($s-8);
+    direction: ltr;
+  }
+}
+
+.dorm-pricing-step-modal-container {
+  .dorm-pricing-step-modal-content {
+    @include body-regular;
+    .modal-content-text {
+      margin-bottom: $s-16;
+    }
+  }
+  .modal-btn-container {
+    direction: ltr;
+  }
+}

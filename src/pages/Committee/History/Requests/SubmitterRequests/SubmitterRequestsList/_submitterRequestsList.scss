@@ -1,0 +1,50 @@
+@use "../../../../../../assets/styles/abstract/variables" as *;
+.submit-page-container {
+  display: flex;
+  flex-direction: column;
+  gap: $s-16;
+  .committee-submit-top-btn-wrapper {
+    display: flex;
+    justify-content: space-between;
+
+    Button {
+      @include h5-regular;
+    }
+    @media (max-width: 590px) {
+      @include flex-gap($s-8);
+      flex-direction: column;
+    }
+  }
+  .ant-tabs-nav-list {
+    @include body-regular;
+    .ant-tabs-tab {
+      margin-left: $s-32;
+      @media (max-width: 1500px) {
+        margin-left: $s-24;
+      }
+      @media (max-width: 1400px) {
+        margin-left: $s-14;
+      }
+    }
+    .tabs-label {
+      @include h5-regular;
+      font-size: $s-14;
+      @media (max-width: 1295px) {
+        font-size: $s-13;
+      }
+      @media (max-width: 1200px) {
+        font-size: $s-12;
+      }
+    }
+  }
+  .committee-submit-tabs-container {
+    .ant-tabs-nav-wrap-ping-left {
+      justify-content: flex-end;
+    }
+  }
+  button {
+    span {
+      @include body-regular;
+    }
+  }
+}

@@ -1,0 +1,4 @@
+@use "../../../../../../../../assets/styles/abstract/variables" as *;
+.banking-card-reject-list-container {
+  @include flex-col($s-16);
+}

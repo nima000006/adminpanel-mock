@@ -1,0 +1,7 @@
+@use "../../../../../assets/styles/abstract/variables" as *;
+.committee-appeal-accusation-case-return-to-session-modal-container {
+  p {
+    @include body-regular;
+    color: $title-black;
+  }
+}

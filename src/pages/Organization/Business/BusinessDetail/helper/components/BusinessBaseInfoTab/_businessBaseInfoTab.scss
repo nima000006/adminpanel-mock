@@ -1,0 +1,11 @@
+@use "../../../../../../../assets/styles/abstract/variables" as *;
+.business-base-info-container {
+  @include body-regular;
+  @include flex-col($s-40);
+  .alert {
+    margin-top: $s-40;
+  }
+  .segment-wrapper {
+    @include flex-gap($s-8);
+  }
+}

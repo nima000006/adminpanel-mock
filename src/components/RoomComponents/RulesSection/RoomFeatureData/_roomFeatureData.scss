@@ -1,0 +1,7 @@
+@use "../../../../assets/styles/abstract/variables" as *;
+.room-feature-data-container {
+  .start-date-container {
+    @include body-regular;
+    margin: $s-16 0;
+  }
+}

@@ -1,0 +1,47 @@
+@use "../../../../../../../assets/styles/abstract/variables" as *;
+.insurance-card-container {
+  border: 1px solid $border-color;
+  border-radius: 8px;
+  display: flex;
+  gap: $s-16;
+  padding: $s-16;
+  height: 100%;
+  @media (max-width: 500px) {
+    flex-direction: column;
+    gap: $s-8;
+  }
+  .info-container {
+    display: flex;
+    flex-direction: column;
+    gap: $s-8;
+    .title-status-container {
+      @include flex-space-between;
+      align-items: start;
+      gap: $s-8;
+      .title {
+        @include h5-bold;
+      }
+      @media (max-width: 600px) {
+        flex-direction: column-reverse;
+      }
+    }
+    .role,
+    .period {
+      @include h5-medium;
+      color: $character-secondary-45;
+    }
+    .price-container {
+      display: flex;
+      align-items: center;
+      gap: $s-4;
+    }
+    .price {
+      @include h5-medium;
+      color: #434343;
+    }
+    .currency {
+      @include body-regular;
+      color: character-secondary-45;
+    }
+  }
+}

@@ -1,0 +1,15 @@
+@use "../../../../../../assets/styles/abstract/variables" as *;
+.management-requests-my-estelam-amozeshyar-list-container {
+  container-type: inline-size;
+  .estelam-amozeshyar-table-container {
+    @include body-regular;
+  }
+  @container (max-width: 140px) {
+    button {
+      padding: $s-2;
+    }
+    button span {
+      font-size: $s-12;
+    }
+  }
+}

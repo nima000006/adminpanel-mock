@@ -1,0 +1,6 @@
+@use "../../../../../../../../../assets/styles/abstract/variables" as *;
+.management-requests-all-role-confirmed-list-tab {
+  .table-container {
+    @include flex-col($s-16);
+  }
+}

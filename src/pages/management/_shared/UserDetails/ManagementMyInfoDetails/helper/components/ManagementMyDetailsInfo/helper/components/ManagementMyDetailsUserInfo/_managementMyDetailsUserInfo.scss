@@ -1,0 +1,73 @@
+@use "../../../../../../../../../../../assets/styles/abstract/variables" as *;
+.management-my-detail-info-uploader-container {
+  background-color: var(--app-bg-layout);
+  border-radius: $s-8;
+  width: $s-178;
+  height: $s-178;
+  @include flex-center;
+  padding: $s-25;
+  .main-uploader-container {
+    .ant-form-item {
+      margin: 0 !important;
+    }
+    .upload-container {
+      gap: 0;
+    }
+  }
+  @media (max-width: 991px) {
+    width: 100%;
+    height: auto;
+  }
+  @media (min-width: 1199px) {
+    height: $s-120;
+    width: $s-120;
+  }
+}
+
+.management-my-detail-info-detail-container {
+  width: 100%;
+  padding: $s-16;
+  @include flex-center;
+  background-color: var(--app-bg-layout);
+  border-radius: $s-8;
+  @media (max-width: 1199px) {
+    height: auto;
+  }
+}
+.management-my-detail-info-detail-info {
+  @include flex-gap($s-5);
+  flex-direction: column;
+  justify-content: center;
+  @include body-regular;
+  height: 100%;
+  h3 {
+    margin-bottom: $s-10;
+  }
+  > div {
+    @include flex-gap($s-20);
+    flex-wrap: wrap;
+    > span:first-child {
+      color: var(--app-text);
+      min-width: $s-85;
+    }
+  }
+}
+.custom-tag-container {
+  @include flex-gap($s-5);
+  .custom-tag {
+    width: fit-content;
+  }
+}
+.management-my-detail-info-detail-buttons {
+  @include flex-gap($s-10);
+  flex-direction: column;
+  align-items: flex-end;
+  button {
+    width: 100%;
+    @include body-regular;
+    @include flex-center;
+    @media (min-width: 992px) {
+      width: $s-120;
+    }
+  }
+}

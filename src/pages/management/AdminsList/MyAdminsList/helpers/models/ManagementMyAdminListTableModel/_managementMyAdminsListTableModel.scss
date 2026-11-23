@@ -1,0 +1,14 @@
+@use "../../../../../../../assets/styles/abstract/variables" as *;
+.management-my-admin-list-container {
+  .management-my-admin-custom-button {
+    padding: $s-5 !important;
+  }
+  .management-my-admin-list-buttons-container {
+    height: $s-38;
+    display: inline-block;
+    @include flex-center;
+  }
+  .management-custom-tag {
+    width: fit-content;
+  }
+}

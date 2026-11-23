@@ -1,0 +1,19 @@
+@use "../../../../../assets/styles/abstract/variables" as *;
+.committee-session-creation-final-check-session-guests-step-container {
+  display: flex;
+  flex-direction: column;
+  gap: $s-35;
+  .add-new-person-table-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: $s-35;
+    .session-guest-btn {
+      @include body-regular;
+    }
+  }
+  .border-round-box {
+    padding: $s-24;
+    border-radius: 10px;
+    border: $border-1 solid $border-color-90;
+  }
+}

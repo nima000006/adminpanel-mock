@@ -1,0 +1,18 @@
+@use "../../../../../../../../../../assets/styles/abstract/variables" as *;
+.organization-structure-segment-content-container {
+  .empty-list-container {
+    padding: $s-5;
+    @include flex-col($s-8);
+    align-items: center;
+
+    .empty-text {
+      @include body-regular;
+    }
+  }
+
+  .organization-structure-segment-content-list-table {
+    .checkout-container {
+      @include flex-gap($s-4);
+    }
+  }
+}

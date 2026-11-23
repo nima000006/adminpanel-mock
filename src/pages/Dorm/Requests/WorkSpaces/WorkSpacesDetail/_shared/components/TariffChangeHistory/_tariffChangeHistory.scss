@@ -1,0 +1,27 @@
+@use "../../../../../../../../assets/styles/abstract/variables" as *;
+
+.work-spaces-change-history-tab-wrapper-sub-title {
+  @include flex-col($s-1);
+  margin-top: $s-16;
+  h4 {
+    @include body-regular;
+  }
+}
+.work-spaces-change-history-tab-wrapper-desc {
+  border: 2px solid $border-color-90;
+  border-radius: 5px;
+  padding: $s-16;
+  margin-top: $s-16;
+}
+.ant-steps-item-container {
+  .ant-steps-item-title {
+    display: flex;
+    flex-direction: column;
+    @include body-regular;
+  }
+}
+.ant-statistic-content-value {
+  span {
+    @include body-regular;
+  }
+}

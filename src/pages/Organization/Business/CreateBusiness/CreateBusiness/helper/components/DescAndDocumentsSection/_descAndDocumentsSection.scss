@@ -1,0 +1,33 @@
+@use "../../../../../../../../assets/styles/abstract/variables" as *;
+.desc-documents-section-container {
+  @include flex-col($s-120);
+
+  .attach-file {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: $s-100;
+    .ant-btn {
+      border-color: $danger-primary;
+      border-style: dashed;
+      background-color: var(--app-bg-layout);
+      padding: $s-30;
+    }
+
+    .ant-upload-wrapper {
+      padding-bottom: $s-40;
+    }
+  }
+
+  .ant-btn {
+    border-color: $danger-primary;
+    border-style: dashed;
+    background-color: var(--app-bg-layout);
+    padding: $s-24;
+  }
+  .all-self-upload-text-container {
+    @include flex-col($s-8);
+    align-items: center;
+    justify-content: center;
+    display: flex;
+  }
+}

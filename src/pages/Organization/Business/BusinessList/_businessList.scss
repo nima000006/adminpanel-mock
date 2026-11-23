@@ -1,0 +1,10 @@
+@use "../../../../assets/styles/abstract/variables" as *;
+.modify-business-list-container {
+  @include flex-col($s-24);
+}
+
+.modify-business-list-table {
+  .business-list-custom-tag {
+    @include flex-gap($s-4);
+  }
+}

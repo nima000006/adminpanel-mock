@@ -1,0 +1,11 @@
+.view-top-chart-drawer-content {
+  .segmented-container {
+    display: block;
+
+    .ant-segmented-group {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+    }
+  }
+}

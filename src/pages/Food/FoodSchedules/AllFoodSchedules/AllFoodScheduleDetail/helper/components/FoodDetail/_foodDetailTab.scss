@@ -1,0 +1,27 @@
+@use "../../../../../../../../assets/styles/abstract/variables" as *;
+.all-food-schedule-food-detail-tab-container {
+  @include flex-col($s-24);
+  .banner-rate-container {
+    @include flex-space-between;
+    flex-direction: column;
+    .img-container {
+      @include flex-center;
+      gap: $s-24;
+      @media (max-width: 830px) {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+      }
+      @media (max-width: 450px) {
+        grid-template-columns: repeat(1, 1fr);
+      }
+
+      .self-img {
+        max-width: fit-content;
+        border-radius: 10px;
+        @media (max-width: 768px) {
+          max-width: 65px;
+        }
+      }
+    }
+  }
+}

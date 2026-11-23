@@ -1,0 +1,88 @@
+@use "../../../../assets/styles/abstract/variables" as *;
+.room-delivered-modal-container {
+  margin: 0 auto;
+  .form-container {
+    display: flex;
+    flex-direction: column;
+    gap: $s-40;
+    max-width: 90%;
+    margin: 0 auto;
+  }
+  .user-profile-container {
+    display: flex;
+    flex-direction: row;
+    gap: $s-40;
+    margin-top: $s-16;
+  }
+  .ant-modal-container {
+    margin: 0;
+    padding: 0;
+    background-color: var(--app-bg-layout);
+    .ant-modal-header {
+      padding: $s-16 $s-40;
+    }
+    .ant-modal-title {
+      @include h5-regular;
+      font-size: $s-19;
+      font-weight: bold;
+    }
+    .ant-modal-body {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: $s-19;
+      margin: 0 auto;
+      .ant-form {
+        width: 100%;
+      }
+    }
+    .input-fields-container {
+      display: flex;
+      justify-content: center;
+      align-items: baseline;
+      gap: $s-22;
+    }
+    .tab-main-container {
+      align-self: flex-start;
+      align-items: flex-start;
+      width: 100%;
+    }
+    .action-btns-container {
+      display: flex;
+      align-self: flex-start;
+      align-items: center;
+      gap: $s-19;
+      margin-bottom: $s-16;
+      button {
+        @include body-regular;
+      }
+    }
+  }
+  .tabs-container {
+    margin: $s-16;
+    padding: $s-24;
+    background-color: var(--app-bg-container);
+    border-radius: 20px;
+    @include card-shadow-1;
+    .ant-tabs-tab-btn {
+      @include h5-regular;
+    }
+    .ant-tabs-tab {
+      margin-left: $s-32;
+    }
+    .table-container {
+      margin-top: $s-16;
+    }
+  }
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .ant-tabs-nav-wrap {
+    @include body-regular;
+  }
+  .ant-tabs-nav {
+    margin: 0;
+  }
+}

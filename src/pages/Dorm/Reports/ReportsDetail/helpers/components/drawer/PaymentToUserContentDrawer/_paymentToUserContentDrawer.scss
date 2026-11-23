@@ -1,0 +1,22 @@
+@use "../../../../../../../../assets/styles/abstract/variables" as *;
+.payment-to-user-drawer-container {
+  .payment-to-user-drawer-header-action-btns-container {
+    @include flex-gap($s-8);
+  }
+
+  .payment-to-user-content-drawer-action-btns-container {
+    @include flex-col($s-40);
+    .uploader-btn-text {
+      @include body-regular;
+    }
+  }
+  .upload-container {
+    @include flex-col($s-10);
+    .ant-upload-list {
+      &::before {
+        content: unset;
+      }
+      gap: $s-10;
+    }
+  }
+}

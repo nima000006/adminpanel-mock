@@ -1,0 +1,23 @@
+@use "../../../../../../../assets/styles/abstract/variables" as *;
+.room-delivered-modal-container-request {
+  .content-text {
+    @include body-regular;
+  }
+  .btn-container {
+    margin: $s-32 $s-16 $s-16 $s-16;
+    display: flex;
+    align-items: center;
+    gap: $s-24;
+  }
+  .ant-modal-title {
+    @include body-regular;
+  }
+  .content-text {
+    @include body-regular;
+  }
+  .ant-btn {
+    span {
+      @include body-regular;
+    }
+  }
+}

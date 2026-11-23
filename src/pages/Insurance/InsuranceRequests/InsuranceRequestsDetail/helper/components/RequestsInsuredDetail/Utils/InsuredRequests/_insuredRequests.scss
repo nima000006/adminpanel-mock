@@ -1,0 +1,6 @@
+@use "../../../../../../../../../assets/styles/abstract/variables" as *;
+.insured-requests-container {
+  display: flex;
+  flex-direction: column;
+  gap: $s-24;
+}

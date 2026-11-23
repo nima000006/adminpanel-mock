@@ -1,0 +1,38 @@
+@use "../../../assets/styles/abstract/variables" as *;
+.rules-text-container {
+  display: flex;
+  flex-direction: column;
+  gap: $s-16;
+  .title {
+    @include h5-regular;
+    color: $black-3;
+  }
+  .sub-title {
+    @include body-regular;
+    color: $black-8;
+  }
+  .rules-section-tabs-container {
+    margin: $s-35 0 $s-16 0;
+    .ant-tabs-nav-list {
+      display: flex;
+      gap: $s-6;
+      .ant-tabs-tab-btn {
+        @include body-regular;
+      }
+      .ant-tabs-tab-with-remove {
+        .ant-tabs-tab-remove {
+          display: none !important;
+        }
+      }
+      .rules-section-btn {
+        display: flex;
+        align-items: center;
+        gap: $s-8;
+        .rules-section-btn-label {
+          color: $blue-primary;
+          @include body-regular-bold;
+        }
+      }
+    }
+  }
+}

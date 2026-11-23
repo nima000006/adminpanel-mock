@@ -1,0 +1,194 @@
+@use "../../../../../assets/styles/abstract/variables" as *;
+$primary-6-01: rgba(rgb(24, 144, 255), 0.1);
+.wallet-detail-tabs-container {
+  @include body-regular;
+}
+.all-wallets-detail-page-container {
+  @include flex-col($s-40);
+  @media (max-width: 575px) {
+    .divider-container {
+      margin-bottom: $s-20 !important;
+    }
+  }
+  .business-info-wrapper {
+    @include flex-col($s-32);
+  }
+
+  .user-info-wrapper {
+    @include flex-col($s-32);
+  }
+
+  .information-container {
+    @include flex-col($s-32);
+    .user-wallet-info-container {
+      @include flex-gap($s-24);
+      @media (max-width: 575px) {
+        @include flex-col($s-10);
+        align-items: start;
+      }
+      align-items: center;
+      .user-img {
+        max-width: 80px;
+        max-height: 80px;
+        border-radius: 16px;
+        border: 1px solid $neutral-4;
+      }
+      .text-profile-button-container {
+        @include flex-space-between;
+        @media (max-width: 575px) {
+          @include flex-col($s-10);
+          align-items: start;
+        }
+        width: 100%;
+        background-color: $black-03;
+        padding: $s-16;
+        border-radius: $s-16;
+        .text-container {
+          @include body-regular;
+          @include flex-col($s-8);
+          .text-user-name-container {
+            @include flex-gap($s-8);
+            .user-name {
+              @include h4-medium;
+            }
+            @media (max-width: 991px) {
+              flex-wrap: wrap;
+            }
+          }
+          .text-item-container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            .title {
+              color: var(--app-text);
+            }
+            .value {
+              color: $neutral-12;
+            }
+          }
+        }
+      }
+    }
+
+    .business-wallet-info-container {
+      @include flex-col($s-32);
+
+      .business-info-container {
+        @include flex-gap($s-24);
+        align-items: center;
+        .user-img {
+          max-width: 80px;
+          max-height: 80px;
+          border-radius: 16px;
+          border: 1px solid $neutral-4;
+        }
+        .text-profile-button-container {
+          @include flex-space-between;
+          @media (max-width: 575px) {
+            @include flex-col($s-10);
+            align-items: start;
+          }
+          width: 100%;
+          background-color: $black-03;
+          padding: $s-16;
+          border-radius: $s-16;
+          @include body-regular;
+          .business-name {
+            @include h4-medium;
+          }
+          .text-container {
+            @include body-regular;
+            @include flex-col($s-8);
+            .text-item-container {
+              display: grid;
+              grid-template-columns: repeat(2, 1fr);
+              @media (max-width: 767px) {
+                grid-template-columns: 1fr;
+              }
+              .title {
+                color: var(--app-text);
+              }
+              .value {
+                color: $neutral-12;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .wallet-info-container {
+      .wallet-id {
+        @include h5-medium;
+        font-weight: 600;
+      }
+      .wallet-id-container {
+        @include body-regular;
+        @include flex-space-between;
+        @media (max-width: 991px) {
+          @include flex-col($s-10);
+          align-items: start;
+        }
+        background-color: $black-03;
+        padding: $s-16;
+        border-radius: $s-16;
+        .wallet-id-items {
+          @media (max-width: 991px) {
+            @include flex-col($s-10);
+            align-items: start;
+          }
+          @include flex-gap($s-8);
+        }
+      }
+    }
+  }
+
+  .table-container {
+    @include flex-col($s-16);
+  }
+
+  .timeline-container {
+    @include flex-col($s-16);
+
+    .ant-timeline-item {
+      @include body-regular;
+
+      .timeline-item-container {
+        @include flex-space-between;
+        padding: $s-16 0;
+        align-items: start;
+        .item-container {
+          @include flex-col($s-8);
+          .info-container {
+            @include flex-gap($s-8);
+            align-items: center;
+            .info-price-value {
+              @include h4-medium;
+              color: var(--app-text);
+            }
+            .info-text-value {
+              @include body-regular;
+              color: var(--app-text);
+            }
+          }
+        }
+      }
+
+      .create-step {
+        @include flex-space-between;
+      }
+    }
+  }
+  .custom-tag {
+    gap: $s-5;
+  }
+  .custom-wallet-details-cards {
+    border: 2px solid transparent;
+    cursor: pointer;
+    &:hover {
+      background-color: $primary-6-01;
+    }
+    &.wallet-selected {
+      border: 2px solid var(--color-primary-5);
+    }
+  }
+}

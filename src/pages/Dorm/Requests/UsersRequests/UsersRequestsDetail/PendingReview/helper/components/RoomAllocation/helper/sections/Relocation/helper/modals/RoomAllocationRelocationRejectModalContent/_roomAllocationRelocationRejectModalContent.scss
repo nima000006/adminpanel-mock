@@ -1,0 +1,6 @@
+@use "../../../../../../../../../../../../../../../assets/styles/abstract/variables" as *;
+.room-allocation-relocation-reject-modal-content-container {
+  .text {
+    @include body-regular;
+  }
+}

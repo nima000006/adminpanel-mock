@@ -1,0 +1,20 @@
+@use "../../../../../../../../../../../assets/styles/abstract/variables" as *;
+.contract-custom-drawer-edit-container {
+  .custom-select-container {
+    margin-bottom: 0 !important;
+  }
+  .mt-5 {
+    margin-top: 2rem;
+  }
+  .edit-contract-all-images-container {
+    display: flex;
+    gap: $s-8;
+    align-items: center;
+    justify-content: center;
+  }
+  .contract-all-drawer-header-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+}

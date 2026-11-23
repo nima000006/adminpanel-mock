@@ -1,0 +1,13 @@
+@use "../../../../../../../../../../../../assets/styles/abstract/variables" as *;
+.pending-review-relocation-requests-info-container {
+  @include flex-col($s-40);
+  .alert-container {
+    @include flex-col($s-40);
+  }
+  .action-btns-container {
+    @include flex-space-between;
+    .relocation-btns-container {
+      @include flex-gap($s-16);
+    }
+  }
+}

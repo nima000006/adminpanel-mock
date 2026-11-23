@@ -1,0 +1,7 @@
+@use "../../../../../../../../../../../assets/styles/abstract/variables" as *;
+.finance-payment-on-account-reject-all-request-drawer-container {
+  .ant-steps-item-container {
+    justify-content: start;
+    padding-inline-start: 0 !important;
+  }
+}

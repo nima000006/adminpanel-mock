@@ -1,0 +1,22 @@
+@use "../../../../assets/styles/abstract/variables" as *;
+.delete-modal-container {
+  @include body-regular;
+  font-size: $s-18;
+  .custom-select-container {
+    margin-bottom: 0;
+  }
+}
+.ant-row {
+  align-items: baseline;
+  // .ant-col {
+  //   margin-top: 4px;
+  // }
+}
+.inquiry-text {
+  @include body-regular;
+  font-size: $s-18;
+}
+.update-user-select {
+  margin-bottom: 0;
+  // height: 54px;
+}
