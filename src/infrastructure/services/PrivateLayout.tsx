@@ -4,6 +4,7 @@ import { Layout, Breadcrumb } from "antd";
 import { shallowEqual, useSelector } from "react-redux";
 import { Outlet, useMatches } from "react-router";
 
+import { linkBreadcrumbItems } from "@infra/helpers/BreadcrumbHelpers/linkBreadcrumbItems";
 import { WHITE } from "@infra/VARS/globalColors/globalColors";
 
 import SideBar from "../../components/Layout/SideBar/SideBar";
@@ -75,7 +76,11 @@ export const PrivateLayout = memo(() => {
             }}
           >
             <div className="page-title-container px-5! py-6!">
-              {breadcrumbItems ? <Breadcrumb items={breadcrumbItems} /> : title}
+              {breadcrumbItems ? (
+                <Breadcrumb items={linkBreadcrumbItems(breadcrumbItems)} />
+              ) : (
+                title
+              )}
             </div>
             <div className={wrapperBoxClass} style={contentStyle}>
               <Outlet />

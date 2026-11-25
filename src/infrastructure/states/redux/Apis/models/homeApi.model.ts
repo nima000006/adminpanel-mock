@@ -7,7 +7,7 @@ export type MenuItemData = {
   key: string;
 };
 export type MenuItemDataTransformed = {
-  label: string;
+  label: React.ReactNode;
   children: MenuItemDataTransformed[] | undefined;
   icon: React.ReactNode;
   id: number;

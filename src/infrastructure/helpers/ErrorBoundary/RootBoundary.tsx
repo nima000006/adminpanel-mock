@@ -1,11 +1,14 @@
-// RootErrorBoundary.tsx
+import React from "react";
+
 import * as Sentry from "@sentry/react";
+import { Button, Result } from "antd";
 import { isRouteErrorResponse, useRouteError } from "react-router";
+
+import { isMockMode } from "@infra/mock/mockMode";
 
 import NotFound from "../../../pages/NotFound/NotFound";
 
 import "./_rootErrorBoundary.scss";
-import React from "react";
 
 // TypeScript interface for potential error types
 interface CustomError extends Error {
@@ -13,7 +16,7 @@ interface CustomError extends Error {
 }
 
 // Function to check if the error is a standard Error object
-function isCustomError(error: any): error is CustomError {
+function isCustomError(error: unknown): error is CustomError {
   return error instanceof Error;
 }
 
@@ -30,6 +33,24 @@ export default function RootErrorBoundary() {
   // Check if the error is a known route error and has a status code we handle
   if (isRouteErrorResponse(error) && knownErrorStatuses.includes(error?.status)) {
     return <NotFound />;
+  }
+
+  if (isMockMode()) {
+    return (
+      <Result
+        status="warning"
+        title="اطلاعات این بخش کامل نیست"
+        subTitle="داده آزمایشی ناقص بود، اما می‌توانید دوباره تلاش کنید یا به صفحه اصلی برگردید."
+        extra={[
+          <Button key="retry" type="primary" onClick={() => globalThis.location.reload()}>
+            تلاش دوباره
+          </Button>,
+          <Button key="home" onClick={() => globalThis.location.assign("/")}>
+            صفحه اصلی
+          </Button>,
+        ]}
+      />
+    );
   }
 
   // In development mode, provide detailed error message and stack trace

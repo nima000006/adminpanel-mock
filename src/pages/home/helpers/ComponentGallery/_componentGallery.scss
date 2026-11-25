@@ -1,0 +1,138 @@
+@use "../../../../assets/styles/abstract/variables" as *;
+
+.component-gallery {
+  display: flex;
+  flex-direction: column;
+  gap: $s-24;
+  width: 100%;
+  padding: $s-24;
+  border-radius: $s-24;
+  background: var(--neutral-1);
+
+  .component-gallery-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: $s-16;
+
+    h2 {
+      margin: 0 0 $s-8;
+      color: var(--neutral-11);
+      font-size: $s-24;
+      font-weight: 700;
+    }
+
+    p {
+      margin: 0;
+      color: var(--neutral-7);
+    }
+  }
+
+  .component-preview-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: $s-16;
+  }
+
+  .component-preview-card {
+    min-width: 0;
+    padding: $s-16;
+    border: 1px solid var(--neutral-4);
+    border-radius: $s-16;
+    background: var(--neutral-1);
+  }
+
+  .component-preview-card-wide {
+    grid-column: 1 / -1;
+  }
+
+  .component-preview-heading {
+    margin-bottom: $s-16;
+
+    h3 {
+      margin: 0 0 $s-4;
+      color: var(--neutral-10);
+      font-size: $s-16;
+      font-weight: 700;
+    }
+
+    p {
+      margin: 0;
+      color: var(--neutral-7);
+      font-size: $s-12;
+    }
+  }
+
+  .component-preview-content,
+  .component-alert-list {
+    display: flex;
+    flex-direction: column;
+    gap: $s-12;
+    min-width: 0;
+  }
+
+  .component-preview-row,
+  .component-icon-tabs {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: $s-8;
+  }
+
+  .component-icon-tabs > div {
+    min-width: 120px;
+  }
+
+  .component-preview-feedback {
+    color: var(--neutral-7);
+    font-size: $s-12;
+  }
+
+  .component-preview-field,
+  .ant-picker,
+  .ant-input-number {
+    width: 100%;
+  }
+
+  .component-mock-state {
+    display: flex;
+    flex-direction: column;
+    gap: $s-8;
+    margin-top: $s-16;
+    padding: $s-16;
+    overflow: hidden;
+    border-radius: $s-12;
+    background: var(--neutral-2);
+
+    code {
+      direction: ltr;
+      max-height: 180px;
+      padding: $s-12;
+      overflow: auto;
+      border-radius: $s-8;
+      background: var(--neutral-1);
+      color: var(--neutral-9);
+      text-align: left;
+      white-space: pre-wrap;
+      word-break: break-word;
+    }
+  }
+
+  @media (max-width: 991px) {
+    .component-preview-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .component-preview-card-wide {
+      grid-column: auto;
+    }
+  }
+
+  @media (max-width: 575px) {
+    padding: $s-16;
+
+    .component-gallery-header {
+      flex-direction: column;
+    }
+  }
+}

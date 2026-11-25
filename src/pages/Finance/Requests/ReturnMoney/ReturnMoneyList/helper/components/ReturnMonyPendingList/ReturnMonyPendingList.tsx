@@ -269,7 +269,7 @@ const ReturnMonyPendingList = () => {
             pageNumber: url?.pageNo ? Number(url?.pageNo) + 1 : 1,
             defaultPageSize: url?.pageSize ? +url?.pageSize : 8,
           })}
-          {...TABLE_PROPS(dataSource?.content.length ?? 0)}
+          {...TABLE_PROPS(dataSource?.content?.length ?? 0)}
           rowKey="id"
           rowSelection={{
             type: "checkbox",

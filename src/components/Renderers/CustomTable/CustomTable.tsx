@@ -18,6 +18,7 @@ import manualPaginationConfig from "@infra/helpers/TableHelpers/config/manualPag
 import paginationConfig from "@infra/helpers/TableHelpers/config/tableConfig";
 import TABLE_PROPS from "@infra/helpers/TableHelpers/config/TableProps";
 import { GetColumnSearchProps } from "@infra/helpers/TableHelpers/TableHelpers";
+import { isMockMode } from "@infra/mock/mockMode";
 
 import {
   DragIndexContext,
@@ -25,6 +26,7 @@ import {
   DragBodyCell,
   useColumnDragSort,
 } from "./DragSort";
+import { createMockTableRows } from "./mockTableData";
 import CustomEmpty from "../CustomEmpty/CustomEmpty";
 
 import type { ColumnType as AntdColumnType } from "antd/es/table";
@@ -252,6 +254,23 @@ function CustomTableInner<T extends object = any>(
         column.sortDirections = ["ascend", "descend"];
       }
 
+      // Mock fixtures intentionally cover many unrelated API shapes. Keep a missing
+      // optional field inside one cell from crashing the complete feature page.
+      if (column.render && isMockMode()) {
+        const renderCell = column.render;
+        column.render = (value, record, index) => {
+          try {
+            return renderCell(value, record, index);
+          } catch (error) {
+            console.warn("Mock table cell could not be rendered", {
+              column: column.key ?? column.dataIndex,
+              error,
+            });
+            return "-";
+          }
+        };
+      }
+
       return column;
     },
     [searchText, searchedColumn]
@@ -265,6 +284,19 @@ function CustomTableInner<T extends object = any>(
   const processedColumns = useMemo(() => {
     return columnsToProcess.filter((col) => !col.hidden).map((col) => processColumn(col));
   }, [columnsToProcess, processColumn]);
+
+  const effectiveDataSource = useMemo(() => {
+    const receivedRows = Array.isArray(dataSource) ? dataSource : [];
+
+    if (!isMockMode() || receivedRows.length > 0) {
+      return receivedRows;
+    }
+
+    return createMockTableRows(
+      columns,
+      typeof restProps.rowKey === "string" ? restProps.rowKey : undefined
+    );
+  }, [columns, dataSource, restProps.rowKey]);
 
   // Pagination Logic
   const paginationConfigInfo = useMemo(() => {
@@ -295,7 +327,9 @@ function CustomTableInner<T extends object = any>(
   }, [emptyDescription]);
 
   // Default Props Integration
-  const defaultTableProps = useDefaultProps ? TABLE_PROPS(dataSource?.length || 0) : {};
+  const defaultTableProps = useDefaultProps
+    ? TABLE_PROPS(effectiveDataSource.length)
+    : {};
 
   // Build class names
   const tableClassName = ["custom-table-container", className].filter(Boolean).join(" ");
@@ -319,7 +353,7 @@ function CustomTableInner<T extends object = any>(
   const tableElement = (
     <Table<T>
       ref={ref as any}
-      dataSource={dataSource}
+      dataSource={effectiveDataSource}
       columns={processedColumns as any}
       loading={loading}
       className={tableClassName}

@@ -30,7 +30,7 @@ const ListOfStakeholdersTableModel = ({
       render: (value: IdTitleName) => {
         return (
           <CustomTag color={value?.name === "ACTIVE" ? "green" : "red"}>
-            {dataPlaceHolder({ data: value?.title.toString() })}
+            {dataPlaceHolder({ data: value?.title?.toString() })}
           </CustomTag>
         );
       },
@@ -40,7 +40,7 @@ const ListOfStakeholdersTableModel = ({
       dataIndex: "contractId",
       key: "contractId",
       width: 150,
-      render: (value: number) => dataPlaceHolder({ data: value.toString() }),
+      render: (value: number) => dataPlaceHolder({ data: value?.toString() }),
     },
     {
       title: "سهم",
@@ -55,7 +55,7 @@ const ListOfStakeholdersTableModel = ({
       key: "beneficiaryRuleType",
       width: 150,
       render: (value: IdTitleName) => {
-        return <span>{dataPlaceHolder({ data: value?.title.toString() })}</span>;
+        return <span>{dataPlaceHolder({ data: value?.title?.toString() })}</span>;
       },
     },
     {

@@ -1,10 +1,16 @@
 import CryptoJS from "crypto-js";
 
+import { isMockMode } from "@infra/mock/mockMode";
+
+const getEncryptionKey = () =>
+  import.meta.env.VITE_ENCRYPTION_KEY ||
+  (isMockMode() ? "daneshjouyar-local-mock-key" : undefined);
+
 export const setLocalStorage = (key: string, value: string) => {
-  const encryptedToken = CryptoJS.AES.encrypt(
-    value,
-    import.meta.env.VITE_ENCRYPTION_KEY
-  )?.toString();
+  const encryptionKey = getEncryptionKey();
+  if (!encryptionKey) return null;
+
+  const encryptedToken = CryptoJS.AES.encrypt(value, encryptionKey)?.toString();
   if (encryptedToken) {
     try {
       localStorage.setItem(key, encryptedToken);
@@ -24,10 +30,10 @@ export const getFromLocalStorage = (key: string) => {
   const encryptedToken = localStorage.getItem(key);
   if (encryptedToken) {
     try {
-      const decryptedBytes = CryptoJS.AES.decrypt(
-        encryptedToken,
-        import.meta.env.VITE_ENCRYPTION_KEY
-      );
+      const encryptionKey = getEncryptionKey();
+      if (!encryptionKey) return null;
+
+      const decryptedBytes = CryptoJS.AES.decrypt(encryptedToken, encryptionKey);
       const token = decryptedBytes?.toString(CryptoJS.enc.Utf8);
       return token;
     } catch (_) {

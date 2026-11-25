@@ -23,6 +23,7 @@ import { serviceOptions } from "@pages/Finance/Accountants/_shared/utils";
 import { ReportListItem } from "@pages/Reports/myReport/@types/@myReportTypes";
 import { ReportCardItem } from "@pages/Reports/myReport/MyReportList/helper/components/MyReportStatisticalReports/@types/ReportCardItem";
 
+import ComponentGallery from "./helpers/ComponentGallery/ComponentGallery";
 import FoodDeliveryScanContent from "./helpers/FoodDeliveryScanContent/FoodDeliveryScanContent";
 import HomePageImagePlaceHolderOn from "../../assets/images/HomePageImageOn.webp";
 import useTitle from "../../infrastructure/helpers/GeneralHelpers/useTitle/useTitle";
@@ -228,6 +229,8 @@ const Home = () => {
             ))}
           </Div>
         </div>
+
+        <ComponentGallery />
       </div>
 
       {isFoodDrawerOpen?.isOpen && (

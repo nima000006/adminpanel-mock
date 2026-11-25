@@ -1,5 +1,3 @@
-import type { FetchArgs } from "@reduxjs/toolkit/query";
-
 import { MENU_ITEMS_MOCK } from "@components/Layout/SideBar/helper/mock/menuMockData";
 
 import {
@@ -16,8 +14,9 @@ import {
   BUSINESS_OPTIONS,
   CITY_OPTIONS,
   COUNTRY_OPTIONS,
+  createMockCollection,
+  createMockDetail,
   createMockListRow,
-  createMockPage,
   DEGREE_OPTIONS,
   FIELD_OPTIONS,
   GENDER_OPTIONS,
@@ -28,6 +27,8 @@ import {
   SEMESTER_OPTIONS,
   STATUS_OPTIONS,
 } from "./referenceMocks";
+
+import type { FetchArgs } from "@reduxjs/toolkit/query";
 
 const delay = (ms = 120) => new Promise((resolve) => setTimeout(resolve, ms));
 
@@ -145,11 +146,17 @@ const resolveAuth = (url: string, method: string, body?: Record<string, unknown>
     return MOCK_ADMIN_STAFF_LIST;
   }
 
-  if (u.includes("/user/staff/admin/login") || (u.includes("staff") && u.includes("login"))) {
+  if (
+    u.includes("/user/staff/admin/login") ||
+    (u.includes("staff") && u.includes("login"))
+  ) {
     return createMockLoginResponse();
   }
 
-  if (method !== "GET" && (u.includes("/auth/") || u.includes("/otp/") || u.includes("/user/email"))) {
+  if (
+    method !== "GET" &&
+    (u.includes("/auth/") || u.includes("/otp/") || u.includes("/user/email"))
+  ) {
     if (u.includes("email")) {
       return { success: true };
     }
@@ -164,14 +171,62 @@ const resolveListOrDetail = (url: string, method: string): unknown => {
     return 1;
   }
 
+  if (url.toLowerCase().includes("/admin/dashboard/all")) {
+    return [
+      {
+        id: 1,
+        title: "گزارش خوابگاه",
+        key: "room-dashboard",
+        description: "نمای کلی آمار خوابگاه",
+        type: "DASHBOARD",
+        typeFaTitle: "داشبورد",
+        typeId: 1,
+        service: "ROOM",
+        serviceFaTitle: "خوابگاه",
+        serviceId: 3,
+        counts: 24,
+      },
+      {
+        id: 2,
+        title: "گزارش تغذیه",
+        key: "food-dashboard",
+        description: "نمای کلی آمار تغذیه",
+        type: "DASHBOARD",
+        typeFaTitle: "داشبورد",
+        typeId: 1,
+        service: "FOOD",
+        serviceFaTitle: "تغذیه",
+        serviceId: 4,
+        counts: 18,
+      },
+      {
+        id: 3,
+        title: "گزارش پرسشنامه",
+        key: "survey-dashboard",
+        description: "نمای کلی آمار پرسشنامه",
+        type: "DASHBOARD",
+        typeFaTitle: "داشبورد",
+        typeId: 1,
+        service: "SURVEY",
+        serviceFaTitle: "پرسشنامه",
+        serviceId: 10,
+        counts: 12,
+      },
+    ];
+  }
+
   if (isOptionListUrl(url)) {
     return resolveOptionList(url);
+  }
+
+  if (url.toLowerCase().includes("shortcut/all")) {
+    return [];
   }
 
   // Detail-ish single resource
   if (/\/\d+(\?|$)/.test(url) || url.toLowerCase().includes("detail")) {
     return {
-      ...createMockListRow(1),
+      ...createMockDetail(),
       ...MOCK_USER_INFO,
       branchTitle: "شعبه تهران",
       amount: 100000,
@@ -200,10 +255,10 @@ const resolveListOrDetail = (url: string, method: string): unknown => {
       "reservation",
     ])
   ) {
-    return createMockPage(rows);
+    return createMockCollection(rows);
   }
 
-  return createMockPage(rows);
+  return createMockCollection(rows);
 };
 
 /**
@@ -230,7 +285,25 @@ export async function resolveMockResponse(args: string | FetchArgs): Promise<unk
       return resolveOptionList(url);
     }
     // Many list endpoints are POST with filter body
+    const hasPaginationBody = Boolean(
+      body &&
+      [
+        "page",
+        "pageNo",
+        "pageNumber",
+        "pageSize",
+        "size",
+        "offset",
+        "limit",
+        "filter",
+        "filters",
+        "search",
+        "sort",
+      ].some((key) => key in body)
+    );
+
     if (
+      hasPaginationBody ||
       includesAny(url, [
         "filter",
         "advance",
@@ -241,7 +314,7 @@ export async function resolveMockResponse(args: string | FetchArgs): Promise<unk
         "report",
       ])
     ) {
-      return createMockPage([1, 2, 3, 4, 5].map((id) => createMockListRow(id)));
+      return createMockCollection([1, 2, 3, 4, 5].map((id) => createMockListRow(id)));
     }
     return 1;
   }

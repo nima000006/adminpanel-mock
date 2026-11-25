@@ -2,6 +2,7 @@ import { Breadcrumb, Button } from "antd";
 import { AiOutlinePlus } from "react-icons/ai";
 
 import CustomTable from "@components/Renderers/CustomTable/CustomTable";
+import { linkBreadcrumbItems } from "@infra/helpers/BreadcrumbHelpers/linkBreadcrumbItems";
 import TABLE_PROPS from "@infra/helpers/TableHelpers/config/TableProps";
 
 import CustomCard from "../../../../components/CustomCard/CustomCard";
@@ -48,7 +49,10 @@ const RoomTimingDetail = () => {
     <div className="room-timing-detail-container-page">
       <div className="bread-crumb-container">
         <CustomCard padding={PADDING_20}>
-          <Breadcrumb items={breadCrumbItems} className="bread-crumb" />
+          <Breadcrumb
+            items={linkBreadcrumbItems(breadCrumbItems)}
+            className="bread-crumb"
+          />
         </CustomCard>
       </div>
       <div className="table-container">

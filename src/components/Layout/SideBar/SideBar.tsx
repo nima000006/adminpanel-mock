@@ -3,7 +3,7 @@ import { useEffect, memo, useState, useCallback, useMemo } from "react";
 import { PushpinFilled, PushpinOutlined } from "@ant-design/icons";
 import { Button, Layout, Menu } from "antd";
 import { AiOutlineArrowRight } from "react-icons/ai";
-import { useLocation, useNavigate } from "react-router";
+import { Link, useLocation, useNavigate } from "react-router";
 import { toast } from "react-toastify";
 
 import CustomTooltip from "@components/Renderers/CustomTooltip/CustomTooltip";
@@ -19,6 +19,7 @@ import {
 } from "@infra/states/redux/Apis/business/serviceManagementService/serviceManagementService";
 
 import { menuKeyToRouteMap } from "../../../infrastructure/helpers/routeConvertor";
+import { isMockMode } from "../../../infrastructure/mock/mockMode";
 import {
   MenuItemData,
   MenuItemDataTransformed,
@@ -117,9 +118,22 @@ const SideBar = memo(({ collapsed, toggleSidebar }: SideBarProps) => {
         const hasChildren = Array.isArray(item.children) && item.children.length > 0;
         const route = menuKeyToRouteMap[item.key as keyof typeof menuKeyToRouteMap];
         const isPinned = route ? pinnedRoutes.has(route) : false;
+        const label =
+          typeof item.label === "string"
+            ? truncateText(item.label, item.label.length > 14 ? 12 : undefined)
+            : item.label;
+        const shortcutTitle = typeof item.label === "string" ? item.label : "";
 
         return {
           ...item,
+          label:
+            !hasChildren && route ? (
+              <Link className="side-bar-menu-link" to={route}>
+                {label}
+              </Link>
+            ) : (
+              label
+            ),
           ...(!hasChildren
             ? !item?.icon
               ? {
@@ -130,7 +144,7 @@ const SideBar = memo(({ collapsed, toggleSidebar }: SideBarProps) => {
                           e.stopPropagation();
                           shortcutRewrite({
                             key: route,
-                            title: item.label,
+                            title: shortcutTitle,
                           })
                             .unwrap()
                             .then(() => {
@@ -148,7 +162,7 @@ const SideBar = memo(({ collapsed, toggleSidebar }: SideBarProps) => {
                           e.stopPropagation();
                           shortcutRewrite({
                             key: route,
-                            title: item.label,
+                            title: shortcutTitle,
                           })
                             .unwrap()
                             .then(() => {
@@ -178,7 +192,7 @@ const SideBar = memo(({ collapsed, toggleSidebar }: SideBarProps) => {
 
   const menuBuilder = async (cameFromLogin = false) => {
     const menuStorageInfo: string | null = getFromLocalStorage("MI");
-    if (!menuStorageInfo || menuStorageInfo === null || cameFromLogin) {
+    if (isMockMode() || !menuStorageInfo || menuStorageInfo === null || cameFromLogin) {
       return await getMenuItems().unwrap().then(onGetMenuItemsSuccess);
     }
     const menuStorageDecrypted: { info: MenuItemData[]; isFetched: boolean } =
@@ -337,6 +351,7 @@ const SideBar = memo(({ collapsed, toggleSidebar }: SideBarProps) => {
           <Menu
             mode="vertical"
             items={mainMenuItems as any}
+            expandIcon={() => null}
             defaultSelectedKeys={selectedKeys}
             // onSelect={onMenuSelect}
             aria-label="منو"

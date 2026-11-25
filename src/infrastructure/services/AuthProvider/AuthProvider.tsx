@@ -3,6 +3,8 @@ import React, { useMemo, useState, useEffect, useCallback } from "react";
 import { useNavigate } from "react-router";
 import { toast } from "react-toastify";
 
+import { MOCK_USER_INFO } from "@infra/mock/mockAuth";
+import { isMockMode } from "@infra/mock/mockMode";
 import { LANDING_PAGE_ROUTE } from "@infra/router/routes/general";
 import { SIGN_IN_FIRST_PAGE_ROUTE } from "@infra/router/routes/public";
 import { useLazyGetUserInfoQuery } from "@infra/states/redux/Apis/authenticationApi";
@@ -54,6 +56,12 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
   //! new get user info
   useEffect(() => {
     if (token && user === null) {
+      if (isMockMode()) {
+        setUser(MOCK_USER_INFO);
+        setLocalStorage("meta", JSON.stringify(MOCK_USER_INFO));
+        return;
+      }
+
       getUserWithToken()
         .unwrap()
         .then((res) => {

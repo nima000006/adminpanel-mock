@@ -1,6 +1,7 @@
 import { Breadcrumb, Button, Divider, Modal, Tabs, Radio, Form, Switch } from "antd";
 
 import CustomTable from "@components/Renderers/CustomTable/CustomTable";
+import { linkBreadcrumbItems } from "@infra/helpers/BreadcrumbHelpers/linkBreadcrumbItems";
 import TABLE_PROPS from "@infra/helpers/TableHelpers/config/TableProps";
 
 import { RoomAllocationModalProps } from "./@types/@allocationModal";
@@ -319,7 +320,10 @@ const RoomAllocationModal = ({ isOpen, onCancel }: RoomAllocationModalProps) => 
           bodyStyle={{ overflowY: "auto" }}
         >
           <div className="room-allocation-modal-content">
-            <Breadcrumb items={breadCrumbItems} className="bread-crumb" />
+            <Breadcrumb
+              items={linkBreadcrumbItems(breadCrumbItems)}
+              className="bread-crumb"
+            />
             <Tabs items={tabItems} className="tabs-container" />
             <div className="room-allocation-action-container">
               <Button type="primary">رزرو و ارسال پیام</Button>

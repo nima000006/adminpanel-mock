@@ -12,6 +12,7 @@ import CustomQrScanner from "@components/CustomInputs/CustomQrScanner/CustomQrSc
 import CustomDrawer from "@components/Renderers/CustomDrawer/CustomDrawer";
 import CustomDrawerHeader from "@components/Renderers/CustomDrawer/CustomDrawerHeader/CustomDrawerHeader";
 import Div from "@components/Renderers/Div/Div";
+import { linkBreadcrumbItems } from "@infra/helpers/BreadcrumbHelpers/linkBreadcrumbItems";
 import { useAudioNotification } from "@infra/hooks/useAudioNotification/useAudioNotification";
 import useQueryParams from "@infra/hooks/useQueryParams";
 import { useLazyGetManagerDeliverableFoodQuery } from "@infra/states/redux/Apis/food/reservation/foodReservationApi";
@@ -91,14 +92,14 @@ const DynamicReservation = () => {
               title={
                 <Breadcrumb
                   className="scan-food-bread-container"
-                  items={[
+                  items={linkBreadcrumbItems([
                     {
                       title: "سفارشات",
                     },
                     {
                       title: "تحویل دهندگان غذا",
                     },
-                  ]}
+                  ])}
                 />
               }
               closeDrawerHandler={() => {

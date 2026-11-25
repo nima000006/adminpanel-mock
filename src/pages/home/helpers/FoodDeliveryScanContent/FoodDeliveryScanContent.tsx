@@ -6,6 +6,7 @@ import CustomDatePicker from "@components/CustomInputs/CustomDatePicker/CustomDa
 import CustomInput from "@components/CustomInputs/CustomInput/CustomInput";
 import CustomQrScanner from "@components/CustomInputs/CustomQrScanner/CustomQrScanner";
 import CustomDrawerHeader from "@components/Renderers/CustomDrawer/CustomDrawerHeader/CustomDrawerHeader";
+import { linkBreadcrumbItems } from "@infra/helpers/BreadcrumbHelpers/linkBreadcrumbItems";
 
 import { FoodDeliveryScanContentProps } from "./@types/food-delivery-scan-content.types";
 import emptyImage from "../../../../assets/images/empty-image.png";
@@ -30,14 +31,14 @@ const FoodDeliveryScanContent = ({
         title={
           <Breadcrumb
             className="scan-food-bread-container"
-            items={[
+            items={linkBreadcrumbItems([
               {
                 title: "سفارشات",
               },
               {
                 title: "تحویل دهندگان غذا",
               },
-            ]}
+            ])}
           />
         }
         closeDrawerHandler={closeDrawerHandler}
